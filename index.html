@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Seth Robles - Mechanical Engineer and Roboticist">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://twitter.com/yourhandle">
+    <meta property="og:title" content="Seth Robles - Portfolio">
+    <meta property="og:description" content="Seth Robles - Mechanical Engineer and Roboticist">
+    <meta property="og:image" content="/static/uploads/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://twitter.com/yourhandle">
+    <meta property="twitter:title" content="Seth Robles - Portfolio">
+    <meta property="twitter:description" content="Seth Robles - Mechanical Engineer and Roboticist">
+    <meta property="twitter:image" content="/static/uploads/og-image.jpg">
+
+    <title>Seth Robles - Mechanical Engineer and Roboticist</title>
+
+    <!-- Favicons for all devices and browsers -->
+    <link rel="icon" type="image/x-icon" href="/static/uploads/personal/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/uploads/personal/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/uploads/personal/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/uploads/personal/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="/static/uploads/personal/favicon_io/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/uploads/personal/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/base.css">
+
+    <!-- MathJax for LaTeX support -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+    <!-- Theme toggle button -->
+    <!-- <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+        <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button> -->
+
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-container">
+        <div class="navbar-brand">
+            <a href="/index.html" class="navbar-logo">
+                Seth Robles
+            </a>
+        </div>
+
+        <button class="navbar-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="navbar-toggle-icon"></span>
+        </button>
+
+        <div class="navbar-menu">
+            <a href="/index.html" class="navbar-link">Home</a>
+            <a href="/projects_index.html" class="navbar-link">Projects</a>
+            <a href="/blog_index.html" class="navbar-link">Blog</a>
+            <a href="/resume.html" class="navbar-link">Resume</a>
+            <a href="/portfolio.html" class="navbar-link">Portfolio</a>
+        </div>
+
+        <!--  -->
+    </div>
+</nav>
+
+<script>
+    // Mobile navigation toggle
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navbarMenu = document.querySelector('.navbar-menu');
+
+    navbarToggle.addEventListener('click', () => {
+        const isExpanded = navbarToggle.getAttribute('aria-expanded') === 'true';
+        navbarToggle.setAttribute('aria-expanded', !isExpanded);
+        navbarMenu.classList.toggle('show');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navbarToggle.contains(e.target) && !navbarMenu.contains(e.target)) {
+            navbarToggle.setAttribute('aria-expanded', 'false');
+            navbarMenu.classList.remove('show');
+        }
+    });
+</script>
+
+    <main class="main-content">
+        
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">Hi, I'm Seth Robles</h1>
+            <p class="hero-subtitle">Mechanical Engineer and Robotocist at MIT</p>
+            <p class="hero-description">
+                I enjoy building robots, integrated technology, and apps. I am passionate about continuous learning, mentoring others, and creating impactful solutions.
+            </p>
+            <div class="hero-actions">
+                <a href="/projects_index.html" class="btn btn-primary">View My Work</a>
+                <a href="/resume.html" class="btn btn-secondary">Download Resume</a>
+                <a href="/portfolio.html" class="btn btn-outline">View Portfolio</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <div class="hero-avatar">
+                <img src="/static/uploads/personal/seth-photo.jpeg" alt="Seth Robles" style="width:220px;height:220px;border-radius:50%;object-fit:cover;box-shadow:0 4px 24px rgba(0,0,0,0.12);border:6px solid #fff;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="featured-projects">
+    <div class="container", id = "featured-projects">
+        <header class="section-header">
+            <h2 class="section-title">Featured Work</h2>
+            <p class="section-description">A selection of my recent projects and blog posts</p>
+        </header>
+
+        <div class="projects-grid">
+            
+            
+                
+<article class="card entry-card" data-tags="KiCAD,PCB Design">
+    <div class="card-image">
+    
+    <img src="/static/uploads/blogs/led-array/../../projects/led-array/led-array-thumb.png"
+             alt="LED Array"
+             class="card-thumbnail"
+             loading="lazy">
+    
+    </div>
+
+    <div class="card-content">
+        <header class="card-header">
+            <div style="text-align:center">
+                <h3 class="card-title">
+                    <a href="/blogs/led-array.html" class="card-link">
+                        LED Array
+                    </a>
+                </h3>
+                
+                <time class="card-date" datetime="2025-09-06">
+                    2025-09-06
+                </time>
+                
+            </div>
+        </header>
+
+        
+        <div class="card-tags">
+            
+            <span class="tag">KiCAD</span>
+            
+            <span class="tag">PCB Design</span>
+            
+            
+        </div>
+        
+
+        
+        <p class="card-summary">Reflections on my first week diving deep into Flask, building small apps, and realizing the joys (and quirks) of web development with Python.</p>
+        
+    </div>
+</article>
+
+            
+                
+<article class="card entry-card" data-tags="Machine Learning,Python,Electron">
+    <div class="card-image">
+    
+    <img src="/static/uploads/projects/ml-maker/ml_maker_thumb.png"
+             alt="ML Maker"
+             class="card-thumbnail"
+             loading="lazy">
+    
+    </div>
+
+    <div class="card-content">
+        <header class="card-header">
+            <div style="text-align:center">
+                <h3 class="card-title">
+                    <a href="/projects/ml-maker.html" class="card-link">
+                        ML Maker
+                    </a>
+                </h3>
+                
+                <time class="card-date" datetime="2025-09-01">
+                    2025-09-01
+                </time>
+                
+            </div>
+        </header>
+
+        
+        <div class="card-tags">
+            
+            <span class="tag">Machine Learning</span>
+            
+            <span class="tag">Python</span>
+            
+            <span class="tag">Electron</span>
+            
+            
+        </div>
+        
+
+        
+        <p class="card-summary">ML Maker is a no-code machine learning toolkit for rapid prototyping, training, and deploying models using a simple web interface.</p>
+        
+    </div>
+</article>
+
+            
+                
+<article class="card entry-card" data-tags="Prototyping,3D Printing,Arduino">
+    <div class="card-image">
+    
+    <img src="/static/uploads/projects/suction-tank/suction-tank-thumb.jpg"
+             alt="Suction Tank Robot"
+             class="card-thumbnail"
+             loading="lazy">
+    
+    </div>
+
+    <div class="card-content">
+        <header class="card-header">
+            <div style="text-align:center">
+                <h3 class="card-title">
+                    <a href="/projects/suction-tank.html" class="card-link">
+                        Suction Tank Robot
+                    </a>
+                </h3>
+                
+                <time class="card-date" datetime="2025-08-21">
+                    2025-08-21
+                </time>
+                
+            </div>
+        </header>
+
+        
+        <div class="card-tags">
+            
+            <span class="tag">Prototyping</span>
+            
+            <span class="tag">3D Printing</span>
+            
+            <span class="tag">Arduino</span>
+            
+            
+        </div>
+        
+
+        
+        <p class="card-summary">A prototyped tank-style robot that uses suction to adhere to surfaces, designed with 3D printed parts and modular components.</p>
+        
+    </div>
+</article>
+
+            
+                
+<article class="card entry-card" data-tags="Mentoring">
+    <div class="card-image">
+    
+    <img src="/static/uploads/blogs/camp-kesem-2025/camp-kesem-2025-thumb.jpeg"
+             alt="Camp Kesem 2025"
+             class="card-thumbnail"
+             loading="lazy">
+    
+    </div>
+
+    <div class="card-content">
+        <header class="card-header">
+            <div style="text-align:center">
+                <h3 class="card-title">
+                    <a href="/blogs/camp-kesem-2025.html" class="card-link">
+                        Camp Kesem 2025
+                    </a>
+                </h3>
+                
+                <time class="card-date" datetime="2025-08-17">
+                    2025-08-17
+                </time>
+                
+            </div>
+        </header>
+
+        
+        <div class="card-tags">
+            
+            <span class="tag">Mentoring</span>
+            
+            
+        </div>
+        
+
+        
+        <p class="card-summary">A week-long summer camp to help support children whose parents have been affected by cancer</p>
+        
+    </div>
+</article>
+
+            
+                
+<article class="card entry-card" data-tags="Robotics,Computer Vision,Machine Learning,Team Project">
+    <div class="card-image">
+    
+    <img src="/static/uploads/projects/2-12-ur5/ur5.jpeg"
+             alt="2.12 UR5"
+             class="card-thumbnail"
+             loading="lazy">
+    
+    </div>
+
+    <div class="card-content">
+        <header class="card-header">
+            <div style="text-align:center">
+                <h3 class="card-title">
+                    <a href="/projects/2-12-ur5.html" class="card-link">
+                        2.12 UR5
+                    </a>
+                </h3>
+                
+                <time class="card-date" datetime="2025-05-15">
+                    2025-05-15
+                </time>
+                
+            </div>
+        </header>
+
+        
+        <div class="card-tags">
+            
+            <span class="tag">Robotics</span>
+            
+            <span class="tag">Computer Vision</span>
+            
+            <span class="tag">Machine Learning</span>
+            
+            
+            <span class="tag tag-more">+1</span>
+            
+        </div>
+        
+
+        
+        <p class="card-summary">As UR5 Team Lead for my 2.12 lab section, I worked with a group of 8 students to program a UR5 robot to detect, sort, and dispose of plastic bottles using computer vision and robotics control.</p>
+        
+    </div>
+</article>
+
+            
+                
+<article class="card entry-card" data-tags="Mentoring">
+    <div class="card-image">
+    
+    <img src="/static/uploads/blogs/tap-2025/tap_2025_thumb.png"
+             alt="Travel Access Program 2025"
+             class="card-thumbnail"
+             loading="lazy">
+    
+    </div>
+
+    <div class="card-content">
+        <header class="card-header">
+            <div style="text-align:center">
+                <h3 class="card-title">
+                    <a href="/blogs/tap-2025.html" class="card-link">
+                        Travel Access Program 2025
+                    </a>
+                </h3>
+                
+                <time class="card-date" datetime="2025-03-31">
+                    2025-03-31
+                </time>
+                
+            </div>
+        </header>
+
+        
+        <div class="card-tags">
+            
+            <span class="tag">Mentoring</span>
+            
+            
+        </div>
+        
+
+        
+        <p class="card-summary">Speaking at high schools in Clarksville, TN about the opportunities at MIT, and potential steps to get there.</p>
+        
+    </div>
+</article>
+
+            
+        </div>
+
+        <div class="section-actions">
+            <a href="/projects_index.html" class="btn btn-outline">View All Projects</a>
+            <a href="/blog_index.html" class="btn btn-outline">View All Blogs</a>
+        </div>
+    </div>
+</section>
+
+<section class="hobbies">
+    <div class="container">
+        <header class="section-header">
+            <h2 class="section-title">Hobbies & Interests</h2>
+            <p class="section-description">What I do when I'm not coding</p>
+        </header>
+
+        <div class="hobbies-grid">
+            <div class="hobby-widget">
+                <h3 class="hobby-title">🏃‍♂️ Running & Fitness</h3>
+                <iframe height='454' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/149255842/latest-rides/881b64a812f22d2154b1a80a870b66ec606887d1'></iframe>
+                <div id="strava-widget" class="strava-widget">
+                    <!-- No additional Strava placeholder or coming soon message -->
+                </div>
+            </div>
+
+            <div class="hobby-widget">
+                <h3 class="hobby-title">📚 Reading</h3>
+                <div id="goodreads-widget" class="goodreads-widget">
+                    <!-- Goodreads widget start -->
+                    <style type="text/css" media="screen">
+                      .gr_custom_container_ {
+                        border: 1px solid gray;
+                        border-radius:10px;
+                        padding: 10px 5px 10px 5px;
+                        background-color: #FFF;
+                        color: #000;
+                        width: 300px
+                      }
+                      .gr_custom_header_ {
+                        border-bottom: 1px solid gray;
+                        width: 100%;
+                        margin-bottom: 5px;
+                        text-align: center;
+                        font-size: 120%
+                      }
+                      .gr_custom_each_container_ {
+                        width: 100%;
+                        clear: both;
+                        margin-bottom: 10px;
+                        overflow: auto;
+                        padding-bottom: 4px;
+                        border-bottom: 1px solid #aaa;
+                      }
+                      .gr_custom_book_container_ {
+                        overflow: hidden;
+                        height: 60px;
+                        float: left;
+                        margin-right: 4px;
+                        width: 39px;
+                      }
+                      .gr_custom_author_ {
+                        font-size: 10px;
+                      }
+                      .gr_custom_tags_ {
+                        font-size: 10px;
+                        color: gray;
+                      }
+                      .gr_custom_rating_ {
+                        float: right;
+                      }
+                    </style>
+                    <!-- Most of this is hardcoded as a fallback is javascript issues occur -->
+                    <div id="gr_custom_widget_">
+                        <div class="gr_custom_container_">
+                            <h2 class="gr_custom_header_">
+                                <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/review/list/186300699-seth-robles?shelf=read&amp;utm_medium=api&amp;utm_source=custom_widget">Seth's Bookshelf</a>
+                            </h2>
+                            <div class="gr_custom_each_container_">
+                                <div class="gr_custom_book_container_">
+                                    <a title="All the Light We Cannot See" rel="nofollow" href="https://www.goodreads.com/review/show/7202514491?utm_medium=api&amp;utm_source=custom_widget"><img alt="All the Light We Cannot See" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1451445646l/18143977._SY75_.jpg" /></a>
+                                </div>
+                                <div class="gr_custom_rating_">
+                                    <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /></span>
+                                </div>
+                                <div class="gr_custom_title_">
+                                    <a rel="nofollow" href="https://www.goodreads.com/review/show/7202514491?utm_medium=api&amp;utm_source=custom_widget">All the Light We Cannot See</a>
+                                </div>
+                                <div class="gr_custom_author_">
+                                    by <a rel="nofollow" href="https://www.goodreads.com/author/show/28186.Anthony_Doerr">Anthony Doerr</a>
+                                </div>
+                            </div>
+                            <div class="gr_custom_each_container_">
+                                <div class="gr_custom_book_container_">
+                                    <a title="Meditations" rel="nofollow" href="https://www.goodreads.com/review/show/7202512462?utm_medium=api&amp;utm_source=custom_widget"><img alt="Meditations" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1421618636l/30659._SY75_.jpg" /></a>
+                                </div>
+                                <div class="gr_custom_rating_">
+                                    <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /></span>
+                                </div>
+                                <div class="gr_custom_title_">
+                                    <a rel="nofollow" href="https://www.goodreads.com/review/show/7202512462?utm_medium=api&amp;utm_source=custom_widget">Meditations</a>
+                                </div>
+                                <div class="gr_custom_author_">
+                                    by <a rel="nofollow" href="https://www.goodreads.com/author/show/17212.Marcus_Aurelius">Marcus Aurelius</a>
+                                </div>
+                            </div>
+                            <div class="gr_custom_each_container_">
+                                <div class="gr_custom_book_container_">
+                                    <a title="Life Is Hard: How Philosophy Can Help Us Find Our Way" rel="nofollow" href="https://www.goodreads.com/review/show/7202510156?utm_medium=api&amp;utm_source=custom_widget"><img alt="Life Is Hard: How Philosophy Can Help Us Find Our Way" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1674052675l/59785502._SY75_.jpg" /></a>
+                                </div>
+                                <div class="gr_custom_rating_">
+                                    <span class=" staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
+                                </div>
+                                <div class="gr_custom_title_">
+                                    <a rel="nofollow" href="https://www.goodreads.com/review/show/7202510156?utm_medium=api&amp;utm_source=custom_widget">Life Is Hard: How Philosophy Can Help Us Find Our Way</a>
+                                </div>
+                                <div class="gr_custom_author_">
+                                    by <a rel="nofollow" href="https://www.goodreads.com/author/show/408444.Kieran_Setiya">Kieran Setiya</a>
+                                </div>
+                            </div>
+                            <div class="gr_custom_each_container_">
+                                <div class="gr_custom_book_container_">
+                                    <a title="Red Queen (Red Queen, #1)" rel="nofollow" href="https://www.goodreads.com/review/show/7202508724?utm_medium=api&amp;utm_source=custom_widget"><img alt="Red Queen" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1449778912l/22328546._SY75_.jpg" /></a>
+                                </div>
+                                <div class="gr_custom_rating_">
+                                    <span class=" staticStars notranslate" title="liked it"><img alt="liked it" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
+                                </div>
+                                <div class="gr_custom_title_">
+                                    <a rel="nofollow" href="https://www.goodreads.com/review/show/7202508724?utm_medium=api&amp;utm_source=custom_widget">Red Queen</a>
+                                </div>
+                                <div class="gr_custom_author_">
+                                    by <a rel="nofollow" href="https://www.goodreads.com/author/show/7074943.Victoria_Aveyard">Victoria Aveyard</a>
+                                </div>
+                            </div>
+                            <div class="gr_custom_each_container_">
+                                <div class="gr_custom_book_container_">
+                                    <a title="Divergent (Divergent, #1)" rel="nofollow" href="https://www.goodreads.com/review/show/7202504647?utm_medium=api&amp;utm_source=custom_widget"><img alt="Divergent" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1618526890l/13335037._SY75_.jpg" /></a>
+                                </div>
+                                <div class="gr_custom_rating_">
+                                    <span class=" staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
+                                </div>
+                                <div class="gr_custom_title_">
+                                    <a rel="nofollow" href="https://www.goodreads.com/review/show/7202504647?utm_medium=api&amp;utm_source=custom_widget">Divergent</a>
+                                </div>
+                                <div class="gr_custom_author_">
+                                    by <a rel="nofollow" href="https://www.goodreads.com/author/show/4039811.Veronica_Roth">Veronica Roth</a>
+                                </div>
+                            </div>
+                            <br style="clear: both"/>
+                            <center>
+                                <a rel="nofollow" href="https://www.goodreads.com/"><img alt="goodreads.com" style="border:0" src="https://s.gr-assets.com/images/widget/widget_logo.gif" /></a>
+                            </center>
+                            <noscript>
+                                Share <a rel="nofollow" href="https://www.goodreads.com/">book reviews</a> and ratings with Seth, and even join a <a rel="nofollow" href="https://www.goodreads.com/group">book club</a> on Goodreads.
+                            </noscript>
+                        </div>
+                    </div>
+                    <script src="https://www.goodreads.com/review/custom_widget/186300699.Seth's%20bookshelf:%20read?cover_position=&cover_size=&num_books=5&order=&shelf=&sort=&widget_bg_transparent=" type="text/javascript" charset="utf-8"></script>
+                    <!-- Goodreads widget end -->
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <section class="contact-cta">
+    <div class="container">
+        <div class="cta-content">
+            <h2 class="section-title">Let's Work Together</h2>
+            <p class="cta-description">
+                I'm always interested in new opportunities and interesting projects.
+                Whether you have a question or just want to say hi, I'll try my best to get back to you!
+            </p>
+            <div class="cta-actions">
+                <a href="mailto:seth@example.com" class="btn btn-primary">Get In Touch</a>
+                <a href="/resume.html" class="btn btn-outline">View Resume</a>
+                <a href="/portfolio.html" class="btn btn-outline">View Portfolio</a>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+    </main>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Seth Robles</h3>
+                <p class="footer-description">Mechanical Engineer & Roboticist</p>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-subtitle">Connect</h4>
+                <div class="footer-links">
+                    <a href="https://github.com/sethrobles04" class="footer-link" target="_blank" rel="noopener noreferrer">
+                        GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/seth-robles-232445254" class="footer-link" target="_blank" rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+                    <a href="mailto:https://sethrobles04@gmail.com" class="footer-link">
+                        Email
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-subtitle">Resources</h4>
+                <div class="footer-links">
+                    <a href="/resume.html" class="footer-link">Resume</a>
+                    <a href="/portfolio.html" class="footer-link">Portfolio</a>
+                    <a href="/projects_index.html" class="footer-link">Projects</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copyright">
+                &copy; 2024 Seth Robles. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+    <!-- JavaScript -->
+    <script src="/static/js/widgets.js"></script>
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to light
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+</html>
