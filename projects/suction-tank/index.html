@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A prototyped tank-style robot that uses suction to adhere to surfaces, designed with 3D printed parts and modular components.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://twitter.com/yourhandle">
+    <meta property="og:title" content="Seth Robles - Portfolio">
+    <meta property="og:description" content="Seth Robles - Mechanical Engineer and Roboticist at MIT">
+    <meta property="og:image" content="/static/uploads/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://twitter.com/yourhandle">
+    <meta property="twitter:title" content="Seth Robles - Portfolio">
+    <meta property="twitter:description" content="Seth Robles - Mechanical Engineer and Roboticist at MIT">
+    <meta property="twitter:image" content="/static/uploads/og-image.jpg">
+
+    <title>Suction Tank Robot - Seth Robles</title>
+
+    <!-- Favicons for all devices and browsers -->
+    <link rel="icon" type="image/x-icon" href="/static/uploads/personal/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/uploads/personal/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/uploads/personal/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/uploads/personal/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="/static/uploads/personal/favicon_io/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/uploads/personal/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/base.css">
+
+    <!-- MathJax for LaTeX support -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+    <!-- Theme toggle button -->
+    <!-- <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+        <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button> -->
+
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-container">
+        <div class="navbar-brand">
+            <a href="/index.html" class="navbar-logo">
+                Seth Robles
+            </a>
+        </div>
+
+        <button class="navbar-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="navbar-toggle-icon"></span>
+        </button>
+
+        <div class="navbar-menu">
+            <a href="/index.html" class="navbar-link">Home</a>
+            <a href="/projects_index.html" class="navbar-link">Projects</a>
+            <a href="/blog_index.html" class="navbar-link">Blog</a>
+            <a href="/resume.html" class="navbar-link">Resume</a>
+            <a href="/portfolio.html" class="navbar-link">Portfolio</a>
+        </div>
+
+        <!--  -->
+    </div>
+</nav>
+
+<script>
+    // Mobile navigation toggle
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navbarMenu = document.querySelector('.navbar-menu');
+
+    navbarToggle.addEventListener('click', () => {
+        const isExpanded = navbarToggle.getAttribute('aria-expanded') === 'true';
+        navbarToggle.setAttribute('aria-expanded', !isExpanded);
+        navbarMenu.classList.toggle('show');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navbarToggle.contains(e.target) && !navbarMenu.contains(e.target)) {
+            navbarToggle.setAttribute('aria-expanded', 'false');
+            navbarMenu.classList.remove('show');
+        }
+    });
+</script>
+
+    <main class="main-content">
+        
+<article class="entry-detail">
+    <div class="container">
+        <!-- Entry Header -->
+        <header class="entry-header entry-header-centered">
+            <h1 class="entry-title">Suction Tank Robot</h1>
+            
+            <div class="entry-tags">
+                
+                <span class="tag">Prototyping</span>
+                
+                <span class="tag">3D Printing</span>
+                
+                <span class="tag">Arduino</span>
+                
+                <span class="tag">Robotics</span>
+                
+            </div>
+            
+            
+            <div class="entry-github" style="margin-bottom:1rem;">
+                <a href="https://github.com/sethrobles/suction-tank" class="nav-link nav-external" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:0.5em;">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+            
+            
+        </header>
+        <!-- Embedded video (if present) -->
+        
+
+        <!-- Entry Content -->
+        <div class="entry-content">
+            <div class="content-main">
+                
+                <div class="markdown-content">
+                    <p>This project was my attempt to design a <strong>tank-style robot that could climb and hold its position using suction</strong>. The goal was to prototype a platform capable of moving across surfaces where wheels or tracks alone wouldn’t provide enough grip.</p>
+<h2 style="text-align:center;">Key Features</h2>
+
+<ul>
+<li><strong>Tank Drive</strong> – Independent tracks for maneuverability across flat and inclined surfaces.</li>
+<li><strong>Suction Chamber</strong> – A sealed cavity beneath the chassis generated suction, helping the robot adhere to surfaces.</li>
+<li><strong>3D Printed Frame</strong> – Fully FDM-printed components designed for modularity and quick iteration.</li>
+<li><strong>Compact Motor Integration</strong> – Small DC motors embedded in custom housings to drive the tracks efficiently.</li>
+</ul>
+<h2 style="text-align:center;">Prototyping Process</h2>
+
+<p>I worked through several CAD design iterations before building functional prototypes:</p>
+<ol>
+<li><strong>Frame &amp; Tracks</strong> – Modeled and printed tank treads with sprockets to improve traction and alignment.</li>
+<li><strong>Suction System</strong> – Tested different gasket materials and chamber sizes to maximize holding force.</li>
+<li><strong>Assembly &amp; Testing</strong> – Printed parts on an FDM printer, experimenting with modular swaps for track tensioning and suction seals.</li>
+</ol>
+<h2 style="text-align:center;">Takeaways</h2>
+
+<p>Through this process, I learned the importance of <strong>modularity for faster redesigns</strong> and how small design changes, like gear shape and bracing, can have large impacts on performance. This project also raised new questions about the limits of suction-based adhesion, especially on steeper slopes and in potential underwater applications.</p>
+<p>
+<style>
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    overflow: hidden;
+  }
+  .carousel-slide {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+  .carousel-slide.active {
+    display: block;
+  }
+  .carousel img {
+    max-width: 100%;
+    height: auto;
+  }
+  .carousel-controls {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .carousel-button {
+    display: inline-block;
+    background: var(--accent, #3b82f6);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+</style>
+<div class="carousel">
+  
+    <div class="carousel-slide">
+      <img src="/static/uploads/projects/suction-tank/suction_track.png" alt="Suction Cup Track">
+      
+        <div class="carousel-caption">Suction Cup Track</div>
+      
+    </div>
+  
+    <div class="carousel-slide">
+      <img src="/static/uploads/projects/suction-tank/bracing_progression.png" alt="Bracing Progression">
+      
+        <div class="carousel-caption">Bracing Progression</div>
+      
+    </div>
+  
+    <div class="carousel-slide">
+      <img src="/static/uploads/projects/suction-tank/gear_progression.png" alt="Gear Progression">
+      
+        <div class="carousel-caption">Gear Progression</div>
+      
+    </div>
+  
+  <div class="carousel-controls">
+    <button class="carousel-button prev" type="button">&#8592;</button>
+    <button class="carousel-button next" type="button">&#8594;</button>
+  </div>
+</div>
+<script>
+  (function() {
+    var carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(function(carousel) {
+      var slides = carousel.querySelectorAll('.carousel-slide');
+      if (slides.length === 0) return;
+      var current = 0;
+      function showSlide(idx) {
+        slides.forEach(function(slide, i) {
+          slide.classList.toggle('active', i === idx);
+        });
+      }
+      var prevBtn = carousel.querySelector('.carousel-button.prev');
+      var nextBtn = carousel.querySelector('.carousel-button.next');
+      prevBtn.onclick = function() {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+      };
+      nextBtn.onclick = function() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      };
+      showSlide(current);
+    });
+  })();
+</script>
+</p>
+<hr />
+<p>This project combined <strong>mechanical prototyping, CAD iteration, and hands-on testing</strong>. While still in its early stages, the suction tank robot gave me valuable insight into designing for unconventional mobility systems.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Entry Navigation -->
+        <nav class="entry-navigation">
+            <div class="nav-links">
+                
+            </div>
+            <div class="nav-actions">
+                
+                <a href="/projects_index.html" class="btn btn-outline">
+                     Back to Projects
+                </a>
+                
+            </div>
+        </nav>
+    </div>
+</article>
+
+    </main>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Seth Robles</h3>
+                <p class="footer-description">Mechanical Engineer & Roboticist</p>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-subtitle">Connect</h4>
+                <div class="footer-links">
+                    <a href="https://github.com/sethrobles" class="footer-link" target="_blank" rel="noopener noreferrer">
+                        GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/seth-robles-232445254" class="footer-link" target="_blank" rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+                    <a href="mailto:https://sethrobles04@gmail.com" class="footer-link">
+                        Email
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-subtitle">Resources</h4>
+                <div class="footer-links">
+                    <a href="/resume.html" class="footer-link">Resume</a>
+                    <a href="/portfolio.html" class="footer-link">Portfolio</a>
+                    <a href="/projects_index.html" class="footer-link">Projects</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copyright">
+                &copy; 2025 Seth Robles. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+    <!-- JavaScript -->
+    <script src="/static/js/widgets.js"></script>
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to light
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+</html>
