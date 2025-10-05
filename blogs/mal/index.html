@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Download Seth Robles' resume and view professional experience, skills, and qualifications.">
+    <meta name="description" content="A description of my work in the Marine Autonomy Lab, working on Blueboat USVs and Spurdog AUVs.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -19,7 +19,7 @@
     <meta property="twitter:description" content="Seth Robles - Mechanical Engineer and Roboticist at MIT">
     <meta property="twitter:image" content="/static/uploads/og-image.jpg">
 
-    <title>Resume - Seth Robles</title>
+    <title>Marine Autonomy Lab - Seth Robles</title>
 
     <!-- Favicons for all devices and browsers -->
     <link rel="icon" type="image/x-icon" href="/static/uploads/personal/favicon_io/favicon.ico">
@@ -121,69 +121,146 @@
 
     <main class="main-content">
         
-<section class="resume-header">
+<article class="entry-detail">
     <div class="container">
-        <header class="section-header">
-            <h1 class="section-title">Resume</h1>
+        <!-- Entry Header -->
+        <header class="entry-header entry-header-centered">
+            <h1 class="entry-title">Marine Autonomy Lab</h1>
+            
+            <div class="entry-tags">
+                
+                <span class="tag">Robotics</span>
+                
+                <span class="tag">Research</span>
+                
+            </div>
+            
+            
+            
         </header>
+        <!-- Embedded video (if present) -->
+        
+
+        <!-- Entry Content -->
+        <div class="entry-content">
+            <div class="content-main">
+                
+                <div class="markdown-content">
+                    <p>This is a blog talking about joining the <a href="https://oceanai.mit.edu/autonomylab/pmwiki/pmwiki.php?n=Main.OpenHouse">Marine Autonomy Lab website</a>
+. They are a group that are in the intersection of various organizations, including MIT MechE, Seagrant, and WHO-I. My advisor is Ray Turrisri and my PI is Dr. Mike Benjamin.</p>
+<p>I reached out to Ray because of a message I saw mentioning wanting someone to work on robotics and I was super interested. Since joining the lab, my goals are to</p>
+<p>1: Create a battery pack that can be used by <a href="https://oceanai.mit.edu/pavlab/pmwiki/pmwiki.php?n=Proj.Spurdog">Spurdog UAVs</a>. The battery pack should fit within the correct battery space, but use a 12s 3p system for a pack that delivers a nominal ~18V and stores about 135 Wh of energy.</p>
+<p>2: Develop a mounting system for a <a href="https://bluerobotics.com/store/sonars/imaging-sonars/ping360-sonar-r1-rp/">Ping360 Sonar</a> that can be attached to the Blueboats, while being compatiable with other sensors.</p>
+<p>3: Develop a code base that works with MOOS-IVP and ROS2 in order to use the Ping360 alongside with other sensors.</p>
+<h2 id="update-october-3-2025">Update (October 3 2025)</h2>
+<p>I have started on the battery pack and have potentially shorted a few AA batteries, but have a basic system that has 3 different components that can deliver 18 V. We're deciding on specific batteries for the power output we want, but I'm  happy the design is generally working. I'm going to make a few last minute modifications on the design.</p>
+<p>
+<style>
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    overflow: hidden;
+  }
+  .carousel-slide {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+  .carousel-slide.active {
+    display: block;
+  }
+  .carousel img {
+    max-width: 100%;
+    height: auto;
+  }
+  .carousel-controls {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .carousel-button {
+    display: inline-block;
+    background: var(--accent, #3b82f6);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+</style>
+<div class="carousel">
+  
+    <div class="carousel-slide">
+      <img src="/static/uploads/blogs/mal/battery_pack.png" alt="Battery pack prototype">
+      
+        <div class="carousel-caption">Battery pack prototype</div>
+      
     </div>
-</section>
-
-<section class="resume-content">
-    <div class="container">
-        <div class="resume-main">
-            <!-- Resume Section -->
-            <div class="resume-section">
-                <div class="resume-preview">
-                    <div class="pdf-embed">
-                        <iframe src="/static/uploads/Resume.pdf#toolbar=0"
-                                class="pdf-viewer"
-                                title="Seth Robles Resume">
-                            <p>Your browser doesn't support PDFs.
-                            <a href="/static/uploads/Resume.pdf" target="_blank">Download the PDF</a>.</p>
-                        </iframe>
-                    </div>
-                </div>
-
-                <div class="resume-actions">
-                          <a href="/static/uploads/Resume.pdf"
-                              class="btn btn-primary"
-                              download="Seth_Robles_Resume.pdf">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7,10 12,15 17,10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                        Download Resume
-                    </a>
-
-                          <a href="/static/uploads/Resume.pdf"
-                              class="btn btn-outline"
-                              target="_blank">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                            <polyline points="15,3 21,3 21,9"></polyline>
-                            <line x1="10" y1="14" x2="21" y2="3"></line>
-                        </svg>
-                        Open in New Tab
-                    </a>
+  
+    <div class="carousel-slide">
+      <img src="/static/uploads/blogs/mal/battery_pack_cad.png" alt="Battery Pack CAD">
+      
+        <div class="carousel-caption">Battery Pack CAD</div>
+      
+    </div>
+  
+  <div class="carousel-controls">
+    <button class="carousel-button prev" type="button">&#8592;</button>
+    <button class="carousel-button next" type="button">&#8594;</button>
+  </div>
+</div>
+<script>
+  (function() {
+    var carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(function(carousel) {
+      var slides = carousel.querySelectorAll('.carousel-slide');
+      if (slides.length === 0) return;
+      var current = 0;
+      function showSlide(idx) {
+        slides.forEach(function(slide, i) {
+          slide.classList.toggle('active', i === idx);
+        });
+      }
+      var prevBtn = carousel.querySelector('.carousel-button.prev');
+      var nextBtn = carousel.querySelector('.carousel-button.next');
+      prevBtn.onclick = function() {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+      };
+      nextBtn.onclick = function() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      };
+      showSlide(current);
+    });
+  })();
+</script>
+</p>
+<p>On an unrelated note, I've realized that I should try to get these carousel image sizes synced up so they don't vary so much. I'll try to work on this more.</p>
+<p>Thumbnail image sourced from <a href="https://oceanai.mit.edu/autonomylab/pmwiki/pmwiki.php?n=Main.OpenHouse">Marine Autonomy Lab website</a></p>
                 </div>
             </div>
         </div>
 
-        <!-- Additional Info -->
-        <div class="resume-info">
-
-        </div>
-
-        <!-- Navigation -->
-        <div class="resume-navigation">
-            <a href="/portfolio/" class="btn btn-outline">
-                View Portfolio →
-            </a>
-        </div>
+        <!-- Entry Navigation -->
+        <nav class="entry-navigation">
+            <div class="nav-links">
+                
+            </div>
+            <div class="nav-actions">
+                
+                <a href="/blogs/" class="btn btn-outline">
+                     Back to Blog
+                </a>
+                
+            </div>
+        </nav>
     </div>
-</section>
+</article>
 
     </main>
 
