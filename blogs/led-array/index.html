@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Reflections on my first week diving deep into Flask, building small apps, and realizing the joys (and quirks) of web development with Python.">
+    <meta name="description" content="A description of my work to create an LED array with shift registers and MOSFETs in order to better my PCB design skills and have a gift for a friend.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -157,6 +157,9 @@
                 <div class="markdown-content">
                     <p>This is a blog describing the process of setting up my <a href="https://sethrobles.github.io/projects/led-array.html">LED Array project</a>. It was my first time laying out a multi-layer PCB, so much of the process was about learning to work with KiCAD.</p>
 <p>A lot of the inspiration for this project came from <a href="https://www.youtube.com/watch?v=aVUqaB0IMh4">Phil's Lab STM32 help</a>. I learned a lot of the basics of laying out components in a schematic and routing the schematic. I also am very thankful to my friend Miguel, who provided an extraordinary amount of guidance and advice.</p>
+<h2 id="update-october-3-2025">Update (October 3 2025)</h2>
+<p>Now, I have been laying out the PCB for it. As of the time of writing right now (October 1st), it's pretty close to being done. I need to make sure it's all up to standards for ERC/DRC one last time and then I'll send it off to JLCPCB.</p>
+<h2 id="update-september-6-2025">Update (September 6 2025)</h2>
 <p>I'm working on setting up the PCB-layout in KiCAD, which I have never done. There are 32x32 LEDs, so there's a lot of components to lay out and I don't want to do it on my own. Thankfully i have hierarchical sheets set up and am not trying to use replicate layout.</p>
 <p>The schematic process was closely following what followed in the video. However, I decided to use a buck converter instead of the linear regulator for better efficiency and to try doing something new.</p>
 <p>I decided to use hierarchical schematics for the LEDs to simplify the schematic and PCB process. I intended to use <strong>Replicate Layout</strong>, which can be downloaded in KiCAD's 'additional plug-ins manager.'</p>
@@ -228,93 +231,6 @@
       <img src="/static/uploads/blogs/led-array/led-row-schematic.png" alt="LED Row Schematic">
       
         <div class="carousel-caption">LED Row Schematic</div>
-      
-    </div>
-  
-  <div class="carousel-controls">
-    <button class="carousel-button prev" type="button">&#8592;</button>
-    <button class="carousel-button next" type="button">&#8594;</button>
-  </div>
-</div>
-<script>
-  (function() {
-    var carousels = document.querySelectorAll('.carousel');
-    carousels.forEach(function(carousel) {
-      var slides = carousel.querySelectorAll('.carousel-slide');
-      if (slides.length === 0) return;
-      var current = 0;
-      function showSlide(idx) {
-        slides.forEach(function(slide, i) {
-          slide.classList.toggle('active', i === idx);
-        });
-      }
-      var prevBtn = carousel.querySelector('.carousel-button.prev');
-      var nextBtn = carousel.querySelector('.carousel-button.next');
-      prevBtn.onclick = function() {
-        current = (current - 1 + slides.length) % slides.length;
-        showSlide(current);
-      };
-      nextBtn.onclick = function() {
-        current = (current + 1) % slides.length;
-        showSlide(current);
-      };
-      showSlide(current);
-    });
-  })();
-</script>
-</p>
-<p>Now, I have been laying out the PCB for it. As of the time of writing right now (October 1st), it's pretty close to being done. I need to make sure it's all up to standards for ERC/DRC one last time and then I'll send it off to JLCPCB.</p>
-<p>
-<style>
-  .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-    overflow: hidden;
-  }
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    text-align: center;
-  }
-  .carousel-slide.active {
-    display: block;
-  }
-  .carousel img {
-    max-width: 100%;
-    height: auto;
-  }
-  .carousel-controls {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-  .carousel-button {
-    display: inline-block;
-    background: var(--accent, #3b82f6);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-  }
-</style>
-<div class="carousel">
-  
-    <div class="carousel-slide">
-      <img src="/static/uploads/blogs/led-array/led-pcb.png" alt="LED Schematic">
-      
-        <div class="carousel-caption">LED PCB</div>
-      
-    </div>
-  
-    <div class="carousel-slide">
-      <img src="/static/uploads/blogs/led-array/led-pcb-3d.png" alt="LED Group Schematic">
-      
-        <div class="carousel-caption">LED PCB 3D View Schematic</div>
       
     </div>
   

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A month spent in Italy, teaching high school students about physics, electronics, web development, and machine learning.">
+    <meta name="description" content="Planning events to foster community within Alumni from the Jack Kent Cooke Foundation.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -19,7 +19,7 @@
     <meta property="twitter:description" content="Seth Robles - Mechanical Engineer and Roboticist at MIT">
     <meta property="twitter:image" content="/static/uploads/og-image.jpg">
 
-    <title>GTL Italy - Seth Robles</title>
+    <title>Jack Kent Cooke Event Planning - Seth Robles</title>
 
     <!-- Favicons for all devices and browsers -->
     <link rel="icon" type="image/x-icon" href="/static/uploads/personal/favicon_io/favicon.ico">
@@ -125,27 +125,17 @@
     <div class="container">
         <!-- Entry Header -->
         <header class="entry-header entry-header-centered">
-            <h1 class="entry-title">GTL Italy</h1>
+            <h1 class="entry-title">Jack Kent Cooke Event Planning</h1>
             
             <div class="entry-tags">
                 
-                <span class="tag">GTL</span>
+                <span class="tag">Community</span>
                 
-                <span class="tag">Travel</span>
-                
-                <span class="tag">Foreign Languages</span>
-                
-                <span class="tag">Teaching</span>
+                <span class="tag">Logistics</span>
                 
             </div>
             
             
-            
-            <div class="entry-hero">
-                <img src="/static/uploads/blogs/gtl-italy/gtl-italy-thumb.jpeg"
-                     alt="GTL Italy"
-                     class="entry-hero-image">
-            </div>
             
         </header>
         <!-- Embedded video (if present) -->
@@ -156,21 +146,99 @@
             <div class="content-main">
                 
                 <div class="markdown-content">
-                    <!-- # This is the description -->
-<p>Over <a href="https://elo.mit.edu/iap/">IAP</a>, I participated in MIT's Italy GTL program, and was able to travel to Pordenone, Italy and teach high schools students.</p>
-<p>I taught the following classes:</p>
-<ul>
-<li>Algebra-Based Mechanics (2)</li>
-<li>Heat Transfer (2)</li>
-<li>Circuits</li>
-<li>Electricity &amp; Magnetism</li>
-<li>Intro to Web Development with HTML and CSS</li>
-<li>Machine Learning</li>
-</ul>
-<p>Classes had 15-25 students with various levels of English-speaking ability. While teaching was primarily done in English, I also used my Spanish and Italian when students struggled to understand a concept.</p>
-<p>I was responsible for developing small problem sets that engaged student content. This involved me preparing 1-hour lectures, creating psets with LaTEX, and providing additional instruction materials or solutions.</p>
-<p>I particularly appreciated this opportunity because of the ability to return to Italy. I lived there when I was younger, but now had the opportunity to do so as a host. It was an invaluable opportunity to learn more about Italian culture and myself.</p>
-<p><img alt="Teaching demo" src="/static/uploads/blogs/gtl-italy/gtl-experiment.jpeg" /></p>
+                    <!-- <h2 style="text-align:center;"></h2> -->
+
+<p>In highschool, I was awarded the <a href="https://www.jkcf.org/our-scholarships/">Jack Kent Cooke Scholarships</a>, which in my opinion is one of (if not the) best scholarship someone could win. For those who qualify, the scholarship provides many benefits, including alumni connections, community building, and more.</p>
+<p>This blog details some of these events.</p>
+<h2 id="original-post-october-8-2025-recap-of-past-events">Original Post (October 8 2025) - Recap of Past Events</h2>
+<p>Last year, I planned a few events for local members of the Jack Kent Cooke community. The first was an Acai/Boba outing, where 10 of us went out to get Boba and Acai and upperclassmen were able to share advice to younger students. The second activity was a volunteer event, with 4 of us (it's so much harder to get people to show up for volunteer work) helping out at the Red Cross Food Pantry and then ordering Panda Express and enjoying a meal together after the fact.</p>
+<p>Both events were amazing, letting me connect with members on campus that I may not have met otherwise, and allowing us to come together to help out at the Red Cross.</p>
+<p>
+<style>
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    overflow: hidden;
+  }
+  .carousel-slide {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+  .carousel-slide.active {
+    display: block;
+  }
+  .carousel img {
+    max-width: 100%;
+    height: auto;
+  }
+  .carousel-controls {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .carousel-button {
+    display: inline-block;
+    background: var(--accent, #3b82f6);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+</style>
+<div class="carousel">
+  
+    <div class="carousel-slide">
+      <img src="/static/uploads/blogs/jkc_planning/jkc_acai.jpeg" alt="Acai with JKC Scholars from MIT and Harvard">
+      
+        <div class="carousel-caption">Acai with JKC Scholars from MIT and Harvard</div>
+      
+    </div>
+  
+    <div class="carousel-slide">
+      <img src="/static/uploads/blogs/jkc_planning/jkc_red_cross.jpeg" alt="Volunteering at the Red Cross with Volunteers from MIT and Harvard">
+      
+        <div class="carousel-caption">Volunteering at the Red Cross with Volunteers from MIT and Harvard</div>
+      
+    </div>
+  
+  <div class="carousel-controls">
+    <button class="carousel-button prev" type="button">&#8592;</button>
+    <button class="carousel-button next" type="button">&#8594;</button>
+  </div>
+</div>
+<script>
+  (function() {
+    var carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(function(carousel) {
+      var slides = carousel.querySelectorAll('.carousel-slide');
+      if (slides.length === 0) return;
+      var current = 0;
+      function showSlide(idx) {
+        slides.forEach(function(slide, i) {
+          slide.classList.toggle('active', i === idx);
+        });
+      }
+      var prevBtn = carousel.querySelector('.carousel-button.prev');
+      var nextBtn = carousel.querySelector('.carousel-button.next');
+      prevBtn.onclick = function() {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+      };
+      nextBtn.onclick = function() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      };
+      showSlide(current);
+    });
+  })();
+</script>
+</p>
                 </div>
             </div>
         </div>
