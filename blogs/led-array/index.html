@@ -159,6 +159,8 @@
 <p>A lot of the inspiration for this project came from <a href="https://www.youtube.com/watch?v=aVUqaB0IMh4">Phil's Lab STM32 help</a>. I learned a lot of the basics of laying out components in a schematic and routing the schematic. I also am very thankful to my friend Miguel, who provided an extraordinary amount of guidance and advice.</p>
 <h2 id="update-october-19-2025">Update (October 19 2025)</h2>
 <p>Yesterday I though tI was done, but I was getting some errors with LCSC fields and compatibility when I uploaded it to JLCPCB. I spent a few hours earlier working more on the LED Array and it's currently in JLCPCB ready to order. I'm doing a final look-over before I order it. Honestly, I'm really excited to order the PCB, but a little worried that it won't come out as well as I want it to. I'll update this hopefully later tonight with order information. I had to pivot one of the footprints so that it would work better with JLCPCB, but it's making my 3D viewer look a little wonky.</p>
+<p>I am ordering the PCB and it looks to be $81.18 for the product (5 PCBs, 2 Assembled), then $39.43 for shipping and $44.65 for custom duties and taxes. The grand total is almost $170. This is kind of insane for a not crazy board. I'm going to look more carefully at this cost before I order actually. I don't think it needs to be this much. I'm going to ask the MITERS discord for thoughts before I buy.</p>
+<p>Okay, it looks like I'll be able to get it down to $154.21 with coupons. This is lowkey still a lot though, so I'm going to wait until a different day to order. I would really prefer not to spend another $150 if I did something wrong, so I want to verify everything if possible.</p>
 <p>
 <style>
   .carousel {
@@ -255,8 +257,8 @@
 <h2 id="update-october-18-2025">Update (October 18 2025)</h2>
 <p>I am working on the Buck Converter right now. While looking through the data sheet for the TPS54331DR, I realized that there is a link to TI's Power Converter. It basically makes a potential schematic for the use case that you want. As such, I put an output ~ 2 A (overestimate for what we need), with an input voltage of 4.4 to 5.4 V that would output 3.3V.</p>
 <p>They recommended a voltage divider into VSENSE with Rfbt = 10.2 kOhm and Rfbb = 3.24 kOhm. This is honestly a little ridiculous, so I'm finding a better combination.</p>
-<p>V_sense needs to = .8V. I need V+out = V_ref * (1 + (R_top) / R_bottom). This means that I need R_top / R_bototm to equal 3.125.</p>
-<p>They recommend resistor values that actually are higher than this, with 10.2 kOhma nd 3.24 kOhm which is a ratio of 3.148. This might be something I should consider more.</p>
+<p>V_sense needs to = .8V. I need V+out = V_ref * (1 + (R_top) / R_bottom). This means that I need R_top / R_bottom to equal 3.125.</p>
+<p>They recommend resistor values that actually are higher than this, with 10.2 kOhms and 3.24 kOhm which is a ratio of 3.148. This might be something I should consider more.</p>
 <p>I'm going to ignore this, stick with the .8V. I'm going to stick with trying to get 3.125. I'll have a 10 kOhm resistor on top and then two resistors (2 kOHm and 1.2 kOhm) in series to get an equivalent resistance equal to 3.2 kOhm. This will give me the desired ratio of 3.125.</p>
 <p>Okay, I've gotten all the new parts laid out and everything. I think it's pretty ready right now. I'm going to have a friend with PCB design experience look over it.</p>
 <h2 id="update-october-12-2025">Update (October 12 2025)</h2>
