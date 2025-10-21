@@ -148,10 +148,20 @@
                 <div class="markdown-content">
                     <p>This is a blog talking about joining the <a href="https://oceanai.mit.edu/autonomylab/pmwiki/pmwiki.php?n=Main.OpenHouse">Marine Autonomy Lab website</a>
 . They are a group that are in the intersection of various organizations, including MIT MechE, Seagrant, and WHO-I. My advisor is Ray Turrisri and my PI is Dr. Mike Benjamin.</p>
-<p>I reached out to Ray because of a message I saw mentioning wanting someone to work on robotics and I was super interested. Since joining the lab, my goals are to</p>
+<p>I reached out to Ray because of a message I saw mentioning wanting someone to work on robotics and I was super interested. Since joining the lab, I have 3 main goals.</p>
 <p>1: Create a battery pack that can be used by <a href="https://oceanai.mit.edu/pavlab/pmwiki/pmwiki.php?n=Proj.Spurdog">Spurdog UAVs</a>. The battery pack should fit within the correct battery space, but use a 12s 3p system for a pack that delivers a nominal ~18V and stores about 135 Wh of energy.</p>
 <p>2: Develop a mounting system for a <a href="https://bluerobotics.com/store/sonars/imaging-sonars/ping360-sonar-r1-rp/">Ping360 Sonar</a> that can be attached to the Blueboats, while being compatiable with other sensors.</p>
 <p>3: Develop a code base that works with MOOS-IVP and ROS2 in order to use the Ping360 alongside with other sensors.</p>
+<h2 id="update-october-20-2025">Update (October 20 2025)</h2>
+<p>I just checked it out and it worked. I'm not sure what the problem with the continuity was, but I'm getting good responses in pingviewer and in my cpp applet. This is fantastic. I should probably do other work, but I'll finish terminating this cable today. I also want to go waterjet the component for attaching the ping360 to the Blueboats later today.</p>
+<p>I am now realizing that the cable jacket component is pretty far from the head connector. This was done intentionally to make sure that I had enough space in case I needed to redo the soldering, but it seems it worked against me. I'm going to have to redo the soldering. Which is unideal, but I think it'll go smoother this time for sure.</p>
+<p>It did not go smoother this time. I while have to tray again later this week. I was, however, able to go and get the mounting component for the BlueBoats machined. I still need to tap the holes, but that might be a later Seth problem. Today, I need to work more on a robotic manipulation pset.</p>
+<p align="center">
+  <img src="/static/uploads/blogs/mal/mounting_sandblasted.png" alt="Waterjetted and Sandblasted component for mounting sensors on BlueBoats" style="width:250px;">
+  <br>
+  <span style="font-size:0.95em; color: #666; font-style:italic;">Waterjetted and Sandblasted component for mounting sensors on BlueBoats</span>
+</p>
+
 <h2 id="update-october-19-2025">Update (October 19 2025)</h2>
 <p>So I haven't updated this in a while. I still need to finalize the ping360 progress, but it seems that I have the basic code that I need. I need to look a little more into MOOS-IVP and the data transfer object (DTO) that I need for that.</p>
 <p>Today, I went to go work on the ping360 wiring, changing from the JST 4-wire and separate power cables into a 6 wire hybrid cable with <a href="https://www.bluetrailengineering.com/product-page/cable-termination-kit">Blue Trail Engineering's Cobalt Series Termination Kit</a>. It turns out that soldering these wires actually really sucks. The power and ground cables were pretty easy to do, but the hybrid wires were a pain in the neck and took a lot of work. I finally got them to seemingly work, but I'm worried there's a short. It seemed that there was a continuity and I decided that I would work on other things for the day and work on it later.</p>
