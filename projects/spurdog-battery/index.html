@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A description of my work in the Marine Autonomy Lab, working on Blueboat USVs and Spurdog AUVs.">
+    <meta name="description" content="An Arduino-powered Library Tracker tool built for an elementary school librarian to help manage student tasks with LEDs, buttons, and a control board.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -19,7 +19,7 @@
     <meta property="twitter:description" content="Seth Robles - Mechanical Engineer and Roboticist at MIT">
     <meta property="twitter:image" content="/static/uploads/og-image.jpg">
 
-    <title>Marine Autonomy Lab - Seth Robles</title>
+    <title>Spurdog Battery - Seth Robles</title>
 
     <!-- Favicons for all devices and browsers -->
     <link rel="icon" type="image/x-icon" href="/static/uploads/personal/favicon_io/favicon.ico">
@@ -125,13 +125,15 @@
     <div class="container">
         <!-- Entry Header -->
         <header class="entry-header entry-header-centered">
-            <h1 class="entry-title">Marine Autonomy Lab</h1>
+            <h1 class="entry-title">Spurdog Battery</h1>
             
             <div class="entry-tags">
                 
+                <span class="tag">Electronics</span>
+                
                 <span class="tag">Robotics</span>
                 
-                <span class="tag">Research</span>
+                <span class="tag">Hardware</span>
                 
             </div>
             
@@ -146,36 +148,11 @@
             <div class="content-main">
                 
                 <div class="markdown-content">
-                    <p>This is a blog talking about joining the <a href="https://oceanai.mit.edu/autonomylab/pmwiki/pmwiki.php?n=Main.OpenHouse">Marine Autonomy Lab website</a>
-. They are a group that are in the intersection of various organizations, including MIT MechE, Seagrant, and WHO-I. My advisor is Ray Turrisri and my PI is Dr. Mike Benjamin.</p>
-<p>I reached out to Ray because of a message I saw mentioning wanting someone to work on robotics and I was super interested. Since joining the lab, I have 3 main goals.</p>
-<p>1: Create a battery pack that can be used by <a href="https://oceanai.mit.edu/pavlab/pmwiki/pmwiki.php?n=Proj.Spurdog">Spurdog UAVs</a>. The battery pack should fit within the correct battery space, but use a 12s 3p system for a pack that delivers a nominal ~18V and stores about 135 Wh of energy.</p>
-<p>2: Develop a mounting system for a <a href="https://bluerobotics.com/store/sonars/imaging-sonars/ping360-sonar-r1-rp/">Ping360 Sonar</a> that can be attached to the Blueboats, while being compatiable with other sensors.</p>
-<p>3: Develop a code base that works with MOOS-IVP and ROS2 in order to use the Ping360 alongside with other sensors.</p>
-<h2 id="update-october-23-2025">Update (October 23 2025)</h2>
-<p>I have tapped the holes or cut the 80 20 aluminum rails yet, but the Ping360 code is now working with automatically scanning in ranges. I do need to figure out the Device Transfer Object (DTO) that will be used to send the distance measurements into the MOOS-IVP workspace. This will likely include some amount of searching through MOOS-IVP documentation and take a minute to get through, so this may take a while. I did have some struggles with the connection and the O-Ring.</p>
-<p>Also, I have realized that the battery pack does not fully fit the space requirements set by the payload spacing on the Spurdogs UUV. Well, this was realized a while ago, but not a major constraint early-on, but now I want to design better for the Spacing. This might be a little difficult because the space includes 156.5 mm and batteries are nominally 50.5 mm in length. This means that I have around 6 mm of free space to work with. Given the necessary battery-tabs, this might be a little difficult. I am considering turning the batteries on their side and routing different. This might look weird, but there will be less wasted space with this likely.</p>
-<h2 id="update-october-21-2025">Update (October 21 2025)</h2>
-<p>I have basically finished (?) with the cable termination. I'm waiting on the epoxy to dry right now and then will test the connection and attach the O-ring. I will also potentially be going to the Sailing Pavilion later to get a measurement for how long the 80 20 bar needs to be that will hold the Ping360 under the Blueboats. I'll go to the Deep probably on Friday to cut it. I also hope to have finished the code that sets up continuous scanning from the Ping360. I'll need to figure out more information about the calibration, but I think the code is mostly set up.</p>
-<p>I still need to tap the holes on the aluminum connector for the Ping360, so maybe I'll do that all on Thursday morning.</p>
-<h2 id="update-october-20-2025">Update (October 20 2025)</h2>
-<p>I just checked it out and it worked. I'm not sure what the problem with the continuity was, but I'm getting good responses in pingviewer and in my cpp applet. This is fantastic. I should probably do other work, but I'll finish terminating this cable today. I also want to go waterjet the component for attaching the ping360 to the Blueboats later today.</p>
-<p>I am now realizing that the cable jacket component is pretty far from the head connector. This was done intentionally to make sure that I had enough space in case I needed to redo the soldering, but it seems it worked against me. I'm going to have to redo the soldering. Which is unideal, but I think it'll go smoother this time for sure.</p>
-<p>It did not go smoother this time. I while have to tray again later this week. I was, however, able to go and get the mounting component for the BlueBoats machined. I still need to tap the holes, but that might be a later Seth problem. Today, I need to work more on a robotic manipulation pset.</p>
-<p align="center">
-  <img src="/static/uploads/blogs/mal/mounting_sandblasted.png" alt="Waterjetted and Sandblasted component for mounting sensors on BlueBoats" style="width:250px;">
-  <br>
-  <span style="font-size:0.95em; color: #666; font-style:italic;">Waterjetted and Sandblasted component for mounting sensors on BlueBoats</span>
-</p>
-
-<h2 id="update-october-19-2025">Update (October 19 2025)</h2>
-<p>So I haven't updated this in a while. I still need to finalize the ping360 progress, but it seems that I have the basic code that I need. I need to look a little more into MOOS-IVP and the data transfer object (DTO) that I need for that.</p>
-<p>Today, I went to go work on the ping360 wiring, changing from the JST 4-wire and separate power cables into a 6 wire hybrid cable with <a href="https://www.bluetrailengineering.com/product-page/cable-termination-kit">Blue Trail Engineering's Cobalt Series Termination Kit</a>. It turns out that soldering these wires actually really sucks. The power and ground cables were pretty easy to do, but the hybrid wires were a pain in the neck and took a lot of work. I finally got them to seemingly work, but I'm worried there's a short. It seemed that there was a continuity and I decided that I would work on other things for the day and work on it later.</p>
-<p>The battery pack is working as a 12s3p system, and has a XT-90 connector loosely hanging on. I didn't formalize the setup because I still need to shrink the packaging a little. It might be a little difficult with the spacing I have (I have around 3 cm of space between the 3 stacked AA batteries and the wall constraints). I'm going to try working on the CAD more probably on Wednesday to have a better offset in general, but I'll have to think more about the vertical fit.</p>
-<h2 id="update-october-7-2025">Update (October 7 2025)</h2>
-<p>The battery pack is basically up, so I'm going to pivot and focus on the Ping360 and getting it set up. I have been able to set up communication in the past, but right now, I'm working on setting up the c++ for its communications. The code used for most of the lab infrastructure is used in-house to decrease reliance on foreign libraries. There is a rationale for it, especially since the software isn't that difficult to code, but it might take a second before I have the pingsensor class fully up and running.</p>
-<h2 id="update-october-3-2025">Update (October 3 2025)</h2>
-<p>I have started on the battery pack and have potentially shorted a few AA batteries, but have a basic system that has 3 different components that can deliver 18 V. We're deciding on specific batteries for the power output we want, but I'm  happy the design is generally working. I'm going to make a few last minute modifications on the design.</p>
+                    <p>As part of my work in the Marine Autonomy Lab, I was tasked with building a 12s3p AA battery pack that would work with the Lab's <a href="https://oceanai.mit.edu/pavlab/pmwiki/pmwiki.php?n=Proj.Spurdog">Spurdog UAVs</a>. The goal was to create a 3D-printable and compact pack that could deliver roughly 18 V nominal and store around 135 Wh of energy, while still fitting within the limited payload space on the vehicle.</p>
+<p>This ended up being trickier than expected. The spacing tolerance was only a few millimeters, so I had to rethink how to orient and connect the batteries. Initially, it was recommended that I use 3 layers of 12 batteries working in series. Based on battery constraints, however, I think this would be rather impractical.</p>
+<p>After thinking and advice from friends, I decided that a flashlight-like solution with stacking batteries that were in series was more practical, both for space and for installation on the machine. I have developed a working prototype, however it does not meet the space constraint.</p>
+<p>In the future, I am considering changing the design so that they are stacked on their side, which will help with the overall height. This may make installation of nickel tabs more difficult, but likely will solve the vertical height constraint.</p>
+<p>This has been put lower on the priority now that I have a working concept, so I am working mostly on writing code for the Ping360 Sonar to integrate it with the lab's Spurdog UUVs and BlueBoats.</p>
 <p>
 <style>
   .carousel {
@@ -262,8 +239,6 @@
   })();
 </script>
 </p>
-<p>On an unrelated note, I've realized that I should try to get these carousel image sizes synced up so they don't vary so much. I'll try to work on this more.</p>
-<p>Thumbnail image sourced from <a href="https://oceanai.mit.edu/autonomylab/pmwiki/pmwiki.php?n=Main.OpenHouse">Marine Autonomy Lab website</a></p>
                 </div>
             </div>
         </div>
@@ -275,8 +250,8 @@
             </div>
             <div class="nav-actions">
                 
-                <a href="/blogs/" class="btn btn-outline">
-                     Back to Blog
+                <a href="/projects/" class="btn btn-outline">
+                     Back to Projects
                 </a>
                 
             </div>

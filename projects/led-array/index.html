@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A description of my work to create an LED array with shift registers and MOSFETs in order to better my PCB design skills and have a gift for a friend.">
+    <meta name="description" content="A 4-layer PCB with an STM32 microcontroller using shift-registers and MOSFETs with a 1/8 scan.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -19,7 +19,7 @@
     <meta property="twitter:description" content="Seth Robles - Mechanical Engineer and Roboticist at MIT">
     <meta property="twitter:image" content="/static/uploads/og-image.jpg">
 
-    <title>LED Array Project Blog - Seth Robles</title>
+    <title>LED Array PCB - Seth Robles</title>
 
     <!-- Favicons for all devices and browsers -->
     <link rel="icon" type="image/x-icon" href="/static/uploads/personal/favicon_io/favicon.ico">
@@ -125,7 +125,7 @@
     <div class="container">
         <!-- Entry Header -->
         <header class="entry-header entry-header-centered">
-            <h1 class="entry-title">LED Array Project Blog</h1>
+            <h1 class="entry-title">LED Array PCB</h1>
             
             <div class="entry-tags">
                 
@@ -155,12 +155,11 @@
             <div class="content-main">
                 
                 <div class="markdown-content">
-                    <p>This is a blog describing the process of setting up my <a href="../../projects/led-array">LED Array project</a>. It was my first time laying out a multi-layer PCB, so much of the process was about learning to work with KiCAD.</p>
-<p>A lot of the inspiration for this project came from <a href="https://www.youtube.com/watch?v=aVUqaB0IMh4">Phil's Lab STM32 help</a>. I learned a lot of the basics of laying out components in a schematic and routing the schematic. I also am very thankful to my friend Miguel, who provided an extraordinary amount of guidance and advice.</p>
-<h2 id="update-october-19-2025">Update (October 19 2025)</h2>
-<p>Yesterday I thought I was done, but I was getting some errors with LCSC fields and compatibility when I uploaded it to JLCPCB. I spent a few hours earlier working more on the LED Array and it's currently in JLCPCB ready to order. I'm doing a final look-over before I order it. Honestly, I'm really excited to order the PCB, but a little worried that it won't come out as well as I want it to. I'll update this hopefully later tonight with order information. I had to pivot one of the footprints so that it would work better with JLCPCB, but it's making my 3D viewer look a little wonky.</p>
-<p>I am ordering the PCB and it looks to be $81.18 for the product (5 PCBs, 2 Assembled), then $39.43 for shipping and $44.65 for custom duties and taxes. The grand total is almost $170. This is kind of insane for a not crazy board. I'm going to look more carefully at this cost before I order actually. I don't think it needs to be this much. I'm going to ask the MITERS discord for thoughts before I buy.</p>
-<p>Okay, it looks like I'll be able to get it down to $154.21 with coupons. This is lowkey still a lot though, so I'm going to wait until a different day to order. I would really prefer not to spend another $150 if I did something wrong, so I want to verify everything if possible.</p>
+                    <p>This is an red LED array (32x32) design in KiCAD and will eventually ordered from JLCPCB. It is a 4-layer PCB board is using a STM32 controller, 16 shift regiseters, and 8 N-fets. I have a <a href="../../blogs/led-array/">corresponding blog post</a> where I go more in depth about the design process. <strong>The project is under active development, and new features are being added frequently.</strong></p>
+<p>Thank you to my friend Miguel for providing a lot of guidance on this project.</p>
+<p>This project started as my first attempt at designing a PCB in KiCad — a 32×32 LED array driven by shift registers and MOSFETs, powered through a buck converter. I used hierarchical sheets to keep things organized, grouping the LEDs into modules and rows to make routing manageable.</p>
+<p>A lot of time went into debugging small design choices: fixing LCSC part compatibility, redoing resistor ratios for the buck converter, and making sure the whole design passed ERC and DRC checks. I also learned how much manufacturing details can affect cost — my first JLCPCB quote came out to nearly $170 (half from customs and shipping), which I managed to cut down with coupons and advice from the MITERS Discord.</p>
+<p>The final board includes sixteen shift registers controlling over a thousand LEDs, with each section modularized for testing and reuse. Even though it took a lot of iteration, it was a huge step up in understanding how electrical design, layout, and fabrication all come together — and I can’t wait to see it light up when it arrives.</p>
 <p>
 <style>
   .carousel {
@@ -219,103 +218,6 @@
       <img src="/static/uploads/blogs/led-array/led-pcb-3d.png" alt="LED Final 3D View">
       
         <div class="carousel-caption">LED Final 3D View</div>
-      
-    </div>
-  
-  <div class="carousel-controls">
-    <button class="carousel-button prev" type="button">&#8592;</button>
-    <button class="carousel-button next" type="button">&#8594;</button>
-  </div>
-</div>
-<script>
-  (function() {
-    var carousels = document.querySelectorAll('.carousel');
-    carousels.forEach(function(carousel) {
-      var slides = carousel.querySelectorAll('.carousel-slide');
-      if (slides.length === 0) return;
-      var current = 0;
-      function showSlide(idx) {
-        slides.forEach(function(slide, i) {
-          slide.classList.toggle('active', i === idx);
-        });
-      }
-      var prevBtn = carousel.querySelector('.carousel-button.prev');
-      var nextBtn = carousel.querySelector('.carousel-button.next');
-      prevBtn.onclick = function() {
-        current = (current - 1 + slides.length) % slides.length;
-        showSlide(current);
-      };
-      nextBtn.onclick = function() {
-        current = (current + 1) % slides.length;
-        showSlide(current);
-      };
-      showSlide(current);
-    });
-  })();
-</script>
-</p>
-<h2 id="update-october-18-2025">Update (October 18 2025)</h2>
-<p>I am working on the Buck Converter right now. While looking through the data sheet for the TPS54331DR, I realized that there is a link to TI's Power Converter. It basically makes a potential schematic for the use case that you want. As such, I put an output ~ 2 A (overestimate for what we need), with an input voltage of 4.4 to 5.4 V that would output 3.3V.</p>
-<p>They recommended a voltage divider into VSENSE with Rfbt = 10.2 kOhm and Rfbb = 3.24 kOhm. This is honestly a little ridiculous, so I'm finding a better combination.</p>
-<p>V_sense needs to = .8V. I need V+out = V_ref * (1 + (R_top) / R_bottom). This means that I need R_top / R_bottom to equal 3.125.</p>
-<p>They recommend resistor values that actually are higher than this, with 10.2 kOhms and 3.24 kOhm which is a ratio of 3.148. This might be something I should consider more.</p>
-<p>I'm going to ignore this, stick with the .8V. I'm going to stick with trying to get 3.125. I'll have a 10 kOhm resistor on top and then two resistors (2 kOHm and 1.2 kOhm) in series to get an equivalent resistance equal to 3.2 kOhm. This will give me the desired ratio of 3.125.</p>
-<p>Okay, I've gotten all the new parts laid out and everything. I think it's pretty ready right now. I'm going to have a friend with PCB design experience look over it.</p>
-<h2 id="update-october-12-2025">Update (October 12 2025)</h2>
-<p>So it was not that easy. It was up to standards for ERC and DRC. I have realized though, that some of my initial decisions were just off. I want to verify my design before I spend money on it, so I'm going back, making sure my buck regulator is correctly set up (I'm almost now sure it is not) and making sure that I'm getting all of the basics. I will be doing some basic calculations as well just to be sure it's working when it arrives here. I'm setting a tentative buy date by Halloween.</p>
-<h2 id="update-october-3-2025">Update (October 3 2025)</h2>
-<p>Now, I have been laying out the PCB for it. As of the time of writing right now (October 1st), it's pretty close to being done. I need to make sure it's all up to standards for ERC/DRC one last time and then I'll send it off to JLCPCB.</p>
-<h2 id="update-september-6-2025">Update (September 6 2025)</h2>
-<p>I'm working on setting up the PCB-layout in KiCAD, which I have never done. There are 32x32 LEDs, so there's a lot of components to lay out and I don't want to do it on my own. Thankfully i have hierarchical sheets set up and am not trying to use replicate layout.</p>
-<p>The schematic process was closely following what followed in the video. However, I decided to use a buck converter instead of the linear regulator for better efficiency and to try doing something new.</p>
-<p>I decided to use hierarchical schematics for the LEDs to simplify the schematic and PCB process. I intended to use <strong>Replicate Layout</strong>, which can be downloaded in KiCAD's 'additional plug-ins manager.'</p>
-<p>I was initially struggling to use it, but after a while of playing around with hiearchical sheets, I got the hang of it. Below are the current schematics that I'm hoping stick around.</p>
-<p>The PCB is organized into a few sections: the microcontroller, a buck converter, serial pins for testing, N-MOSFETs, shift registers, and N-MOSFETs. The shift registers and LEDs are within hiearchical sheets, so they are not visible from the high level-schematic.</p>
-<p>The structure can be seen in the photos below. Basically, there are 8 LEDs in an "LED row" that all are attached to the same pin off a single shift register. There are 8 such rows tied to each shift register. Each of these shift registers and 64 LEDs makes up an "LED Module." 4 LED Modules make up an "LED Group." These were mostly made for convenience when laying out the PCB. There are 4 shift registers in an LED module and 4 LED moduels in an LED Gropu, for a total of 16 shift registers and 1032 LEDs.</p>
-<p>
-<style>
-  .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-    overflow: hidden;
-  }
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    text-align: center;
-  }
-  .carousel-slide.active {
-    display: block;
-  }
-  .carousel img {
-    max-width: 100%;
-    height: auto;
-  }
-  .carousel-controls {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-  .carousel-button {
-    display: inline-block;
-    background: var(--accent, #3b82f6);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-  }
-</style>
-<div class="carousel">
-  
-    <div class="carousel-slide">
-      <img src="/static/uploads/blogs/led-array/led-schematic.png" alt="LED Schematic">
-      
-        <div class="carousel-caption">LED Schematic</div>
       
     </div>
   
@@ -383,8 +285,8 @@
             </div>
             <div class="nav-actions">
                 
-                <a href="/blogs/" class="btn btn-outline">
-                     Back to Blog
+                <a href="/projects/" class="btn btn-outline">
+                     Back to Projects
                 </a>
                 
             </div>
