@@ -157,10 +157,99 @@
                 <div class="markdown-content">
                     <p>This is a blog describing the process of setting up my <a href="../../projects/led-array">LED Array project</a>. It was my first time laying out a multi-layer PCB, so much of the process was about learning to work with KiCAD.</p>
 <p>A lot of the inspiration for this project came from <a href="https://www.youtube.com/watch?v=aVUqaB0IMh4">Phil's Lab STM32 help</a>. I learned a lot of the basics of laying out components in a schematic and routing the schematic. I also am very thankful to my friend Miguel, who provided an extraordinary amount of guidance and advice.</p>
+<h2 id="update-november-15-2025">Update (November 15 2025)</h2>
+<p>I have not updated my website pretty much at all this past month. I've once again gotten hosed by my classes. This weekend though, I have some amount of spare time that is getting devoted to finishing up the LED Board project. I ordered it around October 31s and it was delivered to me on November 7th. A lot of time last week was devoted to my UROP, since I need to get the Ping360 on the boat this upcoming week. Also my classes are piling up and I'm realizing I'm not really getting more time this semester. I want to finish this up so I can focus on my MITERS project with Daniel.</p>
+<p>Anyways, now I'm working my way through STM32IDE and trying to set up the firmware so I can flash the STM32 microcontroller. After getting some help finding an ST-Link to flash the STM32, I determined that it did work. I first had a blink code set up. I first had it powered off of the ST-Link, to confirm the STM32 was properly routed (not a huge concern, but somewhat big for my first time designing a PCB). After that, I looked at the voltage ripple on an oscilloscope, which showed a ripple of around 20 mV. I apparently didn't load the image on my thumb drive how i thought I had, so this will be uploaded later.</p>
+<p>
+<style>
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    overflow: hidden;
+  }
+  .carousel-slide {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+  .carousel-slide.active {
+    display: block;
+  }
+  .carousel img {
+    max-width: 100%;
+    height: auto;
+  }
+  .carousel-controls {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .carousel-button {
+    display: inline-block;
+    background: var(--accent, #3b82f6);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+</style>
+<div class="carousel">
+  
+    <div class="carousel-slide">
+      <img src="/static/uploads/blogs/led-array/laid-out-boards.png" alt="PCBs and Assembled PCBs ordered from JLC">
+      
+        <div class="carousel-caption">PCBs and Assembled PCBs ordered from JLC</div>
+      
+    </div>
+  
+    <div class="carousel-slide">
+      <img src="/static/uploads/blogs/led-array/lightup_led.jpeg" alt="Initial testing for LEDs">
+      
+        <div class="carousel-caption">Initial testing for LEDs</div>
+      
+    </div>
+  
+  <div class="carousel-controls">
+    <button class="carousel-button prev" type="button">&#8592;</button>
+    <button class="carousel-button next" type="button">&#8594;</button>
+  </div>
+</div>
+<script>
+  (function() {
+    var carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(function(carousel) {
+      var slides = carousel.querySelectorAll('.carousel-slide');
+      if (slides.length === 0) return;
+      var current = 0;
+      function showSlide(idx) {
+        slides.forEach(function(slide, i) {
+          slide.classList.toggle('active', i === idx);
+        });
+      }
+      var prevBtn = carousel.querySelector('.carousel-button.prev');
+      var nextBtn = carousel.querySelector('.carousel-button.next');
+      prevBtn.onclick = function() {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+      };
+      nextBtn.onclick = function() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      };
+      showSlide(current);
+    });
+  })();
+</script>
+</p>
 <h2 id="update-october-19-2025">Update (October 19 2025)</h2>
 <p>Yesterday I thought I was done, but I was getting some errors with LCSC fields and compatibility when I uploaded it to JLCPCB. I spent a few hours earlier working more on the LED Array and it's currently in JLCPCB ready to order. I'm doing a final look-over before I order it. Honestly, I'm really excited to order the PCB, but a little worried that it won't come out as well as I want it to. I'll update this hopefully later tonight with order information. I had to pivot one of the footprints so that it would work better with JLCPCB, but it's making my 3D viewer look a little wonky.</p>
-<p>I am ordering the PCB and it looks to be $81.18 for the product (5 PCBs, 2 Assembled), then $39.43 for shipping and $44.65 for custom duties and taxes. The grand total is almost $170. This is kind of insane for a not crazy board. I'm going to look more carefully at this cost before I order actually. I don't think it needs to be this much. I'm going to ask the MITERS discord for thoughts before I buy.</p>
-<p>Okay, it looks like I'll be able to get it down to $154.21 with coupons. This is lowkey still a lot though, so I'm going to wait until a different day to order. I would really prefer not to spend another $150 if I did something wrong, so I want to verify everything if possible.</p>
+<p>I am ordering the PCB and it looks to be \$81.18 for the product (5 PCBs, 2 Assembled), then \$39.43 for shipping and \$44.65 for custom duties and taxes. The grand total is almost \$170. This is kind of insane for a not crazy board. I'm going to look more carefully at this cost before I order actually. I don't think it needs to be this much. I'm going to ask the MITERS discord for thoughts before I buy.</p>
+<p>Okay, it looks like I'll be able to get it down to \$154.21 with coupons. This is lowkey still a lot though, so I'm going to wait until a different day to order. I would really prefer not to spend another \$150 if I did something wrong, so I want to verify everything if possible.</p>
 <p>
 <style>
   .carousel {
@@ -269,9 +358,9 @@
 <p>I'm working on setting up the PCB-layout in KiCAD, which I have never done. There are 32x32 LEDs, so there's a lot of components to lay out and I don't want to do it on my own. Thankfully i have hierarchical sheets set up and am not trying to use replicate layout.</p>
 <p>The schematic process was closely following what followed in the video. However, I decided to use a buck converter instead of the linear regulator for better efficiency and to try doing something new.</p>
 <p>I decided to use hierarchical schematics for the LEDs to simplify the schematic and PCB process. I intended to use <strong>Replicate Layout</strong>, which can be downloaded in KiCAD's 'additional plug-ins manager.'</p>
-<p>I was initially struggling to use it, but after a while of playing around with hiearchical sheets, I got the hang of it. Below are the current schematics that I'm hoping stick around.</p>
-<p>The PCB is organized into a few sections: the microcontroller, a buck converter, serial pins for testing, N-MOSFETs, shift registers, and N-MOSFETs. The shift registers and LEDs are within hiearchical sheets, so they are not visible from the high level-schematic.</p>
-<p>The structure can be seen in the photos below. Basically, there are 8 LEDs in an "LED row" that all are attached to the same pin off a single shift register. There are 8 such rows tied to each shift register. Each of these shift registers and 64 LEDs makes up an "LED Module." 4 LED Modules make up an "LED Group." These were mostly made for convenience when laying out the PCB. There are 4 shift registers in an LED module and 4 LED moduels in an LED Gropu, for a total of 16 shift registers and 1032 LEDs.</p>
+<p>I was initially struggling to use it, but after a while of playing around with hierarchical sheets, I got the hang of it. Below are the current schematics that I'm hoping stick around.</p>
+<p>The PCB is organized into a few sections: the microcontroller, a buck converter, serial pins for testing, N-MOSFETs, shift registers, and N-MOSFETs. The shift registers and LEDs are within hierarchical sheets, so they are not visible from the high level-schematic.</p>
+<p>The structure can be seen in the photos below. Basically, there are 8 LEDs in an "LED row" that all are attached to the same pin off a single shift register. There are 8 such rows tied to each shift register. Each of these shift registers and 64 LEDs makes up an "LED Module." 4 LED Modules make up an "LED Group." These were mostly made for convenience when laying out the PCB. There are 4 shift registers in an LED module and 4 LED modules in an LED Group, for a total of 16 shift registers and 1032 LEDs.</p>
 <p>
 <style>
   .carousel {
