@@ -1,6 +1,19 @@
 {
-  "generated_at_utc": "2026-01-04T20:26:25.488496+00:00",
+  "generated_at_utc": "2026-01-04T23:24:06.957676+00:00",
   "activities": [
+    {
+      "id": 16939486893,
+      "name": "Calm Yoga",
+      "type": "Yoga",
+      "start_date_local": "2026-01-04",
+      "distance_m": 0.0,
+      "moving_time_s": 1871,
+      "total_elevation_gain_m": 0,
+      "calories": 0,
+      "pace_min_per_mi": null,
+      "url": "https://www.strava.com/activities/16939486893",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a16939486893"
+    },
     {
       "id": 16928253944,
       "name": "Afternoon Run",
@@ -65,19 +78,6 @@
       "pace_min_per_mi": "8:52",
       "url": "https://www.strava.com/activities/16593013105",
       "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a16593013105"
-    },
-    {
-      "id": 16471450957,
-      "name": "Midday run",
-      "type": "Run",
-      "start_date_local": "2025-11-15",
-      "distance_m": 8321.3,
-      "moving_time_s": 2710,
-      "total_elevation_gain_m": 17.9,
-      "calories": 0,
-      "pace_min_per_mi": "8:44",
-      "url": "https://www.strava.com/activities/16471450957",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a16471450957"
     }
   ]
 }

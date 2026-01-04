@@ -158,7 +158,8 @@ class StravaWidget {
             'Walk': '🚶‍♂️',
             'Swim': '🏊‍♂️',
             'Hike': '🥾',
-            'Workout': '🏋️'
+            'Workout': '🏋️',
+            'Yoga': '🧘'
         };
 
         return icons[type] || '🏃‍♂️';
