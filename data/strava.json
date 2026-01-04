@@ -1,0 +1,83 @@
+{
+  "generated_at_utc": "2026-01-04T19:54:36.630222+00:00",
+  "activities": [
+    {
+      "id": 16928253944,
+      "name": "Afternoon Run",
+      "type": "Run",
+      "start_date_local": "2026-01-03",
+      "distance_m": 16162.3,
+      "moving_time_s": 5343,
+      "total_elevation_gain_m": 152.0,
+      "calories": 0,
+      "pace_min_per_mi": "8:52",
+      "url": "https://www.strava.com/activities/16928253944",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a16928253944"
+    },
+    {
+      "id": 16886456481,
+      "name": "Lunch Run",
+      "type": "Run",
+      "start_date_local": "2025-12-30",
+      "distance_m": 8116.1,
+      "moving_time_s": 2574,
+      "total_elevation_gain_m": 68.0,
+      "calories": 0,
+      "pace_min_per_mi": "8:30",
+      "url": "https://www.strava.com/activities/16886456481",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a16886456481"
+    },
+    {
+      "id": 16859293811,
+      "name": "Afternoon Run",
+      "type": "Run",
+      "start_date_local": "2025-12-27",
+      "distance_m": 8078.3,
+      "moving_time_s": 2456,
+      "total_elevation_gain_m": 61.0,
+      "calories": 0,
+      "pace_min_per_mi": "8:09",
+      "url": "https://www.strava.com/activities/16859293811",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a16859293811"
+    },
+    {
+      "id": 16846733115,
+      "name": "Morning Workout",
+      "type": "Workout",
+      "start_date_local": "2025-12-26",
+      "distance_m": 0.0,
+      "moving_time_s": 2196,
+      "total_elevation_gain_m": 0,
+      "calories": 0,
+      "pace_min_per_mi": null,
+      "url": "https://www.strava.com/activities/16846733115",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a16846733115"
+    },
+    {
+      "id": 16593013105,
+      "name": "Thanksgiving Run",
+      "type": "Run",
+      "start_date_local": "2025-11-27",
+      "distance_m": 9660.2,
+      "moving_time_s": 3196,
+      "total_elevation_gain_m": 147.4,
+      "calories": 0,
+      "pace_min_per_mi": "8:52",
+      "url": "https://www.strava.com/activities/16593013105",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a16593013105"
+    },
+    {
+      "id": 16471450957,
+      "name": "Midday run",
+      "type": "Run",
+      "start_date_local": "2025-11-15",
+      "distance_m": 8321.3,
+      "moving_time_s": 2710,
+      "total_elevation_gain_m": 17.9,
+      "calories": 0,
+      "pace_min_per_mi": "8:44",
+      "url": "https://www.strava.com/activities/16471450957",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a16471450957"
+    }
+  ]
+}

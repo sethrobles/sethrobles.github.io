@@ -2,6 +2,12 @@
  * Widgets and interactive functionality for Seth Robles' portfolio
  */
 
+// Social usernames (loaded from window.socialUsernames set in base.html)
+let socialUsernames = window.socialUsernames || {
+    strava: "sethrobles",
+    hardcover: "Sethyopolopodis"
+};
+
 // Strava Widget
 class StravaWidget {
     constructor(containerId) {
@@ -13,24 +19,31 @@ class StravaWidget {
     async init() {
         if (!this.container) return;
 
+        // Show loading state
+        this.container.innerHTML = '<div class="strava-loading">Loading activities...</div>';
+
         try {
-            // Check if Strava API is configured
-            const response = await fetch('/api/strava/latest?per_page=5');
-            if (response.ok) {
-                const data = await response.json();
+            const response = await fetch('/data/strava.json');
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            if (data.activities && data.activities.length > 0) {
                 this.renderActivities(data.activities);
             } else {
-                this.renderPlaceholder();
+                this.renderEmpty();
             }
         } catch (error) {
-            console.log('Strava widget not configured, showing placeholder');
-            this.renderPlaceholder();
+            console.log('Error loading Strava data:', error);
+            this.renderError();
         }
     }
 
     renderActivities(activities) {
         if (!activities || activities.length === 0) {
-            this.renderPlaceholder();
+            this.renderEmpty();
             return;
         }
 
@@ -38,7 +51,7 @@ class StravaWidget {
             <div class="strava-activities">
                 <div class="activities-header">
                     <h4>Recent Activities</h4>
-                    <a href="https://strava.com/athletes/sethrobles" target="_blank" rel="noopener noreferrer" class="strava-link">
+                    <a href="https://strava.com/athletes/${socialUsernames.strava}" target="_blank" rel="noopener noreferrer" class="strava-link">
                         View on Strava
                     </a>
                 </div>
@@ -52,10 +65,20 @@ class StravaWidget {
     }
 
     renderActivity(activity) {
-        const date = new Date(activity.date).toLocaleDateString('en-US', {
-            month: 'short',
-            day: 'numeric'
-        });
+        const date = this.formatDate(activity.start_date_local);
+        const duration = this.formatDuration(activity.moving_time_s);
+        const name = this.escapeHtml(activity.name);
+
+        // For workouts, show calories instead of distance
+        // For other activities, show distance if > 0
+        let primaryStat = '';
+        if (activity.type === 'Workout') {
+            const calories = activity.calories || 0;
+            primaryStat = calories > 0 ? `<span class="activity-calories">${calories} cal</span>` : '';
+        } else {
+            const distance = this.formatDistance(activity.distance_m);
+            primaryStat = activity.distance_m > 0 ? `<span class="activity-distance">${distance}</span>` : '';
+        }
 
         return `
             <div class="activity-item">
@@ -63,13 +86,67 @@ class StravaWidget {
                     ${this.getActivityIcon(activity.type)}
                 </div>
                 <div class="activity-details">
-                    <div class="activity-name">${activity.name}</div>
+                    <div class="activity-name">${name}</div>
                     <div class="activity-stats">
-                        <span class="activity-distance">${activity.distance}</span>
-                        <span class="activity-duration">${activity.duration}</span>
+                        ${primaryStat}
+                        <span class="activity-duration">${duration}</span>
                     </div>
                 </div>
                 <div class="activity-date">${date}</div>
+            </div>
+        `;
+    }
+
+    formatDate(dateString) {
+        const date = new Date(dateString + 'T00:00:00');
+        return date.toLocaleDateString('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: date.getFullYear() !== new Date().getFullYear() ? 'numeric' : undefined
+        });
+    }
+
+    formatDistance(distanceM) {
+        if (distanceM < 1000) {
+            return `${Math.round(distanceM)}m`;
+        } else {
+            const km = distanceM / 1000;
+            return km >= 10
+                ? `${km.toFixed(1)}km`
+                : `${km.toFixed(2)}km`;
+        }
+    }
+
+    formatDuration(seconds) {
+        const hours = Math.floor(seconds / 3600);
+        const minutes = Math.floor((seconds % 3600) / 60);
+        const secs = seconds % 60;
+
+        if (hours > 0) {
+            return `${hours}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        } else {
+            return `${minutes}:${secs.toString().padStart(2, '0')}`;
+        }
+    }
+
+    escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    renderEmpty() {
+        this.container.innerHTML = `
+            <div class="strava-empty">
+                <p>No activities found. Check back soon!</p>
+            </div>
+        `;
+    }
+
+    renderError() {
+        this.container.innerHTML = `
+            <div class="strava-error">
+                <p>Unable to load activities. <a href="https://www.strava.com/athletes/${socialUsernames.strava}" target="_blank" rel="noopener noreferrer">View on Strava</a></p>
             </div>
         `;
     }
@@ -81,7 +158,7 @@ class StravaWidget {
             'Walk': '🚶‍♂️',
             'Swim': '🏊‍♂️',
             'Hike': '🥾',
-            'Workout': '💪'
+            'Workout': '🏋️'
         };
 
         return icons[type] || '🏃‍♂️';
@@ -93,22 +170,123 @@ class StravaWidget {
     }
 }
 
-// Goodreads Widget
-class GoodreadsWidget {
+// Hardcover Widget
+class HardcoverWidget {
     constructor(containerId) {
         this.container = document.getElementById(containerId);
         this.init();
     }
 
-    init() {
+    async init() {
         if (!this.container) return;
 
-        this.renderPlaceholder();
+        // Show loading state
+        this.container.innerHTML = '<div class="hardcover-loading">Loading books...</div>';
+
+        try {
+            const response = await fetch('/data/hardcover.json');
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            if (data.books && data.books.length > 0) {
+                this.renderBooks(data.books);
+            } else {
+                this.renderEmpty();
+            }
+        } catch (error) {
+            console.log('Error loading Hardcover data:', error);
+            this.renderError();
+        }
     }
 
-    renderPlaceholder() {
-        // Do nothing: placeholder removed so only embedded widget shows
-        this.container.innerHTML = '';
+    renderBooks(books) {
+        if (!books || books.length === 0) {
+            this.renderEmpty();
+            return;
+        }
+
+        const html = `
+            <div class="hardcover-books">
+                <div class="books-header">
+                    <h4>Recent Books</h4>
+                    <a href="https://hardcover.app/user/${socialUsernames.hardcover}" target="_blank" rel="noopener noreferrer" class="hardcover-link">
+                        View on Hardcover
+                    </a>
+                </div>
+                <div class="books-list">
+                    ${books.map(book => this.renderBook(book)).join('')}
+                </div>
+            </div>
+        `;
+
+        this.container.innerHTML = html;
+    }
+
+    renderBook(book) {
+        const date = this.formatDate(book.date_read);
+        const title = this.escapeHtml(book.title);
+        const author = this.escapeHtml(book.author);
+        const coverUrl = book.cover_image_url || '/static/uploads/personal/seth-photo.jpeg'; // Fallback image
+        const rating = book.rating ? this.renderRating(book.rating) : '';
+        const statusBadge = book.status === 'currently-reading' ? '<span class="book-status">Reading</span>' : '';
+
+        return `
+            <div class="book-item">
+                <div class="book-cover">
+                    <img src="${coverUrl}" alt="${title}" onerror="this.src='/static/uploads/personal/seth-photo.jpeg'">
+                </div>
+                <div class="book-details">
+                    <div class="book-name">${title}</div>
+                    <div class="book-author">${author}</div>
+                    <div class="book-meta">
+                        ${rating}
+                        ${statusBadge}
+                    </div>
+                </div>
+                <div class="book-date">${date}</div>
+            </div>
+        `;
+    }
+
+    renderRating(rating) {
+        if (!rating || rating < 1 || rating > 5) return '';
+        const stars = '⭐'.repeat(Math.round(rating));
+        return `<span class="book-rating">${stars}</span>`;
+    }
+
+    formatDate(dateString) {
+        if (!dateString) return '';
+        const date = new Date(dateString + 'T00:00:00');
+        return date.toLocaleDateString('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: date.getFullYear() !== new Date().getFullYear() ? 'numeric' : undefined
+        });
+    }
+
+    escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    renderEmpty() {
+        this.container.innerHTML = `
+            <div class="hardcover-empty">
+                <p>No books found. Check back soon!</p>
+            </div>
+        `;
+    }
+
+    renderError() {
+        this.container.innerHTML = `
+            <div class="hardcover-error">
+                <p>Unable to load books. <a href="https://hardcover.app/user/${socialUsernames.hardcover}" target="_blank" rel="noopener noreferrer">View on Hardcover</a></p>
+            </div>
+        `;
     }
 }
 
@@ -190,9 +368,11 @@ function initSmoothScrolling() {
 
 // Initialize all widgets when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-
     // Initialize Strava widget
     const stravaWidget = new StravaWidget('strava-widget');
+
+    // Initialize Hardcover widget
+    const hardcoverWidget = new HardcoverWidget('hardcover-widget');
 
     // Initialize image lightbox
     const imageLightbox = new ImageLightbox();
