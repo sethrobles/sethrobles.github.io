@@ -1,6 +1,19 @@
 {
-  "generated_at_utc": "2026-01-04T23:39:18.509433+00:00",
+  "generated_at_utc": "2026-01-06T14:15:24.770573+00:00",
   "books": [
+    {
+      "id": "11711912",
+      "book_id": "481844",
+      "title": "Build: An Unorthodox Guide to Making Things Worth Making",
+      "author": "Tony Fadell",
+      "cover_image_url": null,
+      "rating": null,
+      "date_read": "2026-01-06",
+      "status": "currently-reading",
+      "review_url": "https://hardcover.app/book/481844",
+      "pages": 416,
+      "isbn": null
+    },
     {
       "id": "11627845",
       "book_id": "212769",
@@ -51,19 +64,6 @@
       "status": "read",
       "review_url": "https://hardcover.app/book/368611",
       "pages": 228,
-      "isbn": null
-    },
-    {
-      "id": "11627827",
-      "book_id": "427912",
-      "title": "Vicious",
-      "author": "V. E. Schwab",
-      "cover_image_url": "https://assets.hardcover.app/books/277848/7410932-L.jpg",
-      "rating": null,
-      "date_read": "2026-01-04",
-      "status": "read",
-      "review_url": "https://hardcover.app/book/427912",
-      "pages": 364,
       "isbn": null
     }
   ]
