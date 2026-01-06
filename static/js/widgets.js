@@ -230,14 +230,16 @@ class HardcoverWidget {
         const date = this.formatDate(book.date_read);
         const title = this.escapeHtml(book.title);
         const author = this.escapeHtml(book.author);
-        const coverUrl = book.cover_image_url || '/static/uploads/personal/seth-photo.jpeg'; // Fallback image
+        // Use a data URI for a simple book placeholder when no cover is available
+        const placeholderBook = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2Y1ZjVmNSIvPjxwYXRoIGQ9Ik0yMCAyMEg4MFYxMzBIMjBaIiBmaWxsPSIjZGRkIi8+PHBhdGggZD0iTTIwIDIwVjEzMEg4MFYyMFoiIGZpbGw9IiNjY2MiLz48bGluZSB4MT0iMzAiIHkxPSI0MCIgeDI9IjcwIiB5Mj0iNDAiIHN0cm9rZT0iIzk5OSIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjMwIiB5MT0iNjAiIHgyPSI3MCIgeTI9IjYwIiBzdHJva2U9IiM5OTkiIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIzMCIgeTE9IjgwIiB4Mj0iNzAiIHkyPSI4MCIgc3Ryb2tlPSIjOTk5IiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=';
+        const coverUrl = book.cover_image_url || placeholderBook;
         const rating = book.rating ? this.renderRating(book.rating) : '';
         const statusBadge = book.status === 'currently-reading' ? '<span class="book-status">Reading</span>' : '';
 
         return `
             <div class="book-item">
                 <div class="book-cover">
-                    <img src="${coverUrl}" alt="${title}" onerror="this.src='/static/uploads/personal/seth-photo.jpeg'">
+                    <img src="${coverUrl}" alt="${title}" onerror="this.src='${placeholderBook}'">
                 </div>
                 <div class="book-details">
                     <div class="book-name">${title}</div>
