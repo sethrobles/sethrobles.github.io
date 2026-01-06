@@ -51,7 +51,7 @@ class StravaWidget {
             <div class="strava-activities">
                 <div class="activities-header">
                     <h4>Recent Activities</h4>
-                    <a href="https://strava.com/athletes/${socialUsernames.strava}" target="_blank" rel="noopener noreferrer" class="strava-link">
+                    <a href="https://strava.com/athletes/${socialUsernames.strava_num}" target="_blank" rel="noopener noreferrer" class="strava-link">
                         View on Strava
                     </a>
                 </div>
@@ -146,7 +146,7 @@ class StravaWidget {
     renderError() {
         this.container.innerHTML = `
             <div class="strava-error">
-                <p>Unable to load activities. <a href="https://www.strava.com/athletes/${socialUsernames.strava}" target="_blank" rel="noopener noreferrer">View on Strava</a></p>
+                <p>Unable to load activities. <a href="https://www.strava.com/athletes/${socialUsernames.strava_num}" target="_blank" rel="noopener noreferrer">View on Strava</a></p>
             </div>
         `;
     }
@@ -213,7 +213,7 @@ class HardcoverWidget {
             <div class="hardcover-books">
                 <div class="books-header">
                     <h4>Recent Books</h4>
-                    <a href="https://hardcover.app/user/${socialUsernames.hardcover}" target="_blank" rel="noopener noreferrer" class="hardcover-link">
+                    <a href="https://hardcover.app/@${socialUsernames.hardcover}" target="_blank" rel="noopener noreferrer" class="hardcover-link">
                         View on Hardcover
                     </a>
                 </div>
@@ -287,7 +287,7 @@ class HardcoverWidget {
     renderError() {
         this.container.innerHTML = `
             <div class="hardcover-error">
-                <p>Unable to load books. <a href="https://hardcover.app/user/${socialUsernames.hardcover}" target="_blank" rel="noopener noreferrer">View on Hardcover</a></p>
+                <p>Unable to load books. <a href="https://hardcover.app/@${socialUsernames.hardcover}" target="_blank" rel="noopener noreferrer">View on Hardcover</a></p>
             </div>
         `;
     }
