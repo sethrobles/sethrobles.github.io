@@ -159,6 +159,7 @@ class StravaWidget {
             'Swim': '🏊‍♂️',
             'Hike': '🥾',
             'Workout': '🏋️',
+            'WeightTraining': '🏋️',
             'Yoga': '🧘'
         };
 
