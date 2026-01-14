@@ -121,13 +121,64 @@
 
     <main class="main-content">
         
-<section class="coming-soon-section" style="min-height: 60vh; display: flex; align-items: center; justify-content: center;">
-    <div style="text-align: center;">
-        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Portfolio Coming Soon</h1>
-        <p style="font-size: 1.25rem; color: #888;">Check back soon for my full portfolio.</p>
-        <div style="margin-top: 2rem;">
-            <a href="/resume/" class="btn btn-outline" style="margin-right: 1rem;">← View Resume</a>
-            <a href="/projects/" class="btn btn-primary">View All Projects →</a>
+<section class="portfolio-header">
+    <div class="container">
+        <header class="section-header">
+            <h1 class="section-title">Portfolio</h1>
+        </header>
+    </div>
+</section>
+
+<section class="portfolio-content">
+    <div class="container">
+        <div class="portfolio-main">
+            <!-- Portfolio Section -->
+            <div class="portfolio-section">
+                <div class="portfolio-preview">
+                    <div class="pdf-embed">
+                        <iframe src="/static/uploads/Portfolio.pdf#toolbar=0"
+                                class="pdf-viewer"
+                                title="Seth Robles Portfolio">
+                            <p>Your browser doesn't support PDFs.
+                            <a href="/static/uploads/Portfolio.pdf" target="_blank">Download the PDF</a>.</p>
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="portfolio-actions">
+                    <a href="/static/uploads/Portfolio.pdf"
+                        class="btn btn-primary"
+                        download="Seth_Robles_Portfolio.pdf">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7,10 12,15 17,10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download Portfolio
+                    </a>
+
+                    <a href="/static/uploads/Portfolio.pdf"
+                        class="btn btn-outline"
+                        target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15,3 21,3 21,9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                        Open in New Tab
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="portfolio-navigation">
+            <a href="/resume/" class="btn btn-outline">
+                ← View Resume
+            </a>
+            <a href="/projects/" class="btn btn-outline">
+                View All Projects →
+            </a>
         </div>
     </div>
 </section>
