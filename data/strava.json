@@ -1,6 +1,19 @@
 {
-  "generated_at_utc": "2026-01-13T03:41:18.679615+00:00",
+  "generated_at_utc": "2026-01-14T03:50:16.531960+00:00",
   "activities": [
+    {
+      "id": 17034639883,
+      "name": "Push Day",
+      "type": "WeightTraining",
+      "start_date_local": "2026-01-13",
+      "distance_m": 0.0,
+      "moving_time_s": 3644,
+      "total_elevation_gain_m": 0,
+      "calories": 0,
+      "pace_min_per_mi": null,
+      "url": "https://www.strava.com/activities/17034639883",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17034639883"
+    },
     {
       "id": 17012859698,
       "name": "Morning Run",
@@ -65,19 +78,6 @@
       "pace_min_per_mi": "12:08",
       "url": "https://www.strava.com/activities/16964084594",
       "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a16964084594"
-    },
-    {
-      "id": 16939486893,
-      "name": "Calm Yoga",
-      "type": "Yoga",
-      "start_date_local": "2026-01-04",
-      "distance_m": 0.0,
-      "moving_time_s": 1871,
-      "total_elevation_gain_m": 0,
-      "calories": 0,
-      "pace_min_per_mi": null,
-      "url": "https://www.strava.com/activities/16939486893",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a16939486893"
     }
   ]
 }
