@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-01-16T03:44:30.678162+00:00",
+  "generated_at_utc": "2026-01-17T02:33:31.062883+00:00",
   "books": [
     {
       "id": "11711912",
@@ -7,9 +7,9 @@
       "title": "Build: An Unorthodox Guide to Making Things Worth Making",
       "author": "Tony Fadell",
       "cover_image_url": null,
-      "rating": null,
-      "date_read": "2026-01-06",
-      "status": "currently-reading",
+      "rating": 5.0,
+      "date_read": "2026-01-17",
+      "status": "read",
       "review_url": "https://hardcover.app/book/481844",
       "pages": 416,
       "isbn": null
