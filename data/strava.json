@@ -1,6 +1,19 @@
 {
-  "generated_at_utc": "2026-01-20T03:47:12.300723+00:00",
+  "generated_at_utc": "2026-01-20T14:40:04.643669+00:00",
   "activities": [
+    {
+      "id": 17115083621,
+      "name": "Morning Run",
+      "type": "Run",
+      "start_date_local": "2026-01-20",
+      "distance_m": 8179.0,
+      "moving_time_s": 2808,
+      "total_elevation_gain_m": 32.0,
+      "calories": 0,
+      "pace_min_per_mi": "9:12",
+      "url": "https://www.strava.com/activities/17115083621",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17115083621"
+    },
     {
       "id": 17093959658,
       "name": "Morning Run",
@@ -65,19 +78,6 @@
       "pace_min_per_mi": null,
       "url": "https://www.strava.com/activities/17034639883",
       "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17034639883"
-    },
-    {
-      "id": 17012859698,
-      "name": "Morning Run",
-      "type": "Run",
-      "start_date_local": "2026-01-11",
-      "distance_m": 16424.5,
-      "moving_time_s": 5787,
-      "total_elevation_gain_m": 47.0,
-      "calories": 0,
-      "pace_min_per_mi": "9:27",
-      "url": "https://www.strava.com/activities/17012859698",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17012859698"
     }
   ]
 }
