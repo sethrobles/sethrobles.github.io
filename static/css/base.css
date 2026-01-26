@@ -414,7 +414,7 @@ a:hover {
 }
 
 .card-image {
-    height: 200px;
+    height: 300px;
     overflow: hidden;
     background: var(--bg-secondary);
 }
