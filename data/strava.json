@@ -1,6 +1,19 @@
 {
-  "generated_at_utc": "2026-01-28T03:47:59.288942+00:00",
+  "generated_at_utc": "2026-01-28T14:39:42.260995+00:00",
   "activities": [
+    {
+      "id": 17201344241,
+      "name": "Evening Weight Training",
+      "type": "WeightTraining",
+      "start_date_local": "2026-01-27",
+      "distance_m": 0.0,
+      "moving_time_s": 2827,
+      "total_elevation_gain_m": 0,
+      "calories": 0,
+      "pace_min_per_mi": null,
+      "url": "https://www.strava.com/activities/17201344241",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17201344241"
+    },
     {
       "id": 17155538538,
       "name": "Squash",
@@ -65,19 +78,6 @@
       "pace_min_per_mi": null,
       "url": "https://www.strava.com/activities/17082458641",
       "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17082458641"
-    },
-    {
-      "id": 17058532385,
-      "name": "Morning Weight Training (Pull)",
-      "type": "WeightTraining",
-      "start_date_local": "2026-01-15",
-      "distance_m": 0.0,
-      "moving_time_s": 3117,
-      "total_elevation_gain_m": 0,
-      "calories": 0,
-      "pace_min_per_mi": null,
-      "url": "https://www.strava.com/activities/17058532385",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17058532385"
     }
   ]
 }
