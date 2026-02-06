@@ -1,6 +1,19 @@
 {
-  "generated_at_utc": "2026-02-05T14:53:45.522063+00:00",
+  "generated_at_utc": "2026-02-06T04:18:16.314363+00:00",
   "activities": [
+    {
+      "id": 17300304415,
+      "name": "Morning Weight Training (Push)",
+      "type": "WeightTraining",
+      "start_date_local": "2026-02-05",
+      "distance_m": 0.0,
+      "moving_time_s": 3495,
+      "total_elevation_gain_m": 0,
+      "calories": 0,
+      "pace_min_per_mi": null,
+      "url": "https://www.strava.com/activities/17300304415",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17300304415"
+    },
     {
       "id": 17284417843,
       "name": "Morning Run",
@@ -65,19 +78,6 @@
       "pace_min_per_mi": null,
       "url": "https://www.strava.com/activities/17155538538",
       "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17155538538"
-    },
-    {
-      "id": 17145544761,
-      "name": "Night Run",
-      "type": "Run",
-      "start_date_local": "2026-01-21",
-      "distance_m": 8154.7,
-      "moving_time_s": 2837,
-      "total_elevation_gain_m": 22.0,
-      "calories": 0,
-      "pace_min_per_mi": "9:19",
-      "url": "https://www.strava.com/activities/17145544761",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17145544761"
     }
   ]
 }
