@@ -1,6 +1,19 @@
 {
-  "generated_at_utc": "2026-02-11T04:31:58.987845+00:00",
+  "generated_at_utc": "2026-02-11T15:03:07.408415+00:00",
   "activities": [
+    {
+      "id": 17362606663,
+      "name": "Morning Weight Training (Pull)",
+      "type": "WeightTraining",
+      "start_date_local": "2026-02-11",
+      "distance_m": 0.0,
+      "moving_time_s": 3150,
+      "total_elevation_gain_m": 0,
+      "calories": 0,
+      "pace_min_per_mi": null,
+      "url": "https://www.strava.com/activities/17362606663",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17362606663"
+    },
     {
       "id": 17357622728,
       "name": "Evening Weight Training",
@@ -65,19 +78,6 @@
       "pace_min_per_mi": "9:02",
       "url": "https://www.strava.com/activities/17284417843",
       "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17284417843"
-    },
-    {
-      "id": 17251625662,
-      "name": "Morning Weight Training (Pull)",
-      "type": "WeightTraining",
-      "start_date_local": "2026-02-01",
-      "distance_m": 0.0,
-      "moving_time_s": 3830,
-      "total_elevation_gain_m": 0,
-      "calories": 0,
-      "pace_min_per_mi": null,
-      "url": "https://www.strava.com/activities/17251625662",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17251625662"
     }
   ]
 }
