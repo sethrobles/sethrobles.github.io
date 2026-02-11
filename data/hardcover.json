@@ -1,6 +1,19 @@
 {
-  "generated_at_utc": "2026-02-10T04:35:45.242946+00:00",
+  "generated_at_utc": "2026-02-11T03:37:46.685583+00:00",
   "books": [
+    {
+      "id": "12763942",
+      "book_id": "478155",
+      "title": "The mom test",
+      "author": " Rob Fitzpatrick",
+      "cover_image_url": null,
+      "rating": null,
+      "date_read": "2026-02-11",
+      "status": "currently-reading",
+      "review_url": "https://hardcover.app/book/478155",
+      "pages": 135,
+      "isbn": null
+    },
     {
       "id": "11711912",
       "book_id": "481844",
@@ -51,19 +64,6 @@
       "status": "read",
       "review_url": "https://hardcover.app/book/253778",
       "pages": 432,
-      "isbn": null
-    },
-    {
-      "id": "11627830",
-      "book_id": "368611",
-      "title": "Into the Wild",
-      "author": "Jon Krakauer",
-      "cover_image_url": "https://assets.hardcover.app/books/368611/1377482-L.jpg",
-      "rating": null,
-      "date_read": "2026-01-04",
-      "status": "read",
-      "review_url": "https://hardcover.app/book/368611",
-      "pages": 228,
       "isbn": null
     }
   ]
