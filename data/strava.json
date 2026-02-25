@@ -1,6 +1,19 @@
 {
-  "generated_at_utc": "2026-02-25T04:23:44.443421+00:00",
+  "generated_at_utc": "2026-02-25T14:59:24.505056+00:00",
   "activities": [
+    {
+      "id": 17518472194,
+      "name": "Morning Run",
+      "type": "Run",
+      "start_date_local": "2026-02-25",
+      "distance_m": 4322.0,
+      "moving_time_s": 1903,
+      "total_elevation_gain_m": 0,
+      "calories": 0,
+      "pace_min_per_mi": "11:48",
+      "url": "https://www.strava.com/activities/17518472194",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17518472194"
+    },
     {
       "id": 17512666349,
       "name": "Afternoon Rock Climb",
@@ -65,19 +78,6 @@
       "pace_min_per_mi": "8:31",
       "url": "https://www.strava.com/activities/17427525939",
       "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17427525939"
-    },
-    {
-      "id": 17384518263,
-      "name": "Morning Weight Training (Push)",
-      "type": "WeightTraining",
-      "start_date_local": "2026-02-13",
-      "distance_m": 0.0,
-      "moving_time_s": 2482,
-      "total_elevation_gain_m": 0,
-      "calories": 0,
-      "pace_min_per_mi": null,
-      "url": "https://www.strava.com/activities/17384518263",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17384518263"
     }
   ]
 }
