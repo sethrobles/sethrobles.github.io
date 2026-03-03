@@ -1,6 +1,19 @@
 {
-  "generated_at_utc": "2026-03-03T04:18:37.326838+00:00",
+  "generated_at_utc": "2026-03-03T14:54:37.657332+00:00",
   "activities": [
+    {
+      "id": 17588302562,
+      "name": "Morning Weight Training (Push)",
+      "type": "WeightTraining",
+      "start_date_local": "2026-03-03",
+      "distance_m": 0.0,
+      "moving_time_s": 3785,
+      "total_elevation_gain_m": 0,
+      "calories": 0,
+      "pace_min_per_mi": null,
+      "url": "https://www.strava.com/activities/17588302562",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17588302562"
+    },
     {
       "id": 17571723318,
       "name": "Ran around Maseeh. So many times",
@@ -65,19 +78,6 @@
       "pace_min_per_mi": null,
       "url": "https://www.strava.com/activities/17512666349",
       "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17512666349"
-    },
-    {
-      "id": 17512666352,
-      "name": "Lunch Weight Training",
-      "type": "WeightTraining",
-      "start_date_local": "2026-02-24",
-      "distance_m": 0.0,
-      "moving_time_s": 3346,
-      "total_elevation_gain_m": 0,
-      "calories": 0,
-      "pace_min_per_mi": null,
-      "url": "https://www.strava.com/activities/17512666352",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17512666352"
     }
   ]
 }
