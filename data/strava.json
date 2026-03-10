@@ -1,6 +1,19 @@
 {
-  "generated_at_utc": "2026-03-09T15:00:34.188745+00:00",
+  "generated_at_utc": "2026-03-10T04:12:15.601166+00:00",
   "activities": [
+    {
+      "id": 17667889296,
+      "name": "Night Run",
+      "type": "Run",
+      "start_date_local": "2026-03-09",
+      "distance_m": 24201.5,
+      "moving_time_s": 8195,
+      "total_elevation_gain_m": 73.0,
+      "calories": 0,
+      "pace_min_per_mi": "9:04",
+      "url": "https://www.strava.com/activities/17667889296",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17667889296"
+    },
     {
       "id": 17642755182,
       "name": "Afternoon Alpine Ski",
@@ -65,19 +78,6 @@
       "pace_min_per_mi": "8:26",
       "url": "https://www.strava.com/activities/17571723318",
       "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17571723318"
-    },
-    {
-      "id": 17569503962,
-      "name": "Skiing",
-      "type": "Run",
-      "start_date_local": "2026-02-28",
-      "distance_m": 0.0,
-      "moving_time_s": 15300,
-      "total_elevation_gain_m": 0,
-      "calories": 0,
-      "pace_min_per_mi": null,
-      "url": "https://www.strava.com/activities/17569503962",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17569503962"
     }
   ]
 }
