@@ -1,6 +1,19 @@
 {
-  "generated_at_utc": "2026-03-12T04:17:08.118540+00:00",
+  "generated_at_utc": "2026-03-12T14:59:19.964267+00:00",
   "activities": [
+    {
+      "id": 17696557623,
+      "name": "Morning Run",
+      "type": "Run",
+      "start_date_local": "2026-03-12",
+      "distance_m": 16059.6,
+      "moving_time_s": 5134,
+      "total_elevation_gain_m": 11.0,
+      "calories": 0,
+      "pace_min_per_mi": "8:34",
+      "url": "https://www.strava.com/activities/17696557623",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17696557623"
+    },
     {
       "id": 17667889296,
       "name": "Night Run",
@@ -65,19 +78,6 @@
       "pace_min_per_mi": null,
       "url": "https://www.strava.com/activities/17588302562",
       "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17588302562"
-    },
-    {
-      "id": 17571723318,
-      "name": "Ran around Maseeh. So many times",
-      "type": "Run",
-      "start_date_local": "2026-03-01",
-      "distance_m": 15286.6,
-      "moving_time_s": 4809,
-      "total_elevation_gain_m": 11.0,
-      "calories": 0,
-      "pace_min_per_mi": "8:26",
-      "url": "https://www.strava.com/activities/17571723318",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17571723318"
     }
   ]
 }
