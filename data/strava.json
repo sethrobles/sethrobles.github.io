@@ -1,6 +1,32 @@
 {
-  "generated_at_utc": "2026-03-22T04:23:12.584183+00:00",
+  "generated_at_utc": "2026-03-22T14:37:02.895342+00:00",
   "activities": [
+    {
+      "id": 17814211516,
+      "name": "Barcelona Run",
+      "type": "Run",
+      "start_date_local": "2026-03-22",
+      "distance_m": 10190.3,
+      "moving_time_s": 3091,
+      "total_elevation_gain_m": 45.0,
+      "calories": 0,
+      "pace_min_per_mi": "8:08",
+      "url": "https://www.strava.com/activities/17814211516",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17814211516"
+    },
+    {
+      "id": 17810997901,
+      "name": "Afternoon Walk",
+      "type": "Walk",
+      "start_date_local": "2026-03-21",
+      "distance_m": 2463.9,
+      "moving_time_s": 2290,
+      "total_elevation_gain_m": 9.0,
+      "calories": 0,
+      "pace_min_per_mi": null,
+      "url": "https://www.strava.com/activities/17810997901",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17810997901"
+    },
     {
       "id": 17753950609,
       "name": "Morning Run",
@@ -52,32 +78,6 @@
       "pace_min_per_mi": null,
       "url": "https://www.strava.com/activities/17743170328",
       "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17743170328"
-    },
-    {
-      "id": 17743170092,
-      "name": "Night Workout",
-      "type": "Workout",
-      "start_date_local": "2026-03-13",
-      "distance_m": 0.0,
-      "moving_time_s": 334,
-      "total_elevation_gain_m": 0,
-      "calories": 0,
-      "pace_min_per_mi": null,
-      "url": "https://www.strava.com/activities/17743170092",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17743170092"
-    },
-    {
-      "id": 17696557623,
-      "name": "Morning Run",
-      "type": "Run",
-      "start_date_local": "2026-03-12",
-      "distance_m": 16059.6,
-      "moving_time_s": 5134,
-      "total_elevation_gain_m": 11.0,
-      "calories": 0,
-      "pace_min_per_mi": "8:34",
-      "url": "https://www.strava.com/activities/17696557623",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17696557623"
     }
   ]
 }
