@@ -1,6 +1,19 @@
 {
-  "generated_at_utc": "2026-03-28T14:39:57.991534+00:00",
+  "generated_at_utc": "2026-03-29T04:39:53.624670+00:00",
   "activities": [
+    {
+      "id": 17892403702,
+      "name": "Lunch Run",
+      "type": "Run",
+      "start_date_local": "2026-03-28",
+      "distance_m": 32430.2,
+      "moving_time_s": 10546,
+      "total_elevation_gain_m": 143.0,
+      "calories": 0,
+      "pace_min_per_mi": "8:43",
+      "url": "https://www.strava.com/activities/17892403702",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17892403702"
+    },
     {
       "id": 17814211516,
       "name": "Barcelona Run",
@@ -65,19 +78,6 @@
       "pace_min_per_mi": null,
       "url": "https://www.strava.com/activities/17743170261",
       "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17743170261"
-    },
-    {
-      "id": 17743170328,
-      "name": "Afternoon Workout",
-      "type": "Workout",
-      "start_date_local": "2026-03-14",
-      "distance_m": 0.0,
-      "moving_time_s": 1550,
-      "total_elevation_gain_m": 0,
-      "calories": 0,
-      "pace_min_per_mi": null,
-      "url": "https://www.strava.com/activities/17743170328",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17743170328"
     }
   ]
 }
