@@ -1,6 +1,32 @@
 {
-  "generated_at_utc": "2026-04-01T15:15:35.947909+00:00",
+  "generated_at_utc": "2026-04-02T04:32:29.982439+00:00",
   "activities": [
+    {
+      "id": 17942407686,
+      "name": "Afternoon Weight Training",
+      "type": "WeightTraining",
+      "start_date_local": "2026-04-01",
+      "distance_m": 0.0,
+      "moving_time_s": 3597,
+      "total_elevation_gain_m": 0,
+      "calories": 0,
+      "pace_min_per_mi": null,
+      "url": "https://www.strava.com/activities/17942407686",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17942407686"
+    },
+    {
+      "id": 17942407743,
+      "name": "Morning Run",
+      "type": "Run",
+      "start_date_local": "2026-04-01",
+      "distance_m": 2433.2,
+      "moving_time_s": 780,
+      "total_elevation_gain_m": 5.0,
+      "calories": 0,
+      "pace_min_per_mi": "8:35",
+      "url": "https://www.strava.com/activities/17942407743",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17942407743"
+    },
     {
       "id": 17892403702,
       "name": "Lunch Run",
@@ -52,32 +78,6 @@
       "pace_min_per_mi": "8:32",
       "url": "https://www.strava.com/activities/17753950609",
       "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17753950609"
-    },
-    {
-      "id": 17746324576,
-      "name": "Afternoon Weight Training (Pull)",
-      "type": "WeightTraining",
-      "start_date_local": "2026-03-16",
-      "distance_m": 0.0,
-      "moving_time_s": 2503,
-      "total_elevation_gain_m": 0,
-      "calories": 0,
-      "pace_min_per_mi": null,
-      "url": "https://www.strava.com/activities/17746324576",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17746324576"
-    },
-    {
-      "id": 17743170261,
-      "name": "Night Yoga",
-      "type": "Yoga",
-      "start_date_local": "2026-03-15",
-      "distance_m": 0.0,
-      "moving_time_s": 1856,
-      "total_elevation_gain_m": 0,
-      "calories": 0,
-      "pace_min_per_mi": null,
-      "url": "https://www.strava.com/activities/17743170261",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a17743170261"
     }
   ]
 }
