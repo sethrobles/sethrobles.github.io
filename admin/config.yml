@@ -1,0 +1,221 @@
+backend:
+  name: github
+  repo: sethrobles/personal-site
+  branch: main
+  # After deploying the Cloudflare Worker (see admin/oauth-worker.js), replace
+  # the placeholder below with your Worker's *.workers.dev URL.
+  base_url: https://sirobles.workers.dev
+
+site_url: https://sethrobles.github.io
+display_url: https://sethrobles.github.io
+
+# Global media defaults (overridden per-collection below)
+media_folder: static/uploads
+public_folder: /static/uploads
+
+locale: en
+
+collections:
+  # ─── Blog Posts ──────────────────────────────────────────────────────────────
+  - name: blogs
+    label: Blog Posts
+    label_singular: Blog Post
+    folder: content/blogs
+    create: true
+    identifier_field: slug
+    # File on disk will be named after the slug field value
+    slug: "{{fields.slug}}"
+    # Images uploaded while editing a post go into that post's own folder
+    media_folder: "static/uploads/blogs/{{slug}}"
+    public_folder: "/static/uploads/blogs/{{slug}}"
+    fields:
+      - label: Type
+        name: type
+        widget: hidden
+        default: "blog"
+
+      - label: Title
+        name: title
+        widget: string
+
+      - label: Slug
+        name: slug
+        widget: string
+        hint: "URL-safe identifier used for the path, e.g. my-post-title"
+        pattern: ['^[a-z0-9_-]+$', "Lowercase letters, numbers, hyphens, and underscores only"]
+
+      - label: Date
+        name: date
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+
+      - label: Tags
+        name: tags
+        widget: list
+        allow_add: true
+        hint: "Press Enter after each tag"
+
+      - label: Thumbnail
+        name: thumbnail
+        widget: image
+        required: false
+        hint: "Card thumbnail shown in the blog listing"
+
+      - label: Hero Image
+        name: hero
+        widget: image
+        required: false
+        hint: "Full-width image displayed at the top of the post"
+
+      - label: Summary
+        name: summary
+        widget: text
+        hint: "One-sentence description shown in cards and meta tags"
+
+      - label: Show Table of Contents
+        name: show_toc
+        widget: boolean
+        default: false
+
+      - label: Shown in Listings
+        name: shown
+        widget: boolean
+        default: true
+
+      - label: Featured on Homepage
+        name: featured
+        widget: boolean
+        default: false
+
+      - label: Carousel Images
+        name: carousel_images
+        widget: list
+        required: false
+        hint: "Images rendered as a carousel at the end of the post. Upload images here; paths are inserted automatically."
+        fields:
+          - label: Image
+            name: src
+            widget: image
+          - label: Alt Text
+            name: alt
+            widget: string
+          - label: Caption
+            name: caption
+            widget: string
+            required: false
+
+      - label: Body
+        name: body
+        widget: markdown
+
+  # ─── Projects ────────────────────────────────────────────────────────────────
+  - name: projects
+    label: Projects
+    label_singular: Project
+    folder: content/projects
+    create: true
+    identifier_field: slug
+    slug: "{{fields.slug}}"
+    media_folder: "static/uploads/projects/{{slug}}"
+    public_folder: "/static/uploads/projects/{{slug}}"
+    fields:
+      - label: Type
+        name: type
+        widget: hidden
+        default: "project"
+
+      - label: Title
+        name: title
+        widget: string
+
+      - label: Slug
+        name: slug
+        widget: string
+        hint: "URL-safe identifier used for the path, e.g. my-project"
+        pattern: ['^[a-z0-9_-]+$', "Lowercase letters, numbers, hyphens, and underscores only"]
+
+      - label: Date
+        name: date
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+
+      - label: Tags
+        name: tags
+        widget: list
+        allow_add: true
+        hint: "Press Enter after each tag"
+
+      - label: Thumbnail
+        name: thumbnail
+        widget: image
+        required: false
+        hint: "Card thumbnail shown in the projects listing"
+
+      - label: Hero Image
+        name: hero
+        widget: image
+        required: false
+        hint: "Full-width image displayed at the top of the project page"
+
+      - label: Summary
+        name: summary
+        widget: text
+        hint: "One-sentence description shown in cards and meta tags"
+
+      - label: GitHub URL
+        name: github_url
+        widget: string
+        required: false
+        hint: "e.g. https://github.com/sethrobles/my-project"
+
+      - label: Live URL
+        name: live_url
+        widget: string
+        required: false
+        hint: "Link shown as 'Live Demo' at the bottom of the page"
+
+      - label: Video
+        name: video
+        widget: string
+        required: false
+        hint: "YouTube/Vimeo URL or a path to a local video file"
+
+      - label: Show Table of Contents
+        name: show_toc
+        widget: boolean
+        default: false
+
+      - label: Shown in Listings
+        name: shown
+        widget: boolean
+        default: true
+
+      - label: Featured on Homepage
+        name: featured
+        widget: boolean
+        default: false
+
+      - label: Carousel Images
+        name: carousel_images
+        widget: list
+        required: false
+        hint: "Images rendered as a carousel at the end of the project page"
+        fields:
+          - label: Image
+            name: src
+            widget: image
+          - label: Alt Text
+            name: alt
+            widget: string
+          - label: Caption
+            name: caption
+            widget: string
+            required: false
+
+      - label: Body
+        name: body
+        widget: markdown
