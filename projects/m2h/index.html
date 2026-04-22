@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Setting up an Ender6 3D Printer with Klipper and Potentially Future Modifications">
+    <meta name="description" content="Entry details and information">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -19,7 +19,7 @@
     <meta property="twitter:description" content="Seth Robles - ">
     <meta property="twitter:image" content="/static/uploads/og-image.jpg">
 
-    <title>Ender 6 Modifications - Seth Robles</title>
+    <title> - Seth Robles</title>
 
     <!-- Favicons for all devices and browsers -->
     <link rel="icon" type="image/x-icon" href="/static/uploads/personal/favicon_io/favicon.ico">
@@ -125,15 +125,7 @@
     <div class="container">
         <!-- Entry Header -->
         <header class="entry-header entry-header-centered">
-            <h1 class="entry-title">Ender 6 Modifications</h1>
-            
-            <div class="entry-tags">
-                
-                <span class="tag">3D Printing</span>
-                
-                <span class="tag">Hardware</span>
-                
-            </div>
+            <h1 class="entry-title"></h1>
             
             
             
@@ -146,22 +138,195 @@
             <div class="content-main">
                 
                 <div class="markdown-content">
-                    <p>I was recently gifted an ender 6 by Andrew (Apprisco) after he swapped to a Voron and mentioned he didn't have space in the <a href="https://miters.mit.edu/">MITERS</a> discord.</p>
-<p>He mentioned that a good way to figure out what was going on the printer would be to kind of restart it and make it my own, which I think it an awesome idea. I've never had my own 3D printer and I'm looking forward to the headaches of nozzle cleaning and such that I've heard so much about.</p>
-<p>I currently have the following components/modifications:</p>
+                    <hr />
+<p>type: "project"
+title: "Metal2Humanoid"
+slug: "m2h"
+date: "2023-10-30"  # Updated to today's date
+tags: ["Python", "Flask", "Web Development"]
+thumbnail: "example-project-thumb.jpg"
+hero: "example-project-hero.jpg"
+summary: "A sample project to demonstrate the portfolio system's capabilities with Markdown rendering, code highlighting, and LaTeX support."
+show_toc: false
+shown: false
+featured: false</p>
+<h2 style="text-align:center;">What I Learned</h2>
+
+<h2 id="features">Features</h2>
 <ul>
-<li>Stock Ender6 Screen</li>
-<li>BigTreeTech (BTT) Voron SKR Mini v3</li>
-<li>Raspberry Pi (On a train and can't check the version)</li>
-<li>Stock nozzle feed</li>
+<li><strong>Markdown Rendering</strong>:</li>
+<li><strong>Code Highlighting</strong>: Syntax highlighting for multiple languages</li>
+<li><strong>LaTeX Support</strong>: Mathematical equations using MathJax</li>
+<li><strong>Responsive Design</strong>: Mobile-first approach</li>
+<li><strong>Dark/Light Mode</strong>: Theme switching with CSS variables</li>
 </ul>
-<p><br?></p>
-<p>My goals are to set up Klipper and in the short-term while i figure out some other life things, hook up the raspberry pi to my <a href="https://tailscale.com/">tailscale</a> account where I have other devices to enable easy 3D printing from other devices. I'll ignore the screen for now as I've read that Klipper can be a pain to set up on stock screens and mostly focus on interacting with the Pi using Mainsail and SSHing from one of my laptops.</p>
-<p>I flashed the Raspberry Pi 3 B with Raspberry Pi OS Lite and plugged it into the BTT. I flashed it with tailscale and now have my SSH set up to work easily and can work from Mainsail.</p>
-<p>I have been having issues with some configuration though. It seems like the previous owner had some of the motors plugged in randomly. I went to start homing to X and Y and there was a decent amount of banging against one of the rails before I was able to stop the movement. I guess a reason to be more careful about having my finger on the emergency stop on my laptop. I am a little worried that this will mean a lot more work for me, but hopefully it's doable this weekend.</p>
-<p>I'm going to check on the timing belts and make sure they're properly tensioned. I once again think my klipper.config file generally needs to be sorted out a bit better. Those are my first steps. I also think that my Z-axis has a limit switch that is not properly set up.</p>
-<p>So hopefully this weekend (January 31ish), I will have the printer set up and working. We'll see how my time goes for that...</p>
-<p>After an extended period of time, I looked back at this. I was testing my motors because it seems that I'm unable to get the motors to move straight. I've determined it's likely because of my Y motor. It might be a wiring issue or the NEMA motor might be messed up. I'm honetsly so cooked with classes, but I want to make time to investigate.</p>
+<h2 id="code-examples">Code Examples</h2>
+<p>Here's some Python code with syntax highlighting:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+<span class="kn">import</span> <span class="nn">markdown</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">home</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;home.html&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p>And some JavaScript:</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">PortfolioWidget</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">containerId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">container</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">containerId</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nx">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Widget initialized!&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="mathematical-content">Mathematical Content</h2>
+<p>The portfolio supports LaTeX equations:</p>
+<p>Inline math: $E = mc^2$</p>
+<p>Block math:</p>
+<p>$$
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+$$</p>
+<h2 id="project-structure">Project Structure</h2>
+<div class="codehilite"><pre><span></span><code>project/
+├── app.py
+├── config.py
+├── templates/
+│   ├── base.html
+│   └── home.html
+├── static/
+│   ├── css/
+│   └── js/
+└── content/
+    └── projects/
+</code></pre></div>
+
+<h2 id="technologies-used">Technologies Used</h2>
+<ul>
+<li><strong>Backend</strong>: Python, Flask</li>
+<li><strong>Frontend</strong>: HTML5, CSS3, JavaScript</li>
+<li><strong>Content</strong>: Markdown with frontmatter</li>
+<li><strong>Styling</strong>: CSS Grid, Flexbox, CSS Variables</li>
+<li><strong>Deployment</strong>: Render, Gunicorn</li>
+</ul>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<ul>
+<li>[ ] Database integration</li>
+<li>[ ] Blog functionality</li>
+<li>[ ] Advanced search</li>
+<li>[ ] Analytics dashboard</li>
+<li>[ ] API endpoints</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>This example project showcases the portfolio system's capabilities and provides a foundation for real projects to be added.</p>
+<p>
+<style>
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    overflow: hidden;
+  }
+  .carousel-slide {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+  .carousel-slide.active {
+    display: block;
+  }
+  .carousel img {
+    max-width: 100%;
+    height: auto;
+  }
+  .carousel-controls {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .carousel-button {
+    display: inline-block;
+    background: var(--accent, #3b82f6);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+</style>
+<div class="carousel">
+  
+    <div class="carousel-slide">
+      <img src="suction-tank-thumb.jpg" alt="First">
+      
+        <div class="carousel-caption">First image</div>
+      
+    </div>
+  
+    <div class="carousel-slide">
+      <img src="/static/uploads/projects/suction-tank/suction-tank-thumb.jpg" alt="Second">
+      
+        <div class="carousel-caption">Second image</div>
+      
+    </div>
+  
+    <div class="carousel-slide">
+      <img src="/static/uploads/blogs/gtl-italy/gtl-experiment.jpeg" alt="Third">
+      
+        <div class="carousel-caption">Third image</div>
+      
+    </div>
+  
+    <div class="carousel-slide">
+      <img src="/static/uploads/blogs/gtl-italy/gtl-experiment.jpeg" alt="Fourth">
+      
+        <div class="carousel-caption">Fourth image</div>
+      
+    </div>
+  
+  <div class="carousel-controls">
+    <button class="carousel-button prev" type="button">&#8592;</button>
+    <button class="carousel-button next" type="button">&#8594;</button>
+  </div>
+</div>
+<script>
+  (function() {
+    var carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(function(carousel) {
+      var slides = carousel.querySelectorAll('.carousel-slide');
+      if (slides.length === 0) return;
+      var current = 0;
+      function showSlide(idx) {
+        slides.forEach(function(slide, i) {
+          slide.classList.toggle('active', i === idx);
+        });
+      }
+      var prevBtn = carousel.querySelector('.carousel-button.prev');
+      var nextBtn = carousel.querySelector('.carousel-button.next');
+      prevBtn.onclick = function() {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+      };
+      nextBtn.onclick = function() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      };
+      showSlide(current);
+    });
+  })();
+</script>
+</p>
                 </div>
             </div>
         </div>
@@ -172,10 +337,6 @@
                 
             </div>
             <div class="nav-actions">
-                
-                <a href="/projects/" class="btn btn-outline">
-                     Back to Projects
-                </a>
                 
             </div>
         </nav>

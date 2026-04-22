@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Setting up an Ender6 3D Printer with Klipper and Potentially Future Modifications">
+    <meta name="description" content="AI Workout Coach. Basically just a ChatGPT wrapper that interfaces with my Garmin data. Will become more if I find it useful">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -19,7 +19,7 @@
     <meta property="twitter:description" content="Seth Robles - ">
     <meta property="twitter:image" content="/static/uploads/og-image.jpg">
 
-    <title>Ender 6 Modifications - Seth Robles</title>
+    <title>Workout Coach - Seth Robles</title>
 
     <!-- Favicons for all devices and browsers -->
     <link rel="icon" type="image/x-icon" href="/static/uploads/personal/favicon_io/favicon.ico">
@@ -125,13 +125,15 @@
     <div class="container">
         <!-- Entry Header -->
         <header class="entry-header entry-header-centered">
-            <h1 class="entry-title">Ender 6 Modifications</h1>
+            <h1 class="entry-title">Workout Coach</h1>
             
             <div class="entry-tags">
                 
-                <span class="tag">3D Printing</span>
+                <span class="tag">Health</span>
                 
-                <span class="tag">Hardware</span>
+                <span class="tag">Fitness</span>
+                
+                <span class="tag">Coding</span>
                 
             </div>
             
@@ -146,22 +148,20 @@
             <div class="content-main">
                 
                 <div class="markdown-content">
-                    <p>I was recently gifted an ender 6 by Andrew (Apprisco) after he swapped to a Voron and mentioned he didn't have space in the <a href="https://miters.mit.edu/">MITERS</a> discord.</p>
-<p>He mentioned that a good way to figure out what was going on the printer would be to kind of restart it and make it my own, which I think it an awesome idea. I've never had my own 3D printer and I'm looking forward to the headaches of nozzle cleaning and such that I've heard so much about.</p>
-<p>I currently have the following components/modifications:</p>
-<ul>
-<li>Stock Ender6 Screen</li>
-<li>BigTreeTech (BTT) Voron SKR Mini v3</li>
-<li>Raspberry Pi (On a train and can't check the version)</li>
-<li>Stock nozzle feed</li>
-</ul>
-<p><br?></p>
-<p>My goals are to set up Klipper and in the short-term while i figure out some other life things, hook up the raspberry pi to my <a href="https://tailscale.com/">tailscale</a> account where I have other devices to enable easy 3D printing from other devices. I'll ignore the screen for now as I've read that Klipper can be a pain to set up on stock screens and mostly focus on interacting with the Pi using Mainsail and SSHing from one of my laptops.</p>
-<p>I flashed the Raspberry Pi 3 B with Raspberry Pi OS Lite and plugged it into the BTT. I flashed it with tailscale and now have my SSH set up to work easily and can work from Mainsail.</p>
-<p>I have been having issues with some configuration though. It seems like the previous owner had some of the motors plugged in randomly. I went to start homing to X and Y and there was a decent amount of banging against one of the rails before I was able to stop the movement. I guess a reason to be more careful about having my finger on the emergency stop on my laptop. I am a little worried that this will mean a lot more work for me, but hopefully it's doable this weekend.</p>
-<p>I'm going to check on the timing belts and make sure they're properly tensioned. I once again think my klipper.config file generally needs to be sorted out a bit better. Those are my first steps. I also think that my Z-axis has a limit switch that is not properly set up.</p>
-<p>So hopefully this weekend (January 31ish), I will have the printer set up and working. We'll see how my time goes for that...</p>
-<p>After an extended period of time, I looked back at this. I was testing my motors because it seems that I'm unable to get the motors to move straight. I've determined it's likely because of my Y motor. It might be a wiring issue or the NEMA motor might be messed up. I'm honetsly so cooked with classes, but I want to make time to investigate.</p>
+                    <!-- <h2 style="text-align:center;"></h2> -->
+
+<p>I really enjoy fitness and working out. Although dips during the semester do not always reflect this very well, I just enjoy a hard workout or the feeling of my body moving.</p>
+<p>This alongisde the fact that I am not wrestling or on a team how I was in high school, means that my fitness has slowed down a decent amount. I'm not able to have someone to push me in the exact same way that I used to.</p>
+<p>Solutions could be friends or a new coach. Most of my friends wake up later in the day than when I would want to work out and the other guy, Jack Hammer, is crazy (as of the writing, we're about to go on a super long run soon. I'm very excited)</p>
+<p>Regardless, I wanted to see if I could have a coach and visualize my training data. I might actually pair this up with a Raspbery Pi + LCD screen at some point.</p>
+<p>As such, right now I am basically vibe-coding an LLM coach integration with this Grafana Dashboard: https://github.com/arpanghosh8453/garmin-grafana.</p>
+<p>I started off thinking that I would use the FIT files format that has been used previously, but I'm very aware that these FIT files are based on Garmin's predicted exercise data, which is notoriously bad. I think I would prefer to sync up the workout data and correct the sets if that makes sense. This would be ideal, although it might be a little annoying.</p>
+<p>I'm honestly just letting Claude run at this for now. I'll make a Telegram bot that I'll text and it'll use some LLM API key to get a response for an ideal workout.</p>
+<p>I've seen that Gemini is free for a limited amount per month, so I'll just use that for now. I'll look more into other open source models in the future.</p>
+<p>A quick search while I was "coding" showed that there are a few products with similar appeals, but I already started this so I'm going to keep going and see if I like the fix once I'm done.</p>
+<p>Okay, so now I'm able to use Telegram to see recent workouts. That's great. I think I'm at a natural stopping point. I'll stop for right now so I can do work that I actually need to.</p>
+<p>Depending on how much I find this useful, I might actually make this into an app using Expo Go as a demo. Anyways, it's very much just an LLM-wrapper right now that has relevant nearby context. Actually, I did add the basic integration so it's able to connect my garmin data to workout specific information I input.</p>
+<p>So this was like an hour long project, but I have a Docker container running this. I'll need to set it up on one of my Rasppis. I just checked tailscale and am realizing that their power source is all unplugged. I will have to do this later I guess.</p>
                 </div>
             </div>
         </div>
