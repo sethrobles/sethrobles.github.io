@@ -4,7 +4,7 @@ backend:
   branch: main
   # After deploying the Cloudflare Worker (see admin/oauth-worker.js), replace
   # the placeholder below with your Worker's *.workers.dev URL.
-  base_url: https://sirobles.workers.dev
+  base_url: https://decap-oauth.sirobles.workers.dev
 
 site_url: https://sethrobles.github.io
 display_url: https://sethrobles.github.io
