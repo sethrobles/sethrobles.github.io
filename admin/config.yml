@@ -26,7 +26,7 @@ collections:
     # File on disk will be named after the slug field value
     slug: "{{fields.slug}}"
     # Images uploaded while editing a post go into that post's own folder
-    media_folder: "static/uploads/blogs/{{slug}}"
+    media_folder: "/static/uploads/blogs/{{slug}}"
     public_folder: "/static/uploads/blogs/{{slug}}"
     fields:
       - label: Type
@@ -118,7 +118,7 @@ collections:
     create: true
     identifier_field: slug
     slug: "{{fields.slug}}"
-    media_folder: "static/uploads/projects/{{slug}}"
+    media_folder: "/static/uploads/projects/{{slug}}"
     public_folder: "/static/uploads/projects/{{slug}}"
     fields:
       - label: Type
