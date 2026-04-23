@@ -1407,3 +1407,11 @@ ul ul {
   margin-left: 2em;
   list-style-type: disc;
 }
+
+/* Center images in post/project content */
+.markdown-content img {
+    display: block;
+    margin: 1.5rem auto;
+    max-width: 100%;
+    height: auto;
+}
