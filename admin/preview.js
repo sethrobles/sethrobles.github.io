@@ -1,20 +1,48 @@
 // Decap CMS Preview Customisation
-// Runs after decap-cms.js loads; uses the globals it exposes: h, createClass, CMS.
+// Runs after decap-cms.js loads; uses globals: h, createClass, CMS.
 
-// ── Inject site styles into the preview iframe ──────────────────────────────
+// ── Site styles ──────────────────────────────────────────────────────────────
 CMS.registerPreviewStyle('/static/css/base.css');
-
-// Small reset so the preview iframe body background matches the site
 CMS.registerPreviewStyle(
   'body { background: var(--bg-primary, #fff); color: var(--text-primary, #0f172a); }',
   { raw: true }
 );
 
-// ── Shared preview component (used for both blogs and projects) ──────────────
+// ── MathJax helpers (run inside the preview iframe) ──────────────────────────
+function loadMathJax() {
+  if (window.MathJax) return;
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    },
+  };
+  var s = document.createElement('script');
+  s.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+  s.async = true;
+  document.head.appendChild(s);
+}
+
+function typesetMathJax() {
+  if (window.MathJax && window.MathJax.typesetPromise) {
+    window.MathJax.typesetPromise();
+  }
+}
+
+// ── Preview component ─────────────────────────────────────────────────────────
 var PostPreview = createClass({
+  componentDidMount: function () {
+    loadMathJax();
+  },
+
+  componentDidUpdate: function () {
+    typesetMathJax();
+  },
+
   render: function () {
-    var entry    = this.props.entry;
+    var entry     = this.props.entry;
     var widgetFor = this.props.widgetFor;
+    var getAsset  = this.props.getAsset;
 
     var title   = entry.getIn(['data', 'title'],   '');
     var summary = entry.getIn(['data', 'summary'], '');
@@ -22,10 +50,13 @@ var PostPreview = createClass({
     var tags    = tagsRaw ? tagsRaw.toJS() : [];
     var body    = widgetFor('body');
 
+    // Hero image — works for both already-uploaded paths and fresh blob uploads
+    var heroField = entry.getIn(['data', 'hero']);
+    var heroSrc   = heroField ? getAsset(heroField).toString() : null;
+
     return h('article', { className: 'entry-detail' },
       h('div', { className: 'container' },
 
-        // Header
         h('header', { className: 'entry-header entry-header-centered' },
           h('h1', { className: 'entry-title' }, title),
 
@@ -46,10 +77,20 @@ var PostPreview = createClass({
                   maxWidth: '60ch',
                 }
               }, summary)
+            : null,
+
+          heroSrc
+            ? h('div', { className: 'entry-hero' },
+                h('img', {
+                  src: heroSrc,
+                  alt: title,
+                  className: 'entry-hero-image',
+                  style: { maxWidth: '100%', marginTop: '1rem' },
+                })
+              )
             : null
         ),
 
-        // Body content
         h('div', { className: 'entry-content' },
           h('div', { className: 'content-main' },
             h('div', { className: 'markdown-content' }, body)
@@ -57,7 +98,7 @@ var PostPreview = createClass({
         )
       )
     );
-  }
+  },
 });
 
 CMS.registerPreviewTemplate('blogs',    PostPreview);
