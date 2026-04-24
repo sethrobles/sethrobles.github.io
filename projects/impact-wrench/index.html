@@ -153,9 +153,28 @@
 <p><img alt="Front of Trigger PCB" src="/static/uploads/projects/impact-wrench/6d917985-d068-4c5d-9f50-e3af766d76a6_1_105_c.jpeg" title="Front of Trigger PCB" /></p>
 <p><img alt="Back of Trigger PCB" src="/static/uploads/projects/impact-wrench/cb70a49c-c6b0-4af2-a5d9-18c10400f089_1_105_c.jpeg" title="Back of Trigger PCB" /></p>
 <p>I need to go back and actually figure out more, but with the help of Elijah in MITERS and looking confused for a small amount of time, I was generally able to figure out what is going on.</p>
-<p>When the trigger is pressed, these little feet move across on the back, connecting the large copper pads seen. You can see that this connects the board's power. (I'll include a schematic later). This prevents unnecessary power waste coming to this board when it's not in use (definitely useful). Below is my current understanding of the pin's functions.</p>
+<p>When the trigger is pressed, these little feet movie across on the back, connecting the large copper pads seen. You can see that this connects the board's power. (I'll include a schematic later). This prevents unnecessary power waste coming to this board when it's not in use (definitely useful). Below is my current understanding of the pin's functions.</p>
 <p><img alt="Mapping of PCB Pins" src="/static/uploads/projects/impact-wrench/img_2268.png" title="Mapping of PCB Pins" /></p>
 <p>I will try milling a PCB for it in the <a href="https://make.mit.edu/makerspace?recordId=recrAr192E0hOylmw">Mezzanine</a> later this week. I will be using a Raspberry Pi for the basic control logic.</p>
+<p>I went back to MITERS to see if I could verify some basic information with an oscilloscope. I was able to determine that when pressed sufficiently, the red pin goes to ~ 4.7Vrms. When not pressed in sufficiently, it floats around 20 Vrms.</p>
+<p>The yellow pin when not connected floats around 20 Vrms and when pressing it goes from around 600 Vrms to 4.7Vrms (around what the red is).</p>
+<p>The yellow is connected to the left middle pad on the back which the carriage connects to. Idk why i thought it was ground.</p>
+<p>I am measuring the resistor values now.</p>
+<p>They all seem to individually read 8.59kOhms. Although, weirdly enough, when i ove beyond a single resistor pair, they seem to get a little distorted. Honestly that's not super important for me because I have a basic understanding of what is going on, so I will continue. Regardless, I thought it was interesting so it's listed below.</p>
+<ol>
+<li>8.59k</li>
+<li>14.4k</li>
+<li>17.3k</li>
+<li>17.4k</li>
+<li>14.7k</li>
+<li>9.11k</li>
+<li>0.71k</li>
+</ol>
+<p>Okay, I think i'm pretty confident about what it is. The pins are isolated until the slider on bottom moves. There appear to be no other copper connections or other traces. As such, I want to make a relay switch that will take in a digital signal of a Raspberry Pi (or some other controller) and then connect these two. I should be able to test this by just connecting them with a wire...</p>
+<p>So that was an obvious test lol. It worked. I'll mimic their design just because I'm not sure what the internals look like, so I will be using a relay switch. I think this will do: AQV210E. </p>
+<p>I now need to do something to mimic the analog signal that is going into the yellow wire. I think this will be: MCP4725A1T-E/CH.</p>
+<p>For now, I think I will be using a floating gnd / connect my rapsi gnd to the lion gnd. It seems a little sketchy to me, but I've probably done similar things before. I'm just worried about it now because It's not something that I would do a lot. Okay, I clamped the motor down and ran a test. It works how I expected. I need to double check the changing of directions, but this looks pretty good right now.</p>
+<p>I am going to try working on this more on Saturday. I will be cutting off a lot of the handle probably and maybe making a basic clamping style mount that grabs the from on top and bottom and could be screwed onto a base platform.</p>
                 </div>
                 
             </div>
