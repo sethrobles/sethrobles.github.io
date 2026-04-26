@@ -1,6 +1,32 @@
 {
-  "generated_at_utc": "2026-04-25T14:53:17.104723+00:00",
+  "generated_at_utc": "2026-04-26T05:14:21.628955+00:00",
   "activities": [
+    {
+      "id": 18258384155,
+      "name": "2x Marathon",
+      "type": "Run",
+      "start_date_local": "2026-04-25",
+      "distance_m": 84568.0,
+      "moving_time_s": 32303,
+      "total_elevation_gain_m": 376.0,
+      "calories": 0,
+      "pace_min_per_mi": "10:14",
+      "url": "https://www.strava.com/activities/18258384155",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18258384155"
+    },
+    {
+      "id": 18258371573,
+      "name": "Lunch Run",
+      "type": "Run",
+      "start_date_local": "2026-04-24",
+      "distance_m": 6144.1,
+      "moving_time_s": 1833,
+      "total_elevation_gain_m": 25.0,
+      "calories": 0,
+      "pace_min_per_mi": "8:00",
+      "url": "https://www.strava.com/activities/18258371573",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18258371573"
+    },
     {
       "id": 18215614213,
       "name": "Lunch Swim",
@@ -52,32 +78,6 @@
       "pace_min_per_mi": null,
       "url": "https://www.strava.com/activities/18118101015",
       "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18118101015"
-    },
-    {
-      "id": 18090751953,
-      "name": "Evening Run",
-      "type": "Run",
-      "start_date_local": "2026-04-12",
-      "distance_m": 13589.9,
-      "moving_time_s": 4033,
-      "total_elevation_gain_m": 52.0,
-      "calories": 0,
-      "pace_min_per_mi": "7:57",
-      "url": "https://www.strava.com/activities/18090751953",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18090751953"
-    },
-    {
-      "id": 18090751825,
-      "name": "Afternoon Workout",
-      "type": "Workout",
-      "start_date_local": "2026-04-12",
-      "distance_m": 0.0,
-      "moving_time_s": 228,
-      "total_elevation_gain_m": 0,
-      "calories": 0,
-      "pace_min_per_mi": null,
-      "url": "https://www.strava.com/activities/18090751825",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18090751825"
     }
   ]
 }
