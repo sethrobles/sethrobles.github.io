@@ -172,6 +172,109 @@
 <p><img alt="Mock Trigger PCB" src="/static/uploads/projects/impact-wrench/screenshot-from-2026-05-24-16-42-24.png" title="Mock Trigger PCB" /></p>
                 </div>
                 
+                
+<style>
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    overflow: hidden;
+  }
+  .carousel-slide {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+  .carousel-slide.active {
+    display: block;
+  }
+  .carousel img {
+    max-width: 100%;
+    height: auto;
+  }
+  .carousel-controls {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .carousel-button {
+    display: inline-block;
+    background: var(--accent, #3b82f6);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+</style>
+<div class="carousel">
+  
+    <div class="carousel-slide">
+      <img src="/static/uploads/projects/impact-wrench/img_0426.jpeg" alt="Part of Impact Wrench">
+      
+    </div>
+  
+    <div class="carousel-slide">
+      <img src="/static/uploads/projects/impact-wrench/img_0426.jpeg" alt="Part of impact wrench">
+      
+    </div>
+  
+    <div class="carousel-slide">
+      <img src="/static/uploads/projects/impact-wrench/img_0428.jpeg" alt="Part of impact wrench">
+      
+    </div>
+  
+    <div class="carousel-slide">
+      <img src="/static/uploads/projects/impact-wrench/img_0429.jpeg" alt="Part of impact wrench">
+      
+    </div>
+  
+    <div class="carousel-slide">
+      <img src="/static/uploads/projects/impact-wrench/img_0430.jpeg" alt="Part of impact wrench">
+      
+    </div>
+  
+    <div class="carousel-slide">
+      <img src="/static/uploads/projects/impact-wrench/img_0431.jpeg" alt="Part of impact wrench">
+      
+    </div>
+  
+  <div class="carousel-controls">
+    <button class="carousel-button prev" type="button">&#8592;</button>
+    <button class="carousel-button next" type="button">&#8594;</button>
+  </div>
+</div>
+<script>
+  (function() {
+    var carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(function(carousel) {
+      var slides = carousel.querySelectorAll('.carousel-slide');
+      if (slides.length === 0) return;
+      var current = 0;
+      function showSlide(idx) {
+        slides.forEach(function(slide, i) {
+          slide.classList.toggle('active', i === idx);
+        });
+      }
+      var prevBtn = carousel.querySelector('.carousel-button.prev');
+      var nextBtn = carousel.querySelector('.carousel-button.next');
+      prevBtn.onclick = function() {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+      };
+      nextBtn.onclick = function() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      };
+      showSlide(current);
+    });
+  })();
+</script>
+
+                
             </div>
         </div>
 
