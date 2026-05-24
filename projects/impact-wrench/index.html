@@ -159,22 +159,17 @@
 <p>I went back to MITERS to see if I could verify some basic information with an oscilloscope. I was able to determine that when pressed sufficiently, the red pin goes to ~ 4.7Vrms. When not pressed in sufficiently, it floats around 20 Vrms.</p>
 <p>The yellow pin when not connected floats around 20 Vrms and when pressing it goes from around 600 Vrms to 4.7Vrms (around what the red is).</p>
 <p>The yellow is connected to the left middle pad on the back which the carriage connects to. Idk why i thought it was ground.</p>
-<p>I am measuring the resistor values now.</p>
-<p>They all seem to individually read 8.59kOhms. Although, weirdly enough, when i ove beyond a single resistor pair, they seem to get a little distorted. Honestly that's not super important for me because I have a basic understanding of what is going on, so I will continue. Regardless, I thought it was interesting so it's listed below. The formatting is still weird for now. I'll try to fix this at some point.</p>
-<ol>
-<li>8.59k</li>
-<li>14.4k</li>
-<li>17.3k</li>
-<li>17.4k</li>
-<li>14.7k</li>
-<li>9.11k</li>
-<li>0.71k</li>
-</ol>
+<p>I am measuring the resistor values now. (This was a long segway, so I exlcuded it here). Basically, I realized that the trigger was acting as an artifical analog voltage signal using the carriage moving across slanted pads.</p>
 <p>Okay, I think i'm pretty confident about what it is. The pins are isolated until the slider on bottom moves. There appear to be no other copper connections or other traces. As such, I want to make a relay switch that will take in a digital signal of a Raspberry Pi (or some other controller) and then connect these two. I should be able to test this by just connecting them with a wire...</p>
 <p>So that was an obvious test lol. It worked. I'll mimic their design just because I'm not sure what the internals look like, so I will be using a relay switch. I think this will do: AQV210E. </p>
 <p>I now need to do something to mimic the analog signal that is going into the yellow wire. I think this will be: MCP4725A1T-E/CH.</p>
 <p>For now, I think I will be using a floating gnd / connect my rapsi gnd to the lion gnd. It seems a little sketchy to me, but I've probably done similar things before. I'm just worried about it now because It's not something that I would do a lot. Okay, I clamped the motor down and ran a test. It works how I expected. I need to double check the changing of directions, but this looks pretty good right now.</p>
 <p>I am going to try working on this more on Saturday. I will be cutting off a lot of the handle probably and maybe making a basic clamping style mount that grabs the from on top and bottom and could be screwed onto a base platform.</p>
+<p>(Update: May 24)</p>
+<p>I've worked this out a little more. I have not made the mount yet, mostly bc I forgot about it. I was just going to screw into the holes that join the hammer part of the wrench with the part containing the motor. I think that should be sufficient.</p>
+<p>That being said, I don't have calipers around me right now, so I'll have to look later.</p>
+<p>I've designed a pcb for imitating the trigger, but I'm not 100% about the direction pin, mostly because I think I lost a couple of the components before. Regardless, I have the pcb for it designed as shown below. I have the parts at home, minus the 330 Ohm resistors, so I may order some from digikey. I'm in Philly for the Summer now, so I'll have to get them delivered here. Once I do, I'm hoping this </p>
+<p><img alt="Mock Trigger PCB" src="/static/uploads/projects/impact-wrench/screenshot-from-2026-05-24-16-42-24.png" title="Mock Trigger PCB" /></p>
                 </div>
                 
             </div>
