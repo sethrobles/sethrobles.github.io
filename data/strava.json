@@ -1,6 +1,71 @@
 {
-  "generated_at_utc": "2026-06-14T06:44:39.499002+00:00",
+  "generated_at_utc": "2026-06-15T07:24:35.286662+00:00",
   "activities": [
+    {
+      "id": 18924285518,
+      "name": "Morning Weight Training",
+      "type": "WeightTraining",
+      "start_date_local": "2026-06-14",
+      "distance_m": 0.0,
+      "moving_time_s": 2722,
+      "total_elevation_gain_m": 0,
+      "calories": 0,
+      "pace_min_per_mi": null,
+      "url": "https://www.strava.com/activities/18924285518",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18924285518"
+    },
+    {
+      "id": 18924283567,
+      "name": "Morning Weight Training",
+      "type": "WeightTraining",
+      "start_date_local": "2026-06-13",
+      "distance_m": 0.0,
+      "moving_time_s": 3778,
+      "total_elevation_gain_m": 0,
+      "calories": 0,
+      "pace_min_per_mi": null,
+      "url": "https://www.strava.com/activities/18924283567",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18924283567"
+    },
+    {
+      "id": 18924283574,
+      "name": "Morning Weight Training",
+      "type": "WeightTraining",
+      "start_date_local": "2026-06-12",
+      "distance_m": 0.0,
+      "moving_time_s": 2063,
+      "total_elevation_gain_m": 0,
+      "calories": 0,
+      "pace_min_per_mi": null,
+      "url": "https://www.strava.com/activities/18924283574",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18924283574"
+    },
+    {
+      "id": 18924283562,
+      "name": "Morning Row",
+      "type": "Rowing",
+      "start_date_local": "2026-06-11",
+      "distance_m": 0.0,
+      "moving_time_s": 1467,
+      "total_elevation_gain_m": 0,
+      "calories": 0,
+      "pace_min_per_mi": null,
+      "url": "https://www.strava.com/activities/18924283562",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18924283562"
+    },
+    {
+      "id": 18924283563,
+      "name": "Afternoon Weight Training",
+      "type": "WeightTraining",
+      "start_date_local": "2026-06-06",
+      "distance_m": 0.0,
+      "moving_time_s": 4315,
+      "total_elevation_gain_m": 0,
+      "calories": 0,
+      "pace_min_per_mi": null,
+      "url": "https://www.strava.com/activities/18924283563",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18924283563"
+    },
     {
       "id": 18650071144,
       "name": "Morning Walk",
@@ -13,71 +78,6 @@
       "pace_min_per_mi": null,
       "url": "https://www.strava.com/activities/18650071144",
       "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18650071144"
-    },
-    {
-      "id": 18298551781,
-      "name": "Afternoon Weight Training",
-      "type": "WeightTraining",
-      "start_date_local": "2026-04-28",
-      "distance_m": 0.0,
-      "moving_time_s": 5203,
-      "total_elevation_gain_m": 0,
-      "calories": 0,
-      "pace_min_per_mi": null,
-      "url": "https://www.strava.com/activities/18298551781",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18298551781"
-    },
-    {
-      "id": 18258384155,
-      "name": "2x Marathon",
-      "type": "Run",
-      "start_date_local": "2026-04-25",
-      "distance_m": 84568.0,
-      "moving_time_s": 32303,
-      "total_elevation_gain_m": 376.0,
-      "calories": 0,
-      "pace_min_per_mi": "10:14",
-      "url": "https://www.strava.com/activities/18258384155",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18258384155"
-    },
-    {
-      "id": 18258371573,
-      "name": "Lunch Run",
-      "type": "Run",
-      "start_date_local": "2026-04-24",
-      "distance_m": 6144.1,
-      "moving_time_s": 1833,
-      "total_elevation_gain_m": 25.0,
-      "calories": 0,
-      "pace_min_per_mi": "8:00",
-      "url": "https://www.strava.com/activities/18258371573",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18258371573"
-    },
-    {
-      "id": 18215614213,
-      "name": "Lunch Swim",
-      "type": "Swim",
-      "start_date_local": "2026-04-21",
-      "distance_m": 825.0,
-      "moving_time_s": 780,
-      "total_elevation_gain_m": 0,
-      "calories": 0,
-      "pace_min_per_mi": null,
-      "url": "https://www.strava.com/activities/18215614213",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18215614213"
-    },
-    {
-      "id": 18118101340,
-      "name": "Morning Run",
-      "type": "Run",
-      "start_date_local": "2026-04-15",
-      "distance_m": 10654.5,
-      "moving_time_s": 3214,
-      "total_elevation_gain_m": 39.0,
-      "calories": 0,
-      "pace_min_per_mi": "8:05",
-      "url": "https://www.strava.com/activities/18118101340",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18118101340"
     }
   ]
 }
