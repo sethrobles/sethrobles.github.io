@@ -1,6 +1,32 @@
 {
-  "generated_at_utc": "2026-06-18T17:19:17.519884+00:00",
+  "generated_at_utc": "2026-06-19T07:11:07.373308+00:00",
   "activities": [
+    {
+      "id": 18979482589,
+      "name": "Morning Weight Training",
+      "type": "WeightTraining",
+      "start_date_local": "2026-06-18",
+      "distance_m": 0.0,
+      "moving_time_s": 3133,
+      "total_elevation_gain_m": 0,
+      "calories": 0,
+      "pace_min_per_mi": null,
+      "url": "https://www.strava.com/activities/18979482589",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18979482589"
+    },
+    {
+      "id": 18979480482,
+      "name": "Morning Weight Training",
+      "type": "WeightTraining",
+      "start_date_local": "2026-06-17",
+      "distance_m": 0.0,
+      "moving_time_s": 3553,
+      "total_elevation_gain_m": 0,
+      "calories": 0,
+      "pace_min_per_mi": null,
+      "url": "https://www.strava.com/activities/18979480482",
+      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18979480482"
+    },
     {
       "id": 18928457797,
       "name": "Morning Weight Training",
@@ -52,32 +78,6 @@
       "pace_min_per_mi": null,
       "url": "https://www.strava.com/activities/18924283574",
       "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18924283574"
-    },
-    {
-      "id": 18924283562,
-      "name": "Morning Row",
-      "type": "Rowing",
-      "start_date_local": "2026-06-11",
-      "distance_m": 0.0,
-      "moving_time_s": 1467,
-      "total_elevation_gain_m": 0,
-      "calories": 0,
-      "pace_min_per_mi": null,
-      "url": "https://www.strava.com/activities/18924283562",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18924283562"
-    },
-    {
-      "id": 18924283563,
-      "name": "Afternoon Weight Training",
-      "type": "WeightTraining",
-      "start_date_local": "2026-06-06",
-      "distance_m": 0.0,
-      "moving_time_s": 4315,
-      "total_elevation_gain_m": 0,
-      "calories": 0,
-      "pace_min_per_mi": null,
-      "url": "https://www.strava.com/activities/18924283563",
-      "map_image_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/a18924283563"
     }
   ]
 }
