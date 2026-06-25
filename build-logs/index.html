@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learning to use blender by making various small figurines for 3D-printable gifts">
+    <meta name="description" content="Informal, behind-the-scenes logs of how I build my projects.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -19,7 +19,7 @@
     <meta property="twitter:description" content="Seth Robles - ">
     <meta property="twitter:image" content="/static/uploads/og-image.jpg">
 
-    <title>Blender Figures - Seth Robles</title>
+    <title>Build Logs - Seth Robles</title>
 
     <!-- Favicons for all devices and browsers -->
     <link rel="icon" type="image/x-icon" href="/static/uploads/personal/favicon_io/favicon.ico">
@@ -121,157 +121,132 @@
 
     <main class="main-content">
         
-<article class="entry-detail">
+<section class="projects-header">
     <div class="container">
-        <!-- Entry Header -->
-        <header class="entry-header entry-header-centered">
-            <h1 class="entry-title">Blender Figures</h1>
-            
-            <div class="entry-tags">
-                
-                <span class="tag">Blender</span>
-                
-                <span class="tag">3D Printing</span>
-                
-            </div>
-            
-            
-            
-            
-            
+        <header class="section-header">
+            <h1 class="section-title">Build Logs</h1>
         </header>
-        <!-- Embedded video (if present) -->
-        
 
-        <!-- Entry Content -->
-        <div class="entry-content">
-            <div class="content-main">
+        <div class="projects-controls">
+            <div class="search-box" style="position:relative;">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="position:absolute;left:0.75rem;top:50%;transform:translateY(-50%);pointer-events:none;">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input type="text" id="buildlog-search" placeholder="Search build logs..." class="search-input" style="padding-left:2.5rem;">
+            </div>
+
+            <div class="tag-filters" id="buildlog-tag-filters">
+                <button class="tag-filter active" data-tag="all">All</button>
                 
-                <div class="markdown-content">
-                    <p>Over winter break, I decided that I wanted to explore new hobbies (and procrastinate on doing things that I probably should), so I downloaded blender and looked at some videos by <a href="https://www.youtube.com/@JoeyCarlino">Joey C</a> on youtube. I followed his tutorial initially and then deviated once I realized that I had somehow messed up and could not cmd + z all the way back. However, below are some of the models I have made and hopefully will at some point print (now that I have a 3D printer)for friends / my siblings.</p>
-<p>Right now, I'm definitely looking at blocky characters. I think my natural intutition / general artistic instict is limited, so I'm going to start intentionally with simpler models. My goal, however, is to make pokemon for my siblings for next christmas that hopefully are of better quality.</p>
-<p>I tested running one of my models through a slier and saw that the print was really messed up, so I had to restart the process. Currently, the process I believe works best is:</p>
-<p>1) Define cubes and icospheres with subdivision surfaces</p>
-<p>2) Shape the surfaces as necessary. Try not to apply modifiers onto objects unless necessary</p>
-<p>3) Use a "union" boolean (potentially right after a division) in order to make sure geometry is well-meshed</p>
-<p>4) Join all bodies together (cmd J)</p>
-<p>5) Select all faces and convert them to triangalize them</p>
-<p>
-<style>
-  .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-    overflow: hidden;
-  }
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    text-align: center;
-  }
-  .carousel-slide.active {
-    display: block;
-  }
-  .carousel img {
-    max-width: 100%;
-    height: auto;
-  }
-  .carousel-controls {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-  .carousel-button {
-    display: inline-block;
-    background: var(--accent, #3b82f6);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-  }
-</style>
-<div class="carousel">
-  
-    <div class="carousel-slide">
-      <img src="/static/uploads/projects/blender-figures/bluey_model.png" alt="Model of Bluey">
-      
-        <div class="carousel-caption">Model of Bluey</div>
-      
-    </div>
-  
-    <div class="carousel-slide">
-      <img src="/static/uploads/projects/blender-figures/bunny_model.png" alt="Model of a bunny">
-      
-        <div class="carousel-caption">Model of a bunny</div>
-      
-    </div>
-  
-    <div class="carousel-slide">
-      <img src="/static/uploads/projects/blender-figures/duck_model.png" alt="Model of a rubber duck">
-      
-        <div class="carousel-caption">Model of a rubber duck</div>
-      
-    </div>
-  
-  <div class="carousel-controls">
-    <button class="carousel-button prev" type="button">&#8592;</button>
-    <button class="carousel-button next" type="button">&#8594;</button>
-  </div>
-</div>
-<script>
-  (function() {
-    var carousels = document.querySelectorAll('.carousel');
-    carousels.forEach(function(carousel) {
-      var slides = carousel.querySelectorAll('.carousel-slide');
-      if (slides.length === 0) return;
-      var current = 0;
-      function showSlide(idx) {
-        slides.forEach(function(slide, i) {
-          slide.classList.toggle('active', i === idx);
-        });
-      }
-      var prevBtn = carousel.querySelector('.carousel-button.prev');
-      var nextBtn = carousel.querySelector('.carousel-button.next');
-      prevBtn.onclick = function() {
-        current = (current - 1 + slides.length) % slides.length;
-        showSlide(current);
-      };
-      nextBtn.onclick = function() {
-        current = (current + 1) % slides.length;
-        showSlide(current);
-      };
-      showSlide(current);
-    });
-  })();
-</script>
-</p>
-                </div>
+                
+                    
+                        
+                            
+                                
+                            
+                        
+                            
+                                
+                            
+                        
+                            
+                                
+                            
+                        
+                    
+                
+
+                
+                <button class="tag-filter" data-tag="Web">Web</button>
+                
+                <button class="tag-filter" data-tag="Python">Python</button>
+                
+                <button class="tag-filter" data-tag="Process">Process</button>
                 
             </div>
         </div>
+    </div>
+</section>
 
-        <!-- Related build logs (project pages only) -->
+<section class="projects-content">
+    <div class="container">
+        <div class="projects-grid" id="buildlog-grid">
+            
+            
+                
+<a href="/build-logs/personal-site-buildlog/" class="card entry-card" data-tags="Web,Python,Process" style="text-decoration:none;color:inherit;">
+    <div class="card-image">
+    
+        <div class="card-placeholder">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21,15 16,10 5,21"></polyline>
+            </svg>
+        </div>
+    
+    </div>
+
+    <div class="card-content">
+        <header class="card-header">
+            <div style="text-align:center">
+                <h3 class="card-title">
+                    Building the Personal Site
+                </h3>
+                
+                <time class="card-date" datetime="2026-06-24">
+                    2026-06-24
+                </time>
+                
+            </div>
+        </header>
+
+        
+        <div class="card-tags">
+            
+            <span class="tag">Web</span>
+            
+            <span class="tag">Python</span>
+            
+            <span class="tag">Process</span>
+            
+            
+        </div>
         
 
-        <!-- Entry Navigation -->
-        <nav class="entry-navigation">
-            <div class="nav-links">
-                
-            </div>
-            <div class="nav-actions">
-                
-                <a href="/projects/" class="btn btn-outline">
-                     Back to Projects
-                </a>
-                
-            </div>
-        </nav>
+        
+        <p class="card-summary">An informal log of how this site came together — the static generator, the CMS wiring, and adding build logs.</p>
+        
     </div>
-</article>
+    </a>
+
+            
+        </div>
+
+        <div class="no-results" id="no-buildlog-results" style="display: none;">
+            <div class="no-results-content">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <h3>No build logs found</h3>
+                <p>Try adjusting your search or filter criteria</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="/static/js/search.js"></script>
+<script>
+    setupSearchAndFilter({
+        searchInputId: 'buildlog-search',
+        tagFilterSelector: '#buildlog-tag-filters .tag-filter',
+        gridId: 'buildlog-grid',
+        noResultsId: 'no-buildlog-results',
+        cardSelector: '.entry-card'
+    });
+</script>
 
     </main>
 

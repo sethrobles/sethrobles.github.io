@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learning to use blender by making various small figurines for 3D-printable gifts">
+    <meta name="description" content="An informal log of how this site came together — the static generator, the CMS wiring, and adding build logs.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -19,7 +19,7 @@
     <meta property="twitter:description" content="Seth Robles - ">
     <meta property="twitter:image" content="/static/uploads/og-image.jpg">
 
-    <title>Blender Figures - Seth Robles</title>
+    <title>Building the Personal Site - Seth Robles</title>
 
     <!-- Favicons for all devices and browsers -->
     <link rel="icon" type="image/x-icon" href="/static/uploads/personal/favicon_io/favicon.ico">
@@ -125,16 +125,24 @@
     <div class="container">
         <!-- Entry Header -->
         <header class="entry-header entry-header-centered">
-            <h1 class="entry-title">Blender Figures</h1>
+            <h1 class="entry-title">Building the Personal Site</h1>
             
             <div class="entry-tags">
                 
-                <span class="tag">Blender</span>
+                <span class="tag">Web</span>
                 
-                <span class="tag">3D Printing</span>
+                <span class="tag">Python</span>
+                
+                <span class="tag">Process</span>
                 
             </div>
             
+            
+            <div class="entry-parent-project" style="margin-bottom:1rem;">
+                <a href="/projects/personal-site/" class="nav-link">
+                    &larr; Build log for Personal Site
+                </a>
+            </div>
             
             
             
@@ -148,107 +156,17 @@
             <div class="content-main">
                 
                 <div class="markdown-content">
-                    <p>Over winter break, I decided that I wanted to explore new hobbies (and procrastinate on doing things that I probably should), so I downloaded blender and looked at some videos by <a href="https://www.youtube.com/@JoeyCarlino">Joey C</a> on youtube. I followed his tutorial initially and then deviated once I realized that I had somehow messed up and could not cmd + z all the way back. However, below are some of the models I have made and hopefully will at some point print (now that I have a 3D printer)for friends / my siblings.</p>
-<p>Right now, I'm definitely looking at blocky characters. I think my natural intutition / general artistic instict is limited, so I'm going to start intentionally with simpler models. My goal, however, is to make pokemon for my siblings for next christmas that hopefully are of better quality.</p>
-<p>I tested running one of my models through a slier and saw that the print was really messed up, so I had to restart the process. Currently, the process I believe works best is:</p>
-<p>1) Define cubes and icospheres with subdivision surfaces</p>
-<p>2) Shape the surfaces as necessary. Try not to apply modifiers onto objects unless necessary</p>
-<p>3) Use a "union" boolean (potentially right after a division) in order to make sure geometry is well-meshed</p>
-<p>4) Join all bodies together (cmd J)</p>
-<p>5) Select all faces and convert them to triangalize them</p>
-<p>
-<style>
-  .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-    overflow: hidden;
-  }
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    text-align: center;
-  }
-  .carousel-slide.active {
-    display: block;
-  }
-  .carousel img {
-    max-width: 100%;
-    height: auto;
-  }
-  .carousel-controls {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-  .carousel-button {
-    display: inline-block;
-    background: var(--accent, #3b82f6);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-  }
-</style>
-<div class="carousel">
-  
-    <div class="carousel-slide">
-      <img src="/static/uploads/projects/blender-figures/bluey_model.png" alt="Model of Bluey">
-      
-        <div class="carousel-caption">Model of Bluey</div>
-      
-    </div>
-  
-    <div class="carousel-slide">
-      <img src="/static/uploads/projects/blender-figures/bunny_model.png" alt="Model of a bunny">
-      
-        <div class="carousel-caption">Model of a bunny</div>
-      
-    </div>
-  
-    <div class="carousel-slide">
-      <img src="/static/uploads/projects/blender-figures/duck_model.png" alt="Model of a rubber duck">
-      
-        <div class="carousel-caption">Model of a rubber duck</div>
-      
-    </div>
-  
-  <div class="carousel-controls">
-    <button class="carousel-button prev" type="button">&#8592;</button>
-    <button class="carousel-button next" type="button">&#8594;</button>
-  </div>
-</div>
-<script>
-  (function() {
-    var carousels = document.querySelectorAll('.carousel');
-    carousels.forEach(function(carousel) {
-      var slides = carousel.querySelectorAll('.carousel-slide');
-      if (slides.length === 0) return;
-      var current = 0;
-      function showSlide(idx) {
-        slides.forEach(function(slide, i) {
-          slide.classList.toggle('active', i === idx);
-        });
-      }
-      var prevBtn = carousel.querySelector('.carousel-button.prev');
-      var nextBtn = carousel.querySelector('.carousel-button.next');
-      prevBtn.onclick = function() {
-        current = (current - 1 + slides.length) % slides.length;
-        showSlide(current);
-      };
-      nextBtn.onclick = function() {
-        current = (current + 1) % slides.length;
-        showSlide(current);
-      };
-      showSlide(current);
-    });
-  })();
-</script>
-</p>
+                    <p>This is a sample build log. Build logs are the informal, behind-the-scenes
+counterpart to a polished project summary — the messy middle, the dead ends,
+and the decisions made along the way.</p>
+<p>This one is attached to the <strong>Personal Site</strong> project via the <code>project</code> field
+in its frontmatter, so it shows up on the project page and links back to it.</p>
+<h2 id="what-goes-here">What goes here</h2>
+<ul>
+<li>Day-by-day or milestone-by-milestone progress</li>
+<li>Things that broke and how they got fixed</li>
+<li>Screenshots and short clips of work in progress</li>
+</ul>
                 </div>
                 
             </div>
@@ -264,8 +182,8 @@
             </div>
             <div class="nav-actions">
                 
-                <a href="/projects/" class="btn btn-outline">
-                     Back to Projects
+                <a href="/build-logs/" class="btn btn-outline">
+                     Back to Build Logs
                 </a>
                 
             </div>
