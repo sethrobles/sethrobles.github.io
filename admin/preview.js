@@ -101,5 +101,6 @@ var PostPreview = createClass({
   },
 });
 
-CMS.registerPreviewTemplate('blogs',    PostPreview);
-CMS.registerPreviewTemplate('projects', PostPreview);
+CMS.registerPreviewTemplate('blogs',     PostPreview);
+CMS.registerPreviewTemplate('projects',  PostPreview);
+CMS.registerPreviewTemplate('buildlogs', PostPreview);

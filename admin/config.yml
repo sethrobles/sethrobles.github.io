@@ -116,8 +116,11 @@ collections:
     label_singular: Build Log
     folder: content/buildlogs
     create: true
-    identifier_field: slug
-    slug: "{{fields.slug}}"
+    identifier_field: title
+    # The slug IS the relationship: "<project-slug>-<number>". It is derived from
+    # the Project and Log Number fields below rather than typed by hand, so the
+    # build-log <-> project link can't be fat-fingered or drift.
+    slug: "{{fields.project}}-{{fields.log_number}}"
     media_folder: "/static/uploads/build-logs/{{slug}}"
     public_folder: "/static/uploads/build-logs/{{slug}}"
     fields:
@@ -126,25 +129,26 @@ collections:
         widget: hidden
         default: "buildlog"
 
-      - label: Title
-        name: title
-        widget: string
-
-      - label: Slug
-        name: slug
-        widget: string
-        hint: "URL-safe identifier used for the path, e.g. my-build-log"
-        pattern: ['^[a-z0-9_-]+$', "Lowercase letters, numbers, hyphens, and underscores only"]
-
       - label: Project
         name: project
         widget: relation
-        required: false
         collection: projects
         search_fields: ["title", "slug"]
         value_field: slug
         display_fields: ["title"]
-        hint: "Optional: the project this build log belongs to"
+        hint: "The project this build log documents. Determines the slug (and the link both ways)."
+
+      - label: Log Number
+        name: log_number
+        widget: number
+        default: 1
+        value_type: int
+        min: 1
+        hint: "Distinguishes multiple build logs for the same project (1, 2, 3, ...). Slug becomes <project>-<number>."
+
+      - label: Title
+        name: title
+        widget: string
 
       - label: Date
         name: date
