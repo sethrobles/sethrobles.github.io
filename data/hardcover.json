@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-03T06:00:27.464870+00:00",
+  "generated_at_utc": "2026-07-04T05:52:50.441432+00:00",
   "books": [
     {
       "id": "12763942",
@@ -7,9 +7,9 @@
       "title": "The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you",
       "author": "Rob  Fitzpatrick",
       "cover_image_url": null,
-      "rating": null,
-      "date_read": "2026-02-11",
-      "status": "currently-reading",
+      "rating": 5.0,
+      "date_read": "2026-07-04",
+      "status": "read",
       "review_url": "https://hardcover.app/book/478155",
       "pages": 130,
       "isbn": null
