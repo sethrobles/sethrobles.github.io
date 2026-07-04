@@ -586,28 +586,28 @@ a:hover {
     box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 }
 
 .hobby-title {
     margin-bottom: 1rem;
     color: var(--text-primary);
-    text-align: center;
+    text-align: left;
 }
 .strava-widget {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
-    background: var(--bg-primary);
+    background: transparent;
 }
 
 .hardcover-widget {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
-    background: var(--bg-primary);
+    background: transparent;
 }
 .hobby-widget iframe {
     display: block;
@@ -657,29 +657,31 @@ a:hover {
 .activities-list {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
     background: transparent;
 }
 
 .activity-item {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem;
-    background: var(--bg-primary);
-    border-radius: 6px;
-    border: 1px solid var(--border);
-    transition: all 0.2s;
+    gap: 0.85rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--border);
 }
 
-.activity-item:hover {
-    border-color: var(--accent);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+.activities-list .activity-item:last-child {
+    border-bottom: none;
 }
 
 .activity-icon {
-    font-size: 1.5rem;
     flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    color: var(--text-muted);
 }
 
 .activity-details {
@@ -690,21 +692,31 @@ a:hover {
 .activity-name {
     font-weight: 500;
     color: var(--text-primary);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.15rem;
     font-size: 0.9rem;
 }
 
 .activity-stats {
     display: flex;
-    gap: 1rem;
-    font-size: 0.875rem;
-    color: var(--text-secondary);
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+}
+
+/* middot separators between the stats that are present */
+.activity-stats > span + span::before {
+    content: "·";
+    margin: 0 0.5rem;
+    color: var(--border-hover);
 }
 
 .activity-date {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     color: var(--text-muted);
     flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
 }
 
 .strava-loading,
@@ -758,101 +770,85 @@ a:hover {
 .books-list {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
     background: transparent;
 }
 
 .book-item {
     display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem;
-    background: var(--bg-primary);
-    border-radius: 6px;
-    border: 1px solid var(--border);
-    transition: all 0.2s;
-    min-height: 80px; /* Match Strava card height */
+    align-items: stretch;
+    gap: 0.85rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--border);
 }
 
-.book-item:hover {
-    border-color: var(--accent);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+.books-list .book-item:last-child {
+    border-bottom: none;
 }
 
-.book-cover {
+/* A slim "spine" — hints at a shelf without literal cover art. Teal when
+   the book is currently being read. */
+.book-spine {
     flex-shrink: 0;
-    width: 50px;
-    height: 75px;
-    border-radius: 4px;
-    overflow: hidden;
-    background: var(--bg-secondary);
-    position: relative;
+    width: 3px;
+    border-radius: 2px;
+    background: var(--border-hover);
 }
 
-.book-cover img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.book-cover .book-status {
-    position: absolute;
-    top: 4px;
-    right: 4px;
-    font-size: 0.65rem;
-    padding: 0.1rem 0.35rem;
+.book-item.reading .book-spine {
     background: var(--accent);
-    color: white;
-    border-radius: 10px;
-    font-weight: 500;
-    line-height: 1.2;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .book-details {
     flex: 1;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.1rem;
 }
 
 .book-name {
     font-weight: 500;
     color: var(--text-primary);
-    margin-bottom: 0.25rem;
     font-size: 0.9rem;
-    line-height: 1.3;
+    line-height: 1.35;
 }
 
 .book-author {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-    margin-bottom: 0.25rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
 }
 
-.book-meta {
+.book-aside {
+    flex-shrink: 0;
     display: flex;
-    gap: 1rem;
-    align-items: center;
-    font-size: 0.875rem;
-    color: var(--text-secondary);
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0.2rem;
+    text-align: right;
 }
 
-.book-rating {
-    font-size: 0.75rem;
-}
-
-.book-status {
-    font-size: 0.75rem;
-    padding: 0.125rem 0.5rem;
-    background: var(--accent);
-    color: white;
-    border-radius: 12px;
-    font-weight: 500;
+.book-reading {
+    font-style: italic;
+    font-size: 0.8rem;
+    color: var(--accent);
 }
 
 .book-date {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     color: var(--text-muted);
-    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+
+.book-rating {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-variant-numeric: tabular-nums;
+}
+
+.book-rating-max {
+    color: var(--text-muted);
 }
 
 .hardcover-loading,
@@ -1414,4 +1410,19 @@ ul ul {
     margin: 1.5rem auto;
     max-width: 100%;
     height: auto;
+}
+
+/* Hero photo (classic look). UI variants (ui-swiss.css / ui-warm.css) override this. */
+.hero-photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    border: 6px solid #fff;
+}
+
+/* Card title/date block alignment (classic = centered). Overridden per UI variant. */
+.card-heading {
+    text-align: center;
 }

@@ -50,7 +50,7 @@ class StravaWidget {
         const html = `
             <div class="strava-activities">
                 <div class="activities-header">
-                    <h4>Recent Activities</h4>
+                    <h4>Recent activity</h4>
                     <a href="https://strava.com/athletes/${socialUsernames.strava_num}" target="_blank" rel="noopener noreferrer" class="strava-link">
                         View on Strava
                     </a>
@@ -66,31 +66,24 @@ class StravaWidget {
 
     renderActivity(activity) {
         const date = this.formatDate(activity.start_date_local);
-        const duration = this.formatDuration(activity.moving_time_s);
         const name = this.escapeHtml(activity.name);
 
-        // For workouts, show calories instead of distance
-        // For other activities, show distance if > 0
-        let primaryStat = '';
-        if (activity.type === 'Workout') {
-            const calories = activity.calories || 0;
-            primaryStat = calories > 0 ? `<span class="activity-calories">${calories} cal</span>` : '';
-        } else {
-            const distance = this.formatDistance(activity.distance_m);
-            primaryStat = activity.distance_m > 0 ? `<span class="activity-distance">${distance}</span>` : '';
-        }
+        // Build an ordered list of the stats that actually exist for this activity.
+        const stats = [];
+        if (activity.distance_m > 0) stats.push(this.formatDistance(activity.distance_m));
+        const pace = this.formatPace(activity.pace_min_per_mi);
+        if (pace) stats.push(pace);
+        stats.push(this.formatDuration(activity.moving_time_s));
+        if (activity.calories > 0) stats.push(`${activity.calories} cal`);
+
+        const statsHtml = stats.map(s => `<span>${s}</span>`).join('');
 
         return `
             <div class="activity-item">
-                <div class="activity-icon">
-                    ${this.getActivityIcon(activity.type)}
-                </div>
+                <div class="activity-icon">${this.getActivityIcon(activity.type)}</div>
                 <div class="activity-details">
                     <div class="activity-name">${name}</div>
-                    <div class="activity-stats">
-                        ${primaryStat}
-                        <span class="activity-duration">${duration}</span>
-                    </div>
+                    <div class="activity-stats">${statsHtml}</div>
                 </div>
                 <div class="activity-date">${date}</div>
             </div>
@@ -115,6 +108,13 @@ class StravaWidget {
                 ? `${km.toFixed(1)}km`
                 : `${km.toFixed(2)}km`;
         }
+    }
+
+    formatPace(paceMinPerMi) {
+        if (!paceMinPerMi || paceMinPerMi <= 0) return '';
+        const minutes = Math.floor(paceMinPerMi);
+        const seconds = Math.round((paceMinPerMi - minutes) * 60);
+        return `${minutes}:${seconds.toString().padStart(2, '0')}/mi`;
     }
 
     formatDuration(seconds) {
@@ -152,18 +152,15 @@ class StravaWidget {
     }
 
     getActivityIcon(type) {
-        const icons = {
-            'Run': '🏃‍♂️',
-            'Ride': '🚴‍♂️',
-            'Walk': '🚶‍♂️',
-            'Swim': '🏊‍♂️',
-            'Hike': '🥾',
-            'Workout': '🏋️',
-            'WeightTraining': '🏋️',
-            'Yoga': '🧘'
-        };
+        // Minimal monochrome line glyphs that inherit currentColor.
+        const svg = (inner) => `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${inner}</svg>`;
 
-        return icons[type] || '🏃‍♂️';
+        // Strength work → dumbbell; everything cardio → an activity pulse.
+        const dumbbell = '<path d="M5 7v10M8 9v6M8 12h8M16 9v6M19 7v10"/>';
+        const pulse = '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>';
+
+        const strength = new Set(['WeightTraining', 'Workout']);
+        return svg(strength.has(type) ? dumbbell : pulse);
     }
 
     renderPlaceholder() {
@@ -213,7 +210,7 @@ class HardcoverWidget {
         const html = `
             <div class="hardcover-books">
                 <div class="books-header">
-                    <h4>Recent Books</h4>
+                    <h4>Recently read</h4>
                     <a href="https://hardcover.app/@${socialUsernames.hardcover}" target="_blank" rel="noopener noreferrer" class="hardcover-link">
                         View on Hardcover
                     </a>
@@ -228,37 +225,36 @@ class HardcoverWidget {
     }
 
     renderBook(book) {
-        const date = this.formatDate(book.date_read);
         const title = this.escapeHtml(book.title);
         const author = this.escapeHtml(book.author);
-        // Use a data URI for a simple book placeholder when no cover is available (50x75 to match CSS)
-        const placeholderBook = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNzUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjUwIiBoZWlnaHQ9Ijc1IiBmaWxsPSIjZjVmNWY1Ii8+CiAgPHBhdGggZD0iTTggOEg0MlY2N0g4WiIgZmlsbD0iI2RkZCIvPgogIDxwYXRoIGQ9Ik04IDhWNjdINDJWOFoiIGZpbGw9IiNjY2MiLz4KICA8bGluZSB4MT0iMTIiIHkxPSIxOCIgeDI9IjM4IiB5Mj0iMTgiIHN0cm9rZT0iIzk5OSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iMTIiIHkxPSIyOCIgeDI9IjM4IiB5Mj0iMjgiIHN0cm9rZT0iIzk5OSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iMTIiIHkxPSIzOCIgeDI9IjM4IiB5Mj0iMzgiIHN0cm9rZT0iIzk5OSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPC9zdmc+';
-        const coverUrl = book.cover_image_url || placeholderBook;
-        const rating = book.rating ? this.renderRating(book.rating) : '';
-        const statusBadge = book.status === 'currently-reading' ? '<span class="book-status">Reading</span>' : '';
+        const reading = book.status === 'currently-reading';
+
+        // Right-hand column: either a "currently reading" note, or the date read
+        // plus a numeric rating when one exists.
+        let aside;
+        if (reading) {
+            aside = '<span class="book-reading">Currently reading</span>';
+        } else {
+            const date = book.date_read ? `<span class="book-date">${this.formatDate(book.date_read)}</span>` : '';
+            aside = `${date}${this.renderRating(book.rating)}`;
+        }
 
         return `
-            <div class="book-item">
-                <div class="book-cover">
-                    <img src="${coverUrl}" alt="${title}" onerror="this.src='${placeholderBook}'">
-                    ${statusBadge}
-                </div>
+            <div class="book-item${reading ? ' reading' : ''}">
+                <div class="book-spine" aria-hidden="true"></div>
                 <div class="book-details">
                     <div class="book-name">${title}</div>
                     <div class="book-author">${author}</div>
-                    <div class="book-meta">
-                        ${rating}
-                    </div>
                 </div>
-                <div class="book-date">${date}</div>
+                <div class="book-aside">${aside}</div>
             </div>
         `;
     }
 
     renderRating(rating) {
         if (!rating || rating < 1 || rating > 5) return '';
-        const stars = '⭐'.repeat(Math.round(rating));
-        return `<span class="book-rating">${stars}</span>`;
+        const val = Number.isInteger(rating) ? rating : rating.toFixed(1);
+        return `<span class="book-rating">${val}<span class="book-rating-max"> / 5</span></span>`;
     }
 
     formatDate(dateString) {

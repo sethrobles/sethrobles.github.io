@@ -1,0 +1,199 @@
+/* =============================================================================
+   UI VARIANT: "swiss"  —  International Typographic Style
+   Loaded on top of base.css when personal_info.ui == "swiss".
+   Flat surfaces, hairline rules, tight Helvetica type, a single red accent,
+   sharp (0-radius) geometry, image-led cards. Restyles almost entirely by
+   redefining base.css's CSS variables, plus a few structural overrides.
+   ========================================================================== */
+
+/* --- Palette (light) --- */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f4f4f4;
+    --bg-tertiary: #e9e9e9;
+    --text-primary: #111111;
+    --text-secondary: #3a3a3a;
+    --text-muted: #767676;
+    --border: #111111;
+    --border-hover: #111111;
+    --accent: #e2231a;          /* Swiss red */
+    --accent-hover: #b91c15;
+    --code-bg: #f4f4f4;
+    --code-inline-bg: #ececec;
+    --shadow: none;
+    --shadow-lg: none;
+}
+
+/* --- Palette (dark) --- */
+[data-theme="dark"] {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #161616;
+    --bg-tertiary: #222222;
+    --text-primary: #f5f5f5;
+    --text-secondary: #cfcfcf;
+    --text-muted: #8f8f8f;
+    --border: #f5f5f5;
+    --border-hover: #ffffff;
+    --accent: #ff3b30;
+    --accent-hover: #ff655c;
+    --code-bg: #161616;
+    --code-inline-bg: #222222;
+    --shadow: none;
+    --shadow-lg: none;
+}
+
+/* --- Typography: tight, neutral, grotesque --- */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+}
+
+/* --- Navbar: hairline rule, uppercase micro-links, no blur --- */
+.navbar {
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: none;
+}
+.navbar-brand .navbar-logo {
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+.navbar-link {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+}
+
+/* --- Hero: flat, left-aligned, solid (non-gradient) headline --- */
+.hero {
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border);
+    padding: 5rem 0;
+}
+.hero-container {
+    gap: 3rem;
+}
+.hero-title {
+    /* undo base.css gradient-clipped text */
+    background: none;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-text-fill-color: currentColor;
+    color: var(--text-primary);
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+.hero-subtitle {
+    color: var(--accent);
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+}
+
+/* Rectangular, full-frame photo instead of the circular avatar */
+.hero-photo {
+    width: 100%;
+    max-width: 340px;
+    height: 380px;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+.hero-photo:hover {
+    filter: grayscale(0%);
+}
+
+/* --- Section headers: left-aligned with a top rule (grid feel) --- */
+.section-header {
+    text-align: left;
+    border-top: 2px solid var(--border);
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+}
+.section-title {
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+}
+.section-actions {
+    text-align: left;
+}
+
+/* --- Cards: framed, sharp corners, no shadow, image-led --- */
+.card {
+    border: 1px solid var(--border);
+    background: var(--bg-primary);
+}
+.card-image {
+    height: 240px;
+    border-bottom: 1px solid var(--border);
+}
+.card:hover .card-thumbnail {
+    transform: none;
+    filter: grayscale(0%);
+}
+.card-thumbnail {
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+.card-heading {
+    text-align: left;
+}
+.card-title {
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    font-size: 1.1rem;
+}
+.tag, .tag-more {
+    border-radius: 0;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.03em;
+}
+.tag-more {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+}
+
+/* --- Buttons: sharp, high-contrast --- */
+.btn {
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+}
+.btn-primary:hover,
+.btn-outline:hover {
+    transform: none;
+}
+
+/* --- Hobby widgets & footer: hairline frames, no shadow --- */
+.hobby-widget {
+    border: 1px solid var(--border);
+    border-radius: 0;
+    box-shadow: none;
+}
+.footer {
+    border-top: 2px solid var(--border);
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+    .hero-title { font-size: 2.75rem; }
+    .section-header { text-align: left; }
+    .hero-photo { max-width: 100%; height: 300px; }
+}
