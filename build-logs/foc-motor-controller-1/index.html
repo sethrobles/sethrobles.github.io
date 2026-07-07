@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Informal, behind-the-scenes logs of how I build my projects.">
+    <meta name="description" content="The development of the FOC Motor Controller (after the end of 2.679)">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -19,7 +19,7 @@
     <meta property="twitter:description" content="Seth Robles - Mechanical Engineer and Roboticist at MIT">
     <meta property="twitter:image" content="/static/uploads/og-image.jpg">
 
-    <title>Build Logs - Seth Robles</title>
+    <title>FOC Motor Controller - Seth Robles</title>
 
     <!-- Favicons for all devices and browsers -->
     <link rel="icon" type="image/x-icon" href="/static/uploads/personal/favicon_io/favicon.ico">
@@ -125,186 +125,63 @@
 
     <main class="main-content">
         
-<section class="projects-header">
+<article class="entry-detail">
     <div class="container">
-        <header class="section-header">
-            <h1 class="section-title">Build Logs</h1>
+        <!-- Entry Header -->
+        <header class="entry-header entry-header-centered">
+            <h1 class="entry-title">FOC Motor Controller</h1>
+            
+            <div class="entry-tags">
+                
+                <span class="tag">pcb-design</span>
+                
+            </div>
+            
+            
+            
+            
+            
         </header>
+        <!-- Embedded video (if present) -->
+        
 
-        <div class="projects-controls">
-            <div class="search-box" style="position:relative;">
-                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="position:absolute;left:0.75rem;top:50%;transform:translateY(-50%);pointer-events:none;">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.35-4.35"></path>
-                </svg>
-                <input type="text" id="buildlog-search" placeholder="Search build logs..." class="search-input" style="padding-left:2.5rem;">
-            </div>
-
-            <div class="tag-filters" id="buildlog-tag-filters">
-                <button class="tag-filter active" data-tag="all">All</button>
+        <!-- Entry Content -->
+        <div class="entry-content">
+            <div class="content-main">
                 
-                
-                    
-                        
-                            
-                                
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                                
-                            
-                        
-                            
-                                
-                            
-                        
-                            
-                                
-                            
-                        
-                    
-                
-
-                
-                <button class="tag-filter" data-tag="pcb-design">pcb-design</button>
-                
-                <button class="tag-filter" data-tag="Web">Web</button>
-                
-                <button class="tag-filter" data-tag="Python">Python</button>
-                
-                <button class="tag-filter" data-tag="Process">Process</button>
+                <div class="markdown-content">
+                    <p>While taking 2.679 my junior spring, I began the development of an FOC motor controller based on ODrive 3.5 (the last open source one I believe). I didn't bookmark the specific schematic I used for reference, but there's a chance that it was <a href="https://github.com/odriverobotics/ODriveHardware/blob/master/v3/v3.5docs/schematic_v3.5.pdf">this one.</a> It helped a lot for my understanding in the moment, but because of the rushes of Sin Limite around the time I was supposed to be designing the board, I ended up speed running it in a day and did not rigorously check the components that I was using. If I attach the photo of the PCB then you'll see. It was all over the place.</p>
+<p>My goal here is to actually develop a board which is able to drive two motors, but this time do so more rigorously and keep better documentation. As a result, here are the starting goals:</p>
+<ul>
+<li>Power: 36V bus, 10A Continuous, 30A Peak (Per motor ?)</li>
+<li>Flash: CAN bootloader</li>
+</ul>
+<p><br></p>
+<p>So my first step is going to be deciding on a microcontroller. My previous design used the <strong>STM32G474RBT6</strong>, but I will be moving towards the STM32G474RET6. The difference is that the new one has 512KB flash as opposed to the 128KB of the first. This will cost around 2 dollars more, but it benefits from the fact that I will not be pressed on the flash storage. Well this is partially verified by Claude since I'm not sure what's a normal amount of storage. Regardless, for this first design, I'd prefer to be safe rather than sorry. There's a design with 256KB flash that I might someday be interested in for a more open source, low-cost board, but I think this will do for now.</p>
+<p>I just wanted to start this build log, my goal for the next few days is to 1) verify the drivers I'll get, 2) decide on the structure of the power stage (likely a buck converter stepping down 36V for the microcontroller, and 3) decide on any other goals that I'd like to add.</p>
+                </div>
                 
             </div>
         </div>
-    </div>
-</section>
 
-<section class="projects-content">
-    <div class="container">
-        <div class="projects-grid" id="buildlog-grid">
-            
-            
-                
-<a href="/build-logs/foc-motor-controller-1/" class="card entry-card" data-tags="pcb-design" style="text-decoration:none;color:inherit;">
-    <div class="card-image">
-    
-        <div class="card-placeholder">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                <polyline points="21,15 16,10 5,21"></polyline>
-            </svg>
-        </div>
-    
-    </div>
+        <!-- Related build logs (project pages only) -->
+        
 
-    <div class="card-content">
-        <header class="card-header">
-            <div class="card-heading">
-                <h3 class="card-title">
-                    FOC Motor Controller
-                </h3>
-                
-                <time class="card-date" datetime="2026-07-07">
-                    2026-07-07
-                </time>
+        <!-- Entry Navigation -->
+        <nav class="entry-navigation">
+            <div class="nav-links">
                 
             </div>
-        </header>
-
-        
-        <div class="card-tags">
-            
-            <span class="tag">pcb-design</span>
-            
-            
-        </div>
-        
-
-        
-        <p class="card-summary">The development of the FOC Motor Controller (after the end of 2.679)</p>
-        
-    </div>
-    </a>
-
-            
+            <div class="nav-actions">
                 
-<a href="/build-logs/personal-site-buildlog/" class="card entry-card" data-tags="Web,Python,Process" style="text-decoration:none;color:inherit;">
-    <div class="card-image">
-    
-        <div class="card-placeholder">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                <polyline points="21,15 16,10 5,21"></polyline>
-            </svg>
-        </div>
-    
-    </div>
-
-    <div class="card-content">
-        <header class="card-header">
-            <div class="card-heading">
-                <h3 class="card-title">
-                    Building the Personal Site
-                </h3>
-                
-                <time class="card-date" datetime="2026-06-24">
-                    2026-06-24
-                </time>
+                <a href="/build-logs/" class="btn btn-outline">
+                     Back to Build Logs
+                </a>
                 
             </div>
-        </header>
-
-        
-        <div class="card-tags">
-            
-            <span class="tag">Web</span>
-            
-            <span class="tag">Python</span>
-            
-            <span class="tag">Process</span>
-            
-            
-        </div>
-        
-
-        
-        <p class="card-summary">An informal log of how this site came together — the static generator, the CMS wiring, and adding build logs.</p>
-        
+        </nav>
     </div>
-    </a>
-
-            
-        </div>
-
-        <div class="no-results" id="no-buildlog-results" style="display: none;">
-            <div class="no-results-content">
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.35-4.35"></path>
-                </svg>
-                <h3>No build logs found</h3>
-                <p>Try adjusting your search or filter criteria</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<script src="/static/js/search.js"></script>
-<script>
-    setupSearchAndFilter({
-        searchInputId: 'buildlog-search',
-        tagFilterSelector: '#buildlog-tag-filters .tag-filter',
-        gridId: 'buildlog-grid',
-        noResultsId: 'no-buildlog-results',
-        cardSelector: '.entry-card'
-    });
-</script>
+</article>
 
     </main>
 
