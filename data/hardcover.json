@@ -1,6 +1,19 @@
 {
-  "generated_at_utc": "2026-07-08T05:28:27.311539+00:00",
+  "generated_at_utc": "2026-07-09T03:00:55.453050+00:00",
   "books": [
+    {
+      "id": "16204980",
+      "book_id": "251442",
+      "title": "The Story of Edgar Sawtelle",
+      "author": "David Wroblewski",
+      "cover_image_url": "https://assets.hardcover.app/books/251442/6566057-L.jpg",
+      "rating": null,
+      "date_read": "2026-07-09",
+      "status": "currently-reading",
+      "review_url": "https://hardcover.app/book/251442",
+      "pages": 576,
+      "isbn": null
+    },
     {
       "id": "12763942",
       "book_id": "478155",
@@ -51,19 +64,6 @@
       "status": "read",
       "review_url": "https://hardcover.app/book/116343",
       "pages": 312,
-      "isbn": null
-    },
-    {
-      "id": "11627832",
-      "book_id": "253778",
-      "title": "The 7 Habits of Highly Effective People",
-      "author": "Stephen R. Covey",
-      "cover_image_url": "https://assets.hardcover.app/books/253778/10858579-L.jpg",
-      "rating": null,
-      "date_read": "2026-01-04",
-      "status": "read",
-      "review_url": "https://hardcover.app/book/253778",
-      "pages": 432,
       "isbn": null
     }
   ]
