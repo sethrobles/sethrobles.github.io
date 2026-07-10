@@ -159,13 +159,77 @@
 <p><br></p>
 <p>Here is the running list of updates goals</p>
 <ul>
-<li>Power: 20-40V input bus (24, 36 nominal), 10A continouous, 30A peak</li>
+<li>Power: 18-40V input bus (24, 36 nominal), 10A continouous, 30A peak</li>
 <li>Communication: CAN2 bus for communication to board + bootloading, SPI to encoders</li>
 </ul>
 <p><br></p>
 <p>So my first step is going to be deciding on a microcontroller. My previous design used the <strong>STM32G474RBT6</strong>, but I will be moving towards the STM32G474RET6. The difference is that the new one has 512KB flash as opposed to the 128KB of the first. This will cost around 2 dollars more, but it benefits from the fact that I will not be pressed on the flash storage. Well this is partially verified by Claude since I'm not sure what's a normal amount of storage. Regardless, for this first design, I'd prefer to be safe rather than sorry. There's a design with 256KB flash that I might someday be interested in for a more open source, low-cost board, but I think this will do for now.</p>
-<p>I just wanted to start this build log, my goal for the next few days is to 1) verify the drivers I'll get, 2) decide on the structure of the power stage (likely a buck converter stepping down 36V for the microcontroller, and 3) decide on any other goals that I'd like to add.</p>
-<p>For the power stage, I want it to be compatible with 24 and 36V, so I'll widen up the range. This will mostly affect the buck converter sizing that I will go with now.</p>
+<p>I just wanted to start this build log, my goal for the next few days is to 1) verify the drivers I'll get, 2) decide on the structure of the power stage (likely a buck converter stepping down the bus for the microcontroller, and 3) decide on any other goals that I'd like to add.</p>
+<h3 align="center">Power Stage</h3>
+<p>`</p>
+<p>For the power stage, I want it to be compatible with 24 and 36V, so I'll widen up the range. This will mostly affect the buck converter sizing that I will go with now. I'm thinking that we'll make it work with an 18-40V input bus + have capacity for any transient spikes from regenerative voltage differences (or anything else I might not be foreseeing).</p>
+<p>I am currently debating whether I want a 3.3V or 5V CAN bus. I think the 3.# removes the extra requirement, which means I don't need the extra part of an LDO + the STM32 can be directly wired up to the CAN without shifting logic levels. For now, I am going to go with this. I'll note in the future that maybe it should go up. Here is a table with my current power estimates*:</p>
+<table>
+<thead>
+<tr>
+<th>Consumer</th>
+<th>Rail</th>
+<th>Est. Current</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>STM32G474 @ 170MHz</td>
+<td>3.3V</td>
+<td>~30–50mA</td>
+<td>Peripherals running</td>
+</tr>
+<tr>
+<td>2× AS5047D motor encoders</td>
+<td>3.3V</td>
+<td>~35mA</td>
+<td>~17mA each</td>
+</tr>
+<tr>
+<td>Potential toy</td>
+<td>3.3V</td>
+<td>~17mA</td>
+<td>2 more AS5047Ds, off-board via expansion connector</td>
+</tr>
+<tr>
+<td>2× DRV8353S</td>
+<td>3.3V</td>
+<td>~5mA</td>
+<td>Pull-ups (nFAULT, SPI) and pin drive only — chip powers its logic internally from VM. Verify in datasheet</td>
+</tr>
+<tr>
+<td>CAN transceiver</td>
+<td>3.3V</td>
+<td>50–70mA</td>
+<td>~10mA idle; Unsure</td>
+</tr>
+<tr>
+<td>Expansion / off-board header reserve</td>
+<td>3.3V</td>
+<td>~50mA</td>
+<td>Future accessories; costs nothing to reserve now</td>
+</tr>
+<tr>
+<td>Sundries</td>
+<td>3.3V</td>
+<td>~15mA</td>
+<td>Status LEDs, thermistor dividers, SPI pullups</td>
+</tr>
+<tr>
+<td><strong>Total (worst case)</strong></td>
+<td>—</td>
+<td><strong>~250mA</strong></td>
+<td>With ~2× margin → size input converter for ~500mA class</td>
+</tr>
+</tbody>
+</table>
+<p>*Thank you Claude for the table, we might need to work on it though.</p>
                 </div>
                 
             </div>
