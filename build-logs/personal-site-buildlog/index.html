@@ -144,7 +144,7 @@
             
             <div class="entry-parent-project" style="margin-bottom:1rem;">
                 <a href="/projects/personal-site/" class="nav-link">
-                    &larr; Personal Site &middot; Build Log #buildlog
+                    &larr; Personal Site &middot; Build Log #1
                 </a>
             </div>
             
@@ -160,18 +160,109 @@
             <div class="content-main">
                 
                 <div class="markdown-content">
-                    <p>This is a sample build log. Build logs are the informal, behind-the-scenes
+                    <p><a href="https://sirobles.com/blogs/open-source/">https://sirobles.com/blogs/open-source/</a>This is a sample build log. Build logs are the informal, behind-the-scenes
 counterpart to a polished project summary — the messy middle, the dead ends,
 and the decisions made along the way.</p>
-<p>This one is attached to the <strong>Personal Site</strong> project via the <code>project</code> field
-in its frontmatter, so it shows up on the project page and links back to it.</p>
-<h2 id="what-goes-here">What goes here</h2>
-<ul>
-<li>Day-by-day or milestone-by-milestone progress</li>
-<li>Things that broke and how they got fixed</li>
-<li>Screenshots and short clips of work in progress</li>
-</ul>
+<p>So, initially my website was hosted on<a href="https://sethrobles.github.io"> https://sethrobles.github.io</a> (still redirected here) and it was made for professional reasons. I have since realized that self expression is something that I think I enjoy doing through the website and that I will do.</p>
+<p>As a result, I added on the blogs section of the website. But then, I realized it would be nice to have a separation of Projects (which would be a more professional final display of a project), vs build logs which will include the detailing. The two should be linked.</p>
+<p>The personal site description is particularly messy because it was not something I thought of as something that I wanted to very rigorously talked about.</p>
+<p>Those were my original intentions though, I will now talk about how the website has changed over time.</p>
+<p>Initially, I was working out of VSCode with Static Jinja (still in Static Jinja), using templates for each of the different projects/blogs. I would basically create a new markdown file and fill out information related to the blog (date, project name, slug-title, github link, etc.). This was okay for a while, but at some point I realized it would not be that great. </p>
+<p>As a result, I decided to add on a CMS (Content Management System) that would help avoid always needing to write code. Basically helped remove some of the boiler plate + ideally would allow me to write these blogs out faster. I added on Decap CMS, which I have been using for a few months.</p>
+<p>I also have gone through a few changes in reference to the general look/design. Right now, it's this new beige and teal. Before it was this blue and white that I was told several times by my girlfriend to change and so I did. Like most things, it seems she was right, I like the new website's look much more.</p>
+<p>One change that I did when I added on the build logs was that I had them linked to projects. The idea is that a specific build-log and project will share a slug title, since they're inherently going to be related. This might change in the future, but I think right now I like the idea. The thing is, that it's currently possible to save several build logs to one project, but I'm not really sure how/why I would do this. I guess projects have several stages so it makes some sense, but it's not my favorite, I kind of like a long scroll. We'll see if that changes.</p>
+<p>One addition I liked was adding my hobbies to the bottom of the first page. The issue is that the strava api recently moved away from being free (I complained about this very briefly <a href="https://sirobles.com/blogs/open-source/">here</a>. I think it just is so silly to me when companies do that. Anyways, that's part of the reason that I moved away from Goodreads to <a href="https://hardcover.app/">Hardcover. </a>They are a young open-source project, but I saw that they were trying to improve upon the openness of Goodreads. I think this is something that should change. If you're giving your data to companies, I personally feel that they should be willing to let you have it back, especially since many of them make money of of it. Regardless, I decided that I would pull the data from these websites regularly using Github Actions. So they run on a somewhat infrequent basis. If I ever decide to host my website and stuff locally, I'll likely just make it a cron job.</p>
+<h6 style="text-align: center;"> July 9th 2026 </h6>
+
+<p>I'm currently looking into switching CMSes. One think that's been a problem is the fact that I can't easily do Carousel images throughout the text for Decap CMS. Maybe I can, I haven't looked into it a lot, but I've heard that Tina will be something that's a little more easy to set up for different things I want. Right now, I typed out the html tag in markdown in order to get that centering above. It's a little ridiculous for a CMS where the whole point is to move away from markup languages. Anyways, there'll potentially be updates. I'm having Claude loop through an initial design update with Tina and will test that locally then potentially deploy.</p>
                 </div>
+                
+                
+<style>
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    overflow: hidden;
+  }
+  .carousel-slide {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+  .carousel-slide.active {
+    display: block;
+  }
+  .carousel img {
+    max-width: 100%;
+    height: auto;
+  }
+  .carousel-controls {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .carousel-button {
+    display: inline-block;
+    background: var(--accent, #3b82f6);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+</style>
+<div class="carousel">
+  
+    <div class="carousel-slide">
+      <img src="/static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-37-10.png" alt="New Website Appearance (Warm + Teal)">
+      
+        <div class="carousel-caption">New Website Appearance (Warm + Teal)</div>
+      
+    </div>
+  
+    <div class="carousel-slide">
+      <img src="/static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-56-10.png" alt="Decap CMS">
+      
+        <div class="carousel-caption">Decap CMS</div>
+      
+    </div>
+  
+  <div class="carousel-controls">
+    <button class="carousel-button prev" type="button">&#8592;</button>
+    <button class="carousel-button next" type="button">&#8594;</button>
+  </div>
+</div>
+<script>
+  (function() {
+    var carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(function(carousel) {
+      var slides = carousel.querySelectorAll('.carousel-slide');
+      if (slides.length === 0) return;
+      var current = 0;
+      function showSlide(idx) {
+        slides.forEach(function(slide, i) {
+          slide.classList.toggle('active', i === idx);
+        });
+      }
+      var prevBtn = carousel.querySelector('.carousel-button.prev');
+      var nextBtn = carousel.querySelector('.carousel-button.next');
+      prevBtn.onclick = function() {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+      };
+      nextBtn.onclick = function() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      };
+      showSlide(current);
+    });
+  })();
+</script>
+
                 
             </div>
         </div>
