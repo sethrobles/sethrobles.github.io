@@ -91,25 +91,30 @@ class FitnessWidget {
                     <h4>Highlights</h4>
                     <a href="${this.stravaUrl()}" target="_blank" rel="noopener noreferrer" class="fitness-link">View on Strava</a>
                 </div>
-                <div class="highlights-grid">
+                <div class="fitness-list">
                     ${tiles.map(t => this.renderTile(t)).join('')}
                 </div>
             </div>
         `;
     }
 
+    // Thin stat row mirroring the Reading widget's book rows: label + detail on
+    // the left, value on the right. Icons are intentionally omitted for now —
+    // getIcon() below still holds the glyphs if we want them back.
     renderTile(tile) {
         const label = this.escapeHtml(tile.label || '');
         const value = this.escapeHtml(tile.value != null ? String(tile.value) : '');
-        const detail = tile.detail
-            ? `<div class="tile-detail">${this.escapeHtml(tile.detail)}</div>`
+        const sub = tile.detail
+            ? `<div class="fitness-sub">${this.escapeHtml(tile.detail)}</div>`
             : '';
         return `
-            <div class="highlight-tile">
-                <div class="tile-icon">${this.getIcon(tile.icon)}</div>
-                <div class="tile-value">${value}</div>
-                <div class="tile-label">${label}</div>
-                ${detail}
+            <div class="fitness-row">
+                <div class="fitness-spine" aria-hidden="true"></div>
+                <div class="fitness-details">
+                    <div class="fitness-stat">${label}</div>
+                    ${sub}
+                </div>
+                <div class="fitness-aside"><span class="fitness-value">${value}</span></div>
             </div>
         `;
     }
