@@ -53,9 +53,9 @@ collections:
 
       - label: Tags
         name: tags
-        widget: list
-        allow_add: true
-        hint: "Press Enter after each tag"
+        widget: tags
+        required: false
+        hint: "Type a tag and press Enter (spaces are fine). Click an already-used tag below to reuse it."
 
       - label: Thumbnail
         name: thumbnail
@@ -159,9 +159,9 @@ collections:
 
       - label: Tags
         name: tags
-        widget: list
-        allow_add: true
-        hint: "Press Enter after each tag"
+        widget: tags
+        required: false
+        hint: "Type a tag and press Enter (spaces are fine). Click an already-used tag below to reuse it."
 
       - label: Thumbnail
         name: thumbnail
@@ -252,9 +252,9 @@ collections:
 
       - label: Tags
         name: tags
-        widget: list
-        allow_add: true
-        hint: "Press Enter after each tag"
+        widget: tags
+        required: false
+        hint: "Type a tag and press Enter (spaces are fine). Click an already-used tag below to reuse it."
 
       - label: Thumbnail
         name: thumbnail

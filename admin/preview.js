@@ -47,7 +47,8 @@ var PostPreview = createClass({
     var title   = entry.getIn(['data', 'title'],   '');
     var summary = entry.getIn(['data', 'summary'], '');
     var tagsRaw = entry.getIn(['data', 'tags']);
-    var tags    = tagsRaw ? tagsRaw.toJS() : [];
+    var tags    = !tagsRaw ? []
+                : (typeof tagsRaw.toJS === 'function' ? tagsRaw.toJS() : tagsRaw);
     var body    = widgetFor('body');
 
     // Hero image — works for both already-uploaded paths and fresh blob uploads
