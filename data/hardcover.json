@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-09T06:12:40.467195+00:00",
+  "generated_at_utc": "2026-07-11T00:44:48.816212+00:00",
   "books": [
     {
       "id": "16204980",
@@ -64,6 +64,19 @@
       "status": "read",
       "review_url": "https://hardcover.app/book/116343",
       "pages": 312,
+      "isbn": null
+    },
+    {
+      "id": "11627832",
+      "book_id": "253778",
+      "title": "The 7 Habits of Highly Effective People",
+      "author": "Stephen R. Covey",
+      "cover_image_url": "https://assets.hardcover.app/books/253778/10858579-L.jpg",
+      "rating": null,
+      "date_read": "2026-01-04",
+      "status": "read",
+      "review_url": "https://hardcover.app/book/253778",
+      "pages": 432,
       "isbn": null
     }
   ]

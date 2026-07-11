@@ -1,6 +1,6 @@
-This favicon was generated using the following font:
+Favicon: "SR" gear monogram — Seth Robles.
 
-- Font Title: IM Fell English SC
-- Font Author: undefined
-- Font Source: https://fonts.gstatic.com/s/imfellenglishsc/v16/a8IENpD3CDX-4zrWfr1VY879qFF05pZLO4gOg0shzA.ttf
-- Font License: undefined)
+Bold gear ring (9 teeth) around a serif "SR", drawn in the warm-theme
+muted teal (#4f8079). Letters outlined from Noto Serif Bold and centered
+by measured glyph bounds. Master sources: /static/img/logo-mark.svg
+(currentColor line mark, used in the navbar) and favicon.svg (cream tile).

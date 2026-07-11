@@ -176,9 +176,24 @@ a:hover {
 }
 
 .navbar-brand .navbar-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-primary);
+}
+
+/* Small accent before the wordmark — the mark's primary home is the favicon. */
+.navbar-logo-mark {
+    width: 1.35rem;
+    height: 1.35rem;
+    flex-shrink: 0;
+    color: var(--accent);
+}
+/* Keep the gear crisp at this small size. */
+.navbar-logo-mark path:first-of-type {
+    stroke-width: 4;
 }
 
 .navbar-menu {
@@ -594,11 +609,12 @@ a:hover {
     color: var(--text-primary);
     text-align: left;
 }
-.strava-widget {
+.fitness-widget {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     width: 100%;
+    flex: 1;
     background: transparent;
 }
 
@@ -607,6 +623,7 @@ a:hover {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
+    flex: 1;
     background: transparent;
 }
 .hobby-widget iframe {
@@ -624,10 +641,13 @@ a:hover {
     color: var(--text-muted);
 }
 
-/* Strava Widget Styles */
-.strava-activities {
+/* Fitness Widget Styles */
+.fitness-highlights {
     width: 100%;
     background: transparent;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .activities-header {
@@ -643,20 +663,67 @@ a:hover {
     font-size: 1rem;
 }
 
-.strava-link {
+.fitness-link {
     font-size: 0.875rem;
     color: var(--accent);
     text-decoration: none;
     transition: opacity 0.2s;
 }
 
-.strava-link:hover {
+.fitness-link:hover {
     opacity: 0.8;
+}
+
+/* Highlights stat grid */
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.highlight-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.85rem 0.9rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg-secondary);
+}
+
+.highlight-tile .tile-icon {
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+    line-height: 0;
+}
+
+.highlight-tile .tile-value {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 1.15rem;
+    line-height: 1.15;
+    font-variant-numeric: tabular-nums;
+}
+
+.highlight-tile .tile-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary, var(--text-muted));
+    margin-top: 0.15rem;
+}
+
+.highlight-tile .tile-detail {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+    font-variant-numeric: tabular-nums;
 }
 
 .activities-list {
     display: flex;
     flex-direction: column;
+    flex: 1;
+    justify-content: space-around;
     background: transparent;
 }
 
@@ -719,21 +786,21 @@ a:hover {
     font-variant-numeric: tabular-nums;
 }
 
-.strava-loading,
-.strava-empty,
-.strava-error {
+.fitness-loading,
+.fitness-empty,
+.fitness-error {
     text-align: center;
     padding: 1.5rem;
     color: var(--text-muted);
     font-size: 0.9rem;
 }
 
-.strava-error a {
+.fitness-error a {
     color: var(--accent);
     text-decoration: none;
 }
 
-.strava-error a:hover {
+.fitness-error a:hover {
     text-decoration: underline;
 }
 
@@ -741,6 +808,9 @@ a:hover {
 .hardcover-books {
     width: 100%;
     background: transparent;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .books-header {
@@ -770,6 +840,8 @@ a:hover {
 .books-list {
     display: flex;
     flex-direction: column;
+    flex: 1;
+    justify-content: space-around;
     background: transparent;
 }
 
@@ -1425,4 +1497,130 @@ ul ul {
 /* Card title/date block alignment (classic = centered). Overridden per UI variant. */
 .card-heading {
     text-align: center;
+}
+
+/* --- Restored Strava fitness widget styles (from 1ea425e) --- */
+.strava-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    flex: 1;
+    background: transparent;
+}
+
+/* Strava Widget Styles */
+.strava-activities {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    background: transparent;
+}
+
+.activities-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.activities-header h4 {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.strava-link {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.strava-link:hover {
+    opacity: 0.8;
+}
+
+.activities-list {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.activities-list .activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    color: var(--text-muted);
+}
+
+.activity-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.activity-name {
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.15rem;
+    font-size: 0.9rem;
+}
+
+.activity-stats {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+}
+
+/* middot separators between the stats that are present */
+.activity-stats > span + span::before {
+    content: "·";
+    margin: 0 0.5rem;
+    color: var(--border-hover);
+}
+
+.activity-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+
+.strava-loading,
+.strava-empty,
+.strava-error {
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.strava-error a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.strava-error a:hover {
+    text-decoration: underline;
 }

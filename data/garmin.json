@@ -1,0 +1,79 @@
+{
+  "generated_at_utc": "2026-07-11T02:18:25.765372+00:00",
+  "highlights": [
+    {
+      "label": "Resting HR",
+      "value": "40",
+      "detail": "7-day avg 44",
+      "icon": "pulse"
+    },
+    {
+      "label": "Longest workout",
+      "value": "8h 49m",
+      "detail": "Cambridge Running \u00b7 Apr 25, 2026",
+      "icon": "run"
+    },
+    {
+      "label": "Run time '26",
+      "value": "41h 19m",
+      "detail": "32 runs",
+      "icon": "run"
+    },
+    {
+      "label": "Active this week",
+      "value": "47m",
+      "detail": "moving time",
+      "icon": "pulse"
+    },
+    {
+      "label": "Workouts",
+      "value": "1",
+      "detail": "this week",
+      "icon": "dumbbell"
+    },
+    {
+      "label": "Longest run",
+      "value": "52.5 mi",
+      "detail": "Apr 25, 2026",
+      "icon": "run"
+    },
+    {
+      "label": "2026 so far",
+      "value": "299.9 mi",
+      "detail": "83 workouts \u00b7 60h",
+      "icon": "calendar"
+    }
+  ],
+  "recent": [
+    {
+      "name": "Philadelphia Running",
+      "type": "running",
+      "start_date_local": "2026-07-07",
+      "distance_m": 8707.01953125,
+      "moving_time_s": 2832,
+      "pace_min_per_mi": 8.725987486346623,
+      "calories": 608,
+      "url": "https://connect.garmin.com/modern/activity/23530226388"
+    },
+    {
+      "name": "Strength",
+      "type": "strength_training",
+      "start_date_local": "2026-07-04",
+      "distance_m": 0,
+      "moving_time_s": 1776,
+      "pace_min_per_mi": null,
+      "calories": 525,
+      "url": "https://connect.garmin.com/modern/activity/23530195122"
+    },
+    {
+      "name": "Philadelphia Running",
+      "type": "running",
+      "start_date_local": "2026-07-03",
+      "distance_m": 7844.18017578125,
+      "moving_time_s": 2710,
+      "pace_min_per_mi": 9.26922509471644,
+      "calories": 647,
+      "url": "https://connect.garmin.com/modern/activity/23530194805"
+    }
+  ]
+}

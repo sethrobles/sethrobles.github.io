@@ -8,164 +8,139 @@ let socialUsernames = window.socialUsernames || {
     hardcover: "Sethyopolopodis"
 };
 
-// Strava Widget
-class StravaWidget {
+// Fitness Widget — rotating highlight tiles (Garmin stats + hand-written jokes)
+// from data/garmin.json (auto) + data/highlights.json (jokes). Shows up to 6
+// tiles chosen by a date-seeded shuffle, so the set is stable all day and
+// rotates once a day. No recent list. Links to Strava.
+class FitnessWidget {
     constructor(containerId) {
         this.container = document.getElementById(containerId);
-        this.apiBase = null; // Will be set from environment
-        this.init();
+        if (this.container) this.init();
     }
 
     async init() {
-        if (!this.container) return;
-
-        // Show loading state
-        this.container.innerHTML = '<div class="strava-loading">Loading activities...</div>';
-
+        this.container.innerHTML = '<div class="fitness-loading">Loading highlights...</div>';
         try {
-            const response = await fetch('/data/strava.json');
-            if (!response.ok) {
-                throw new Error(`HTTP ${response.status}`);
-            }
-
-            const data = await response.json();
-
-            if (data.activities && data.activities.length > 0) {
-                this.renderActivities(data.activities);
-            } else {
-                this.renderEmpty();
-            }
-        } catch (error) {
-            console.log('Error loading Strava data:', error);
+            const [garmin, highlights] = await Promise.all([
+                this.fetchJson('/data/garmin.json'),
+                this.fetchJson('/data/highlights.json'),
+            ]);
+            const auto = (garmin && garmin.highlights) || [];
+            const jokes = (highlights && highlights.items) || [];
+            const tiles = this.pickDaily(auto, jokes, 6, 1);
+            if (!tiles.length) { this.renderEmpty(); return; }
+            this.render(tiles);
+        } catch (e) {
+            console.log('Error loading fitness data:', e);
             this.renderError();
         }
     }
 
-    renderActivities(activities) {
-        if (!activities || activities.length === 0) {
-            this.renderEmpty();
-            return;
+    async fetchJson(url) {
+        try {
+            const res = await fetch(url);
+            if (!res.ok) return null;
+            return await res.json();
+        } catch (e) {
+            return null;
         }
+    }
 
-        const html = `
-            <div class="strava-activities">
+    // Deterministic per-day pick: up to `total` tiles, aiming for `jokeTarget`
+    // jokes, backfilling from whichever pool has more so it never comes up short.
+    pickDaily(auto, jokes, total, jokeTarget) {
+        const seed = this.daySeed();
+        const a = this.shuffle(auto.slice(), seed);
+        const j = this.shuffle(jokes.slice(), (seed ^ 0x9e3779b9) >>> 0);
+        const nJoke = Math.min(jokeTarget, j.length, total);
+        const nAuto = Math.min(total - nJoke, a.length);
+        let chosen = a.slice(0, nAuto).concat(j.slice(0, nJoke));
+        if (chosen.length < total) {
+            const extra = a.slice(nAuto).concat(j.slice(nJoke));
+            chosen = chosen.concat(extra.slice(0, total - chosen.length));
+        }
+        // final shuffle so auto/joke tiles aren't clustered together
+        return this.shuffle(chosen, (seed ^ 0x85ebca6b) >>> 0);
+    }
+
+    daySeed() {
+        const d = new Date();
+        return d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
+    }
+
+    // Seeded Fisher–Yates (small LCG) — same seed => same order.
+    shuffle(arr, seed) {
+        let s = (seed >>> 0) || 1;
+        const rnd = () => { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; };
+        for (let i = arr.length - 1; i > 0; i--) {
+            const k = Math.floor(rnd() * (i + 1));
+            const tmp = arr[i]; arr[i] = arr[k]; arr[k] = tmp;
+        }
+        return arr;
+    }
+
+    stravaUrl() {
+        const num = (window.socialUsernames && socialUsernames.strava_num) || '';
+        return 'https://www.strava.com/athletes/' + num;
+    }
+
+    render(tiles) {
+        this.container.innerHTML = `
+            <div class="fitness-highlights">
                 <div class="activities-header">
-                    <h4>Recent activity</h4>
-                    <a href="https://strava.com/athletes/${socialUsernames.strava_num}" target="_blank" rel="noopener noreferrer" class="strava-link">
-                        View on Strava
-                    </a>
+                    <h4>Highlights</h4>
+                    <a href="${this.stravaUrl()}" target="_blank" rel="noopener noreferrer" class="fitness-link">View on Strava</a>
                 </div>
-                <div class="activities-list">
-                    ${activities.map(activity => this.renderActivity(activity)).join('')}
+                <div class="highlights-grid">
+                    ${tiles.map(t => this.renderTile(t)).join('')}
                 </div>
             </div>
         `;
-
-        this.container.innerHTML = html;
     }
 
-    renderActivity(activity) {
-        const date = this.formatDate(activity.start_date_local);
-        const name = this.escapeHtml(activity.name);
-
-        // Build an ordered list of the stats that actually exist for this activity.
-        const stats = [];
-        if (activity.distance_m > 0) stats.push(this.formatDistance(activity.distance_m));
-        const pace = this.formatPace(activity.pace_min_per_mi);
-        if (pace) stats.push(pace);
-        stats.push(this.formatDuration(activity.moving_time_s));
-        if (activity.calories > 0) stats.push(`${activity.calories} cal`);
-
-        const statsHtml = stats.map(s => `<span>${s}</span>`).join('');
-
+    renderTile(tile) {
+        const label = this.escapeHtml(tile.label || '');
+        const value = this.escapeHtml(tile.value != null ? String(tile.value) : '');
+        const detail = tile.detail
+            ? `<div class="tile-detail">${this.escapeHtml(tile.detail)}</div>`
+            : '';
         return `
-            <div class="activity-item">
-                <div class="activity-icon">${this.getActivityIcon(activity.type)}</div>
-                <div class="activity-details">
-                    <div class="activity-name">${name}</div>
-                    <div class="activity-stats">${statsHtml}</div>
-                </div>
-                <div class="activity-date">${date}</div>
+            <div class="highlight-tile">
+                <div class="tile-icon">${this.getIcon(tile.icon)}</div>
+                <div class="tile-value">${value}</div>
+                <div class="tile-label">${label}</div>
+                ${detail}
             </div>
         `;
     }
 
-    formatDate(dateString) {
-        const date = new Date(dateString + 'T00:00:00');
-        return date.toLocaleDateString('en-US', {
-            month: 'short',
-            day: 'numeric',
-            year: date.getFullYear() !== new Date().getFullYear() ? 'numeric' : undefined
-        });
+    getIcon(name) {
+        const glyphs = {
+            dumbbell: '<path d="M5 7v10M8 9v6M8 12h8M16 9v6M19 7v10"/>',
+            pulse: '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',
+            run: '<circle cx="13" cy="4" r="1.6"/><path d="M4 20l3-4 3 1 1-4-3-2 4-3 3 4h3"/>',
+            calendar: '<rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/>',
+            swim: '<path d="M2 18c2 0 2-1.5 4-1.5S8 18 10 18s2-1.5 4-1.5S16 18 18 18s2-1.5 4-1.5"/><circle cx="8" cy="7" r="1.6"/><path d="M9.5 8.5l4 2.5-3 2"/>',
+            food: '<path d="M6 3v8a2 2 0 004 0V3M8 11v10M16 3c-1.5 0-2.5 2-2.5 5s1 4 2.5 4v9"/>',
+            trophy: '<path d="M8 4h8v4a4 4 0 01-8 0V4zM6 5H4v1a3 3 0 003 3M18 5h2v1a3 3 0 01-3 3M9 16h6M10 20h4M12 16v4"/>',
+            star: '<polygon points="12 3 14.5 9 21 9.5 16 14 17.5 20.5 12 17 6.5 20.5 8 14 3 9.5 9.5 9"/>',
+        };
+        const inner = glyphs[name] || glyphs.pulse;
+        return `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${inner}</svg>`;
     }
 
-    formatDistance(distanceM) {
-        if (distanceM < 1000) {
-            return `${Math.round(distanceM)}m`;
-        } else {
-            const km = distanceM / 1000;
-            return km >= 10
-                ? `${km.toFixed(1)}km`
-                : `${km.toFixed(2)}km`;
-        }
-    }
-
-    formatPace(paceMinPerMi) {
-        if (!paceMinPerMi || paceMinPerMi <= 0) return '';
-        const minutes = Math.floor(paceMinPerMi);
-        const seconds = Math.round((paceMinPerMi - minutes) * 60);
-        return `${minutes}:${seconds.toString().padStart(2, '0')}/mi`;
-    }
-
-    formatDuration(seconds) {
-        const hours = Math.floor(seconds / 3600);
-        const minutes = Math.floor((seconds % 3600) / 60);
-        const secs = seconds % 60;
-
-        if (hours > 0) {
-            return `${hours}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-        } else {
-            return `${minutes}:${secs.toString().padStart(2, '0')}`;
-        }
-    }
-
-    escapeHtml(text) {
+    escapeHtml(str) {
         const div = document.createElement('div');
-        div.textContent = text;
+        div.textContent = str;
         return div.innerHTML;
     }
 
     renderEmpty() {
-        this.container.innerHTML = `
-            <div class="strava-empty">
-                <p>No activities found. Check back soon!</p>
-            </div>
-        `;
+        this.container.innerHTML = '<div class="fitness-empty"><p>No highlights yet — check back soon.</p></div>';
     }
 
     renderError() {
-        this.container.innerHTML = `
-            <div class="strava-error">
-                <p>Unable to load activities. <a href="https://www.strava.com/athletes/${socialUsernames.strava_num}" target="_blank" rel="noopener noreferrer">View on Strava</a></p>
-            </div>
-        `;
-    }
-
-    getActivityIcon(type) {
-        // Minimal monochrome line glyphs that inherit currentColor.
-        const svg = (inner) => `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${inner}</svg>`;
-
-        // Strength work → dumbbell; everything cardio → an activity pulse.
-        const dumbbell = '<path d="M5 7v10M8 9v6M8 12h8M16 9v6M19 7v10"/>';
-        const pulse = '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>';
-
-        const strength = new Set(['WeightTraining', 'Workout']);
-        return svg(strength.has(type) ? dumbbell : pulse);
-    }
-
-    renderPlaceholder() {
-        // Do nothing: placeholder removed so only embedded widget shows
-        this.container.innerHTML = '';
+        this.container.innerHTML = `<div class="fitness-error"><p>Unable to load highlights. <a href="${this.stravaUrl()}" target="_blank" rel="noopener noreferrer">View on Strava</a></p></div>`;
     }
 }
 
@@ -369,7 +344,7 @@ function initSmoothScrolling() {
 // Initialize all widgets when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize Strava widget
-    const stravaWidget = new StravaWidget('strava-widget');
+    const fitnessWidget = new FitnessWidget('fitness-widget');
 
     // Initialize Hardcover widget
     const hardcoverWidget = new HardcoverWidget('hardcover-widget');

@@ -1,0 +1,17 @@
+{
+  "_comment": "Hand-edited 'life highlights' — the joke tiles. Shown alongside the auto Garmin stats; the widget rotates through the combined pool and shows ~2 of these per day. Each item: label, value, detail (optional), icon (one of: run, dumbbell, calendar, pulse, swim, food, trophy, star). NEVER overwritten by the fetch script — edit freely.",
+  "items": [
+    {
+      "label": "Swims avoided",
+      "value": "all",
+      "detail": "and counting",
+      "icon": "swim"
+    },
+    {
+      "label": "Snacks eaten without regret",
+      "value": "many",
+      "detail": "no notes",
+      "icon": "food"
+    }
+  ]
+}

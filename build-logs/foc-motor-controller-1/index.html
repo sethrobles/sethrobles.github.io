@@ -22,6 +22,7 @@
     <title>FOC Motor Controller - Seth Robles</title>
 
     <!-- Favicons for all devices and browsers -->
+    <link rel="icon" type="image/svg+xml" href="/static/uploads/personal/favicon_io/favicon.svg">
     <link rel="icon" type="image/x-icon" href="/static/uploads/personal/favicon_io/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/static/uploads/personal/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/static/uploads/personal/favicon_io/favicon-16x16.png">
@@ -206,7 +207,7 @@
 <tr>
 <td>CAN transceiver</td>
 <td>3.3V</td>
-<td>50–70mA</td>
+<td>~50–70mA</td>
 <td>~10mA idle; Unsure</td>
 </tr>
 <tr>
@@ -225,11 +226,63 @@
 <td><strong>Total (worst case)</strong></td>
 <td>—</td>
 <td><strong>~250mA</strong></td>
-<td>With ~2× margin → size input converter for ~500mA class</td>
+<td>500 mA with safety factor</td>
 </tr>
 </tbody>
 </table>
 <p>*Thank you Claude for the table, we might need to work on it though.</p>
+<p>Given this, I'm going to start looking into buck converters that will be able to bring us down from the bus to the 3.3V that will be used for all of these. I'm going to use a 1.5x safety factor from the 40V input bus, so we'll say a buck rated for 60V and for current, we'll use a 2x safety factor and rate it for 500 mA. This is likely far more than it needs, but I'd prefer to be safe than sorry. A future iteration could potentially use a cheaper buck.</p>
+<p>Now I'm searching for a buck. These are the few that I am considering with help from Claude again. I previously used from TI and made a terrible mistake while using their Power Designer. I clicked on the first item and did not check the nature of the buck. It was a prototype that I centered my design around and I spent a decent amount of time trying to fix it. I would verify that whatever you choose, it's well stocked by whatever supplier you're using.</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Rating</th>
+<th>Est. Specs</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LMR36006 (400kHz variant)</td>
+<td>4.2–60V (66V transient), 0.6A</td>
+<td>Sync; 400kHz fixed; VQFN-HR-12 (hard to hand-solder); TI extended part, stock fluctuates</td>
+<td>Best electrical fit; meets IEC 61000-4-5 surge; PG flag; confirm suffix→400kHz before ordering</td>
+</tr>
+<tr>
+<td>LMR36015</td>
+<td>4.2–60V (66V), 1.5A</td>
+<td>Sync; 400kHz option; VQFN-HR-12 (hard); Extended, fluctuates</td>
+<td>Same family, 2.5× current margin at same design effort</td>
+</tr>
+<tr>
+<td>LM5164</td>
+<td>6–100V, 1.0A</td>
+<td>Sync; ~440kHz (COT); SOIC-8 (easy); Extended, usually available</td>
+<td>100V input gives large transient immunity; easiest package; low Iq; COT = f_sw varies somewhat with operating point</td>
+</tr>
+<tr>
+<td>LM5163</td>
+<td>6–100V, 0.5A</td>
+<td>Sync; COT; SOIC-8 (easy); Extended</td>
+<td>0.5A rating equals worst-case budget exactly — zero margin; LM5164 preferred</td>
+</tr>
+<tr>
+<td>TPS54160</td>
+<td>3.5–60V, 1.5A</td>
+<td>Non-sync (ext. catch diode); 300kHz–2.5MHz (RT-set); HVSSOP-10 (moderate); Extended, mature/common</td>
+<td>Must set f_sw ≈ 300–600kHz per min-on-time rule; adds diode to BOM</td>
+</tr>
+<tr>
+<td>XL7015 (XLSEMI)</td>
+<td>5–80V, ~0.8A</td>
+<td>Non-sync (ext. diode); 150kHz; TO-252 (trivial); Basic/near-permanent stock</td>
+<td>Cheapest option; lower efficiency; 150kHz is only ~3.75× the 40kHz motor PWM — noise harmonics land closer to sampling</td>
+</tr>
+</tbody>
+</table>
+<p>I want to go to bed, so this weekend I plan on looking more into these bucks. The few other things related to power that I will be doing are 1) sizing capacitance (dependent on ripple current) and 2) begin planning for power safety for any regen voltage. I'm not very familiar with the second, but I believe it relates to what I will be driving.</p>
+<p>Additional power things I will be looking into are: 1) reverse polarity protection, 2) limiting inrush voltage, 3) power sequencing, and 4) discharge paths. I'm not experienced with these, but early research (AI) suggests I look into them. I'll do reading after I decide on a buck.</p>
                 </div>
                 
             </div>
