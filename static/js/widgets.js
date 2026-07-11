@@ -98,23 +98,25 @@ class FitnessWidget {
         `;
     }
 
-    // Thin stat row mirroring the Reading widget's book rows: label + detail on
-    // the left, value on the right. Icons are intentionally omitted for now —
-    // getIcon() below still holds the glyphs if we want them back.
+    // Thin stat row mirroring the Reading widget's book rows: label on the left
+    // (like a title); value + comment stacked on the right like the book's date
+    // + rating. Icons omitted for now — getIcon() below still holds the glyphs.
     renderTile(tile) {
         const label = this.escapeHtml(tile.label || '');
         const value = this.escapeHtml(tile.value != null ? String(tile.value) : '');
-        const sub = tile.detail
-            ? `<div class="fitness-sub">${this.escapeHtml(tile.detail)}</div>`
+        const comment = tile.detail
+            ? `<span class="fitness-comment">${this.escapeHtml(tile.detail)}</span>`
             : '';
         return `
             <div class="fitness-row">
                 <div class="fitness-spine" aria-hidden="true"></div>
                 <div class="fitness-details">
                     <div class="fitness-stat">${label}</div>
-                    ${sub}
                 </div>
-                <div class="fitness-aside"><span class="fitness-value">${value}</span></div>
+                <div class="fitness-aside">
+                    <span class="fitness-value">${value}</span>
+                    ${comment}
+                </div>
             </div>
         `;
     }
