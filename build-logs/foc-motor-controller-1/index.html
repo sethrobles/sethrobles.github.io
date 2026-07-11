@@ -283,6 +283,16 @@
 </table>
 <p>I want to go to bed, so this weekend I plan on looking more into these bucks. The few other things related to power that I will be doing are 1) sizing capacitance (dependent on ripple current) and 2) begin planning for power safety for any regen voltage. I'm not very familiar with the second, but I believe it relates to what I will be driving.</p>
 <p>Additional power things I will be looking into are: 1) reverse polarity protection, 2) limiting inrush voltage, 3) power sequencing, and 4) discharge paths. I'm not experienced with these, but early research (AI) suggests I look into them. I'll do reading after I decide on a buck.</p>
+<p><strong>July 10 2026</strong></p>
+<p>For sizing capacitance, I have done a little bit of reading. I've typically gone off suggestions in the past / other designs, but now I'm trying to be more deliberate.</p>
+<p>So for sizing the bus cap bank, I'll be estimating the power draw.</p>
+<p>Given 10A continouous per bus, we'll have an RMS rating of 10 / sqrt(2) = 7.41A. This means we'll have an expected 14.82A expected (round to 15). We can then size for half of this (not fully sure why), but I will need to find enough capacitors with &gt;= 60V that are able to add up to this 7A requirement for ripple current. </p>
+<p>Additionally, I'll need to verify that it works for any potential voltage sag. We can find the expected voltage sag with this equation: Delta V ≈ I·D/(f_sw·C). </p>
+<p>Here, current is the max current draw, f_sw is the frequency of switching (driven by our PWM frequency), C is the capacitance (set up above) and D is the duty cycle. At the worst case, duty cycle is at its maximum, which occurs at 50%. </p>
+<p>I haven't looked more into the buck converters yet, but I'll do it tomorrow morning (Saturday). Right now I'm hoping to get a decent idea of what I personally will need to do for calculations in the next few days.</p>
+<p>I think given this power, I can start getting a basic schematic set up.</p>
+<p>Next things to consider are 1: reverse polarity and 2) bleed resistor (after the buck and everything are set up.</p>
+<p>I think this will be most of what I need for power in the short term. Tomorrow might result in a new build log focused on the development of the microcontroller set up.</p>
                 </div>
                 
             </div>
