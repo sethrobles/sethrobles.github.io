@@ -176,24 +176,9 @@ a:hover {
 }
 
 .navbar-brand .navbar-logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-primary);
-}
-
-/* Small accent before the wordmark — the mark's primary home is the favicon. */
-.navbar-logo-mark {
-    width: 1.35rem;
-    height: 1.35rem;
-    flex-shrink: 0;
-    color: var(--accent);
-}
-/* Keep the gear crisp at this small size. */
-.navbar-logo-mark path:first-of-type {
-    stroke-width: 4;
 }
 
 .navbar-menu {
@@ -1498,6 +1483,89 @@ ul ul {
 .card-heading {
     text-align: center;
 }
+
+/* ── Optimized <picture> images in content ─────────────────────────────────── */
+/* Body images are emitted as <picture> now; keep the same centered block look. */
+.markdown-content picture {
+    display: block;
+    margin: 1.5rem auto;
+    text-align: center;
+}
+.markdown-content picture img {
+    display: inline-block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ── Editor-component blocks (Decap) ───────────────────────────────────────── */
+/* Centered block */
+.markdown-content .text-center {
+    text-align: center;
+}
+.markdown-content .text-center > :first-child { margin-top: 0; }
+.markdown-content .text-center > :last-child { margin-bottom: 0; }
+
+/* Callout / note boxes */
+.markdown-content .callout {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+.markdown-content .callout > :first-child { margin-top: 0; }
+.markdown-content .callout > :last-child { margin-bottom: 0; }
+.markdown-content .callout-note    { border-left-color: var(--accent);  }
+.markdown-content .callout-tip     { border-left-color: var(--success); }
+.markdown-content .callout-warning { border-left-color: var(--warning); }
+.markdown-content .callout-danger  { border-left-color: var(--error);   }
+
+/* Figure + caption */
+.markdown-content figure {
+    margin: 1.5rem auto;
+    text-align: center;
+}
+.markdown-content figure img,
+.markdown-content figure picture { margin: 0 auto; }
+.markdown-content figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Tables */
+.markdown-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95em;
+    display: block;
+    overflow-x: auto;
+}
+.markdown-content th,
+.markdown-content td {
+    border: 1px solid var(--border);
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+}
+.markdown-content thead th {
+    background: var(--bg-secondary);
+    font-weight: 600;
+}
+.markdown-content tbody tr:nth-child(even) {
+    background: var(--bg-secondary);
+}
+
+/* Display math */
+.markdown-content .math-block {
+    overflow-x: auto;
+    margin: 1.25rem 0;
+    text-align: center;
+}
+
 
 /* --- Restored Strava fitness widget styles (from 1ea425e) --- */
 .strava-widget {

@@ -84,6 +84,16 @@ h1, h2, h3, h4, h5, h6,
     font-family: Georgia, serif;
 }
 
+/* Let the wrapper shrink-wrap the rounded-rectangle portrait. base.css sizes
+   this to a fixed 200px circle, which the taller photo overflows in every
+   direction — the upward spill covers the hero buttons on narrow screens. */
+.hero-avatar {
+    width: auto;
+    height: auto;
+    background: none;
+    border-radius: 0;
+}
+
 /* Soft rounded-rectangle portrait instead of a hard circle */
 .hero-photo {
     width: 100%;
