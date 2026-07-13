@@ -1,3 +1,7 @@
+# local_backend only activates when the admin is served from localhost; in
+# production (GitHub Pages) Decap still uses the github backend below.
+local_backend: true
+
 backend:
   name: github
   repo: sethrobles/personal-site

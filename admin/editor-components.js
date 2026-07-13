@@ -148,48 +148,115 @@
   });
 
   // ── Table ─────────────────────────────────────────────────────────────────────
-  // Inserts a GFM table scaffold (rendered by the markdown 'extra' extension).
-  // Editors fill in the cells directly; add/remove rows by editing the block.
+  // A GFM table (rendered by the markdown 'extra' extension) edited entirely
+  // through form fields — no hand-written pipes required:
+  //   • Column headers  – a list; the number of headers defines the column count.
+  //   • Rows            – a list of rows, each row a list of cell strings.
+  //
+  // Crucially this ROUND-TRIPS existing content: `fromBlock` parses every real
+  // cell out of the markdown, so opening a post with a table shows the actual
+  // data (not an empty "Header" scaffold), and saving re-emits it unchanged.
+  // Rows are normalised to the header count on write (short rows pad with empty
+  // cells, long rows truncate), so adding/removing a column is a one-field edit.
+  function tableSplitCells(line) {
+    // Split "| a | b |" into trimmed cells, honouring escaped \| pipes.
+    var s = line.trim();
+    if (s.charAt(0) === '|') s = s.slice(1);
+    if (s.charAt(s.length - 1) === '|') s = s.slice(0, -1);
+    var cells = [];
+    var buf = '';
+    for (var i = 0; i < s.length; i++) {
+      var ch = s.charAt(i);
+      if (ch === '\\' && s.charAt(i + 1) === '|') { buf += '|'; i++; continue; }
+      if (ch === '|') { cells.push(buf.trim()); buf = ''; continue; }
+      buf += ch;
+    }
+    cells.push(buf.trim());
+    return cells;
+  }
+  function tablePlain(v) { return v && typeof v.toJS === 'function' ? v.toJS() : v; }
+  function tableEscCell(v) {
+    return String(v == null ? '' : v).replace(/\|/g, '\\|').replace(/\n/g, ' ').trim();
+  }
+  function tableEscHtml(v) {
+    return String(v == null ? '' : v)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
   CMS.registerEditorComponent({
     id: 'table',
     label: 'Table',
     fields: [
-      { name: 'columns', label: 'Columns', widget: 'number', default: 3, min: 1, max: 8, value_type: 'int' },
-      { name: 'rows', label: 'Body rows', widget: 'number', default: 2, min: 1, max: 30, value_type: 'int' },
+      {
+        name: 'headers',
+        label: 'Column headers',
+        widget: 'list',
+        field: { name: 'header', label: 'Header', widget: 'string' },
+        default: ['Column 1', 'Column 2'],
+        hint: 'One entry per column. Adding/removing a header adds/removes a column.',
+      },
+      {
+        name: 'rows',
+        label: 'Rows',
+        label_singular: 'Row',
+        widget: 'list',
+        default: [],
+        fields: [
+          {
+            name: 'cells',
+            label: 'Cells (one per column)',
+            widget: 'list',
+            field: { name: 'cell', label: 'Cell', widget: 'string' },
+          },
+        ],
+      },
     ],
-    // Match a markdown table block so it round-trips (editing just re-opens the form).
+    // Match a markdown table block so existing tables re-open in this editor.
     pattern: /^(\|.*\|\n\|[ :|-]+\|\n(?:\|.*\|\n?)*)$/,
     fromBlock: function (match) {
-      var lines = match[1].trim().split('\n');
-      var cols = (lines[0].match(/\|/g) || []).length - 1;
-      return { columns: cols > 0 ? cols : 3, rows: Math.max(lines.length - 2, 1) };
+      var lines = (match[1] || '').trim().split('\n').filter(function (l) { return l.trim(); });
+      var headers = lines.length ? tableSplitCells(lines[0]) : [];
+      // lines[1] is the |---|---| separator; body rows start at index 2.
+      var rows = lines.slice(2).map(function (l) { return { cells: tableSplitCells(l) }; });
+      return { headers: headers, rows: rows };
     },
     toBlock: function (data) {
-      var cols = Math.max(parseInt(data.columns, 10) || 3, 1);
-      var rows = Math.max(parseInt(data.rows, 10) || 2, 1);
-      var cell = function (label) {
+      var d = tablePlain(data) || {};
+      var headers = toArray(d.headers).map(String);
+      if (!headers.length) headers = ['Column 1'];
+      var ncol = headers.length;
+      var line = function (arr) {
         var out = [];
-        for (var c = 0; c < cols; c++) out.push(' ' + (label || '') + ' ');
+        for (var i = 0; i < ncol; i++) out.push(' ' + tableEscCell(arr[i] != null ? arr[i] : '') + ' ');
         return '|' + out.join('|') + '|';
       };
-      var header = cell('Header');
-      var sep = '|' + Array(cols).fill(' --- ').join('|') + '|';
-      var body = [];
-      for (var r = 0; r < rows; r++) body.push(cell(''));
-      return [header, sep].concat(body).join('\n');
+      var sep = '|' + new Array(ncol).fill(' --- ').join('|') + '|';
+      var body = toArray(d.rows).map(function (r) {
+        return line(toArray((tablePlain(r) || {}).cells));
+      });
+      return [line(headers), sep].concat(body).join('\n');
     },
     toPreview: function (data) {
-      var cols = Math.max(parseInt(data.columns, 10) || 3, 1);
-      var rows = Math.max(parseInt(data.rows, 10) || 2, 1);
+      var d = tablePlain(data) || {};
+      var headers = toArray(d.headers);
+      var ncol = headers.length || 1;
+      var cellStyle = 'border:1px solid #d0d0d0;padding:4px 8px;text-align:left';
       var th = '';
-      for (var c = 0; c < cols; c++) th += '<th>Header</th>';
-      var trs = '';
-      for (var r = 0; r < rows; r++) {
-        var tds = '';
-        for (var c2 = 0; c2 < cols; c2++) tds += '<td>&nbsp;</td>';
-        trs += '<tr>' + tds + '</tr>';
+      for (var c = 0; c < ncol; c++) {
+        th += '<th style="' + cellStyle + ';background:#f5f5f5">' + tableEscHtml(headers[c]) + '</th>';
       }
-      return '<table><thead><tr>' + th + '</tr></thead><tbody>' + trs + '</tbody></table>';
+      var trs = toArray(d.rows).map(function (r) {
+        var cells = toArray((tablePlain(r) || {}).cells);
+        var tds = '';
+        for (var i = 0; i < ncol; i++) {
+          tds += '<td style="' + cellStyle + '">' + tableEscHtml(cells[i] != null ? cells[i] : '') + '</td>';
+        }
+        return '<tr>' + tds + '</tr>';
+      }).join('');
+      return (
+        '<table style="border-collapse:collapse;margin:1rem 0">' +
+        '<thead><tr>' + th + '</tr></thead><tbody>' + trs + '</tbody></table>'
+      );
     },
   });
 
