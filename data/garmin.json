@@ -1,9 +1,9 @@
 {
-  "generated_at_utc": "2026-07-15T15:20:58.062034+00:00",
+  "generated_at_utc": "2026-07-16T04:50:26.797959+00:00",
   "highlights": [
     {
       "label": "Resting HR",
-      "value": "44",
+      "value": "46",
       "detail": "7-day avg 42",
       "icon": "pulse"
     },
@@ -21,19 +21,19 @@
     },
     {
       "label": "Day streak",
-      "value": "4",
+      "value": "5",
       "detail": "days in a row",
       "icon": "calendar"
     },
     {
       "label": "Active this week",
-      "value": "1h 3m",
+      "value": "1h 33m",
       "detail": "moving time",
       "icon": "pulse"
     },
     {
       "label": "Workouts",
-      "value": "3",
+      "value": "4",
       "detail": "this week",
       "icon": "dumbbell"
     },
@@ -46,11 +46,21 @@
     {
       "label": "2026 so far",
       "value": "308.7 mi",
-      "detail": "88 workouts \u00b7 62h",
+      "detail": "89 workouts \u00b7 62h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "Yoga",
+      "type": "yoga",
+      "start_date_local": "2026-07-15",
+      "distance_m": 0,
+      "moving_time_s": 1786,
+      "pace_min_per_mi": null,
+      "calories": 51,
+      "url": "https://connect.garmin.com/modern/activity/23614089033"
+    },
     {
       "name": "Philadelphia Running",
       "type": "running",
@@ -70,16 +80,6 @@
       "pace_min_per_mi": null,
       "calories": 203,
       "url": "https://connect.garmin.com/modern/activity/23593938484"
-    },
-    {
-      "name": "Strength",
-      "type": "strength_training",
-      "start_date_local": "2026-07-13",
-      "distance_m": 0,
-      "moving_time_s": 938,
-      "pace_min_per_mi": null,
-      "calories": 227,
-      "url": "https://connect.garmin.com/modern/activity/23581156166"
     }
   ]
 }

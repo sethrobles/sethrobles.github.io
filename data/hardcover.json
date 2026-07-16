@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-15T05:07:18.788085+00:00",
+  "generated_at_utc": "2026-07-16T05:17:06.874580+00:00",
   "books": [
     {
       "id": "16204980",
@@ -7,9 +7,9 @@
       "title": "The Story of Edgar Sawtelle",
       "author": "David Wroblewski",
       "cover_image_url": "https://assets.hardcover.app/books/251442/6566057-L.jpg",
-      "rating": null,
-      "date_read": "2026-07-09",
-      "status": "currently-reading",
+      "rating": 5.0,
+      "date_read": "2026-07-16",
+      "status": "read",
       "review_url": "https://hardcover.app/book/251442",
       "pages": 576,
       "isbn": null
