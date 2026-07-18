@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-17T15:08:01.271421+00:00",
+  "generated_at_utc": "2026-07-18T04:38:25.384067+00:00",
   "highlights": [
     {
       "label": "Resting HR",
@@ -18,12 +18,6 @@
       "value": "42h 35m",
       "detail": "34 runs",
       "icon": "run"
-    },
-    {
-      "label": "Day streak",
-      "value": "6",
-      "detail": "days in a row",
-      "icon": "calendar"
     },
     {
       "label": "Active this week",
