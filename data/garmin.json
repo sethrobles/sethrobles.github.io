@@ -1,12 +1,6 @@
 {
-  "generated_at_utc": "2026-07-19T14:48:39.498055+00:00",
+  "generated_at_utc": "2026-07-20T05:29:59.460582+00:00",
   "highlights": [
-    {
-      "label": "Resting HR",
-      "value": "45",
-      "detail": "7-day avg 43",
-      "icon": "pulse"
-    },
     {
       "label": "Longest workout",
       "value": "8h 49m",
@@ -18,18 +12,6 @@
       "value": "42h 35m",
       "detail": "34 runs",
       "icon": "run"
-    },
-    {
-      "label": "Active this week",
-      "value": "1h 46m",
-      "detail": "moving time",
-      "icon": "pulse"
-    },
-    {
-      "label": "Workouts",
-      "value": "5",
-      "detail": "this week",
-      "icon": "dumbbell"
     },
     {
       "label": "Longest run",
