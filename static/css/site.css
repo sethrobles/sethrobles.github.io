@@ -2133,29 +2133,22 @@ ul ul {
 
 /* ── §13  Responsive ─────────────────────────────────────────────────────── */
 
+/* The hero deliberately stays two-column right down to the nav breakpoint. It
+   used to collapse at 900px while keeping the portrait, which stacked the photo
+   above the text with a dead column beside it — the worst of both layouts.
+   Here the columns just tighten instead. */
 @media (max-width: 900px) {
+    :root {
+        --text-4xl: 2.5rem;   /* headline now lives in a narrower column */
+    }
+
     .hero-container {
-        grid-template-columns: 1fr;
         gap: var(--space-6);
     }
 
-    .hero-image {
-        order: -1;
-        justify-content: flex-start;
-    }
-
     .hero-photo {
-        max-width: 220px;
-        height: 260px;
-    }
-}
-
-/* Below this the portrait costs a screenful of scroll before anyone reaches a
-   word of the intro, and the hero reads better as type alone. Dropped rather
-   than shrunk — a 120px thumbnail of a person is worse than none. */
-@media (max-width: 620px) {
-    .hero-image {
-        display: none;
+        max-width: 200px;
+        height: 240px;
     }
 }
 
@@ -2164,6 +2157,18 @@ ul ul {
         --text-4xl: 2.25rem;
         --text-3xl: 1.875rem;
         --text-2xl: 1.5rem;
+    }
+
+    /* The portrait only reads well beside the text. At the point the nav
+       collapses to the hamburger there's no room for a second column, and
+       stacking it just pushes the intro below the fold — so it goes with
+       the nav rather than being shrunk into a thumbnail. */
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        display: none;
     }
 
     .navbar-toggle {
