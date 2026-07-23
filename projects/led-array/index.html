@@ -174,7 +174,7 @@
             <div class="content-main">
                 
                 <div class="markdown-content">
-                    <p>This is an red LED array (32x32) design in KiCAD and will eventually ordered from JLCPCB. It is a 4-layer PCB board is using a STM32 controller, 16 shift regiseters, and 8 N-fets. I have a <a href="../../blogs/led-array/">corresponding blog post</a> where I go more in depth about the design process. <strong>The project is under active development, and new features are being added frequently.</strong></p>
+                    <p>This is an red LED array (32x32) design in KiCAD and will eventually ordered from JLCPCB. It is a 4-layer PCB board is using a STM32 controller, 16 shift regiseters, and 8 N-fets. I have a <a href="/build-logs/led-array-1/">corresponding blog post</a> where I go more in depth about the design process. <strong>The project is under active development, and new features are being added frequently.</strong></p>
 <p>Thank you to my friend Miguel for providing a lot of guidance on this project.</p>
 <p>This project started as my first attempt at designing a PCB in KiCad — a 32×32 LED array driven by shift registers and MOSFETs, powered through a buck converter. I used hierarchical sheets to keep things organized, grouping the LEDs into modules and rows to make routing manageable.</p>
 <p>A lot of time went into debugging small design choices: fixing LCSC part compatibility, redoing resistor ratios for the buck converter, and making sure the whole design passed ERC and DRC checks. I also learned how much manufacturing details can affect cost — my first JLCPCB quote came out to nearly $170 (half from customs and shipping), which I managed to cut down with coupons and advice from the MITERS Discord.</p>
@@ -313,6 +313,27 @@
         </div>
 
         
+        
+        <section class="related-buildlogs">
+            <div class="logs-head">
+                <h2 class="logs-title">Build Logs</h2>
+                <span class="logs-count">1 log</span>
+            </div>
+            <p class="logs-blurb">The messy middle &mdash; notes, dead ends, and what
+                each revision actually changed.</p>
+            <div class="log-list">
+                
+                <a class="log-row" href="/build-logs/led-array-1/">
+                    <span class="log-num">#1</span>
+                    <span class="log-meta">
+                        <span class="log-title">LED Array PCB</span>
+                        <span class="log-summary">A description of my work to create an LED array with shift registers and MOSFETs in order to better my PCB design skills and have a gift for a friend.</span>
+                    </span>
+                    <span class="log-date">2025-12-13</span>
+                </a>
+                
+            </div>
+        </section>
         
 
         

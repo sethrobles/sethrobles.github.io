@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog by Seth Robles">
+    <meta name="description" content="I wanted to have an app that would be better with budgeting, so I went with Actual + SimpleFIN">
 
     
     <!-- Open Graph / Facebook -->
@@ -20,7 +20,7 @@
     <meta property="twitter:description" content="Seth Robles - Mechanical Engineer and Roboticist at MIT">
     <meta property="twitter:image" content="https://sirobles.com/static/uploads/a6df2c09e280bab7.jpg">
 
-    <title>Blog - Seth Robles</title>
+    <title>Budgeting - Seth Robles</title>
 
     <!-- Favicons for all devices and browsers -->
     <link rel="icon" type="image/svg+xml" href="/static/uploads/personal/favicon_io/favicon.svg">
@@ -128,78 +128,75 @@
 
     <main class="main-content">
         
-<div class="entry-detail">
+<article class="entry-detail entry-detail--project">
     <div class="container">
-        <header class="idx-header">
-            <h1 class="idx-title">Blog</h1>
+
+        
+        
+        <header class="entry-header entry-header--project entry-header-centered">
+            <h1 class="entry-title">Budgeting</h1>
+            
+            <div class="entry-tags">
+                <span class="tag">Software</span><span class="tag">Open Source</span><span class="tag">Self-Hosted</span>
+            </div>
+            
+            
+            <p class="entry-subtitle">I wanted to have an app that would be better with budgeting, so I went with Actual + SimpleFIN</p>
+            
             
         </header>
+        
 
         
         
-        <nav class="tagbar" aria-label="Filter by category">
-            <a class="tagbar-link"
-               href="/blogs/">
-                All <span class="tagbar-count">12</span>
-            </a>
-            
-            <a class="tagbar-link"
-               href="/blogs/tag/community/">
-                Community <span class="tagbar-count">5</span>
-            </a>
-            
-            <a class="tagbar-link"
-               href="/blogs/tag/mentoring/">
-                Mentoring <span class="tagbar-count">3</span>
-            </a>
-            
-            <a class="tagbar-link"
-               href="/blogs/tag/software/">
-                Software <span class="tagbar-count">3</span>
-            </a>
-            
-            <a class="tagbar-link"
-               href="/blogs/tag/logistics/">
-                Logistics <span class="tagbar-count">2</span>
-            </a>
-            
-            <a class="tagbar-link"
-               href="/blogs/tag/open-source/">
-                Open Source <span class="tagbar-count">2</span>
-            </a>
-            
-            <a class="tagbar-link"
-               href="/blogs/tag/teaching/">
-                Teaching <span class="tagbar-count">2</span>
-            </a>
-            
-            <a class="tagbar-link is-active"
-               href="/blogs/tag/device-integration/" aria-current="page">
-                Device Integration <span class="tagbar-count">1</span>
-            </a>
-            
-        </nav>
         
-
-        <div class="index-list">
-            
-            <a class="index-row" href="/blogs/home-server/">
-                <span class="index-top">
-                    <span class="index-title">Home Server</span>
-                    
-                    <span class="index-date">Jun 2026</span>
-                    
-                </span>
-                
-                <span class="index-summary">Setting up a home server. Thoughts primarily for now.</span>
-                
-            </a>
-            
-
-            
+        
+        <div class="entry-hero">
+            <picture><source type="image/avif" srcset="/static/uploads/9a42256c63e6f7d8-480.avif 480w, /static/uploads/9a42256c63e6f7d8-512.avif 512w" sizes="(max-width: 1000px) 100vw, 960px"><source type="image/webp" srcset="/static/uploads/9a42256c63e6f7d8-480.webp 480w, /static/uploads/9a42256c63e6f7d8-512.webp 512w" sizes="(max-width: 1000px) 100vw, 960px"><img src="/static/uploads/9a42256c63e6f7d8.png" alt="Budgeting" class="entry-hero-image" width="512" height="512" decoding="async" loading="eager" fetchpriority="high"></picture>
         </div>
+        
+
+        
+        
+
+        
+        
+
+        
+        <div class="entry-content">
+            <div class="content-main">
+                
+                <div class="markdown-content">
+                    <p>I recently talking with my girlfriend about budgeting and I realize that during the semester, I am not very proactive about it. I was scrolling through my credit statement while on the phone with her and began to realize the charges were getting a little ridiculous. The sheer number of MBTA and Chipotle charges was overwhelming.</p>
+<p>As a result, I started looking into different budgeting apps. I saw Rocket, which I am very much not a fan of. I think most budeting apps that charge you are a little silly. Yes, I understand how saas works, but if I'm worried about my expenditures, why would I add another $100+ a year onto them.</p>
+<p>As a result, I started looking around through Reddit for other recommendations, ideally one that was open source, and I saw about the Actual + SimpleFIN connection.</p>
+<p>SimpleFIN charges a relatively small amount and Actual is on github, which means some amount of editing is possible.</p>
+<p>I set it up on my Zbook, but wanted access on my phone. After a little bit of searching, I saw that I could make it a web app. My goal is to start hosting it on one of my private fleet devices and serving it through my Tailscale subnet. I have been able to budget with my phone through it and am able to regularly see my charges.</p>
+<p>My main complaint was how transfers were managed, specifically for credit card payments. The issue came to the initial pending charge associated with a card payment. I tried deleting these values and accidentally threw my account values totally off. An evening project is now reseetting my accounts so that they accurately mirror my account balances and then setting this up.</p>
+<p>After that, I want a feature that allows for combining purchases. I frequently put my card down when eating in a larger group and then I have several zelle/venmo amounts come in. In order to get a better estimate of my own actual personal expenditure, I would like this set up. Not having this was acutal my main gripe with RocketMoney.</p>
+<p>I will be looking at this more later :).</p>
+                </div>
+                
+                
+            </div>
+        </div>
+
+        
+        
+
+        
+        <nav class="entry-navigation">
+            <div class="nav-links">
+                
+            </div>
+            <div class="nav-actions">
+                
+                <a href="/projects/" class="btn btn-outline">Back to Projects</a>
+                
+            </div>
+        </nav>
     </div>
-</div>
+</article>
 
     </main>
 
