@@ -1,0 +1,2102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-ui="warm">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Every photo across the projects, build logs, and writing on this site.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="Seth Robles - Portfolio">
+    <meta property="og:description" content="Seth Robles - Mechanical Engineer and Roboticist at MIT">
+    <meta property="og:image" content="/static/uploads/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="Seth Robles - Portfolio">
+    <meta property="twitter:description" content="Seth Robles - Mechanical Engineer and Roboticist at MIT">
+    <meta property="twitter:image" content="/static/uploads/og-image.jpg">
+
+    <title>Photos - Seth Robles</title>
+
+    <!-- Favicons for all devices and browsers -->
+    <link rel="icon" type="image/svg+xml" href="/static/uploads/personal/favicon_io/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/static/uploads/personal/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/uploads/personal/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/uploads/personal/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/uploads/personal/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="/static/uploads/personal/favicon_io/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/uploads/personal/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
+
+        <!-- CSS -->
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
+
+        <!-- Redirect /index.html to pretty URL -->
+        <script>
+            if (location.pathname.endsWith('/index.html')) {
+                location.replace(location.pathname.replace('/index.html', '/'));
+            }
+        </script>
+
+    <!-- MathJax for LaTeX support -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- GoatCounter analytics -->
+    <script data-goatcounter="https://sirobles.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+
+</head>
+<body>
+    <!-- Theme toggle button -->
+    <!-- <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+        <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button> -->
+
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-logo">
+                Seth Robles
+            </a>
+        </div>
+
+        <button class="navbar-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="navbar-toggle-icon"></span>
+        </button>
+
+        
+        <div class="navbar-menu">
+            <a href="/" class="navbar-link">Home</a>
+            <a href="/projects" class="navbar-link">Projects</a>
+            <a href="/blogs" class="navbar-link">Blog</a>
+        </div>
+
+        <!--  -->
+    </div>
+</nav>
+
+<script>
+    // Mobile navigation toggle
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navbarMenu = document.querySelector('.navbar-menu');
+
+    navbarToggle.addEventListener('click', () => {
+        const isExpanded = navbarToggle.getAttribute('aria-expanded') === 'true';
+        navbarToggle.setAttribute('aria-expanded', !isExpanded);
+        navbarMenu.classList.toggle('show');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navbarToggle.contains(e.target) && !navbarMenu.contains(e.target)) {
+            navbarToggle.setAttribute('aria-expanded', 'false');
+            navbarMenu.classList.remove('show');
+        }
+    });
+</script>
+
+    <main class="main-content">
+        
+<section class="projects-header">
+    <div class="container">
+        <header class="section-header">
+            <h1 class="section-title">Photos</h1>
+            <p class="section-subtitle">
+                Every image across the projects, build logs, and writing —
+                <span class="photo-count-total">86</span> in all.
+            </p>
+        </header>
+
+        <div class="projects-controls">
+            <div class="search-box" style="position:relative;">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="position:absolute;left:0.75rem;top:50%;transform:translateY(-50%);pointer-events:none;">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                
+                <input type="search" id="photo-search" class="search-input"
+                       placeholder="Search photos by caption, project, or tag…"
+                       style="padding-left:2.5rem;" autocomplete="off">
+            </div>
+
+            <div class="tag-filters" id="photo-tag-filters">
+                <button class="tag-filter active" data-tag="all">All</button>
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                
+                <button class="tag-filter" data-tag="Open Source">Open Source</button>
+                
+                <button class="tag-filter" data-tag="Software">Software</button>
+                
+                <button class="tag-filter" data-tag="Web">Web</button>
+                
+                <button class="tag-filter" data-tag="Python">Python</button>
+                
+                <button class="tag-filter" data-tag="Process">Process</button>
+                
+                <button class="tag-filter" data-tag="PCB Design">PCB Design</button>
+                
+                <button class="tag-filter" data-tag="Electronics">Electronics</button>
+                
+                <button class="tag-filter" data-tag="Hardware">Hardware</button>
+                
+                <button class="tag-filter" data-tag="Device Integration">Device Integration</button>
+                
+                <button class="tag-filter" data-tag="Motor">Motor</button>
+                
+                <button class="tag-filter" data-tag="3D Printing">3D Printing</button>
+                
+                <button class="tag-filter" data-tag="Community">Community</button>
+                
+                <button class="tag-filter" data-tag="Logistics">Logistics</button>
+                
+                <button class="tag-filter" data-tag="Fitness">Fitness</button>
+                
+                <button class="tag-filter" data-tag="Machine Learning">Machine Learning</button>
+                
+                <button class="tag-filter" data-tag="Blender">Blender</button>
+                
+                <button class="tag-filter" data-tag="Robotics">Robotics</button>
+                
+                <button class="tag-filter" data-tag="Coursework">Coursework</button>
+                
+                <button class="tag-filter" data-tag="Computer Vision">Computer Vision</button>
+                
+                <button class="tag-filter" data-tag="Mentoring">Mentoring</button>
+                
+                <button class="tag-filter" data-tag="Teaching">Teaching</button>
+                
+                <button class="tag-filter" data-tag="Research">Research</button>
+                
+                <button class="tag-filter" data-tag="Travel">Travel</button>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="projects-content">
+    <div class="container">
+        
+        <div class="photo-grid" id="photo-grid">
+            
+            <a class="photo-tile"
+               href="/blogs/open-source/"
+               data-q="photo of the old strava format open source and open development open source software blog open-source"
+               data-tags="Open Source,Software"
+               title="Photo of the Old Strava Format">
+                <picture><source type="image/avif" srcset="/static/uploads/6861849c532ce4e1-480.avif 480w, /static/uploads/6861849c532ce4e1-800.avif 800w, /static/uploads/6861849c532ce4e1-1200.avif 1200w, /static/uploads/6861849c532ce4e1-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/6861849c532ce4e1-480.webp 480w, /static/uploads/6861849c532ce4e1-800.webp 800w, /static/uploads/6861849c532ce4e1-1200.webp 1200w, /static/uploads/6861849c532ce4e1-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/6861849c532ce4e1.png" alt="Photo of the Old Strava Format" class="photo-tile-img" width="1600" height="992" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADwAgCdASoUAAwAPu1iqU2ppaOiMAgBMB2JaQC7ADKtAAD+8E9ygdrKoIbeKxtJFVAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Open Source and Open Development</span>
+                    
+                    <span class="photo-tile-alt">Photo of the Old Strava Format</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/build-logs/personal-site-buildlog/"
+               data-q="building this website building this website web python process buildlog personal-site-buildlog"
+               data-tags="Web,Python,Process"
+               title="Building this website">
+                <picture><source type="image/avif" srcset="/static/uploads/54863665cd350373-480.avif 480w, /static/uploads/54863665cd350373-800.avif 800w, /static/uploads/54863665cd350373-1200.avif 1200w, /static/uploads/54863665cd350373-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/54863665cd350373-480.webp 480w, /static/uploads/54863665cd350373-800.webp 800w, /static/uploads/54863665cd350373-1200.webp 1200w, /static/uploads/54863665cd350373-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/54863665cd350373.png" alt="Building this website" class="photo-tile-img" width="1600" height="739" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoUAAkAPu1oqk6ppiQiMAgBMB2JZwC3uCKbVUiYAAD+7c2KtHwaobNhQVATzzFrWMYhrzsZJ31DeZbfwZBfp5bUCBfgAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Building this website</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/build-logs/personal-site-buildlog/"
+               data-q="decap cms building this website web python process buildlog personal-site-buildlog"
+               data-tags="Web,Python,Process"
+               title="Decap CMS">
+                <picture><source type="image/avif" srcset="/static/uploads/6e180681fac0aa4c-480.avif 480w, /static/uploads/6e180681fac0aa4c-800.avif 800w, /static/uploads/6e180681fac0aa4c-1200.avif 1200w, /static/uploads/6e180681fac0aa4c-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/6e180681fac0aa4c-480.webp 480w, /static/uploads/6e180681fac0aa4c-800.webp 800w, /static/uploads/6e180681fac0aa4c-1200.webp 1200w, /static/uploads/6e180681fac0aa4c-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/6e180681fac0aa4c.png" alt="Decap CMS" class="photo-tile-img" width="1600" height="812" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAgCdASoUAAoAPu1iqU2ppaOiMAgBMB2JaQAAfqoAAP7wTgIo1aV/7Ordwj7i66EhgAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Building this website</span>
+                    
+                    <span class="photo-tile-alt">Decap CMS</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/build-logs/personal-site-buildlog/"
+               data-q="replacement garmin dashboard building this website web python process buildlog personal-site-buildlog"
+               data-tags="Web,Python,Process"
+               title="Replacement Garmin Dashboard">
+                <picture><source type="image/avif" srcset="/static/uploads/21760c2ba8981bb9-480.avif 480w, /static/uploads/21760c2ba8981bb9-800.avif 800w, /static/uploads/21760c2ba8981bb9-1200.avif 1200w, /static/uploads/21760c2ba8981bb9-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/21760c2ba8981bb9-480.webp 480w, /static/uploads/21760c2ba8981bb9-800.webp 800w, /static/uploads/21760c2ba8981bb9-1200.webp 1200w, /static/uploads/21760c2ba8981bb9-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/21760c2ba8981bb9.png" alt="Replacement Garmin Dashboard" class="photo-tile-img" width="1600" height="836" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADwAgCdASoUAAoAPu1iqU2ppaQiMAgBMB2JZwC2yC5JAAD+8BHY3gionsPY0AL0SAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Building this website</span>
+                    
+                    <span class="photo-tile-alt">Replacement Garmin Dashboard</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/impact-wrench/"
+               data-q="disassembling impact wrench disassembling impact wrench pcb design electronics hardware device integration project impact-wrench"
+               data-tags="PCB Design,Electronics,Hardware,Device Integration"
+               title="Disassembling Impact Wrench">
+                <picture><source type="image/avif" srcset="/static/uploads/c9dd604590e67da6-480.avif 480w, /static/uploads/c9dd604590e67da6-800.avif 800w, /static/uploads/c9dd604590e67da6-1200.avif 1200w, /static/uploads/c9dd604590e67da6-1499.avif 1499w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/c9dd604590e67da6-480.webp 480w, /static/uploads/c9dd604590e67da6-800.webp 800w, /static/uploads/c9dd604590e67da6-1200.webp 1200w, /static/uploads/c9dd604590e67da6-1499.webp 1499w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/c9dd604590e67da6.jpg" alt="Disassembling Impact Wrench" class="photo-tile-img" width="1499" height="1500" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRvIAAABXRUJQVlA4IOYAAACQBQCdASoUABQAPu1ur1IppiQiqAgBMB2JZgDM8P8gtQrhkuKISoDuJAh/M1o9G93A52yEAAD+84F7i2WEtevnfOa4Gn20aYm6jUrS98J92XE45tbEmkbdKRNkze93lQHCtxM9ffMX52+T6ma+J9LGWp0pAcusu4ETgdHRr0fuzwk4+7bkcf/OzU2WSb6trHsYk3hNN/9iaOHHjhHF62KcIgWdk7S+LIa+1rLDl0zdur5UGnEIl+HZ5NWNDp4lQBB0wQVSG0qr+oteB1ZRNruiWNiBvbr47QGwnAKEdPomc5GOvgAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Disassembling Impact Wrench</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/impact-wrench/"
+               data-q="part of impact wrench disassembling impact wrench pcb design electronics hardware device integration project impact-wrench"
+               data-tags="PCB Design,Electronics,Hardware,Device Integration"
+               title="Part of Impact Wrench">
+                <picture><source type="image/avif" srcset="/static/uploads/42d5ee7dd2af295d-480.avif 480w, /static/uploads/42d5ee7dd2af295d-800.avif 800w, /static/uploads/42d5ee7dd2af295d-1200.avif 1200w, /static/uploads/42d5ee7dd2af295d-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/42d5ee7dd2af295d-480.webp 480w, /static/uploads/42d5ee7dd2af295d-800.webp 800w, /static/uploads/42d5ee7dd2af295d-1200.webp 1200w, /static/uploads/42d5ee7dd2af295d-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/42d5ee7dd2af295d.jpg" alt="Part of Impact Wrench" class="photo-tile-img" width="1600" height="2133" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAACQBQCdASoUABsAPu1srFEppaQiqAqpMB2JYwCo9YyoZh5yEOSq6uRBLdDexY5Nvw1zPIhlWAD5KWItOElQBSfwt7nCT/UcBSfUSf4G4MwrHIh/cnWMcftO1N6qcUISbUcQ6opo5oDGY0LCJ/ZQQbvdtYpD+eOyvJHwmdN0ZU0+Z6648eN9LXzrQNQJCTWTNI3VZg47rW66rtbeGYXXMMkxP14nKOjKnOn2GZb7xIx2FegXrd3K2AIUwwfdMiUwBb0Qx5DWl6zRjRAjojuoc+dIpbQAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Disassembling Impact Wrench</span>
+                    
+                    <span class="photo-tile-alt">Part of Impact Wrench</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/impact-wrench/"
+               data-q="part of impact wrench disassembling impact wrench pcb design electronics hardware device integration project impact-wrench"
+               data-tags="PCB Design,Electronics,Hardware,Device Integration"
+               title="Part of impact wrench">
+                <picture><source type="image/avif" srcset="/static/uploads/d845577a3a0d0c5b-480.avif 480w, /static/uploads/d845577a3a0d0c5b-800.avif 800w, /static/uploads/d845577a3a0d0c5b-1200.avif 1200w, /static/uploads/d845577a3a0d0c5b-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/d845577a3a0d0c5b-480.webp 480w, /static/uploads/d845577a3a0d0c5b-800.webp 800w, /static/uploads/d845577a3a0d0c5b-1200.webp 1200w, /static/uploads/d845577a3a0d0c5b-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/d845577a3a0d0c5b.jpg" alt="Part of impact wrench" class="photo-tile-img" width="1600" height="1200" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAwCdASoUAA8APu1iqU2ppaQiMAgBMB2JZQC7ABoyM5FWY3t8ucEQAPX+TsxI98FDxos2dqD4cWKbX+aRs3uTFtLl9p5p6p2oNHuhgrzCU/JUFddtEjgA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Disassembling Impact Wrench</span>
+                    
+                    <span class="photo-tile-alt">Part of impact wrench</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/impact-wrench/"
+               data-q="part of impact wrench disassembling impact wrench pcb design electronics hardware device integration project impact-wrench"
+               data-tags="PCB Design,Electronics,Hardware,Device Integration"
+               title="Part of impact wrench">
+                <picture><source type="image/avif" srcset="/static/uploads/fd8f9255ac5c0f84-480.avif 480w, /static/uploads/fd8f9255ac5c0f84-800.avif 800w, /static/uploads/fd8f9255ac5c0f84-1200.avif 1200w, /static/uploads/fd8f9255ac5c0f84-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/fd8f9255ac5c0f84-480.webp 480w, /static/uploads/fd8f9255ac5c0f84-800.webp 800w, /static/uploads/fd8f9255ac5c0f84-1200.webp 1200w, /static/uploads/fd8f9255ac5c0f84-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/fd8f9255ac5c0f84.jpg" alt="Part of impact wrench" class="photo-tile-img" width="1600" height="2133" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAAAQBQCdASoUABsAPu1sq08ppiOiMBgIATAdiWQAt7gN0T1ZJc1gk1BBY0Db4orCeYjgAP7ys0OMVVKA1OIWoPqvAJJ3RqFPuwKIkv58b2Laa0j/LZyxbaLfH+E69SYtlXZmTCYJKmdB1Oz94qrEWI+kKE0DLg9wuSo5QokqWC/OPOUOsJBSUChGrQ28UZiJQxlC740lEAffAMDpvo6+FZL/MZLIVHibeNR5J7q0cAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Disassembling Impact Wrench</span>
+                    
+                    <span class="photo-tile-alt">Part of impact wrench</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/impact-wrench/"
+               data-q="part of impact wrench disassembling impact wrench pcb design electronics hardware device integration project impact-wrench"
+               data-tags="PCB Design,Electronics,Hardware,Device Integration"
+               title="Part of impact wrench">
+                <picture><source type="image/avif" srcset="/static/uploads/86e9ef9fadc7bad3-480.avif 480w, /static/uploads/86e9ef9fadc7bad3-800.avif 800w, /static/uploads/86e9ef9fadc7bad3-1200.avif 1200w, /static/uploads/86e9ef9fadc7bad3-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/86e9ef9fadc7bad3-480.webp 480w, /static/uploads/86e9ef9fadc7bad3-800.webp 800w, /static/uploads/86e9ef9fadc7bad3-1200.webp 1200w, /static/uploads/86e9ef9fadc7bad3-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/86e9ef9fadc7bad3.jpg" alt="Part of impact wrench" class="photo-tile-img" width="1600" height="1200" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAABwBACdASoUAA8APu1iqU2ppaQiMAgBMB2JYgC7Ef/gK2rjt4PBPZu99fS8AAD+zfvWK8CKKcvX1z9NQGXLDeN+2l+VFI2bQb8Kk+FtsFEQNf3DGrOfKPI9H/Cj5TPMUdaHApAUZxswWuWBejOv4AxomADKwJrEj8iT4++SY1RenYcAAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Disassembling Impact Wrench</span>
+                    
+                    <span class="photo-tile-alt">Part of impact wrench</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/impact-wrench/"
+               data-q="part of impact wrench disassembling impact wrench pcb design electronics hardware device integration project impact-wrench"
+               data-tags="PCB Design,Electronics,Hardware,Device Integration"
+               title="Part of impact wrench">
+                <picture><source type="image/avif" srcset="/static/uploads/2e2ecfbb8d28f386-480.avif 480w, /static/uploads/2e2ecfbb8d28f386-800.avif 800w, /static/uploads/2e2ecfbb8d28f386-1200.avif 1200w, /static/uploads/2e2ecfbb8d28f386-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/2e2ecfbb8d28f386-480.webp 480w, /static/uploads/2e2ecfbb8d28f386-800.webp 800w, /static/uploads/2e2ecfbb8d28f386-1200.webp 1200w, /static/uploads/2e2ecfbb8d28f386-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/2e2ecfbb8d28f386.jpg" alt="Part of impact wrench" class="photo-tile-img" width="1600" height="2133" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRuwAAABXRUJQVlA4IOAAAADQBQCdASoUABsAPu1qr1CppaQiqAqpMB2JQBYjbrKv/KRTuD1aQ0pQVHsrMdsKFIbmSATYhwHAAPkY5OkBcfiOSxiCNSWMshv+yZezUeOgA+yaVrah106zDplN/qkkGa55WsC8J8IbPggd2hgOX3+tV5cGBCHYkwrrD42GFAyfo/1CVGlX+e3C9fix7YgiHWzvNWl+3vwWBySVNfJ9xyGlxCNsxqPOtdVp2pmRa3hmjLzFBZpwXrvBmfrBQmQwVaDO8qe9cSEHHqN18wD+EuGN8Tp1QGK/kZ5dwEaYKiAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Disassembling Impact Wrench</span>
+                    
+                    <span class="photo-tile-alt">Part of impact wrench</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/impact-wrench/"
+               data-q="front of trigger pcb disassembling impact wrench pcb design electronics hardware device integration project impact-wrench"
+               data-tags="PCB Design,Electronics,Hardware,Device Integration"
+               title="Front of Trigger PCB">
+                <picture><source type="image/avif" srcset="/static/uploads/6a8d05191d9b389a-480.avif 480w, /static/uploads/6a8d05191d9b389a-768.avif 768w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/6a8d05191d9b389a-480.webp 480w, /static/uploads/6a8d05191d9b389a-768.webp 768w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/6a8d05191d9b389a.jpg" alt="Front of Trigger PCB" class="photo-tile-img" width="768" height="1024" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRgIBAABXRUJQVlA4IPYAAACwBQCdASoUABsAPu1iq1AppSOisBgIATAdiWwAtOmM7l3RpmqwQGVtroTfMg+EmvgA3OvBcgAA/nkWiynkGZ66y1KtcCKKcqmtXLPVef3ui8ctjQ3sjGQFub0eQjtMtPI89J9s89CmehsnH+nfIny/XUN0omrIN+R849A26k5MhFHVlyrxOa+JdYSSJ1sTSY51KUUh073LayP40b+P6a5/6yb0iaR3FB9I+f0U34ZWtZ4r35zQW37eZ1BF5Rv3Jn3IY1onSg5kSEt63itnLrKtW4AALdXjV4WIqc2BIVK7ken+7h098AmpKaxX4IvgyWckaMwrgAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Disassembling Impact Wrench</span>
+                    
+                    <span class="photo-tile-alt">Front of Trigger PCB</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/impact-wrench/"
+               data-q="back of trigger pcb disassembling impact wrench pcb design electronics hardware device integration project impact-wrench"
+               data-tags="PCB Design,Electronics,Hardware,Device Integration"
+               title="Back of Trigger PCB">
+                <picture><source type="image/avif" srcset="/static/uploads/1114bf3efc238f5b-480.avif 480w, /static/uploads/1114bf3efc238f5b-768.avif 768w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/1114bf3efc238f5b-480.webp 480w, /static/uploads/1114bf3efc238f5b-768.webp 768w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/1114bf3efc238f5b.jpg" alt="Back of Trigger PCB" class="photo-tile-img" width="768" height="1024" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRgABAABXRUJQVlA4IPQAAADQBQCdASoUABsAPu1qsFAppaSiqAqpMB2JaAC7AYy8aIRRUSQIzeldrmWseGoVStPpdrgB+NQAAOJmjUM73p+WNIbefU9FXFhBupCvumF8YKZvMdjWwoTSzjQrtm/6dw9JwP+Fo4S/kGn9ZptNobvEyPgJ0WAFPhM6MuOLjTBQWxTKfWdAzuRjinkCf1uL7suIobfNiqH+Dou51etfY2SGzeBBOa6Tt+fwD9xaepZBJFQbTVMBFQyPx5Wa55PwkjOhfbnfQO4U2gGdmkxHCRfviHXhUhrvyf1O4qMXgDee0yC82HOlP1AFclyAFOql/aFYsqAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Disassembling Impact Wrench</span>
+                    
+                    <span class="photo-tile-alt">Back of Trigger PCB</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/impact-wrench/"
+               data-q="mapping of pcb pins disassembling impact wrench pcb design electronics hardware device integration project impact-wrench"
+               data-tags="PCB Design,Electronics,Hardware,Device Integration"
+               title="Mapping of PCB Pins">
+                <picture><source type="image/avif" srcset="/static/uploads/7aa9bece1e94ca80-480.avif 480w, /static/uploads/7aa9bece1e94ca80-800.avif 800w, /static/uploads/7aa9bece1e94ca80-1200.avif 1200w, /static/uploads/7aa9bece1e94ca80-1334.avif 1334w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/7aa9bece1e94ca80-480.webp 480w, /static/uploads/7aa9bece1e94ca80-800.webp 800w, /static/uploads/7aa9bece1e94ca80-1200.webp 1200w, /static/uploads/7aa9bece1e94ca80-1334.webp 1334w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/7aa9bece1e94ca80.png" alt="Mapping of PCB Pins" class="photo-tile-img" width="1334" height="1161" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABQAwCdASoUABEAPu1sq1EppaOiqAqpMB2JaQAAOpv8nMkEAAD+8C72WKamfPPG37el2nYncuq0G/hsbaHCWG5xpCO2Gsv6iBdLQAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Disassembling Impact Wrench</span>
+                    
+                    <span class="photo-tile-alt">Mapping of PCB Pins</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/impact-wrench/"
+               data-q="mock trigger pcb disassembling impact wrench pcb design electronics hardware device integration project impact-wrench"
+               data-tags="PCB Design,Electronics,Hardware,Device Integration"
+               title="Mock Trigger PCB">
+                <picture><source type="image/avif" srcset="/static/uploads/0969fca2d74adc3e-480.avif 480w, /static/uploads/0969fca2d74adc3e-800.avif 800w, /static/uploads/0969fca2d74adc3e-1200.avif 1200w, /static/uploads/0969fca2d74adc3e-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/0969fca2d74adc3e-480.webp 480w, /static/uploads/0969fca2d74adc3e-800.webp 800w, /static/uploads/0969fca2d74adc3e-1200.webp 1200w, /static/uploads/0969fca2d74adc3e-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/0969fca2d74adc3e.png" alt="Mock Trigger PCB" class="photo-tile-img" width="1600" height="869" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADwAgCdASoUAAsAPu1iqU2ppaOiMAgBMB2JaQDA3C0kAAD+8ElR7xIjQAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Disassembling Impact Wrench</span>
+                    
+                    <span class="photo-tile-alt">Mock Trigger PCB</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/impact-wrench/"
+               data-q="front of trigger-mimic pcb disassembling impact wrench pcb design electronics hardware device integration project impact-wrench"
+               data-tags="PCB Design,Electronics,Hardware,Device Integration"
+               title="Front of Trigger-Mimic PCB">
+                <picture><source type="image/avif" srcset="/static/uploads/fec08c92d9933e94-480.avif 480w, /static/uploads/fec08c92d9933e94-800.avif 800w, /static/uploads/fec08c92d9933e94-1200.avif 1200w, /static/uploads/fec08c92d9933e94-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/fec08c92d9933e94-480.webp 480w, /static/uploads/fec08c92d9933e94-800.webp 800w, /static/uploads/fec08c92d9933e94-1200.webp 1200w, /static/uploads/fec08c92d9933e94-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/fec08c92d9933e94.jpg" alt="Front of Trigger-Mimic PCB" class="photo-tile-img" width="1600" height="2133" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAQBQCdASoUABsAPu1gq1AppKOisBgIATAdiWMAtsgQpluznNk58RyMaTqWyISrKuoAAP58IkYVP9qlh9nTsOxAWyJnyrTNxuLnEXzsSmDhYGCZT69PDBpEgxkKo5A29k9FJGiLxLlUsRJBnBs45CeAAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Disassembling Impact Wrench</span>
+                    
+                    <span class="photo-tile-alt">Front of Trigger-Mimic PCB</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/impact-wrench/"
+               data-q="back of trigger-mimic pcb disassembling impact wrench pcb design electronics hardware device integration project impact-wrench"
+               data-tags="PCB Design,Electronics,Hardware,Device Integration"
+               title="Back of Trigger-Mimic PCB">
+                <picture><source type="image/avif" srcset="/static/uploads/7a1cbbd374e96a16-480.avif 480w, /static/uploads/7a1cbbd374e96a16-800.avif 800w, /static/uploads/7a1cbbd374e96a16-1200.avif 1200w, /static/uploads/7a1cbbd374e96a16-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/7a1cbbd374e96a16-480.webp 480w, /static/uploads/7a1cbbd374e96a16-800.webp 800w, /static/uploads/7a1cbbd374e96a16-1200.webp 1200w, /static/uploads/7a1cbbd374e96a16-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/7a1cbbd374e96a16.jpg" alt="Back of Trigger-Mimic PCB" class="photo-tile-img" width="1600" height="2133" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABQBACdASoUABsAPu1qr1CppaQiqAqpMB2JYwCdAAxsBcgxSKUeD4BXN4fAAP6fMASLcfWvI+qoD0olKsz1ZS0IOaPdJgxpr9dAYUb0JAOG8yB7MRnGicIEhEgqcacJEJWDme75iIEL4AgtHemXZ2OVL7tcZlDh9VpNBAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Disassembling Impact Wrench</span>
+                    
+                    <span class="photo-tile-alt">Back of Trigger-Mimic PCB</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/3d-printable-motor/"
+               data-q="small 3d printable motor small 3d printable motor motor 3d printing hardware project 3d-printable-motor"
+               data-tags="Motor,3D Printing,Hardware"
+               title="Small 3D Printable Motor">
+                <picture><source type="image/avif" srcset="/static/uploads/08c2ae70c8c0136a-480.avif 480w, /static/uploads/08c2ae70c8c0136a-800.avif 800w, /static/uploads/08c2ae70c8c0136a-1200.avif 1200w, /static/uploads/08c2ae70c8c0136a-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/08c2ae70c8c0136a-480.webp 480w, /static/uploads/08c2ae70c8c0136a-800.webp 800w, /static/uploads/08c2ae70c8c0136a-1200.webp 1200w, /static/uploads/08c2ae70c8c0136a-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/08c2ae70c8c0136a.jpg" alt="Small 3D Printable Motor" class="photo-tile-img" width="1600" height="2133" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADQBACdASoUABsAPu1or1AppaSiqAqpMB2JYwAAEV37gyuPN3EkuzikW4/md/mvYAD9q5pQ/2K+il4aTvi2YhS0Ya6hJjFzwuEy6c+5DUzedVkYWrZSVVk+QBN1/ChB29RmgRkJQQpLanBpVXofpE/F+SsXKuG+44LYAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Small 3D Printable Motor</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/3d-printable-motor/"
+               data-q="motor alongside vesc and foc controller prototype small 3d printable motor motor 3d printing hardware project 3d-printable-motor"
+               data-tags="Motor,3D Printing,Hardware"
+               title="Motor alongside VESC and FOC Controller Prototype">
+                <picture><source type="image/avif" srcset="/static/uploads/c8b29e57498d3be6-480.avif 480w, /static/uploads/c8b29e57498d3be6-800.avif 800w, /static/uploads/c8b29e57498d3be6-1200.avif 1200w, /static/uploads/c8b29e57498d3be6-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/c8b29e57498d3be6-480.webp 480w, /static/uploads/c8b29e57498d3be6-800.webp 800w, /static/uploads/c8b29e57498d3be6-1200.webp 1200w, /static/uploads/c8b29e57498d3be6-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/c8b29e57498d3be6.jpg" alt="Motor alongside VESC and FOC Controller Prototype" class="photo-tile-img" width="1600" height="2133" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAADQBACdASoUABsAPu1ur1IppiQiqAgBMB2JYwDA3BGvRral5ABePk0NqO53IN9lwADOO5EIdBRh9o2xW8KdQnFynwsOx6bYaogm6WegGmeGsxkIoC3YLtLprhqhwaPaoP+7ThxKRs7hoZAjjfQ43Tuck9G9djIxrwYjK/b9/DyorQCkaXTinZT5SWP6mZ6pqADBGKp9CFkhhW5c0AA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Small 3D Printable Motor</span>
+                    
+                    <span class="photo-tile-alt">Motor alongside VESC and FOC Controller Prototype</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/budgeting/"
+               data-q="budgeting budgeting software open source blog budgeting"
+               data-tags="Software,Open Source"
+               title="Budgeting">
+                <picture><source type="image/avif" srcset="/static/uploads/9a42256c63e6f7d8-480.avif 480w, /static/uploads/9a42256c63e6f7d8-512.avif 512w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/9a42256c63e6f7d8-480.webp 480w, /static/uploads/9a42256c63e6f7d8-512.webp 512w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/9a42256c63e6f7d8.png" alt="Budgeting" class="photo-tile-img" width="512" height="512" decoding="async" loading="lazy"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Budgeting</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/personal-site/"
+               data-q="personal site personal site software project personal-site"
+               data-tags="Software"
+               title="Personal Site">
+                <picture><source type="image/avif" srcset="/static/uploads/092bd70fe808c70a-480.avif 480w, /static/uploads/092bd70fe808c70a-800.avif 800w, /static/uploads/092bd70fe808c70a-1200.avif 1200w, /static/uploads/092bd70fe808c70a-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/092bd70fe808c70a-480.webp 480w, /static/uploads/092bd70fe808c70a-800.webp 800w, /static/uploads/092bd70fe808c70a-1200.webp 1200w, /static/uploads/092bd70fe808c70a-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/092bd70fe808c70a.png" alt="Personal Site" class="photo-tile-img" width="1600" height="1093" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAACwAwCdASoUAA4APu1iqU2ppaQiMAgBMB2JZwAAW4bdJWZJBkgpoAD+8iQObcKPBSWO1GcaK8PhPb9tDWTCB7bdSF8L5x1lu4RfV9pu27zH0c99zCmk48bAAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Personal Site</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/sl_coordinator/"
+               data-q="sin limite coordinator sin limite coordinator community logistics blog sl_coordinator"
+               data-tags="Community,Logistics"
+               title="Sin LiMITe Coordinator">
+                <picture><source type="image/avif" srcset="/static/uploads/bfea860491d42683-480.avif 480w, /static/uploads/bfea860491d42683-800.avif 800w, /static/uploads/bfea860491d42683-1200.avif 1200w, /static/uploads/bfea860491d42683-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/bfea860491d42683-480.webp 480w, /static/uploads/bfea860491d42683-800.webp 800w, /static/uploads/bfea860491d42683-1200.webp 1200w, /static/uploads/bfea860491d42683-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/bfea860491d42683.jpg" alt="Sin LiMITe Coordinator" class="photo-tile-img" width="1600" height="1600" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAAAQBQCdASoUABQAPu1srFEppaQiqAqpMB2JbADA6iKwFImuT0UIg58UjFUpA21kXsQAAP7zdN9Lk4qabY4T7teyyPIvJduOSC5+et7OfDD8PgVE7G2qU2/9srIo1nfl+X+raumgqZGr63v71OTynNZcFy8PTZszuNiQ9RoC6AOBSjRJO8tvzq2MSKLWCQdbjATvAAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Sin LiMITe Coordinator</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/sl_coordinator/"
+               data-q="lcc logo sin limite coordinator community logistics blog sl_coordinator"
+               data-tags="Community,Logistics"
+               title="LCC Logo">
+                <picture><source type="image/avif" srcset="/static/uploads/a76316081cd47e41-480.avif 480w, /static/uploads/a76316081cd47e41-500.avif 500w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/a76316081cd47e41-480.webp 480w, /static/uploads/a76316081cd47e41-500.webp 500w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/a76316081cd47e41.png" alt="LCC Logo" class="photo-tile-img" width="500" height="537" decoding="async" loading="lazy"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Sin LiMITe Coordinator</span>
+                    
+                    <span class="photo-tile-alt">LCC Logo</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/sl_coordinator/"
+               data-q="mujeres latinas logo sin limite coordinator community logistics blog sl_coordinator"
+               data-tags="Community,Logistics"
+               title="Mujeres Latinas Logo">
+                <picture><source type="image/avif" srcset="/static/uploads/977182e1678aabfd-480.avif 480w, /static/uploads/977182e1678aabfd-800.avif 800w, /static/uploads/977182e1678aabfd-1200.avif 1200w, /static/uploads/977182e1678aabfd-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/977182e1678aabfd-480.webp 480w, /static/uploads/977182e1678aabfd-800.webp 800w, /static/uploads/977182e1678aabfd-1200.webp 1200w, /static/uploads/977182e1678aabfd-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/977182e1678aabfd.png" alt="Mujeres Latinas Logo" class="photo-tile-img" width="1600" height="1600" decoding="async" loading="lazy"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Sin LiMITe Coordinator</span>
+                    
+                    <span class="photo-tile-alt">Mujeres Latinas Logo</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/sl_coordinator/"
+               data-q="ldc logo sin limite coordinator community logistics blog sl_coordinator"
+               data-tags="Community,Logistics"
+               title="LDC Logo">
+                <picture><source type="image/avif" srcset="/static/uploads/216300da16ae3dd7-480.avif 480w, /static/uploads/216300da16ae3dd7-500.avif 500w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/216300da16ae3dd7-480.webp 480w, /static/uploads/216300da16ae3dd7-500.webp 500w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/216300da16ae3dd7.png" alt="LDC Logo" class="photo-tile-img" width="500" height="500" decoding="async" loading="lazy"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Sin LiMITe Coordinator</span>
+                    
+                    <span class="photo-tile-alt">LDC Logo</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/sl_coordinator/"
+               data-q="cafe logo sin limite coordinator community logistics blog sl_coordinator"
+               data-tags="Community,Logistics"
+               title="CAFE Logo">
+                <picture><source type="image/avif" srcset="/static/uploads/3f6ceaa2588b7aea-480.avif 480w, /static/uploads/3f6ceaa2588b7aea-800.avif 800w, /static/uploads/3f6ceaa2588b7aea-1200.avif 1200w, /static/uploads/3f6ceaa2588b7aea-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/3f6ceaa2588b7aea-480.webp 480w, /static/uploads/3f6ceaa2588b7aea-800.webp 800w, /static/uploads/3f6ceaa2588b7aea-1200.webp 1200w, /static/uploads/3f6ceaa2588b7aea-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/3f6ceaa2588b7aea.png" alt="CAFE Logo" class="photo-tile-img" width="1600" height="1200" decoding="async" loading="lazy"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Sin LiMITe Coordinator</span>
+                    
+                    <span class="photo-tile-alt">CAFE Logo</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/sl_coordinator/"
+               data-q="club peru logo sin limite coordinator community logistics blog sl_coordinator"
+               data-tags="Community,Logistics"
+               title="Club Peru Logo">
+                <picture><source type="image/avif" srcset="/static/uploads/f4ba6d7c2c6d80a3-480.avif 480w, /static/uploads/f4ba6d7c2c6d80a3-800.avif 800w, /static/uploads/f4ba6d7c2c6d80a3-1000.avif 1000w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/f4ba6d7c2c6d80a3-480.webp 480w, /static/uploads/f4ba6d7c2c6d80a3-800.webp 800w, /static/uploads/f4ba6d7c2c6d80a3-1000.webp 1000w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/f4ba6d7c2c6d80a3.png" alt="Club Peru Logo" class="photo-tile-img" width="1000" height="502" decoding="async" loading="lazy"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Sin LiMITe Coordinator</span>
+                    
+                    <span class="photo-tile-alt">Club Peru Logo</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/sl_coordinator/"
+               data-q="mit mariachi logo sin limite coordinator community logistics blog sl_coordinator"
+               data-tags="Community,Logistics"
+               title="MIT Mariachi Logo">
+                <picture><source type="image/avif" srcset="/static/uploads/ae9638c4b4a21c33-480.avif 480w, /static/uploads/ae9638c4b4a21c33-676.avif 676w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/ae9638c4b4a21c33-480.webp 480w, /static/uploads/ae9638c4b4a21c33-676.webp 676w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/ae9638c4b4a21c33.png" alt="MIT Mariachi Logo" class="photo-tile-img" width="676" height="676" decoding="async" loading="lazy"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Sin LiMITe Coordinator</span>
+                    
+                    <span class="photo-tile-alt">MIT Mariachi Logo</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/sl_coordinator/"
+               data-q="casino rueda logo sin limite coordinator community logistics blog sl_coordinator"
+               data-tags="Community,Logistics"
+               title="Casino Rueda Logo">
+                <picture><source type="image/avif" srcset="/static/uploads/70daff2c2663d3c8-480.avif 480w, /static/uploads/70daff2c2663d3c8-800.avif 800w, /static/uploads/70daff2c2663d3c8-1080.avif 1080w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/70daff2c2663d3c8-480.webp 480w, /static/uploads/70daff2c2663d3c8-800.webp 800w, /static/uploads/70daff2c2663d3c8-1080.webp 1080w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/70daff2c2663d3c8.jpg" alt="Casino Rueda Logo" class="photo-tile-img" width="1080" height="1080" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAADwBQCdASoUABQAPu1qrVCppaQiqAqpMB2JbACdMoR1B5fxVJqH4AegB0twDGS3m6tOURfitMCSIAD+4xDn4PPjR7myvDJI5vpwAXqEmcSYSJ34g/HMZzVQzNCZPfxY0S+wM4hqTf/9Lv4zwNBfd80NNw4Zi2CT3yj/ixJ9ZqcIbhCuqDAEhdR1cCujnIgspbV0++WpJimS3lcFqR8aBzH/zttdB2V6bIouvXRBMZ//4ZOF9ZLfwZ1P7jfJa99yH/8prGZ/loepdYtdZGnEAAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Sin LiMITe Coordinator</span>
+                    
+                    <span class="photo-tile-alt">Casino Rueda Logo</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/sl_coordinator/"
+               data-q="maes logo sin limite coordinator community logistics blog sl_coordinator"
+               data-tags="Community,Logistics"
+               title="MAES Logo">
+                <picture><source type="image/avif" srcset="/static/uploads/a58b64fdb2c6c07a-480.avif 480w, /static/uploads/a58b64fdb2c6c07a-800.avif 800w, /static/uploads/a58b64fdb2c6c07a-1200.avif 1200w, /static/uploads/a58b64fdb2c6c07a-1486.avif 1486w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/a58b64fdb2c6c07a-480.webp 480w, /static/uploads/a58b64fdb2c6c07a-800.webp 800w, /static/uploads/a58b64fdb2c6c07a-1200.webp 1200w, /static/uploads/a58b64fdb2c6c07a-1486.webp 1486w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/a58b64fdb2c6c07a.png" alt="MAES Logo" class="photo-tile-img" width="1486" height="848" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADQAwCdASoUAAsAPu1iqU2ppaQiMAgBMB2JYwCdEf/gQF2AVO13z9YA/u3qu8MZvWHLRFLRrAXCdoHLVmXZbzsag9f5ox7vGWzR709qT/eQrjjeltOnLPbDBi1ycgFxNGzQ+zwvgCmZzJ0UToggBhKBskoAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Sin LiMITe Coordinator</span>
+                    
+                    <span class="photo-tile-alt">MAES Logo</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/ultra_marathon_1/"
+               data-q="52 mile run 52 mile run fitness blog ultra_marathon_1"
+               data-tags="Fitness"
+               title="52 Mile Run">
+                <picture><source type="image/avif" srcset="/static/uploads/28c327d25530c9cb-480.avif 480w, /static/uploads/28c327d25530c9cb-800.avif 800w, /static/uploads/28c327d25530c9cb-1200.avif 1200w, /static/uploads/28c327d25530c9cb-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/28c327d25530c9cb-480.webp 480w, /static/uploads/28c327d25530c9cb-800.webp 800w, /static/uploads/28c327d25530c9cb-1200.webp 1200w, /static/uploads/28c327d25530c9cb-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/28c327d25530c9cb.jpg" alt="52 Mile Run" class="photo-tile-img" width="1600" height="2133" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAAAwBQCdASoUABsAPu1mq0+ppaOiMBgIATAdiWIAtvqDNGwcOSJRMf77gn1n0H09UrE0AAD6OLyGHy5bljamIY91QgGFgKJzjONL28fdt3+1tVLMbeL2+hQPCSRJ0hCOzjdvbGSnx7Xh+sEkrdvLneQLxxCJhA5DgWusMTBwCboV93euNU+IoBGnlKQb8VSoi4UzZbWe2fevuTNH/G5utXzLi9z/c/nRB8006K4ZRGGk1R7TfZwGCawgIAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">52 Mile Run</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/ultra_marathon_1/"
+               data-q="a random trail on my run 52 mile run fitness blog ultra_marathon_1"
+               data-tags="Fitness"
+               title="A random trail on my run">
+                <picture><source type="image/avif" srcset="/static/uploads/2fadbb055444de01-480.avif 480w, /static/uploads/2fadbb055444de01-800.avif 800w, /static/uploads/2fadbb055444de01-1200.avif 1200w, /static/uploads/2fadbb055444de01-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/2fadbb055444de01-480.webp 480w, /static/uploads/2fadbb055444de01-800.webp 800w, /static/uploads/2fadbb055444de01-1200.webp 1200w, /static/uploads/2fadbb055444de01-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/2fadbb055444de01.jpg" alt="A random trail on my run" class="photo-tile-img" width="1600" height="2133" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABwBACdASoUABsAPu1eqU6ppKOiMBgMATAdiWUAwzQQcYo4vZOTit1CiT6wAAD5Jzfwe7+PymQ6Bg+isA1m9TOlh9PFHEGlyTXMAKq5HG3n3E8Mt0+Q5Iw828xjwruG2gAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">52 Mile Run</span>
+                    
+                    <span class="photo-tile-alt">A random trail on my run</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/ultra_marathon_1/"
+               data-q="view from the esplanada 52 mile run fitness blog ultra_marathon_1"
+               data-tags="Fitness"
+               title="View from the Esplanada">
+                <picture><source type="image/avif" srcset="/static/uploads/ea9b02d7c904ea37-480.avif 480w, /static/uploads/ea9b02d7c904ea37-800.avif 800w, /static/uploads/ea9b02d7c904ea37-1200.avif 1200w, /static/uploads/ea9b02d7c904ea37-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/ea9b02d7c904ea37-480.webp 480w, /static/uploads/ea9b02d7c904ea37-800.webp 800w, /static/uploads/ea9b02d7c904ea37-1200.webp 1200w, /static/uploads/ea9b02d7c904ea37-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/ea9b02d7c904ea37.jpg" alt="View from the Esplanada" class="photo-tile-img" width="1600" height="2133" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAACwBACdASoUABsAPu1ur1IppiQiqAgBMB2JZQDJEAyY+3xYxHutV/RPl/Cw1rTAAPoOMPj5xbvV06Q16h2Gv9z1CO8b9lGv6ThedLumQDI4uLT9w8nQVl6/JgpwGHh2a9BTEA89sjrEkazgGQUVH59PHQtHAgkKl1d7wKBwtFHl1xYJV3CnjpS3qEVX6ZKd8AA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">52 Mile Run</span>
+                    
+                    <span class="photo-tile-alt">View from the Esplanada</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/ultra_marathon_1/"
+               data-q="me after finishing my run trying to look composed 52 mile run fitness blog ultra_marathon_1"
+               data-tags="Fitness"
+               title="Me after finishing my run trying to look composed">
+                <picture><source type="image/avif" srcset="/static/uploads/e5306f759b0fd396-480.avif 480w, /static/uploads/e5306f759b0fd396-800.avif 800w, /static/uploads/e5306f759b0fd396-1200.avif 1200w, /static/uploads/e5306f759b0fd396-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/e5306f759b0fd396-480.webp 480w, /static/uploads/e5306f759b0fd396-800.webp 800w, /static/uploads/e5306f759b0fd396-1200.webp 1200w, /static/uploads/e5306f759b0fd396-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/e5306f759b0fd396.jpg" alt="Me after finishing my run trying to look composed" class="photo-tile-img" width="1600" height="2133" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAACQBQCdASoUABsAPu1irFAppSQisBgIATAdiUAWHYGHvAzmwdUTSXuwKmoNNWy7SZAVuRK4AAD+6323NohHNEhfPIct3yFI9g8l2HONdGgDv4l6NEckt5dsZ5bDn+LG6y3r/yQIHdiIBYBWkEaBBEyo3daF4HU883sYJFa2RXryrqvZucYqpBRWyfREChNRqe8Ci9TTg5L8GLUtKLKq3NqeSeqZxnj6M596RfAfKO1ymxmKs68XP3qpFKWGRIAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">52 Mile Run</span>
+                    
+                    <span class="photo-tile-alt">Me after finishing my run trying to look composed</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/workout_coach/"
+               data-q="workout coach workout coach fitness software device integration project workout_coach"
+               data-tags="Fitness,Software,Device Integration"
+               title="Workout Coach">
+                <picture><source type="image/avif" srcset="/static/uploads/388c9c8786f90262-480.avif 480w, /static/uploads/388c9c8786f90262-768.avif 768w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/388c9c8786f90262-480.webp 480w, /static/uploads/388c9c8786f90262-768.webp 768w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/388c9c8786f90262.jpg" alt="Workout Coach" class="photo-tile-img" width="768" height="1024" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABwBACdASoUABsAPu1opk2ppiMiMBgMATAdiWcAvdAQ6o1uplNJF0//fkFiCAD+kZMxuweJru3Y9UfcY60qCmfqEg+6kzBWjArb3Iad98vx64kFzdK6ChnevWJISz460Eqm3WtnKP0HWaCMzAhl9t29XY+NXlkOhPHkWwaxysocdlq+RzaAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Workout Coach</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/rl-practice/"
+               data-q="reinforcement learning explorations reinforcement learning explorations machine learning software project rl-practice"
+               data-tags="Machine Learning,Software"
+               title="Reinforcement Learning Explorations">
+                <picture><source type="image/avif" srcset="/static/uploads/86194d585ea0f373-350.avif 350w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/86194d585ea0f373-350.webp 350w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/86194d585ea0f373.png" alt="Reinforcement Learning Explorations" class="photo-tile-img" width="350" height="350" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAQBACdASoUABQAPu1mrE+ppSQiMBgIATAdiWQAwzQQ7+Oq2kf3KBJ8BAD+9WbKDu97hfbyG12kXjjhVQfmVjIsJ2AEVzKiJrQuITfOJoeG8CWoijrXaMKyZv7cwCozAohhfKFyOQ9TybDRoAAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Reinforcement Learning Explorations</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/ender6/"
+               data-q="ender 6 modifications ender 6 modifications 3d printing hardware project ender6"
+               data-tags="3D Printing,Hardware"
+               title="Ender 6 Modifications">
+                <picture><source type="image/avif" srcset="/static/uploads/b73816728ff3868d-480.avif 480w, /static/uploads/b73816728ff3868d-800.avif 800w, /static/uploads/b73816728ff3868d-1200.avif 1200w, /static/uploads/b73816728ff3868d-1346.avif 1346w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/b73816728ff3868d-480.webp 480w, /static/uploads/b73816728ff3868d-800.webp 800w, /static/uploads/b73816728ff3868d-1200.webp 1200w, /static/uploads/b73816728ff3868d-1346.webp 1346w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/b73816728ff3868d.png" alt="Ender 6 Modifications" class="photo-tile-img" width="1346" height="1536" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAAAQBgCdASoUABcAPu1qrVCppaQiqAqpMB2JaACdL0MkFGaFQvlfevvFo0Y/PxYnyTPp4XYjoIBzQQAA+4DO31Vvw9DsRY0jxRww6Yuwr+Fm9keqCl8FfuQDgtMfLOLmbL9shAUo15hb0W4XA/EzL2fm03YZ3Kc21wd+Flv7NIUObgS2/UKJeW+U3lqA7JWqubO0I83oiO9l2T/Cl5gZkZrzcIyCiIvBvKiL9yPBCeyUHcMUuRZ8fa8XIQ1Eb+h0lZsj/tr0TZ59RCH1FpO6vWL03TvRMhTEeP0D6tgAAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Ender 6 Modifications</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/blender-figures/"
+               data-q="blender figures blender figures 3d printing blender project blender-figures"
+               data-tags="3D Printing,Blender"
+               title="Blender Figures">
+                <picture><source type="image/avif" srcset="/static/uploads/d0d2478409450494-225.avif 225w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/d0d2478409450494-225.webp 225w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/d0d2478409450494.png" alt="Blender Figures" class="photo-tile-img" width="225" height="225" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAwBACdASoUABQAPu1qrE8ppiQiMBgIATAdiWcAzYQQ79n2a3j/qOF5fQAA/vNp77+xqFRZ2whQh/ecfLSwBXVNHX1ibZCvSUEYYAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Blender Figures</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/blender-figures/"
+               data-q="model of bluey blender figures 3d printing blender project blender-figures"
+               data-tags="3D Printing,Blender"
+               title="Model of Bluey">
+                <picture><source type="image/avif" srcset="/static/uploads/3fe24d036f3579b8-480.avif 480w, /static/uploads/3fe24d036f3579b8-800.avif 800w, /static/uploads/3fe24d036f3579b8-1200.avif 1200w, /static/uploads/3fe24d036f3579b8-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/3fe24d036f3579b8-480.webp 480w, /static/uploads/3fe24d036f3579b8-800.webp 800w, /static/uploads/3fe24d036f3579b8-1200.webp 1200w, /static/uploads/3fe24d036f3579b8-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/3fe24d036f3579b8.png" alt="Model of Bluey" class="photo-tile-img" width="1600" height="900" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAAAwAwCdASoUAAsAPu1iqU2ppaOiMAgBMB2JZwAAQmCC4a6AAP7jTaUqwUov7fjM4qZ+zGFXDNvvvku1QAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Blender Figures</span>
+                    
+                    <span class="photo-tile-alt">Model of Bluey</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/blender-figures/"
+               data-q="model of a bunny blender figures 3d printing blender project blender-figures"
+               data-tags="3D Printing,Blender"
+               title="Model of a bunny">
+                <picture><source type="image/avif" srcset="/static/uploads/64811c0486a80ca0-480.avif 480w, /static/uploads/64811c0486a80ca0-800.avif 800w, /static/uploads/64811c0486a80ca0-1200.avif 1200w, /static/uploads/64811c0486a80ca0-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/64811c0486a80ca0-480.webp 480w, /static/uploads/64811c0486a80ca0-800.webp 800w, /static/uploads/64811c0486a80ca0-1200.webp 1200w, /static/uploads/64811c0486a80ca0-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/64811c0486a80ca0.png" alt="Model of a bunny" class="photo-tile-img" width="1600" height="900" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAwAwCdASoUAAsAPu1iqU2ppaOiMAgBMB2JaQAASmqhamwAAP7jS2NBghSknxY+njwS569V9NC25QAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Blender Figures</span>
+                    
+                    <span class="photo-tile-alt">Model of a bunny</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/blender-figures/"
+               data-q="model of a rubber duck blender figures 3d printing blender project blender-figures"
+               data-tags="3D Printing,Blender"
+               title="Model of a rubber duck">
+                <picture><source type="image/avif" srcset="/static/uploads/17a6755032e0e20c-480.avif 480w, /static/uploads/17a6755032e0e20c-800.avif 800w, /static/uploads/17a6755032e0e20c-1200.avif 1200w, /static/uploads/17a6755032e0e20c-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/17a6755032e0e20c-480.webp 480w, /static/uploads/17a6755032e0e20c-800.webp 800w, /static/uploads/17a6755032e0e20c-1200.webp 1200w, /static/uploads/17a6755032e0e20c-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/17a6755032e0e20c.png" alt="Model of a rubber duck" class="photo-tile-img" width="1600" height="900" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABQAwCdASoUAAsAPu1iqU2ppaOiMAgBMB2JYgC7AAyvWtyXAAD+4wRuFyezcELgvGeMkzq/0qUF8siDf62CQZrjMpmc6dEPliIz6TL+qdZcHVMwJcbHPgAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Blender Figures</span>
+                    
+                    <span class="photo-tile-alt">Model of a rubber duck</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/spurdog-battery/"
+               data-q="spurdog battery spurdog battery electronics hardware robotics project spurdog-battery"
+               data-tags="Electronics,Hardware,Robotics"
+               title="Spurdog Battery">
+                <picture><source type="image/avif" srcset="/static/uploads/0ebb003c2f04c585-480.avif 480w, /static/uploads/0ebb003c2f04c585-800.avif 800w, /static/uploads/0ebb003c2f04c585-1200.avif 1200w, /static/uploads/0ebb003c2f04c585-1342.avif 1342w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/0ebb003c2f04c585-480.webp 480w, /static/uploads/0ebb003c2f04c585-800.webp 800w, /static/uploads/0ebb003c2f04c585-1200.webp 1200w, /static/uploads/0ebb003c2f04c585-1342.webp 1342w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/0ebb003c2f04c585.png" alt="Spurdog Battery" class="photo-tile-img" width="1342" height="1304" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABwBACdASoUABMAPu1mq06ppaOiKA1RMB2JZQC7ABGh71l+IXQ5/QNma4f5EAD+8uJ6n6cIgs1stb0AWZvlab7F1tmSSSd/nR3ei3NTsst3WXQ9WcTKZgk5P4jHr20AMdfvEOhg0D22DHn0sRC8jwAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Spurdog Battery</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/spurdog-battery/"
+               data-q="battery pack prototype alongside bluerov battery spurdog battery electronics hardware robotics project spurdog-battery"
+               data-tags="Electronics,Hardware,Robotics"
+               title="Battery pack prototype alongside BlueROV battery">
+                <picture><source type="image/avif" srcset="/static/uploads/7979f67e9f8d06b2-480.avif 480w, /static/uploads/7979f67e9f8d06b2-800.avif 800w, /static/uploads/7979f67e9f8d06b2-1200.avif 1200w, /static/uploads/7979f67e9f8d06b2-1316.avif 1316w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/7979f67e9f8d06b2-480.webp 480w, /static/uploads/7979f67e9f8d06b2-800.webp 800w, /static/uploads/7979f67e9f8d06b2-1200.webp 1200w, /static/uploads/7979f67e9f8d06b2-1316.webp 1316w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/7979f67e9f8d06b2.png" alt="Battery pack prototype alongside BlueROV battery" class="photo-tile-img" width="1316" height="1374" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAACwBACdASoUABUAPu1ur1IppiQiqAgBMB2JQBfJMZPOZGuLQ40ZLSUD3l3kzkAAAP7ADX7CYTJSKBFmhGaPsSGdm5zKlnz7XAqXHixM/+THklAFi5L169NL+D5+AcGCLf/2tRZEUBbYRvANsPcC3YH0aplaWAoiilt0Xob1LF/qYVl61P+EnCAdZu/gKRAfzkSjjyn1OOvsBdDPdJiQgAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Spurdog Battery</span>
+                    
+                    <span class="photo-tile-alt">Battery pack prototype alongside BlueROV battery</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/spurdog-battery/"
+               data-q="battery pack prototype spurdog battery electronics hardware robotics project spurdog-battery"
+               data-tags="Electronics,Hardware,Robotics"
+               title="Battery pack prototype">
+                <picture><source type="image/avif" srcset="/static/uploads/10eb6ba3d629fe36-480.avif 480w, /static/uploads/10eb6ba3d629fe36-720.avif 720w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/10eb6ba3d629fe36-480.webp 480w, /static/uploads/10eb6ba3d629fe36-720.webp 720w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/10eb6ba3d629fe36.png" alt="Battery pack prototype" class="photo-tile-img" width="720" height="1066" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAQBQCdASoUAB4APulcp02pJKOiN/VYASAdCWMAqPQQ5mN/BuybLz53oKuEQxnBa7gAAPohHSDiWe+lxp0XfNWVLUATQmG4aFagiNwoIeiqAq6jSiIynMG9WMbt1P/gPbzGC2y9Grt6q88NeT8tgwHthVsQ/S1IecY0y/VCcxb3CsxI2+ol1r3CZDS+CFVHhgAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Spurdog Battery</span>
+                    
+                    <span class="photo-tile-alt">Battery pack prototype</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/spurdog-battery/"
+               data-q="battery pack cad spurdog battery electronics hardware robotics project spurdog-battery"
+               data-tags="Electronics,Hardware,Robotics"
+               title="Battery Pack CAD">
+                <picture><source type="image/avif" srcset="/static/uploads/ee20b27e05befc77-480.avif 480w, /static/uploads/ee20b27e05befc77-800.avif 800w, /static/uploads/ee20b27e05befc77-1200.avif 1200w, /static/uploads/ee20b27e05befc77-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/ee20b27e05befc77-480.webp 480w, /static/uploads/ee20b27e05befc77-800.webp 800w, /static/uploads/ee20b27e05befc77-1200.webp 1200w, /static/uploads/ee20b27e05befc77-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/ee20b27e05befc77.png" alt="Battery Pack CAD" class="photo-tile-img" width="1600" height="1105" decoding="async" loading="lazy"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Spurdog Battery</span>
+                    
+                    <span class="photo-tile-alt">Battery Pack CAD</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/2_671/"
+               data-q="2.671 2.671 coursework electronics project 2_671"
+               data-tags="Coursework,Electronics"
+               title="2.671">
+                <picture><source type="image/avif" srcset="/static/uploads/2de8855d06681b83-480.avif 480w, /static/uploads/2de8855d06681b83-800.avif 800w, /static/uploads/2de8855d06681b83-1200.avif 1200w, /static/uploads/2de8855d06681b83-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/2de8855d06681b83-480.webp 480w, /static/uploads/2de8855d06681b83-800.webp 800w, /static/uploads/2de8855d06681b83-1200.webp 1200w, /static/uploads/2de8855d06681b83-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/2de8855d06681b83.png" alt="2.671" class="photo-tile-img" width="1600" height="688" decoding="async" loading="lazy"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">2.671</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/led-array/"
+               data-q="led array project blog led array project blog pcb design electronics blog led-array"
+               data-tags="PCB Design,Electronics"
+               title="LED Array Project Blog">
+                <picture><source type="image/avif" srcset="/static/uploads/3b857154fa000813-480.avif 480w, /static/uploads/3b857154fa000813-800.avif 800w, /static/uploads/3b857154fa000813-1200.avif 1200w, /static/uploads/3b857154fa000813-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/3b857154fa000813-480.webp 480w, /static/uploads/3b857154fa000813-800.webp 800w, /static/uploads/3b857154fa000813-1200.webp 1200w, /static/uploads/3b857154fa000813-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/3b857154fa000813.png" alt="LED Array Project Blog" class="photo-tile-img" width="1600" height="1200" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQBahBshXKrbAX7Sk+8IAAM4QHw+YB81MOKtO2++aNYdAQ3Q/R4tbV0c099HTnr+rrD4tH9WMa6se1HSA2HjIg2efJYBToVfFxJgnh7AsnBJAAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">LED Array Project Blog</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/led-array/"
+               data-q="pcbs and assembled pcbs ordered from jlc led array project blog pcb design electronics blog led-array"
+               data-tags="PCB Design,Electronics"
+               title="PCBs and Assembled PCBs ordered from JLC">
+                <picture><source type="image/avif" srcset="/static/uploads/04556f0978530840-480.avif 480w, /static/uploads/04556f0978530840-800.avif 800w, /static/uploads/04556f0978530840-1200.avif 1200w, /static/uploads/04556f0978530840-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/04556f0978530840-480.webp 480w, /static/uploads/04556f0978530840-800.webp 800w, /static/uploads/04556f0978530840-1200.webp 1200w, /static/uploads/04556f0978530840-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/04556f0978530840.png" alt="PCBs and Assembled PCBs ordered from JLC" class="photo-tile-img" width="1600" height="1200" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAADwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQBadAz2nRW6gJaPwh3PoAP7pBCaea1soD+LUUfJ1sp7NV3Squuj1JOfOFfU2b/jArWxnEOHHyGi7E+e4xGp+RoLxcTB+jBtf/KBkYXeOdfF32FvgJFmm9WSzsV3qeof94u0r3gAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">LED Array Project Blog</span>
+                    
+                    <span class="photo-tile-alt">PCBs and Assembled PCBs ordered from JLC</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/led-array/"
+               data-q="initial testing for leds led array project blog pcb design electronics blog led-array"
+               data-tags="PCB Design,Electronics"
+               title="Initial testing for LEDs">
+                <picture><source type="image/avif" srcset="/static/uploads/b35002a2b5d9b5fd-480.avif 480w, /static/uploads/b35002a2b5d9b5fd-800.avif 800w, /static/uploads/b35002a2b5d9b5fd-1024.avif 1024w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/b35002a2b5d9b5fd-480.webp 480w, /static/uploads/b35002a2b5d9b5fd-800.webp 800w, /static/uploads/b35002a2b5d9b5fd-1024.webp 1024w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/b35002a2b5d9b5fd.jpg" alt="Initial testing for LEDs" class="photo-tile-img" width="1024" height="768" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JZgCdMoRwIsAAh4GTnvxReENAAPxKOzkIuE5+0cQmjQW/1zfJ8deECYzMgBzQ7ZyipHW7eUHHE/ts1Wjmb1VL7RDyAmWVaOKyRsVJ1NLP4bi2p5Cta4NT+jVVGeuwBjLLgAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">LED Array Project Blog</span>
+                    
+                    <span class="photo-tile-alt">Initial testing for LEDs</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/led-array/"
+               data-q="led final schematic led array project blog pcb design electronics blog led-array"
+               data-tags="PCB Design,Electronics"
+               title="LED Final Schematic">
+                <picture><source type="image/avif" srcset="/static/uploads/b89ac7e3a8208ca7-480.avif 480w, /static/uploads/b89ac7e3a8208ca7-800.avif 800w, /static/uploads/b89ac7e3a8208ca7-1200.avif 1200w, /static/uploads/b89ac7e3a8208ca7-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/b89ac7e3a8208ca7-480.webp 480w, /static/uploads/b89ac7e3a8208ca7-800.webp 800w, /static/uploads/b89ac7e3a8208ca7-1200.webp 1200w, /static/uploads/b89ac7e3a8208ca7-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/b89ac7e3a8208ca7.png" alt="LED Final Schematic" class="photo-tile-img" width="1600" height="1011" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADwAgCdASoUAA0APu1iqU2ppaOiMAgBMB2JZwDE2C0kAAD+8C5i3aifkG4AAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">LED Array Project Blog</span>
+                    
+                    <span class="photo-tile-alt">LED Final Schematic</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/led-array/"
+               data-q="led final pcb design led array project blog pcb design electronics blog led-array"
+               data-tags="PCB Design,Electronics"
+               title="LED Final PCB Design">
+                <picture><source type="image/avif" srcset="/static/uploads/9a294051ef276eb8-480.avif 480w, /static/uploads/9a294051ef276eb8-800.avif 800w, /static/uploads/9a294051ef276eb8-1200.avif 1200w, /static/uploads/9a294051ef276eb8-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/9a294051ef276eb8-480.webp 480w, /static/uploads/9a294051ef276eb8-800.webp 800w, /static/uploads/9a294051ef276eb8-1200.webp 1200w, /static/uploads/9a294051ef276eb8-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/9a294051ef276eb8.png" alt="LED Final PCB Design" class="photo-tile-img" width="1600" height="967" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAwCdASoUAAwAPu1orU2ppqSiMAgBMB2JZgCdMoAKRtcEUIe5KiRAAP78aFJoxK+Az/YT4GDI1vyIn9Ztp0QdeRO2ArV9oWT+++vESkrAAAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">LED Array Project Blog</span>
+                    
+                    <span class="photo-tile-alt">LED Final PCB Design</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/led-array/"
+               data-q="led final 3d view led array project blog pcb design electronics blog led-array"
+               data-tags="PCB Design,Electronics"
+               title="LED Final 3D View">
+                <picture><source type="image/avif" srcset="/static/uploads/b3efe6bc314c8b1b-480.avif 480w, /static/uploads/b3efe6bc314c8b1b-800.avif 800w, /static/uploads/b3efe6bc314c8b1b-1200.avif 1200w, /static/uploads/b3efe6bc314c8b1b-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/b3efe6bc314c8b1b-480.webp 480w, /static/uploads/b3efe6bc314c8b1b-800.webp 800w, /static/uploads/b3efe6bc314c8b1b-1200.webp 1200w, /static/uploads/b3efe6bc314c8b1b-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/b3efe6bc314c8b1b.png" alt="LED Final 3D View" class="photo-tile-img" width="1600" height="947" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACQAwCdASoUAAwAPu1kq04ppaQiMAgBMB2JYwAAW+wc9mzOoFsAAPa8GqQSPL6Vfcp/URhNGchF0uZBt+Her7/NU9U50JKqUzXX3t9JLR1qpEhpMYAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">LED Array Project Blog</span>
+                    
+                    <span class="photo-tile-alt">LED Final 3D View</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/led-array/"
+               data-q="led schematic led array project blog pcb design electronics blog led-array"
+               data-tags="PCB Design,Electronics"
+               title="LED Schematic">
+                <picture><source type="image/avif" srcset="/static/uploads/cba700b080937c12-480.avif 480w, /static/uploads/cba700b080937c12-800.avif 800w, /static/uploads/cba700b080937c12-1200.avif 1200w, /static/uploads/cba700b080937c12-1434.avif 1434w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/cba700b080937c12-480.webp 480w, /static/uploads/cba700b080937c12-800.webp 800w, /static/uploads/cba700b080937c12-1200.webp 1200w, /static/uploads/cba700b080937c12-1434.webp 1434w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/cba700b080937c12.png" alt="LED Schematic" class="photo-tile-img" width="1434" height="998" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAAAQAwCdASoUAA4APu1iqU2ppaOiMAgBMB2JZ2VuADc1SAAA/vAOL1KCx2bBiGZQlhaFAAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">LED Array Project Blog</span>
+                    
+                    <span class="photo-tile-alt">LED Schematic</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/led-array/"
+               data-q="led group schematic led array project blog pcb design electronics blog led-array"
+               data-tags="PCB Design,Electronics"
+               title="LED Group Schematic">
+                <picture><source type="image/avif" srcset="/static/uploads/d5c22e66595dc9c6-480.avif 480w, /static/uploads/d5c22e66595dc9c6-794.avif 794w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/d5c22e66595dc9c6-480.webp 480w, /static/uploads/d5c22e66595dc9c6-794.webp 794w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/d5c22e66595dc9c6.png" alt="LED Group Schematic" class="photo-tile-img" width="794" height="334" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADwAgCdASoUAAgAPu1kqU2ppaOiMAgBMB2JaQDMHC0kAAD+8En7sx4vL7iQVbLIcAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">LED Array Project Blog</span>
+                    
+                    <span class="photo-tile-alt">LED Group Schematic</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/led-array/"
+               data-q="led module schematic led array project blog pcb design electronics blog led-array"
+               data-tags="PCB Design,Electronics"
+               title="LED Module Schematic">
+                <picture><source type="image/avif" srcset="/static/uploads/4d350f5a81faf27a-480.avif 480w, /static/uploads/4d350f5a81faf27a-800.avif 800w, /static/uploads/4d350f5a81faf27a-1200.avif 1200w, /static/uploads/4d350f5a81faf27a-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/4d350f5a81faf27a-480.webp 480w, /static/uploads/4d350f5a81faf27a-800.webp 800w, /static/uploads/4d350f5a81faf27a-1200.webp 1200w, /static/uploads/4d350f5a81faf27a-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/4d350f5a81faf27a.png" alt="LED Module Schematic" class="photo-tile-img" width="1600" height="1142" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADwAgCdASoUAA4APu1kqU2ppaOiMAgBMB2JZwDE2C0kAAD+8Enspz7vm3DbagAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">LED Array Project Blog</span>
+                    
+                    <span class="photo-tile-alt">LED Module Schematic</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/led-array/"
+               data-q="led row schematic led array project blog pcb design electronics blog led-array"
+               data-tags="PCB Design,Electronics"
+               title="LED Row Schematic">
+                <picture><source type="image/avif" srcset="/static/uploads/b65351c64ec7fa26-480.avif 480w, /static/uploads/b65351c64ec7fa26-800.avif 800w, /static/uploads/b65351c64ec7fa26-1200.avif 1200w, /static/uploads/b65351c64ec7fa26-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/b65351c64ec7fa26-480.webp 480w, /static/uploads/b65351c64ec7fa26-800.webp 800w, /static/uploads/b65351c64ec7fa26-1200.webp 1200w, /static/uploads/b65351c64ec7fa26-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/b65351c64ec7fa26.png" alt="LED Row Schematic" class="photo-tile-img" width="1600" height="880" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADwAgCdASoUAAsAPu1iqU2ppaOiMAgBMB2JaQAAetCIAAD+8El/1xMCjCgAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">LED Array Project Blog</span>
+                    
+                    <span class="photo-tile-alt">LED Row Schematic</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/led-array/"
+               data-q="led array pcb led array pcb pcb design electronics project led-array"
+               data-tags="PCB Design,Electronics"
+               title="LED Array PCB">
+                <picture><source type="image/avif" srcset="/static/uploads/3b857154fa000813-480.avif 480w, /static/uploads/3b857154fa000813-800.avif 800w, /static/uploads/3b857154fa000813-1200.avif 1200w, /static/uploads/3b857154fa000813-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/3b857154fa000813-480.webp 480w, /static/uploads/3b857154fa000813-800.webp 800w, /static/uploads/3b857154fa000813-1200.webp 1200w, /static/uploads/3b857154fa000813-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/3b857154fa000813.png" alt="LED Array PCB" class="photo-tile-img" width="1600" height="1200" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQBahBshXKrbAX7Sk+8IAAM4QHw+YB81MOKtO2++aNYdAQ3Q/R4tbV0c099HTnr+rrD4tH9WMa6se1HSA2HjIg2efJYBToVfFxJgnh7AsnBJAAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">LED Array PCB</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/jkc_planning/"
+               data-q="jack kent cooke event planning jack kent cooke event planning community logistics blog jkc_planning"
+               data-tags="Community,Logistics"
+               title="Jack Kent Cooke Event Planning">
+                <picture><source type="image/avif" srcset="/static/uploads/05073b881b5e3bb5-480.avif 480w, /static/uploads/05073b881b5e3bb5-800.avif 800w, /static/uploads/05073b881b5e3bb5-1200.avif 1200w, /static/uploads/05073b881b5e3bb5-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/05073b881b5e3bb5-480.webp 480w, /static/uploads/05073b881b5e3bb5-800.webp 800w, /static/uploads/05073b881b5e3bb5-1200.webp 1200w, /static/uploads/05073b881b5e3bb5-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/05073b881b5e3bb5.jpg" alt="Jack Kent Cooke Event Planning" class="photo-tile-img" width="1600" height="1191" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAACQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JbACdMoLUANlufVQ5kp74LFfeM+AA/mZGvw12mbyk8ro31AL7o8a8+QWbxGp2bd5do7bw3+bbKfZKMgjy+yWowiDB/aja7fql3QpPlsJDZ7QKIiIWAR+QhDc3kKV/BjPErZ2KVrBRxAwkmKKZ0bEc+WF5F4ywzRnH5m3O989DPMOhhQOW+dCrlO3Ij9oslUzO+4mAAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Jack Kent Cooke Event Planning</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/jkc_planning/"
+               data-q="acai with jkc scholars from mit and harvard jack kent cooke event planning community logistics blog jkc_planning"
+               data-tags="Community,Logistics"
+               title="Acai with JKC Scholars from MIT and Harvard">
+                <picture><source type="image/avif" srcset="/static/uploads/a3974ca8e4405bb4-480.avif 480w, /static/uploads/a3974ca8e4405bb4-800.avif 800w, /static/uploads/a3974ca8e4405bb4-1024.avif 1024w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/a3974ca8e4405bb4-480.webp 480w, /static/uploads/a3974ca8e4405bb4-800.webp 800w, /static/uploads/a3974ca8e4405bb4-1024.webp 1024w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/a3974ca8e4405bb4.jpg" alt="Acai with JKC Scholars from MIT and Harvard" class="photo-tile-img" width="1024" height="768" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAACwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQBbZMXwMGBFlOQ8ogAD+fKBJOqleX0otYWDZ6Uuv0KPJDCrzAPPemOgE2aNW4lJTBWlJBbq69aNMcYZ3ckUaqQh1bk2wTY6I7Hm0A4V5ba0Gzs4LT1KuPDSZBJgfcPrW0aekHsSrzijNq2Zqtl4n+Jr3WKzgeNeiI/lpXW9p0Km1vf4AAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Jack Kent Cooke Event Planning</span>
+                    
+                    <span class="photo-tile-alt">Acai with JKC Scholars from MIT and Harvard</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/jkc_planning/"
+               data-q="volunteering at the red cross with volunteers from mit and harvard jack kent cooke event planning community logistics blog jkc_planning"
+               data-tags="Community,Logistics"
+               title="Volunteering at the Red Cross with Volunteers from MIT and Harvard">
+                <picture><source type="image/avif" srcset="/static/uploads/91905cbe5e95034d-480.avif 480w, /static/uploads/91905cbe5e95034d-800.avif 800w, /static/uploads/91905cbe5e95034d-1024.avif 1024w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/91905cbe5e95034d-480.webp 480w, /static/uploads/91905cbe5e95034d-800.webp 800w, /static/uploads/91905cbe5e95034d-1024.webp 1024w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/91905cbe5e95034d.jpg" alt="Volunteering at the Red Cross with Volunteers from MIT and Harvard" class="photo-tile-img" width="1024" height="768" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAAAwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JQBOmUDX/wGhcd4mOa9aMVPAA/dln7xrXBwAbX7V6hQp6qnKmeA80nhR3ydyursdo3oMQMy4if4PRUUhiiUpfl+rJV/V9AqNXN7qcoxh8fiM3Wp1bAzkWUR0ENXwbKjJd8gVdFijSMXxnR6yjrv95zItb1NJqZirflFupT5g/SmQSzxAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Jack Kent Cooke Event Planning</span>
+                    
+                    <span class="photo-tile-alt">Volunteering at the Red Cross with Volunteers from MIT and Harvard</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/2-12-ur5/"
+               data-q="2.12 ur5 2.12 ur5 robotics computer vision coursework project 2-12-ur5"
+               data-tags="Robotics,Computer Vision,Coursework"
+               title="2.12 UR5">
+                <picture><source type="image/avif" srcset="/static/uploads/93ad7f911a95a4c1-480.avif 480w, /static/uploads/93ad7f911a95a4c1-768.avif 768w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/93ad7f911a95a4c1-480.webp 480w, /static/uploads/93ad7f911a95a4c1-768.webp 768w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/93ad7f911a95a4c1.jpg" alt="2.12 UR5" class="photo-tile-img" width="768" height="1024" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAADwBACdASoUABsAPu1sqlEppaOiqAqpMB2JZQDGQBCAaNJGHitgpMqeYYOhWnnV5AAA/tUQM4rM5Shk3l1bgJRYyVcxem+mdXBhXo0hUrZl6fIVqybCNnYT9L5rhQd3DnbKBFSV9TucO6VJLimMZ30dTegSxxBQsqUUm7L9NvWMOnEaRP0z23MzA6I9uYZpQ+DvJZsY6vYxFPaaqA9CtHvTyFZFitIKUbSPy55FfXnt0jiYKf8AAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">2.12 UR5</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/tap-2025/"
+               data-q="travel access program 2025 travel access program 2025 mentoring community blog tap-2025"
+               data-tags="Mentoring,Community"
+               title="Travel Access Program 2025">
+                <picture><source type="image/avif" srcset="/static/uploads/69e66319226aa0d0-390.avif 390w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/69e66319226aa0d0-390.webp 390w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/69e66319226aa0d0.png" alt="Travel Access Program 2025" class="photo-tile-img" width="390" height="200" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAQBACdASoUAAoAPu1qrU8ppiQiMAgBMB2JagCw7CKluNE8xm2EojmrCAD+4jPUEm1GPZzc2tv98Nw/IzzFqz6vTfqS2mhimBXDpAL0JFruyewSibBqANaTas3MuyWhB37V/JL+4ZplXPlY3i4VHqxzflKBf7e0pCOpEAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Travel Access Program 2025</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/tap-2025/"
+               data-q="tracker on display travel access program 2025 mentoring community blog tap-2025"
+               data-tags="Mentoring,Community"
+               title="tracker on display">
+                <picture><source type="image/avif" srcset="/static/uploads/ebc5b341f8de6d01-480.avif 480w, /static/uploads/ebc5b341f8de6d01-640.avif 640w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/ebc5b341f8de6d01-480.webp 480w, /static/uploads/ebc5b341f8de6d01-640.webp 640w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/ebc5b341f8de6d01.png" alt="tracker on display" class="photo-tile-img" width="640" height="481" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAACQAwCdASoUAA8APu1iqU2ppaQiMAgBMB2JYwC2yA+UvTubvvtAAP6eofpV4lA031ikBW+sEQzjzkvexujzL3RAnc2D/OSHkBh/XrHokzupOETK3sr4brxXS7UgD5bCbb6RbeZeZadTOYhL9qW2PvqN/fhi9IkfghwAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Travel Access Program 2025</span>
+                    
+                    <span class="photo-tile-alt">tracker on display</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/mites-physics-ta/"
+               data-q="teaching physics at mites teaching physics at mites teaching mentoring community blog mites-physics-ta"
+               data-tags="Teaching,Mentoring,Community"
+               title="Teaching Physics at MITES">
+                <picture><source type="image/avif" srcset="/static/uploads/c62ed9819158e391-480.avif 480w, /static/uploads/c62ed9819158e391-800.avif 800w, /static/uploads/c62ed9819158e391-1086.avif 1086w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/c62ed9819158e391-480.webp 480w, /static/uploads/c62ed9819158e391-800.webp 800w, /static/uploads/c62ed9819158e391-1086.webp 1086w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/c62ed9819158e391.jpg" alt="Teaching Physics at MITES" class="photo-tile-img" width="1086" height="724" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAADwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JQAB8vUHSnsfFCCm0Nc/AAP6qHH2AkdreYB1eJgj36CBdWCts0IHR1zJL3lE03FOstJA+IbAtv2X3Hnvve8aK/ezL+qvTpfbEjyhuV0uW6nfTmWMFiA+OG3JNltnwLtsemfZY/Y8kvzTAOnzFYEAAAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Teaching Physics at MITES</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/mites-physics-ta/"
+               data-q="final mites staff dinner teaching physics at mites teaching mentoring community blog mites-physics-ta"
+               data-tags="Teaching,Mentoring,Community"
+               title="Final MITES Staff Dinner">
+                <picture><source type="image/avif" srcset="/static/uploads/29d34faf36b9b868-480.avif 480w, /static/uploads/29d34faf36b9b868-800.avif 800w, /static/uploads/29d34faf36b9b868-1024.avif 1024w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/29d34faf36b9b868-480.webp 480w, /static/uploads/29d34faf36b9b868-800.webp 800w, /static/uploads/29d34faf36b9b868-1024.webp 1024w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/29d34faf36b9b868.jpg" alt="Final MITES Staff Dinner" class="photo-tile-img" width="1024" height="768" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JYwCdABZLaV3IbwjwsyCyAAD97QMgVGdHnKaicV123Twt5gsn/ruDj75iso8F4YWs/6U+GUf1C2fYjzpUq5EbjXEOBGQ/pwC84N8csETSHHJcEilghuqn17xrTQBpSPB3nfPoStkvv2EAAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Teaching Physics at MITES</span>
+                    
+                    <span class="photo-tile-alt">Final MITES Staff Dinner</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/mites-physics-ta/"
+               data-q="appreciation board from students teaching physics at mites teaching mentoring community blog mites-physics-ta"
+               data-tags="Teaching,Mentoring,Community"
+               title="Appreciation Board from Students">
+                <picture><source type="image/avif" srcset="/static/uploads/220f57cb2aa14f2f-480.avif 480w, /static/uploads/220f57cb2aa14f2f-800.avif 800w, /static/uploads/220f57cb2aa14f2f-1024.avif 1024w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/220f57cb2aa14f2f-480.webp 480w, /static/uploads/220f57cb2aa14f2f-800.webp 800w, /static/uploads/220f57cb2aa14f2f-1024.webp 1024w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/220f57cb2aa14f2f.jpg" alt="Appreciation Board from Students" class="photo-tile-img" width="1024" height="768" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAwCdASoUAA8APu1kqk4ppaQiMAgBMB2JZwC7ACHfVT2YmSHhpOwA4ix1zBx3HOp4T7645kgb2bU2SHlqqXm5QdrUJzH9C/1YgQVBuBwSkoBsGeGq+L8wGhZygAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Teaching Physics at MITES</span>
+                    
+                    <span class="photo-tile-alt">Appreciation Board from Students</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/mites-physics-ta/"
+               data-q="jan and i teaching physics at mites teaching mentoring community blog mites-physics-ta"
+               data-tags="Teaching,Mentoring,Community"
+               title="Jan and I">
+                <picture><source type="image/avif" srcset="/static/uploads/e57ced0a3561cc74-480.avif 480w, /static/uploads/e57ced0a3561cc74-800.avif 800w, /static/uploads/e57ced0a3561cc74-1086.avif 1086w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/e57ced0a3561cc74-480.webp 480w, /static/uploads/e57ced0a3561cc74-800.webp 800w, /static/uploads/e57ced0a3561cc74-1086.webp 1086w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/e57ced0a3561cc74.jpg" alt="Jan and I" class="photo-tile-img" width="1086" height="724" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAwBACdASoUAA0APu1iqU2ppaOiMAgBMB2JQBgfjgA365YC2p7wsv6i4aAA/uihTQwqfhG2ibrW/dujC+shkPCKlp3inB5BCVJf2QPzGKsSoT9GQ6wD+CygvvlnawFZ9KVL+6aeb9Auax8U0aPs+7l8IUDMJA9n5r3ByNiNcGs8Nt5XH8KaoAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Teaching Physics at MITES</span>
+                    
+                    <span class="photo-tile-alt">Jan and I</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/suction-tank/"
+               data-q="suction tank robot suction tank robot robotics 3d printing electronics hardware project suction-tank"
+               data-tags="Robotics,3D Printing,Electronics,Hardware"
+               title="Suction Tank Robot">
+                <picture><source type="image/avif" srcset="/static/uploads/ab10b956f0356a66-480.avif 480w, /static/uploads/ab10b956f0356a66-800.avif 800w, /static/uploads/ab10b956f0356a66-970.avif 970w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/ab10b956f0356a66-480.webp 480w, /static/uploads/ab10b956f0356a66-800.webp 800w, /static/uploads/ab10b956f0356a66-970.webp 970w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/ab10b956f0356a66.jpg" alt="Suction Tank Robot" class="photo-tile-img" width="970" height="598" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQBACdASoUAAwAPu1kqU2ppaQiMAgBMB2JaQAD4kIkZFfkV2E+KykFAAD+8Nxwgz7B2QhBFkZMHS+YBPh8G8ZGklnjj3nnz7dee6EI5Il59mrz+fnxt8NyxmNs6MS8AAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Suction Tank Robot</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/suction-tank/"
+               data-q="suction cup track suction tank robot robotics 3d printing electronics hardware project suction-tank"
+               data-tags="Robotics,3D Printing,Electronics,Hardware"
+               title="Suction Cup Track">
+                <picture><source type="image/avif" srcset="/static/uploads/061eacf159c45a61-480.avif 480w, /static/uploads/061eacf159c45a61-800.avif 800w, /static/uploads/061eacf159c45a61-1200.avif 1200w, /static/uploads/061eacf159c45a61-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/061eacf159c45a61-480.webp 480w, /static/uploads/061eacf159c45a61-800.webp 800w, /static/uploads/061eacf159c45a61-1200.webp 1200w, /static/uploads/061eacf159c45a61-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/061eacf159c45a61.png" alt="Suction Cup Track" class="photo-tile-img" width="1600" height="576" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABwAwCdASoUAAcAPu1qrU8ppiQiMAgBMB2JaQAAW9NEcV6uIQAAzisIN/r5+V4RFO8/tqmVHDwNw9VqPj1gTJPp0PfIYseHQoAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Suction Tank Robot</span>
+                    
+                    <span class="photo-tile-alt">Suction Cup Track</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/suction-tank/"
+               data-q="bracing progression suction tank robot robotics 3d printing electronics hardware project suction-tank"
+               data-tags="Robotics,3D Printing,Electronics,Hardware"
+               title="Bracing Progression">
+                <picture><source type="image/avif" srcset="/static/uploads/90c32697d95b5ab8-480.avif 480w, /static/uploads/90c32697d95b5ab8-800.avif 800w, /static/uploads/90c32697d95b5ab8-1200.avif 1200w, /static/uploads/90c32697d95b5ab8-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/90c32697d95b5ab8-480.webp 480w, /static/uploads/90c32697d95b5ab8-800.webp 800w, /static/uploads/90c32697d95b5ab8-1200.webp 1200w, /static/uploads/90c32697d95b5ab8-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/90c32697d95b5ab8.png" alt="Bracing Progression" class="photo-tile-img" width="1600" height="1067" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAADQAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JaQAD5JoJY3b4jnGOMhgA/vK+ZpMQsSeXdZjar+sa9twVpGSMBQSqCpxB1WWpWwYXIAOxCWycv7d2r7LvYmgHO8uNvW/e2j9mTjzR7zF9YgZp9cssDasuXn+RHEcBn04bKa3h+ryMjxZtxQAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Suction Tank Robot</span>
+                    
+                    <span class="photo-tile-alt">Bracing Progression</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/suction-tank/"
+               data-q="gear progression suction tank robot robotics 3d printing electronics hardware project suction-tank"
+               data-tags="Robotics,3D Printing,Electronics,Hardware"
+               title="Gear Progression">
+                <picture><source type="image/avif" srcset="/static/uploads/93862ec202b9c054-480.avif 480w, /static/uploads/93862ec202b9c054-800.avif 800w, /static/uploads/93862ec202b9c054-1200.avif 1200w, /static/uploads/93862ec202b9c054-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/93862ec202b9c054-480.webp 480w, /static/uploads/93862ec202b9c054-800.webp 800w, /static/uploads/93862ec202b9c054-1200.webp 1200w, /static/uploads/93862ec202b9c054-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/93862ec202b9c054.png" alt="Gear Progression" class="photo-tile-img" width="1600" height="1067" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JaQAAXHIOvqZ70zJ1zV8gAP7s2rpKrMeqpyY1dsYQ9Gs4YLA8nP93mhOySMUZ59wUmAzvX4mOYnWLPVwoZZ3vmj/ApA4dKuV64vPRcyBJtYMFC4dKjgYfOzPpyebJrCusqyerAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Suction Tank Robot</span>
+                    
+                    <span class="photo-tile-alt">Gear Progression</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/mal/"
+               data-q="marine autonomy lab marine autonomy lab robotics research blog mal"
+               data-tags="Robotics,Research"
+               title="Marine Autonomy Lab">
+                <picture><source type="image/avif" srcset="/static/uploads/d7ad373504c39c08-480.avif 480w, /static/uploads/d7ad373504c39c08-800.avif 800w, /static/uploads/d7ad373504c39c08-864.avif 864w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/d7ad373504c39c08-480.webp 480w, /static/uploads/d7ad373504c39c08-800.webp 800w, /static/uploads/d7ad373504c39c08-864.webp 864w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/d7ad373504c39c08.png" alt="Marine Autonomy Lab" class="photo-tile-img" width="864" height="571" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JYwCdABuBQ0Shk6bpAAD97SbyDUHBV+MpogrpUoNaq2FZ+sSnBHBCiEvctWHEXsh/VsB0WyJ8GhhLoEiM16uLmthhbNQspyifBjgA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Marine Autonomy Lab</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/mal/"
+               data-q="waterjetted and sandblasted component for mounting sensors on blueboats marine autonomy lab robotics research blog mal"
+               data-tags="Robotics,Research"
+               title="Waterjetted and Sandblasted component for mounting sensors on BlueBoats">
+                <picture><source type="image/avif" srcset="/static/uploads/9b734a3224df99da-480.avif 480w, /static/uploads/9b734a3224df99da-800.avif 800w, /static/uploads/9b734a3224df99da-1120.avif 1120w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/9b734a3224df99da-480.webp 480w, /static/uploads/9b734a3224df99da-800.webp 800w, /static/uploads/9b734a3224df99da-1120.webp 1120w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/9b734a3224df99da.png" alt="Waterjetted and Sandblasted component for mounting sensors on BlueBoats" class="photo-tile-img" width="1120" height="1620" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADQBACdASoUAB0APu1qrVEppaQiqAqpMB2JagDE2BEctSJFvVEpVdX3F1tmdFGgAAD9zF1q1LD4Tu/m5IGVg/OFf4lD0r/nkwmcQbybEM3jgmVa2B4qioGbLBCuQukfaKaEJmw/mekZT5eyQTvmJtBPHK8vLrVhAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Marine Autonomy Lab</span>
+                    
+                    <span class="photo-tile-alt">Waterjetted and Sandblasted component for mounting sensors on BlueBoats</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/mal/"
+               data-q="battery pack prototype marine autonomy lab robotics research blog mal"
+               data-tags="Robotics,Research"
+               title="Battery pack prototype">
+                <picture><source type="image/avif" srcset="/static/uploads/10eb6ba3d629fe36-480.avif 480w, /static/uploads/10eb6ba3d629fe36-720.avif 720w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/10eb6ba3d629fe36-480.webp 480w, /static/uploads/10eb6ba3d629fe36-720.webp 720w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/10eb6ba3d629fe36.png" alt="Battery pack prototype" class="photo-tile-img" width="720" height="1066" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAQBQCdASoUAB4APulcp02pJKOiN/VYASAdCWMAqPQQ5mN/BuybLz53oKuEQxnBa7gAAPohHSDiWe+lxp0XfNWVLUATQmG4aFagiNwoIeiqAq6jSiIynMG9WMbt1P/gPbzGC2y9Grt6q88NeT8tgwHthVsQ/S1IecY0y/VCcxb3CsxI2+ol1r3CZDS+CFVHhgAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Marine Autonomy Lab</span>
+                    
+                    <span class="photo-tile-alt">Battery pack prototype</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/mal/"
+               data-q="battery pack cad marine autonomy lab robotics research blog mal"
+               data-tags="Robotics,Research"
+               title="Battery Pack CAD">
+                <picture><source type="image/avif" srcset="/static/uploads/ee20b27e05befc77-480.avif 480w, /static/uploads/ee20b27e05befc77-800.avif 800w, /static/uploads/ee20b27e05befc77-1200.avif 1200w, /static/uploads/ee20b27e05befc77-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/ee20b27e05befc77-480.webp 480w, /static/uploads/ee20b27e05befc77-800.webp 800w, /static/uploads/ee20b27e05befc77-1200.webp 1200w, /static/uploads/ee20b27e05befc77-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/ee20b27e05befc77.png" alt="Battery Pack CAD" class="photo-tile-img" width="1600" height="1105" decoding="async" loading="lazy"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Marine Autonomy Lab</span>
+                    
+                    <span class="photo-tile-alt">Battery Pack CAD</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/gtl-italy/"
+               data-q="gtl italy gtl italy teaching travel blog gtl-italy"
+               data-tags="Teaching,Travel"
+               title="GTL Italy">
+                <picture><source type="image/avif" srcset="/static/uploads/9eee50c830ff0e8c-480.avif 480w, /static/uploads/9eee50c830ff0e8c-800.avif 800w, /static/uploads/9eee50c830ff0e8c-1024.avif 1024w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/9eee50c830ff0e8c-480.webp 480w, /static/uploads/9eee50c830ff0e8c-800.webp 800w, /static/uploads/9eee50c830ff0e8c-1024.webp 1024w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/9eee50c830ff0e8c.jpg" alt="GTL Italy" class="photo-tile-img" width="1024" height="768" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAADwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQBWGUABA/ndqyuV4ALMAAOFMSehR+RwPXM4YpW+vy95K6C3Qi60il/jpC2PLAGeA8kfXNACM4SuHZXhyhFqqACFJMgdAy/zk/53UGDQxfyn8SUTREbzfLvJ9X4lbg5AVzHdjpn1+H9hccUwog6w1jFs+X86aQaxMHonUF6QPCsQAoAagAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">GTL Italy</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/gtl-italy/"
+               data-q="teaching demo gtl italy teaching travel blog gtl-italy"
+               data-tags="Teaching,Travel"
+               title="Teaching demo">
+                <picture><source type="image/avif" srcset="/static/uploads/ad920077539a2e6e-480.avif 480w, /static/uploads/ad920077539a2e6e-800.avif 800w, /static/uploads/ad920077539a2e6e-1024.avif 1024w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/ad920077539a2e6e-480.webp 480w, /static/uploads/ad920077539a2e6e-800.webp 800w, /static/uploads/ad920077539a2e6e-1024.webp 1024w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/ad920077539a2e6e.jpg" alt="Teaching demo" class="photo-tile-img" width="1024" height="768" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JQBWAO4AaWmwFO850N9msuQAA92oO8D0fLFP66cDUEDIU3T8qcCcRRzV414WpTJqtfJpGyZFbsQP/rzD4fRJBesp6lGCA8Elx6O6iWqj/Dv3uPmoQPbp2uKIJq5P4TvkRg2ky9By05AAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">GTL Italy</span>
+                    
+                    <span class="photo-tile-alt">Teaching demo</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/camp-kesem-2025/"
+               data-q="camp kesem 2025 camp kesem 2025 mentoring community blog camp-kesem-2025"
+               data-tags="Mentoring,Community"
+               title="Camp Kesem 2025">
+                <picture><source type="image/avif" srcset="/static/uploads/627c025cf78ea435-480.avif 480w, /static/uploads/627c025cf78ea435-800.avif 800w, /static/uploads/627c025cf78ea435-1200.avif 1200w, /static/uploads/627c025cf78ea435-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/627c025cf78ea435-480.webp 480w, /static/uploads/627c025cf78ea435-800.webp 800w, /static/uploads/627c025cf78ea435-1200.webp 1200w, /static/uploads/627c025cf78ea435-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/627c025cf78ea435.jpg" alt="Camp Kesem 2025" class="photo-tile-img" width="1600" height="1066" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAACwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JbACdACHcA6hAzZAzygD+6fkgdgViODJnwcFYi5X1X1TzMtFsr0GCXBWCXzw7mX2H4JO5RnPE8b9XV9gDPxOxmohAlsspMrrUWeTqt5jff+kZqN6G+y3dEAZcg2kaR/uNpmEbXD4AAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Camp Kesem 2025</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/camp-kesem-2025/"
+               data-q="whole camp camp kesem 2025 mentoring community blog camp-kesem-2025"
+               data-tags="Mentoring,Community"
+               title="Whole Camp">
+                <picture><source type="image/avif" srcset="/static/uploads/f8d7220b1c546955-480.avif 480w, /static/uploads/f8d7220b1c546955-800.avif 800w, /static/uploads/f8d7220b1c546955-1086.avif 1086w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/f8d7220b1c546955-480.webp 480w, /static/uploads/f8d7220b1c546955-800.webp 800w, /static/uploads/f8d7220b1c546955-1086.webp 1086w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/f8d7220b1c546955.jpg" alt="Whole Camp" class="photo-tile-img" width="1086" height="724" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JagCsIHAC4uS0cU7ogv6AAP7cXRLb4XAEhNqG9KD9zA7++lLUmg3Lqjl+JUc6AGVGHXrZ6pyHIPrwRkEN1kIhRciXeoAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Camp Kesem 2025</span>
+                    
+                    <span class="photo-tile-alt">Whole Camp</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/camp-kesem-2025/"
+               data-q="my kesem camp group camp kesem 2025 mentoring community blog camp-kesem-2025"
+               data-tags="Mentoring,Community"
+               title="My Kesem Camp Group">
+                <picture><source type="image/avif" srcset="/static/uploads/5a02dfd9caba1e53-480.avif 480w, /static/uploads/5a02dfd9caba1e53-800.avif 800w, /static/uploads/5a02dfd9caba1e53-1086.avif 1086w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/5a02dfd9caba1e53-480.webp 480w, /static/uploads/5a02dfd9caba1e53-800.webp 800w, /static/uploads/5a02dfd9caba1e53-1086.webp 1086w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/5a02dfd9caba1e53.jpg" alt="My Kesem Camp Group" class="photo-tile-img" width="1086" height="724" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAwBACdASoUAA0APu1iqU2ppaOiMAgBMB2JbACdACHu2Anjy4HTn6jXOgAA/uoxZjKqUCc8mXv39ml688FrPMte2alLxyMeacBT7zFSczM/2JtWoFtwS0LXjWRMR2cG+jd/z8lpzThTb1q0pg2tOB/o0BF7/lPBQm+eO/ReuWKvYpN9NjQAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Camp Kesem 2025</span>
+                    
+                    <span class="photo-tile-alt">My Kesem Camp Group</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/camp-kesem-2025/"
+               data-q="scaling a climbing wall camp kesem 2025 mentoring community blog camp-kesem-2025"
+               data-tags="Mentoring,Community"
+               title="Scaling a climbing wall">
+                <picture><source type="image/avif" srcset="/static/uploads/5a9da65766504c4e-480.avif 480w, /static/uploads/5a9da65766504c4e-724.avif 724w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/5a9da65766504c4e-480.webp 480w, /static/uploads/5a9da65766504c4e-724.webp 724w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/5a9da65766504c4e.jpg" alt="Scaling a climbing wall" class="photo-tile-img" width="724" height="1086" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAABQBQCdASoUAB4APu1qq08ppiOiMBgIATAdiWMAuwAxVliaj2vUSwPuc8NM7vqCEqMFUgAA/pwB89MF7ZFVQsc8Ue8JdLJF8hEfTJzrax4MU21qMer4+6zz55A72scvvei4miCb5pV/nJkHLanzxmFh+WtKKhDCqzBrQYI2IFcWXcXyH1WBh3PyneazS1Isf8BeJd0XGN4Sdk3G8xONYGvoDNs0MONMdl4AAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Camp Kesem 2025</span>
+                    
+                    <span class="photo-tile-alt">Scaling a climbing wall</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/camp-kesem-2025/"
+               data-q="leading a purple team chant camp kesem 2025 mentoring community blog camp-kesem-2025"
+               data-tags="Mentoring,Community"
+               title="Leading a Purple Team Chant">
+                <picture><source type="image/avif" srcset="/static/uploads/b9000e11a8944766-480.avif 480w, /static/uploads/b9000e11a8944766-800.avif 800w, /static/uploads/b9000e11a8944766-1086.avif 1086w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/b9000e11a8944766-480.webp 480w, /static/uploads/b9000e11a8944766-800.webp 800w, /static/uploads/b9000e11a8944766-1086.webp 1086w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/b9000e11a8944766.jpg" alt="Leading a Purple Team Chant" class="photo-tile-img" width="1086" height="724" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAADQAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JbACdACPmL+DSH31uxlgA/tcAbpgtCpJJBYlZKbXetX738HYTLPNRZND6cpQp6BZaigeZRlr6RZBP6dtpA0E40CYonieR6b7xnl/M/+8u98N5UBhkHfwhUbkVnvsNf78rl9UHudM+fG3pspOFagDZ4UqAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Camp Kesem 2025</span>
+                    
+                    <span class="photo-tile-alt">Leading a Purple Team Chant</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/blogs/camp-kesem-2025/"
+               data-q="post affirmation hug camp kesem 2025 mentoring community blog camp-kesem-2025"
+               data-tags="Mentoring,Community"
+               title="Post Affirmation Hug">
+                <picture><source type="image/avif" srcset="/static/uploads/f4e2390e4ede73bc-480.avif 480w, /static/uploads/f4e2390e4ede73bc-800.avif 800w, /static/uploads/f4e2390e4ede73bc-1200.avif 1200w, /static/uploads/f4e2390e4ede73bc-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/f4e2390e4ede73bc-480.webp 480w, /static/uploads/f4e2390e4ede73bc-800.webp 800w, /static/uploads/f4e2390e4ede73bc-1200.webp 1200w, /static/uploads/f4e2390e4ede73bc-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/f4e2390e4ede73bc.jpg" alt="Post Affirmation Hug" class="photo-tile-img" width="1600" height="1068" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAwBACdASoUAA0APu1iqU2ppaOiMAgBMB2JbACdMoGv/gJZNo4glIJH1YAA/hSLj+0C4ZHRpDlMsJUUDFw6LVz1q7LT1X4TPMIBqyZ9rjzYfFnOJMRLYW2Bg7XvvmZvNawX8+qZ4qwWv4DnO/mzpfmL1Z2/z9GgZEdNyPI/HbdiF4cl4fcmAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">Camp Kesem 2025</span>
+                    
+                    <span class="photo-tile-alt">Post Affirmation Hug</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/2-00-library-tracker/"
+               data-q="2.00 library tracker 2.00 library tracker electronics hardware coursework project 2-00-library-tracker"
+               data-tags="Electronics,Hardware,Coursework"
+               title="2.00 Library Tracker">
+                <picture><source type="image/avif" srcset="/static/uploads/97b5f800acf0f207-480.avif 480w, /static/uploads/97b5f800acf0f207-800.avif 800w, /static/uploads/97b5f800acf0f207-1200.avif 1200w, /static/uploads/97b5f800acf0f207-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/97b5f800acf0f207-480.webp 480w, /static/uploads/97b5f800acf0f207-800.webp 800w, /static/uploads/97b5f800acf0f207-1200.webp 1200w, /static/uploads/97b5f800acf0f207-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/97b5f800acf0f207.jpg" alt="2.00 Library Tracker" class="photo-tile-img" width="1600" height="1252" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBACdASoUABAAPu1iqk4ppaQiMAgBMB2JaACxDMgDA2XyZlseaUODeAD+83SGsel1OS2rO24bX6+3UcwnJkLgAdsPh8WqbnLOjfXiU78G7Fq3FS8x+fyvnNlpPTYssSU04g/bWoDK5gAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">2.00 Library Tracker</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/2-00-library-tracker/"
+               data-q="tracker on display 2.00 library tracker electronics hardware coursework project 2-00-library-tracker"
+               data-tags="Electronics,Hardware,Coursework"
+               title="Tracker on display">
+                <picture><source type="image/avif" srcset="/static/uploads/ea60318faa65107a-480.avif 480w, /static/uploads/ea60318faa65107a-768.avif 768w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/ea60318faa65107a-480.webp 480w, /static/uploads/ea60318faa65107a-768.webp 768w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/ea60318faa65107a.jpg" alt="Tracker on display" class="photo-tile-img" width="768" height="1024" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAAAwBQCdASoUABsAPu1oq08ppiOiMBgIATAdiWMAwztqUCHXEF9k/uyKM/sY9mFz+Z9AAAD+7JSn9+1kiQxJdznVsaN4ntlUIHf8mStM8AIDzWhA3WOOeMQEkkziWvtW6A3Jm7w8YG3KGfOwnJSiAjrVL0+zGgvIhAcrjMUZVzeiyfGX+S1VezwYmQO9guMYsRn8SSm1AMIN7/ibmbgT7pdaT6hPA/d4bWSDe7nh9sQBRmI3SAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">2.00 Library Tracker</span>
+                    
+                    <span class="photo-tile-alt">Tracker on display</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/accesspoint/"
+               data-q="accesspoint accesspoint software project accesspoint"
+               data-tags="Software"
+               title="AccessPoint">
+                <picture><source type="image/avif" srcset="/static/uploads/6d852e07696147dd-480.avif 480w, /static/uploads/6d852e07696147dd-800.avif 800w, /static/uploads/6d852e07696147dd-1200.avif 1200w, /static/uploads/6d852e07696147dd-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/6d852e07696147dd-480.webp 480w, /static/uploads/6d852e07696147dd-800.webp 800w, /static/uploads/6d852e07696147dd-1200.webp 1200w, /static/uploads/6d852e07696147dd-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/6d852e07696147dd.png" alt="AccessPoint" class="photo-tile-img" width="1600" height="1112" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoUAA4APu1kqU2ppaOiMAgBMB2JaACdEf/gNnx5h8rfbipwAPX8oEKduO2Tuur0qh/WhlDbszfZhbVlVNrg6o7De8Ze8GxnFlbRdBGHmUxbwcHUAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">AccessPoint</span>
+                    
+                </span>
+            </a>
+            
+            <a class="photo-tile"
+               href="/projects/accesspoint/"
+               data-q="resources section accesspoint software project accesspoint"
+               data-tags="Software"
+               title="Resources Section">
+                <picture><source type="image/avif" srcset="/static/uploads/9c985b41eae470b2-480.avif 480w, /static/uploads/9c985b41eae470b2-800.avif 800w, /static/uploads/9c985b41eae470b2-1200.avif 1200w, /static/uploads/9c985b41eae470b2-1600.avif 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><source type="image/webp" srcset="/static/uploads/9c985b41eae470b2-480.webp 480w, /static/uploads/9c985b41eae470b2-800.webp 800w, /static/uploads/9c985b41eae470b2-1200.webp 1200w, /static/uploads/9c985b41eae470b2-1600.webp 1600w" sizes="(max-width: 500px) 45vw, (max-width: 900px) 30vw, 220px"><img src="/static/uploads/9c985b41eae470b2.png" alt="Resources Section" class="photo-tile-img" width="1600" height="1106" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAACwAwCdASoUAA4APu1kqU2ppaQiMAgBMB2JZACdEf/gPI4Z69zdgADN5XPzkHNcK3G5W9Fl6tbr4TYOOOHIQLFJbhufIOdTGUkeBuXshEf/vb4VfdUpzvurpM57XDkJK4rGUceQnOu68AAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                <span class="photo-tile-meta">
+                    <span class="photo-tile-entry">AccessPoint</span>
+                    
+                    <span class="photo-tile-alt">Resources Section</span>
+                    
+                </span>
+            </a>
+            
+        </div>
+
+        <div class="no-results" id="no-photo-results" style="display:none;">
+            <p>No photos match that search.</p>
+        </div>
+    </div>
+</section>
+
+<script>
+(function () {
+    var grid = document.getElementById('photo-grid');
+    var input = document.getElementById('photo-search');
+    var empty = document.getElementById('no-photo-results');
+    var filters = document.querySelectorAll('#photo-tag-filters .tag-filter');
+    if (!grid) return;
+
+    // Read the haystacks once. Every keystroke is then a substring test over an
+    // in-memory array — no DOM reads, no re-tokenizing.
+    var tiles = Array.prototype.map.call(grid.children, function (el) {
+        return {
+            el: el,
+            q: el.getAttribute('data-q') || '',
+            tags: (el.getAttribute('data-tags') || '').toLowerCase()
+                    .split(',').map(function (t) { return t.trim(); }).filter(Boolean)
+        };
+    });
+
+    var query = '';
+    var tag = 'all';
+
+    function apply() {
+        // Every term must match, so "motor pcb" narrows instead of widening.
+        var terms = query.split(/\s+/).filter(Boolean);
+        var shown = 0;
+        for (var i = 0; i < tiles.length; i++) {
+            var t = tiles[i];
+            var ok = (tag === 'all' || t.tags.indexOf(tag) !== -1);
+            for (var j = 0; ok && j < terms.length; j++) {
+                if (t.q.indexOf(terms[j]) === -1) ok = false;
+            }
+            // `hidden` rather than style.display so the tile keeps whatever
+            // display the grid gives it when it comes back.
+            t.el.hidden = !ok;
+            if (ok) shown++;
+        }
+        grid.hidden = shown === 0;
+        empty.style.display = shown === 0 ? 'block' : 'none';
+    }
+
+    input.addEventListener('input', function (e) {
+        query = e.target.value.toLowerCase().trim();
+        apply();
+    });
+
+    filters.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            filters.forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            tag = (btn.getAttribute('data-tag') || 'all').toLowerCase();
+            apply();
+        });
+    });
+})();
+</script>
+
+    </main>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Seth Robles</h3>
+                <p class="footer-description">Mechanical Engineer & Roboticist</p>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-subtitle">Connect</h4>
+                <div class="footer-links">
+                    <a href="" class="footer-link" target="_blank" rel="noopener noreferrer">
+                        GitHub
+                    </a>
+                    <a href="" class="footer-link" target="_blank" rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+                    <a href="mailto:" class="footer-link">
+                        Email
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-subtitle">Explore</h4>
+                <div class="footer-links">
+                    <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copyright">
+                &copy; 2025 Seth Robles. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+    <!-- JavaScript -->
+    <!-- Social usernames for widgets -->
+    <script>
+        window.socialUsernames = {
+            strava: "sethrobles",
+            strava_num: "149255842",
+            hardcover: "Sethyopolopodis"
+        };
+    </script>
+    <script src="/static/js/widgets.js"></script>
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to light
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+</html>

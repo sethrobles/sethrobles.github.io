@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -136,14 +135,13 @@
             <p class="hero-description">I enjoy working on robots and integrated technology. I am passionate about continuous learning, mentoring others, and self improvement.</p>
             <div class="hero-actions">
                 <a href="/projects/" class="btn btn-primary">View My Work</a>
-                <a href="/resume/" class="btn btn-secondary">Download Resume</a>
-                <a href="/portfolio/" class="btn btn-outline">View Portfolio</a>
+                <a href="/blogs/" class="btn btn-secondary">Read the Blog</a>
             </div>
         </div>
 
         <div class="hero-image">
             <div class="hero-avatar">
-                <picture><source type="image/avif" srcset="/static/uploads/personal/seth-photo-480.avif 480w, /static/uploads/personal/seth-photo-800.avif 800w, /static/uploads/personal/seth-photo-1086.avif 1086w" sizes="(max-width: 768px) 60vw, 400px"><source type="image/webp" srcset="/static/uploads/personal/seth-photo-480.webp 480w, /static/uploads/personal/seth-photo-800.webp 800w, /static/uploads/personal/seth-photo-1086.webp 1086w" sizes="(max-width: 768px) 60vw, 400px"><img src="/static/uploads/personal/seth-photo.jpg" alt="Seth Robles" class="hero-photo" width="1086" height="724" decoding="async" loading="eager" fetchpriority="high"></picture>
+                <picture><source type="image/avif" srcset="/static/uploads/a6df2c09e280bab7-480.avif 480w, /static/uploads/a6df2c09e280bab7-800.avif 800w, /static/uploads/a6df2c09e280bab7-1086.avif 1086w" sizes="(max-width: 768px) 60vw, 400px"><source type="image/webp" srcset="/static/uploads/a6df2c09e280bab7-480.webp 480w, /static/uploads/a6df2c09e280bab7-800.webp 800w, /static/uploads/a6df2c09e280bab7-1086.webp 1086w" sizes="(max-width: 768px) 60vw, 400px"><img src="/static/uploads/a6df2c09e280bab7.jpg" alt="Seth Robles" class="hero-photo" width="1086" height="724" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADQAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JYwC7ABnbh2pVJ2WPpVAA/oUZCSqy9PMwmaJREc4pA1f5YG6GabRIKn/GC4e63/E2B8al+DV/MPZqbWnk0QwcD2SkWKZzneL6pofY6khqX4fVzp6rGCy5v6jA5bA9zzbbAAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
             </div>
         </div>
     </div>
@@ -159,11 +157,11 @@
             
             
                 
-<a href="/projects/impact-wrench/" class="card entry-card" data-tags="PCB" style="text-decoration:none;color:inherit;">
+<a href="/projects/impact-wrench/" class="card entry-card" data-tags="PCB Design,Electronics,Hardware,Device Integration" style="text-decoration:none;color:inherit;">
     <div class="card-image">
     
         
-        <picture><source type="image/avif" srcset="/static/uploads/projects/impact-wrench/71ztjtxvkul._ac_sl1500_-480.avif 480w, /static/uploads/projects/impact-wrench/71ztjtxvkul._ac_sl1500_-800.avif 800w, /static/uploads/projects/impact-wrench/71ztjtxvkul._ac_sl1500_-1200.avif 1200w, /static/uploads/projects/impact-wrench/71ztjtxvkul._ac_sl1500_-1499.avif 1499w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/projects/impact-wrench/71ztjtxvkul._ac_sl1500_-480.webp 480w, /static/uploads/projects/impact-wrench/71ztjtxvkul._ac_sl1500_-800.webp 800w, /static/uploads/projects/impact-wrench/71ztjtxvkul._ac_sl1500_-1200.webp 1200w, /static/uploads/projects/impact-wrench/71ztjtxvkul._ac_sl1500_-1499.webp 1499w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/projects/impact-wrench/71ztjtxvkul._ac_sl1500_.jpg" alt="Disassembling Impact Wrench" class="card-thumbnail" width="1499" height="1500" decoding="async" loading="lazy"></picture>
+        <picture><source type="image/avif" srcset="/static/uploads/c9dd604590e67da6-480.avif 480w, /static/uploads/c9dd604590e67da6-800.avif 800w, /static/uploads/c9dd604590e67da6-1200.avif 1200w, /static/uploads/c9dd604590e67da6-1499.avif 1499w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/c9dd604590e67da6-480.webp 480w, /static/uploads/c9dd604590e67da6-800.webp 800w, /static/uploads/c9dd604590e67da6-1200.webp 1200w, /static/uploads/c9dd604590e67da6-1499.webp 1499w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/c9dd604590e67da6.jpg" alt="Disassembling Impact Wrench" class="card-thumbnail" width="1499" height="1500" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRvIAAABXRUJQVlA4IOYAAACQBQCdASoUABQAPu1ur1IppiQiqAgBMB2JZgDM8P8gtQrhkuKISoDuJAh/M1o9G93A52yEAAD+84F7i2WEtevnfOa4Gn20aYm6jUrS98J92XE45tbEmkbdKRNkze93lQHCtxM9ffMX52+T6ma+J9LGWp0pAcusu4ETgdHRr0fuzwk4+7bkcf/OzU2WSb6trHsYk3hNN/9iaOHHjhHF62KcIgWdk7S+LIa+1rLDl0zdur5UGnEIl+HZ5NWNDp4lQBB0wQVSG0qr+oteB1ZRNruiWNiBvbr47QGwnAKEdPomc5GOvgAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
     
     </div>
 
@@ -184,8 +182,14 @@
         
         <div class="card-tags">
             
-            <span class="tag">PCB</span>
+            <span class="tag">PCB Design</span>
             
+            <span class="tag">Electronics</span>
+            
+            <span class="tag">Hardware</span>
+            
+            
+            <span class="tag tag-more">+1</span>
             
         </div>
         
@@ -198,11 +202,11 @@
 
             
                 
-<a href="/projects/rl-practice/" class="card entry-card" data-tags="Machine Learning" style="text-decoration:none;color:inherit;">
+<a href="/projects/rl-practice/" class="card entry-card" data-tags="Machine Learning,Software" style="text-decoration:none;color:inherit;">
     <div class="card-image">
     
         
-        <picture><source type="image/avif" srcset="/static/uploads/projects/rl-practice/rl-practice-thumb-350.avif 350w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/projects/rl-practice/rl-practice-thumb-350.webp 350w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/projects/rl-practice/rl-practice-thumb.png" alt="Reinforcement Learning Explorations" class="card-thumbnail" width="350" height="350" decoding="async" loading="lazy"></picture>
+        <picture><source type="image/avif" srcset="/static/uploads/86194d585ea0f373-350.avif 350w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/86194d585ea0f373-350.webp 350w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/86194d585ea0f373.png" alt="Reinforcement Learning Explorations" class="card-thumbnail" width="350" height="350" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAQBACdASoUABQAPu1mrE+ppSQiMBgIATAdiWQAwzQQ7+Oq2kf3KBJ8BAD+9WbKDu97hfbyG12kXjjhVQfmVjIsJ2AEVzKiJrQuITfOJoeG8CWoijrXaMKyZv7cwCozAohhfKFyOQ9TybDRoAAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
     
     </div>
 
@@ -225,6 +229,8 @@
             
             <span class="tag">Machine Learning</span>
             
+            <span class="tag">Software</span>
+            
             
         </div>
         
@@ -237,11 +243,11 @@
 
             
                 
-<a href="/projects/spurdog-battery/" class="card entry-card" data-tags="Electronics,Robotics,Hardware" style="text-decoration:none;color:inherit;">
+<a href="/projects/spurdog-battery/" class="card entry-card" data-tags="Electronics,Hardware,Robotics" style="text-decoration:none;color:inherit;">
     <div class="card-image">
     
         
-        <picture><source type="image/avif" srcset="/static/uploads/projects/spurdog-battery/spurdog_battery_thumb-480.avif 480w, /static/uploads/projects/spurdog-battery/spurdog_battery_thumb-800.avif 800w, /static/uploads/projects/spurdog-battery/spurdog_battery_thumb-1200.avif 1200w, /static/uploads/projects/spurdog-battery/spurdog_battery_thumb-1342.avif 1342w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/projects/spurdog-battery/spurdog_battery_thumb-480.webp 480w, /static/uploads/projects/spurdog-battery/spurdog_battery_thumb-800.webp 800w, /static/uploads/projects/spurdog-battery/spurdog_battery_thumb-1200.webp 1200w, /static/uploads/projects/spurdog-battery/spurdog_battery_thumb-1342.webp 1342w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/projects/spurdog-battery/spurdog_battery_thumb.png" alt="Spurdog Battery" class="card-thumbnail" width="1342" height="1304" decoding="async" loading="lazy"></picture>
+        <picture><source type="image/avif" srcset="/static/uploads/0ebb003c2f04c585-480.avif 480w, /static/uploads/0ebb003c2f04c585-800.avif 800w, /static/uploads/0ebb003c2f04c585-1200.avif 1200w, /static/uploads/0ebb003c2f04c585-1342.avif 1342w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/0ebb003c2f04c585-480.webp 480w, /static/uploads/0ebb003c2f04c585-800.webp 800w, /static/uploads/0ebb003c2f04c585-1200.webp 1200w, /static/uploads/0ebb003c2f04c585-1342.webp 1342w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/0ebb003c2f04c585.png" alt="Spurdog Battery" class="card-thumbnail" width="1342" height="1304" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABwBACdASoUABMAPu1mq06ppaOiKA1RMB2JZQC7ABGh71l+IXQ5/QNma4f5EAD+8uJ6n6cIgs1stb0AWZvlab7F1tmSSSd/nR3ei3NTsst3WXQ9WcTKZgk5P4jHr20AMdfvEOhg0D22DHn0sRC8jwAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
     
     </div>
 
@@ -264,9 +270,9 @@
             
             <span class="tag">Electronics</span>
             
-            <span class="tag">Robotics</span>
-            
             <span class="tag">Hardware</span>
+            
+            <span class="tag">Robotics</span>
             
             
         </div>
@@ -280,11 +286,11 @@
 
             
                 
-<a href="/projects/2_671/" class="card entry-card" data-tags="Class,Electronics,Arduino" style="text-decoration:none;color:inherit;">
+<a href="/projects/2_671/" class="card entry-card" data-tags="Coursework,Electronics" style="text-decoration:none;color:inherit;">
     <div class="card-image">
     
         
-        <picture><source type="image/avif" srcset="/static/uploads/projects/2_671/gf_visual_abstract-480.avif 480w, /static/uploads/projects/2_671/gf_visual_abstract-800.avif 800w, /static/uploads/projects/2_671/gf_visual_abstract-1200.avif 1200w, /static/uploads/projects/2_671/gf_visual_abstract-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/projects/2_671/gf_visual_abstract-480.webp 480w, /static/uploads/projects/2_671/gf_visual_abstract-800.webp 800w, /static/uploads/projects/2_671/gf_visual_abstract-1200.webp 1200w, /static/uploads/projects/2_671/gf_visual_abstract-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/projects/2_671/gf_visual_abstract.png" alt="2.671" class="card-thumbnail" width="1600" height="688" decoding="async" loading="lazy"></picture>
+        <picture><source type="image/avif" srcset="/static/uploads/2de8855d06681b83-480.avif 480w, /static/uploads/2de8855d06681b83-800.avif 800w, /static/uploads/2de8855d06681b83-1200.avif 1200w, /static/uploads/2de8855d06681b83-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/2de8855d06681b83-480.webp 480w, /static/uploads/2de8855d06681b83-800.webp 800w, /static/uploads/2de8855d06681b83-1200.webp 1200w, /static/uploads/2de8855d06681b83-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/2de8855d06681b83.png" alt="2.671" class="card-thumbnail" width="1600" height="688" decoding="async" loading="lazy"></picture>
     
     </div>
 
@@ -305,11 +311,9 @@
         
         <div class="card-tags">
             
-            <span class="tag">Class</span>
+            <span class="tag">Coursework</span>
             
             <span class="tag">Electronics</span>
-            
-            <span class="tag">Arduino</span>
             
             
         </div>
@@ -323,11 +327,11 @@
 
             
                 
-<a href="/projects/led-array/" class="card entry-card" data-tags="KiCAD,PCB Design" style="text-decoration:none;color:inherit;">
+<a href="/projects/led-array/" class="card entry-card" data-tags="PCB Design,Electronics" style="text-decoration:none;color:inherit;">
     <div class="card-image">
     
         
-        <picture><source type="image/avif" srcset="/static/uploads/projects/led-array/led_pcb-480.avif 480w, /static/uploads/projects/led-array/led_pcb-800.avif 800w, /static/uploads/projects/led-array/led_pcb-1200.avif 1200w, /static/uploads/projects/led-array/led_pcb-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/projects/led-array/led_pcb-480.webp 480w, /static/uploads/projects/led-array/led_pcb-800.webp 800w, /static/uploads/projects/led-array/led_pcb-1200.webp 1200w, /static/uploads/projects/led-array/led_pcb-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/projects/led-array/led_pcb.png" alt="LED Array PCB" class="card-thumbnail" width="1600" height="1200" decoding="async" loading="lazy"></picture>
+        <picture><source type="image/avif" srcset="/static/uploads/3b857154fa000813-480.avif 480w, /static/uploads/3b857154fa000813-800.avif 800w, /static/uploads/3b857154fa000813-1200.avif 1200w, /static/uploads/3b857154fa000813-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/3b857154fa000813-480.webp 480w, /static/uploads/3b857154fa000813-800.webp 800w, /static/uploads/3b857154fa000813-1200.webp 1200w, /static/uploads/3b857154fa000813-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/3b857154fa000813.png" alt="LED Array PCB" class="card-thumbnail" width="1600" height="1200" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQBahBshXKrbAX7Sk+8IAAM4QHw+YB81MOKtO2++aNYdAQ3Q/R4tbV0c099HTnr+rrD4tH9WMa6se1HSA2HjIg2efJYBToVfFxJgnh7AsnBJAAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
     
     </div>
 
@@ -348,9 +352,9 @@
         
         <div class="card-tags">
             
-            <span class="tag">KiCAD</span>
-            
             <span class="tag">PCB Design</span>
+            
+            <span class="tag">Electronics</span>
             
             
         </div>
@@ -364,11 +368,11 @@
 
             
                 
-<a href="/projects/2-12-ur5/" class="card entry-card" data-tags="Robotics,Computer Vision,Team Project,Class" style="text-decoration:none;color:inherit;">
+<a href="/projects/2-12-ur5/" class="card entry-card" data-tags="Robotics,Computer Vision,Coursework" style="text-decoration:none;color:inherit;">
     <div class="card-image">
     
         
-        <picture><source type="image/avif" srcset="/static/uploads/projects/2-12-ur5/ur5-480.avif 480w, /static/uploads/projects/2-12-ur5/ur5-768.avif 768w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/projects/2-12-ur5/ur5-480.webp 480w, /static/uploads/projects/2-12-ur5/ur5-768.webp 768w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/projects/2-12-ur5/ur5.jpg" alt="2.12 UR5" class="card-thumbnail" width="768" height="1024" decoding="async" loading="lazy"></picture>
+        <picture><source type="image/avif" srcset="/static/uploads/93ad7f911a95a4c1-480.avif 480w, /static/uploads/93ad7f911a95a4c1-768.avif 768w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/93ad7f911a95a4c1-480.webp 480w, /static/uploads/93ad7f911a95a4c1-768.webp 768w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/93ad7f911a95a4c1.jpg" alt="2.12 UR5" class="card-thumbnail" width="768" height="1024" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAADwBACdASoUABsAPu1sqlEppaOiqAqpMB2JZQDGQBCAaNJGHitgpMqeYYOhWnnV5AAA/tUQM4rM5Shk3l1bgJRYyVcxem+mdXBhXo0hUrZl6fIVqybCNnYT9L5rhQd3DnbKBFSV9TucO6VJLimMZ30dTegSxxBQsqUUm7L9NvWMOnEaRP0z23MzA6I9uYZpQ+DvJZsY6vYxFPaaqA9CtHvTyFZFitIKUbSPy55FfXnt0jiYKf8AAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
     
     </div>
 
@@ -393,10 +397,8 @@
             
             <span class="tag">Computer Vision</span>
             
-            <span class="tag">Team Project</span>
+            <span class="tag">Coursework</span>
             
-            
-            <span class="tag tag-more">+1</span>
             
         </div>
         
@@ -445,23 +447,6 @@
     </div>
 </section>
 
-<!-- <section class="contact-cta">
-    <div class="container">
-        <div class="cta-content">
-            <h2 class="section-title">Let's Work Together</h2>
-            <p class="cta-description">
-                I'm always interested in new opportunities and interesting projects.
-                Whether you have a question or just want to say hi, I'll try my best to get back to you!
-            </p>
-            <div class="cta-actions">
-                <a href="mailto:seth@example.com" class="btn btn-primary">Get In Touch</a>
-                <a href="/resume/" class="btn btn-outline">View Resume</a>
-                <a href="/portfolio/" class="btn btn-outline">View Portfolio</a>
-            </div>
-        </div>
-    </div>
-</section> -->
-
     </main>
 
     <footer class="footer">
@@ -488,11 +473,10 @@
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>

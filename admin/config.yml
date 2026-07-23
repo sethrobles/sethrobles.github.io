@@ -310,11 +310,21 @@ collections:
         widget: boolean
         default: false
 
-      - label: Carousel Images
+      - label: Photo Layout
+        name: gallery_style
+        widget: select
+        default: strip
+        options:
+          - { label: "Strip — small row under the hero", value: strip }
+          - { label: "Grid — larger even tiles", value: grid }
+          - { label: "Carousel — one at a time, with arrows", value: carousel }
+        hint: "How the photos below are laid out beneath the hero image."
+
+      - label: Photos
         name: carousel_images
         widget: list
         required: false
-        hint: "Images rendered as a carousel at the end of the project page"
+        hint: "Shown near the top of the project page, arranged per Photo Layout above. The hero falls back to the first photo here if no hero/thumbnail is set."
         fields:
           - label: Image
             name: src

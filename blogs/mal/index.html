@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -128,29 +127,35 @@
 
     <main class="main-content">
         
-<article class="entry-detail">
+<article class="entry-detail entry-detail--blog">
     <div class="container">
-        <!-- Entry Header -->
-        <header class="entry-header entry-header-centered">
+
+        
+        
+        <header class="entry-header entry-header--blog">
+            
+            <div class="entry-eyebrow"><time datetime="2025-10-23">23 October 2025</time></div>
+            
             <h1 class="entry-title">Marine Autonomy Lab</h1>
             
-            <div class="entry-tags">
-                
-                <span class="tag">Robotics</span>
-                
-                <span class="tag">Research</span>
-                
-            </div>
-            
-            
-            
-            
+            <p class="entry-subtitle">A description of my work in the Marine Autonomy Lab, working on Blueboat USVs and Spurdog AUVs.</p>
             
         </header>
-        <!-- Embedded video (if present) -->
+
         
 
-        <!-- Entry Content -->
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+
+        
         <div class="entry-content">
             <div class="content-main">
                 
@@ -172,7 +177,7 @@
 <p>I am now realizing that the cable jacket component is pretty far from the head connector. This was done intentionally to make sure that I had enough space in case I needed to redo the soldering, but it seems it worked against me. I'm going to have to redo the soldering. Which is unideal, but I think it'll go smoother this time for sure.</p>
 <p>It did not go smoother this time. I while have to tray again later this week. I was, however, able to go and get the mounting component for the BlueBoats machined. I still need to tap the holes, but that might be a later Seth problem. Today, I need to work more on a robotic manipulation pset.</p>
 <p align="center">
-  <picture><source type="image/avif" srcset="/static/uploads/blogs/mal/mounting_sandblasted-480.avif 480w, /static/uploads/blogs/mal/mounting_sandblasted-800.avif 800w, /static/uploads/blogs/mal/mounting_sandblasted-1120.avif 1120w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/blogs/mal/mounting_sandblasted-480.webp 480w, /static/uploads/blogs/mal/mounting_sandblasted-800.webp 800w, /static/uploads/blogs/mal/mounting_sandblasted-1120.webp 1120w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/blogs/mal/mounting_sandblasted.png" alt="Waterjetted and Sandblasted component for mounting sensors on BlueBoats" width="1120" height="1620" decoding="async" loading="lazy"></picture>
+  <picture><source type="image/avif" srcset="/static/uploads/9b734a3224df99da-480.avif 480w, /static/uploads/9b734a3224df99da-800.avif 800w, /static/uploads/9b734a3224df99da-1120.avif 1120w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/9b734a3224df99da-480.webp 480w, /static/uploads/9b734a3224df99da-800.webp 800w, /static/uploads/9b734a3224df99da-1120.webp 1120w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/9b734a3224df99da.png" alt="Waterjetted and Sandblasted component for mounting sensors on BlueBoats" width="1120" height="1620" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADQBACdASoUAB0APu1qrVEppaQiqAqpMB2JagDE2BEctSJFvVEpVdX3F1tmdFGgAAD9zF1q1LD4Tu/m5IGVg/OFf4lD0r/nkwmcQbybEM3jgmVa2B4qioGbLBCuQukfaKaEJmw/mekZT5eyQTvmJtBPHK8vLrVhAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
   <br>
   <span style="font-size:0.95em; color: #666; font-style:italic;">Waterjetted and Sandblasted component for mounting sensors on BlueBoats</span>
 </p>
@@ -186,54 +191,17 @@
 <h2 id="update-october-3-2025">Update (October 3 2025)</h2>
 <p>I have started on the battery pack and have potentially shorted a few AA batteries, but have a basic system that has 3 different components that can deliver 18 V. We're deciding on specific batteries for the power output we want, but I'm  happy the design is generally working. I'm going to make a few last minute modifications on the design.</p>
 <p>
-<style>
-  .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-    overflow: hidden;
-  }
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    text-align: center;
-  }
-  .carousel-slide.active {
-    display: block;
-  }
-  .carousel img {
-    max-width: 100%;
-    height: auto;
-  }
-  .carousel-controls {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-  .carousel-button {
-    display: inline-block;
-    background: var(--accent, #3b82f6);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-  }
-</style>
 <div class="carousel">
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/mal/battery_pack-480.avif 480w, /static/uploads/blogs/mal/battery_pack-720.avif 720w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/mal/battery_pack-480.webp 480w, /static/uploads/blogs/mal/battery_pack-720.webp 720w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/blogs/mal/battery_pack-480.avif 480w, /static/uploads/blogs/mal/battery_pack-720.avif 720w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/blogs/mal/battery_pack-480.webp 480w, /static/uploads/blogs/mal/battery_pack-720.webp 720w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/blogs/mal/battery_pack.png" alt="Battery pack prototype" width="720" height="1066" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/10eb6ba3d629fe36-480.avif 480w, /static/uploads/10eb6ba3d629fe36-720.avif 720w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/10eb6ba3d629fe36-480.webp 480w, /static/uploads/10eb6ba3d629fe36-720.webp 720w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/10eb6ba3d629fe36.png" alt="Battery pack prototype" width="720" height="1066" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAQBQCdASoUAB4APulcp02pJKOiN/VYASAdCWMAqPQQ5mN/BuybLz53oKuEQxnBa7gAAPohHSDiWe+lxp0XfNWVLUATQmG4aFagiNwoIeiqAq6jSiIynMG9WMbt1P/gPbzGC2y9Grt6q88NeT8tgwHthVsQ/S1IecY0y/VCcxb3CsxI2+ol1r3CZDS+CFVHhgAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Battery pack prototype</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/mal/battery_pack_cad-480.avif 480w, /static/uploads/blogs/mal/battery_pack_cad-800.avif 800w, /static/uploads/blogs/mal/battery_pack_cad-1200.avif 1200w, /static/uploads/blogs/mal/battery_pack_cad-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/mal/battery_pack_cad-480.webp 480w, /static/uploads/blogs/mal/battery_pack_cad-800.webp 800w, /static/uploads/blogs/mal/battery_pack_cad-1200.webp 1200w, /static/uploads/blogs/mal/battery_pack_cad-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/blogs/mal/battery_pack_cad-480.avif 480w, /static/uploads/blogs/mal/battery_pack_cad-800.avif 800w, /static/uploads/blogs/mal/battery_pack_cad-1200.avif 1200w, /static/uploads/blogs/mal/battery_pack_cad-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/blogs/mal/battery_pack_cad-480.webp 480w, /static/uploads/blogs/mal/battery_pack_cad-800.webp 800w, /static/uploads/blogs/mal/battery_pack_cad-1200.webp 1200w, /static/uploads/blogs/mal/battery_pack_cad-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/blogs/mal/battery_pack_cad.png" alt="Battery Pack CAD" width="1600" height="1105" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/ee20b27e05befc77-480.avif 480w, /static/uploads/ee20b27e05befc77-800.avif 800w, /static/uploads/ee20b27e05befc77-1200.avif 1200w, /static/uploads/ee20b27e05befc77-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/ee20b27e05befc77-480.webp 480w, /static/uploads/ee20b27e05befc77-800.webp 800w, /static/uploads/ee20b27e05befc77-1200.webp 1200w, /static/uploads/ee20b27e05befc77-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/ee20b27e05befc77.png" alt="Battery Pack CAD" width="1600" height="1105" decoding="async" loading="lazy"></picture>
       
         <div class="carousel-caption">Battery Pack CAD</div>
       
@@ -275,22 +243,21 @@
 <p>Thumbnail image sourced from <a href="https://oceanai.mit.edu/autonomylab/pmwiki/pmwiki.php?n=Main.OpenHouse">Marine Autonomy Lab website</a></p>
                 </div>
                 
+                
             </div>
         </div>
 
-        <!-- Related build logs (project pages only) -->
+        
         
 
-        <!-- Entry Navigation -->
+        
         <nav class="entry-navigation">
             <div class="nav-links">
                 
             </div>
             <div class="nav-actions">
                 
-                <a href="/blogs/" class="btn btn-outline">
-                     Back to Blog
-                </a>
+                <a href="/blogs/" class="btn btn-outline">Back to Blog</a>
                 
             </div>
         </nav>
@@ -323,11 +290,10 @@
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>

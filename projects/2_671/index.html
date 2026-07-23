@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -128,36 +127,46 @@
 
     <main class="main-content">
         
-<article class="entry-detail">
+<article class="entry-detail entry-detail--project">
     <div class="container">
-        <!-- Entry Header -->
-        <header class="entry-header entry-header-centered">
+
+        
+        
+        <header class="entry-header entry-header--project entry-header-centered">
             <h1 class="entry-title">2.671</h1>
             
             <div class="entry-tags">
-                
-                <span class="tag">Class</span>
-                
-                <span class="tag">Electronics</span>
-                
-                <span class="tag">Arduino</span>
-                
+                <span class="tag">Coursework</span><span class="tag">Electronics</span>
             </div>
             
             
-            
+            <p class="entry-subtitle">Reflections on 2.671, Measurement and Instrumentation.</p>
             
             
         </header>
-        <!-- Embedded video (if present) -->
         
 
-        <!-- Entry Content -->
+        
+        
+        
+        
+        <div class="entry-hero">
+            <picture><source type="image/avif" srcset="/static/uploads/2de8855d06681b83-480.avif 480w, /static/uploads/2de8855d06681b83-800.avif 800w, /static/uploads/2de8855d06681b83-1200.avif 1200w, /static/uploads/2de8855d06681b83-1600.avif 1600w" sizes="(max-width: 1000px) 100vw, 960px"><source type="image/webp" srcset="/static/uploads/2de8855d06681b83-480.webp 480w, /static/uploads/2de8855d06681b83-800.webp 800w, /static/uploads/2de8855d06681b83-1200.webp 1200w, /static/uploads/2de8855d06681b83-1600.webp 1600w" sizes="(max-width: 1000px) 100vw, 960px"><img src="/static/uploads/2de8855d06681b83.png" alt="2.671" class="entry-hero-image" width="1600" height="688" decoding="async" loading="eager" fetchpriority="high"></picture>
+        </div>
+        
+
+        
+        
+
+        
+        
+
+        
         <div class="entry-content">
             <div class="content-main">
                 
                 <div class="markdown-content">
-                    <!-- <h2 style="text-align:center;"></h2> -->
+                    
 
 <p>This semester (Fall-2025), I am taking 2.671 (Measurement and Instrumentation). As part of the class, students have to conduct an independent research assignment, known as the "Go Forth and Measure" project. This is a semester-long research project that helps students apply measurements techniques and experimental design to a topic of our own interest. At the bottom of this page is a 2 column final paper summarizing my work in the class (sadly not in $LaTeX$).</p>
 <h2 id="initial-writing-october-12-2025">Initial Writing (October 12 2025)</h2>
@@ -256,22 +265,21 @@
 </div>
                 </div>
                 
+                
             </div>
         </div>
 
-        <!-- Related build logs (project pages only) -->
+        
         
 
-        <!-- Entry Navigation -->
+        
         <nav class="entry-navigation">
             <div class="nav-links">
                 
             </div>
             <div class="nav-actions">
                 
-                <a href="/projects/" class="btn btn-outline">
-                     Back to Projects
-                </a>
+                <a href="/projects/" class="btn btn-outline">Back to Projects</a>
                 
             </div>
         </nav>
@@ -304,11 +312,10 @@
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>

@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -128,27 +127,35 @@
 
     <main class="main-content">
         
-<article class="entry-detail">
+<article class="entry-detail entry-detail--blog">
     <div class="container">
-        <!-- Entry Header -->
-        <header class="entry-header entry-header-centered">
+
+        
+        
+        <header class="entry-header entry-header--blog">
+            
+            <div class="entry-eyebrow"><time datetime="2025-10-23">23 October 2025</time></div>
+            
             <h1 class="entry-title">Travel Access Program 2025</h1>
             
-            <div class="entry-tags">
-                
-                <span class="tag">Mentoring</span>
-                
-            </div>
-            
-            
-            
-            
+            <p class="entry-subtitle">Speaking at high schools in Clarksville, TN about the opportunities at MIT, and potential steps to get there.</p>
             
         </header>
-        <!-- Embedded video (if present) -->
+
         
 
-        <!-- Entry Content -->
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+
+        
         <div class="entry-content">
             <div class="content-main">
                 
@@ -158,28 +165,27 @@
 <p>While I was there, I had the opportunity to talk about my experience at MIT as a first-generation student in college. I was also able to talk about other programs, including the <a href="https://www.jkcf.org/our-scholarships/">Jack Kent Cooke Scholarship</a>, the <a href="https://www.thegatesscholarship.org/scholarship">Gates Scholarship</a>, and <a href="https://mites.mit.edu/">MITES</a>.</p>
 <p>It was an exciting opportunity to give back to the community in Clarksville and share more about my MIT experience with others.</p>
 <p align="center">
-  <picture><source type="image/avif" srcset="/static/uploads/blogs/tap-2025/tap_2025_speaking-480.avif 480w, /static/uploads/blogs/tap-2025/tap_2025_speaking-640.avif 640w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/blogs/tap-2025/tap_2025_speaking-480.webp 480w, /static/uploads/blogs/tap-2025/tap_2025_speaking-640.webp 640w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/blogs/tap-2025/tap_2025_speaking.png" alt="tracker on display" width="640" height="481" decoding="async" loading="lazy"></picture>
+  <picture><source type="image/avif" srcset="/static/uploads/ebc5b341f8de6d01-480.avif 480w, /static/uploads/ebc5b341f8de6d01-640.avif 640w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/ebc5b341f8de6d01-480.webp 480w, /static/uploads/ebc5b341f8de6d01-640.webp 640w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/ebc5b341f8de6d01.png" alt="tracker on display" width="640" height="481" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAACQAwCdASoUAA8APu1iqU2ppaQiMAgBMB2JYwC2yA+UvTubvvtAAP6eofpV4lA031ikBW+sEQzjzkvexujzL3RAnc2D/OSHkBh/XrHokzupOETK3sr4brxXS7UgD5bCbb6RbeZeZadTOYhL9qW2PvqN/fhi9IkfghwAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
   <br>
   <span style="font-size:0.95em; color: #666; font-style:italic;">Speaking at Kenwood High School</span>
 </p>
                 </div>
                 
+                
             </div>
         </div>
 
-        <!-- Related build logs (project pages only) -->
+        
         
 
-        <!-- Entry Navigation -->
+        
         <nav class="entry-navigation">
             <div class="nav-links">
                 
             </div>
             <div class="nav-actions">
                 
-                <a href="/blogs/" class="btn btn-outline">
-                     Back to Blog
-                </a>
+                <a href="/blogs/" class="btn btn-outline">Back to Blog</a>
                 
             </div>
         </nav>
@@ -212,11 +218,10 @@
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>

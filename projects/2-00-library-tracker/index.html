@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -128,33 +127,41 @@
 
     <main class="main-content">
         
-<article class="entry-detail">
+<article class="entry-detail entry-detail--project">
     <div class="container">
-        <!-- Entry Header -->
-        <header class="entry-header entry-header-centered">
+
+        
+        
+        <header class="entry-header entry-header--project entry-header-centered">
             <h1 class="entry-title">2.00 Library Tracker</h1>
             
             <div class="entry-tags">
-                
-                <span class="tag">Arduino</span>
-                
-                <span class="tag">Hardware</span>
-                
-                <span class="tag">Team Project</span>
-                
-                <span class="tag">Class</span>
-                
+                <span class="tag">Electronics</span><span class="tag">Hardware</span><span class="tag">Coursework</span>
             </div>
             
             
-            
+            <p class="entry-subtitle">An Arduino-powered Library Tracker tool built for an elementary school librarian to help manage student tasks with LEDs, buttons, and a control board.</p>
             
             
         </header>
-        <!-- Embedded video (if present) -->
         
 
-        <!-- Entry Content -->
+        
+        
+        
+        
+        <div class="entry-hero">
+            <picture><source type="image/avif" srcset="/static/uploads/97b5f800acf0f207-480.avif 480w, /static/uploads/97b5f800acf0f207-800.avif 800w, /static/uploads/97b5f800acf0f207-1200.avif 1200w, /static/uploads/97b5f800acf0f207-1600.avif 1600w" sizes="(max-width: 1000px) 100vw, 960px"><source type="image/webp" srcset="/static/uploads/97b5f800acf0f207-480.webp 480w, /static/uploads/97b5f800acf0f207-800.webp 800w, /static/uploads/97b5f800acf0f207-1200.webp 1200w, /static/uploads/97b5f800acf0f207-1600.webp 1600w" sizes="(max-width: 1000px) 100vw, 960px"><img src="/static/uploads/97b5f800acf0f207.jpg" alt="2.00 Library Tracker" class="entry-hero-image" width="1600" height="1252" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBACdASoUABAAPu1iqk4ppaQiMAgBMB2JaACxDMgDA2XyZlseaUODeAD+83SGsel1OS2rO24bX6+3UcwnJkLgAdsPh8WqbnLOjfXiU78G7Fq3FS8x+fyvnNlpPTYssSU04g/bWoDK5gAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+        </div>
+        
+
+        
+        
+
+        
+        
+
+        
         <div class="entry-content">
             <div class="content-main">
                 
@@ -189,54 +196,17 @@
 - Designing for reliability and <strong>teacher control</strong> (locks, reset/undo flows) in a chaotic environment.
 - That low-tech, robust interactions can be more effective than complex software when the audience is young students.</p>
 <p>
-<style>
-  .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-    overflow: hidden;
-  }
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    text-align: center;
-  }
-  .carousel-slide.active {
-    display: block;
-  }
-  .carousel img {
-    max-width: 100%;
-    height: auto;
-  }
-  .carousel-controls {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-  .carousel-button {
-    display: inline-block;
-    background: var(--accent, #3b82f6);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-  }
-</style>
 <div class="carousel">
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/projects/2-00-library-tracker/tracker_on_display-480.avif 480w, /static/uploads/projects/2-00-library-tracker/tracker_on_display-768.avif 768w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/projects/2-00-library-tracker/tracker_on_display-480.webp 480w, /static/uploads/projects/2-00-library-tracker/tracker_on_display-768.webp 768w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/projects/2-00-library-tracker/tracker_on_display.jpg" alt="Tracker on display" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/ea60318faa65107a-480.avif 480w, /static/uploads/ea60318faa65107a-768.avif 768w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/ea60318faa65107a-480.webp 480w, /static/uploads/ea60318faa65107a-768.webp 768w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/ea60318faa65107a.jpg" alt="Tracker on display" width="768" height="1024" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAAAwBQCdASoUABsAPu1oq08ppiOiMBgIATAdiWMAwztqUCHXEF9k/uyKM/sY9mFz+Z9AAAD+7JSn9+1kiQxJdznVsaN4ntlUIHf8mStM8AIDzWhA3WOOeMQEkkziWvtW6A3Jm7w8YG3KGfOwnJSiAjrVL0+zGgvIhAcrjMUZVzeiyfGX+S1VezwYmQO9guMYsRn8SSm1AMIN7/ibmbgT7pdaT6hPA/d4bWSDe7nh9sQBRmI3SAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Final presentation display</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/projects/2-00-library-tracker/library_tracker-480.avif 480w, /static/uploads/projects/2-00-library-tracker/library_tracker-800.avif 800w, /static/uploads/projects/2-00-library-tracker/library_tracker-1200.avif 1200w, /static/uploads/projects/2-00-library-tracker/library_tracker-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/projects/2-00-library-tracker/library_tracker-480.webp 480w, /static/uploads/projects/2-00-library-tracker/library_tracker-800.webp 800w, /static/uploads/projects/2-00-library-tracker/library_tracker-1200.webp 1200w, /static/uploads/projects/2-00-library-tracker/library_tracker-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/projects/2-00-library-tracker/library_tracker-480.avif 480w, /static/uploads/projects/2-00-library-tracker/library_tracker-800.avif 800w, /static/uploads/projects/2-00-library-tracker/library_tracker-1200.avif 1200w, /static/uploads/projects/2-00-library-tracker/library_tracker-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/projects/2-00-library-tracker/library_tracker-480.webp 480w, /static/uploads/projects/2-00-library-tracker/library_tracker-800.webp 800w, /static/uploads/projects/2-00-library-tracker/library_tracker-1200.webp 1200w, /static/uploads/projects/2-00-library-tracker/library_tracker-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/projects/2-00-library-tracker/library_tracker.jpg" alt="Library Tracker Thumbnail" width="1600" height="1252" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/97b5f800acf0f207-480.avif 480w, /static/uploads/97b5f800acf0f207-800.avif 800w, /static/uploads/97b5f800acf0f207-1200.avif 1200w, /static/uploads/97b5f800acf0f207-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/97b5f800acf0f207-480.webp 480w, /static/uploads/97b5f800acf0f207-800.webp 800w, /static/uploads/97b5f800acf0f207-1200.webp 1200w, /static/uploads/97b5f800acf0f207-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/97b5f800acf0f207.jpg" alt="Library Tracker Thumbnail" width="1600" height="1252" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBACdASoUABAAPu1iqk4ppaQiMAgBMB2JaACxDMgDA2XyZlseaUODeAD+83SGsel1OS2rO24bX6+3UcwnJkLgAdsPh8WqbnLOjfXiU78G7Fq3FS8x+fyvnNlpPTYssSU04g/bWoDK5gAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Board + control box</div>
       
@@ -274,61 +244,24 @@
   })();
 </script>
 </p>
-<!-- ---
-type: "project"
-title: "2.00 Library Tracker"
-slug: "2-00-library-tracker"
-date: "2024-05-10"
-tags: ["Arduino", "Education", "Hardware", "Team Project"]
-thumbnail: "library_tracker.jpg"
-summary: "An Arduino-powered Library Tracker tool built for an elementary school librarian to help manage student tasks with LEDs, buttons, and a control board."
-github_url: ""
-live_url: ""
-show_toc: false
-hidden: false
----
 
-In May 2024, I (with a team of three others) built a **Library Tracker** tool as part of MIT’s 2.00 course. Our client was an elementary school librarian who struggled to track when her younger, special-needs students completed tasks—like checking out books or returning overdue materials—in a chaotic classroom environment.
-
-We were asked to design a **low-tech, privacy-conscious, and classroom-friendly** solution that would make task-tracking easier.
-
-After numerous conversations with our client, we finally settled on our library tracker, with the main features listed below.
-
-- **Board Body**
-    - Built from layered 1/8" plywood sheets with slots for name-tag sliders.
-    - RGB LEDs beneath each student’s photo and name, lighting up to indicate task completion.
-    - One plywood sheet was lasercut for panel bending for singular component design
-- **Librarian Control Box**
-    - A teacher-activated **unlock switch** prevents students from changing lights when not allowed.
-    - Buttons for marking tasks as complete, undoing the last action, or resetting all lights.
-- **Electronics**
-    - An **Arduino Mega** provided sufficient GPIO pins for the many LEDs and buttons.
-    - Hand-soldered connections for power, ground, and signals across the tracker board.
-
-
-<p align="center",padding=20px>
-  <picture><source type="image/avif" srcset="/static/uploads/projects/2-00-library-tracker/tracker_on_display-480.avif 480w, /static/uploads/projects/2-00-library-tracker/tracker_on_display-768.avif 768w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/projects/2-00-library-tracker/tracker_on_display-480.webp 480w, /static/uploads/projects/2-00-library-tracker/tracker_on_display-768.webp 768w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/projects/2-00-library-tracker/tracker_on_display.jpg" alt="tracker on display" width="768" height="1024" decoding="async" loading="lazy"></picture>
-  <br>
-  <span style="font-size:0.95em; color: #666; font-style:italic;">Tracker on display at final presentation</span>
-</p> -->
                 </div>
+                
                 
             </div>
         </div>
 
-        <!-- Related build logs (project pages only) -->
+        
         
 
-        <!-- Entry Navigation -->
+        
         <nav class="entry-navigation">
             <div class="nav-links">
                 
             </div>
             <div class="nav-actions">
                 
-                <a href="/projects/" class="btn btn-outline">
-                     Back to Projects
-                </a>
+                <a href="/projects/" class="btn btn-outline">Back to Projects</a>
                 
             </div>
         </nav>
@@ -361,11 +294,10 @@ After numerous conversations with our client, we finally settled on our library 
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>

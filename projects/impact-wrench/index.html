@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -128,27 +127,60 @@
 
     <main class="main-content">
         
-<article class="entry-detail">
+<article class="entry-detail entry-detail--project">
     <div class="container">
-        <!-- Entry Header -->
-        <header class="entry-header entry-header-centered">
+
+        
+        
+        <header class="entry-header entry-header--project entry-header-centered">
             <h1 class="entry-title">Disassembling Impact Wrench</h1>
             
             <div class="entry-tags">
-                
-                <span class="tag">PCB</span>
-                
+                <span class="tag">PCB Design</span><span class="tag">Electronics</span><span class="tag">Hardware</span><span class="tag">Device Integration</span>
             </div>
             
             
-            
+            <p class="entry-subtitle">I am trying to put my own controls on an impact wrench so that it can be controlled by a computer without using the trigger that is normally used for the control.</p>
             
             
         </header>
-        <!-- Embedded video (if present) -->
         
 
-        <!-- Entry Content -->
+        
+        
+        
+        
+        <div class="entry-hero">
+            <picture><source type="image/avif" srcset="/static/uploads/c9dd604590e67da6-480.avif 480w, /static/uploads/c9dd604590e67da6-800.avif 800w, /static/uploads/c9dd604590e67da6-1200.avif 1200w, /static/uploads/c9dd604590e67da6-1499.avif 1499w" sizes="(max-width: 1000px) 100vw, 960px"><source type="image/webp" srcset="/static/uploads/c9dd604590e67da6-480.webp 480w, /static/uploads/c9dd604590e67da6-800.webp 800w, /static/uploads/c9dd604590e67da6-1200.webp 1200w, /static/uploads/c9dd604590e67da6-1499.webp 1499w" sizes="(max-width: 1000px) 100vw, 960px"><img src="/static/uploads/c9dd604590e67da6.jpg" alt="Disassembling Impact Wrench" class="entry-hero-image" width="1499" height="1500" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRvIAAABXRUJQVlA4IOYAAACQBQCdASoUABQAPu1ur1IppiQiqAgBMB2JZgDM8P8gtQrhkuKISoDuJAh/M1o9G93A52yEAAD+84F7i2WEtevnfOa4Gn20aYm6jUrS98J92XE45tbEmkbdKRNkze93lQHCtxM9ffMX52+T6ma+J9LGWp0pAcusu4ETgdHRr0fuzwk4+7bkcf/OzU2WSb6trHsYk3hNN/9iaOHHjhHF62KcIgWdk7S+LIa+1rLDl0zdur5UGnEIl+HZ5NWNDp4lQBB0wQVSG0qr+oteB1ZRNruiWNiBvbr47QGwnAKEdPomc5GOvgAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+        </div>
+        
+
+        
+        
+            
+            
+            <div class="pgallery pgallery--strip">
+                
+                    <picture><source type="image/avif" srcset="/static/uploads/42d5ee7dd2af295d-480.avif 480w, /static/uploads/42d5ee7dd2af295d-800.avif 800w, /static/uploads/42d5ee7dd2af295d-1200.avif 1200w, /static/uploads/42d5ee7dd2af295d-1600.avif 1600w" sizes="(max-width: 700px) 50vw, 320px"><source type="image/webp" srcset="/static/uploads/42d5ee7dd2af295d-480.webp 480w, /static/uploads/42d5ee7dd2af295d-800.webp 800w, /static/uploads/42d5ee7dd2af295d-1200.webp 1200w, /static/uploads/42d5ee7dd2af295d-1600.webp 1600w" sizes="(max-width: 700px) 50vw, 320px"><img src="/static/uploads/42d5ee7dd2af295d.jpg" alt="Part of Impact Wrench" class="pgallery-img" width="1600" height="2133" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAACQBQCdASoUABsAPu1srFEppaQiqAqpMB2JYwCo9YyoZh5yEOSq6uRBLdDexY5Nvw1zPIhlWAD5KWItOElQBSfwt7nCT/UcBSfUSf4G4MwrHIh/cnWMcftO1N6qcUISbUcQ6opo5oDGY0LCJ/ZQQbvdtYpD+eOyvJHwmdN0ZU0+Z6648eN9LXzrQNQJCTWTNI3VZg47rW66rtbeGYXXMMkxP14nKOjKnOn2GZb7xIx2FegXrd3K2AIUwwfdMiUwBb0Qx5DWl6zRjRAjojuoc+dIpbQAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                
+                    <picture><source type="image/avif" srcset="/static/uploads/42d5ee7dd2af295d-480.avif 480w, /static/uploads/42d5ee7dd2af295d-800.avif 800w, /static/uploads/42d5ee7dd2af295d-1200.avif 1200w, /static/uploads/42d5ee7dd2af295d-1600.avif 1600w" sizes="(max-width: 700px) 50vw, 320px"><source type="image/webp" srcset="/static/uploads/42d5ee7dd2af295d-480.webp 480w, /static/uploads/42d5ee7dd2af295d-800.webp 800w, /static/uploads/42d5ee7dd2af295d-1200.webp 1200w, /static/uploads/42d5ee7dd2af295d-1600.webp 1600w" sizes="(max-width: 700px) 50vw, 320px"><img src="/static/uploads/42d5ee7dd2af295d.jpg" alt="Part of impact wrench" class="pgallery-img" width="1600" height="2133" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAACQBQCdASoUABsAPu1srFEppaQiqAqpMB2JYwCo9YyoZh5yEOSq6uRBLdDexY5Nvw1zPIhlWAD5KWItOElQBSfwt7nCT/UcBSfUSf4G4MwrHIh/cnWMcftO1N6qcUISbUcQ6opo5oDGY0LCJ/ZQQbvdtYpD+eOyvJHwmdN0ZU0+Z6648eN9LXzrQNQJCTWTNI3VZg47rW66rtbeGYXXMMkxP14nKOjKnOn2GZb7xIx2FegXrd3K2AIUwwfdMiUwBb0Qx5DWl6zRjRAjojuoc+dIpbQAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                
+                    <picture><source type="image/avif" srcset="/static/uploads/d845577a3a0d0c5b-480.avif 480w, /static/uploads/d845577a3a0d0c5b-800.avif 800w, /static/uploads/d845577a3a0d0c5b-1200.avif 1200w, /static/uploads/d845577a3a0d0c5b-1600.avif 1600w" sizes="(max-width: 700px) 50vw, 320px"><source type="image/webp" srcset="/static/uploads/d845577a3a0d0c5b-480.webp 480w, /static/uploads/d845577a3a0d0c5b-800.webp 800w, /static/uploads/d845577a3a0d0c5b-1200.webp 1200w, /static/uploads/d845577a3a0d0c5b-1600.webp 1600w" sizes="(max-width: 700px) 50vw, 320px"><img src="/static/uploads/d845577a3a0d0c5b.jpg" alt="Part of impact wrench" class="pgallery-img" width="1600" height="1200" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAwCdASoUAA8APu1iqU2ppaQiMAgBMB2JZQC7ABoyM5FWY3t8ucEQAPX+TsxI98FDxos2dqD4cWKbX+aRs3uTFtLl9p5p6p2oNHuhgrzCU/JUFddtEjgA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                
+                    <picture><source type="image/avif" srcset="/static/uploads/fd8f9255ac5c0f84-480.avif 480w, /static/uploads/fd8f9255ac5c0f84-800.avif 800w, /static/uploads/fd8f9255ac5c0f84-1200.avif 1200w, /static/uploads/fd8f9255ac5c0f84-1600.avif 1600w" sizes="(max-width: 700px) 50vw, 320px"><source type="image/webp" srcset="/static/uploads/fd8f9255ac5c0f84-480.webp 480w, /static/uploads/fd8f9255ac5c0f84-800.webp 800w, /static/uploads/fd8f9255ac5c0f84-1200.webp 1200w, /static/uploads/fd8f9255ac5c0f84-1600.webp 1600w" sizes="(max-width: 700px) 50vw, 320px"><img src="/static/uploads/fd8f9255ac5c0f84.jpg" alt="Part of impact wrench" class="pgallery-img" width="1600" height="2133" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAAAQBQCdASoUABsAPu1sq08ppiOiMBgIATAdiWQAt7gN0T1ZJc1gk1BBY0Db4orCeYjgAP7ys0OMVVKA1OIWoPqvAJJ3RqFPuwKIkv58b2Laa0j/LZyxbaLfH+E69SYtlXZmTCYJKmdB1Oz94qrEWI+kKE0DLg9wuSo5QokqWC/OPOUOsJBSUChGrQ28UZiJQxlC740lEAffAMDpvo6+FZL/MZLIVHibeNR5J7q0cAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                
+                    <picture><source type="image/avif" srcset="/static/uploads/86e9ef9fadc7bad3-480.avif 480w, /static/uploads/86e9ef9fadc7bad3-800.avif 800w, /static/uploads/86e9ef9fadc7bad3-1200.avif 1200w, /static/uploads/86e9ef9fadc7bad3-1600.avif 1600w" sizes="(max-width: 700px) 50vw, 320px"><source type="image/webp" srcset="/static/uploads/86e9ef9fadc7bad3-480.webp 480w, /static/uploads/86e9ef9fadc7bad3-800.webp 800w, /static/uploads/86e9ef9fadc7bad3-1200.webp 1200w, /static/uploads/86e9ef9fadc7bad3-1600.webp 1600w" sizes="(max-width: 700px) 50vw, 320px"><img src="/static/uploads/86e9ef9fadc7bad3.jpg" alt="Part of impact wrench" class="pgallery-img" width="1600" height="1200" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAABwBACdASoUAA8APu1iqU2ppaQiMAgBMB2JYgC7Ef/gK2rjt4PBPZu99fS8AAD+zfvWK8CKKcvX1z9NQGXLDeN+2l+VFI2bQb8Kk+FtsFEQNf3DGrOfKPI9H/Cj5TPMUdaHApAUZxswWuWBejOv4AxomADKwJrEj8iT4++SY1RenYcAAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                
+                    <picture><source type="image/avif" srcset="/static/uploads/2e2ecfbb8d28f386-480.avif 480w, /static/uploads/2e2ecfbb8d28f386-800.avif 800w, /static/uploads/2e2ecfbb8d28f386-1200.avif 1200w, /static/uploads/2e2ecfbb8d28f386-1600.avif 1600w" sizes="(max-width: 700px) 50vw, 320px"><source type="image/webp" srcset="/static/uploads/2e2ecfbb8d28f386-480.webp 480w, /static/uploads/2e2ecfbb8d28f386-800.webp 800w, /static/uploads/2e2ecfbb8d28f386-1200.webp 1200w, /static/uploads/2e2ecfbb8d28f386-1600.webp 1600w" sizes="(max-width: 700px) 50vw, 320px"><img src="/static/uploads/2e2ecfbb8d28f386.jpg" alt="Part of impact wrench" class="pgallery-img" width="1600" height="2133" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRuwAAABXRUJQVlA4IOAAAADQBQCdASoUABsAPu1qr1CppaQiqAqpMB2JQBYjbrKv/KRTuD1aQ0pQVHsrMdsKFIbmSATYhwHAAPkY5OkBcfiOSxiCNSWMshv+yZezUeOgA+yaVrah106zDplN/qkkGa55WsC8J8IbPggd2hgOX3+tV5cGBCHYkwrrD42GFAyfo/1CVGlX+e3C9fix7YgiHWzvNWl+3vwWBySVNfJ9xyGlxCNsxqPOtdVp2pmRa3hmjLzFBZpwXrvBmfrBQmQwVaDO8qe9cSEHHqN18wD+EuGN8Tp1QGK/kZ5dwEaYKiAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+                
+            </div>
+            
+        
+
+        
+        
+
+        
         <div class="entry-content">
             <div class="content-main">
                 
@@ -158,11 +190,11 @@
 <p>That being said, since I am stripping out the trigger and basic electronics, I will need to figure out a substitute "trigger" control mechanism as well as a mount for the actual actuation. </p>
 <p>Last week, I was in MITERs trying to figure out if I would be able to power this separately.</p>
 <p>This is my second time tearing apart something and really trying to figure out what its PCB does. The first time was at a Bad Bunny concert in the Dominican Republic where they gave out these necklaces with flashing lights.</p>
-<p><picture><source type="image/avif" srcset="/static/uploads/projects/impact-wrench/6d917985-d068-4c5d-9f50-e3af766d76a6_1_105_c-480.avif 480w, /static/uploads/projects/impact-wrench/6d917985-d068-4c5d-9f50-e3af766d76a6_1_105_c-768.avif 768w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/projects/impact-wrench/6d917985-d068-4c5d-9f50-e3af766d76a6_1_105_c-480.webp 480w, /static/uploads/projects/impact-wrench/6d917985-d068-4c5d-9f50-e3af766d76a6_1_105_c-768.webp 768w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/projects/impact-wrench/6d917985-d068-4c5d-9f50-e3af766d76a6_1_105_c.jpg" alt="Front of Trigger PCB" width="768" height="1024" decoding="async" loading="lazy"></picture></p>
-<p><picture><source type="image/avif" srcset="/static/uploads/projects/impact-wrench/cb70a49c-c6b0-4af2-a5d9-18c10400f089_1_105_c-480.avif 480w, /static/uploads/projects/impact-wrench/cb70a49c-c6b0-4af2-a5d9-18c10400f089_1_105_c-768.avif 768w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/projects/impact-wrench/cb70a49c-c6b0-4af2-a5d9-18c10400f089_1_105_c-480.webp 480w, /static/uploads/projects/impact-wrench/cb70a49c-c6b0-4af2-a5d9-18c10400f089_1_105_c-768.webp 768w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/projects/impact-wrench/cb70a49c-c6b0-4af2-a5d9-18c10400f089_1_105_c.jpg" alt="Back of Trigger PCB" width="768" height="1024" decoding="async" loading="lazy"></picture></p>
+<p><picture><source type="image/avif" srcset="/static/uploads/6a8d05191d9b389a-480.avif 480w, /static/uploads/6a8d05191d9b389a-768.avif 768w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/6a8d05191d9b389a-480.webp 480w, /static/uploads/6a8d05191d9b389a-768.webp 768w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/6a8d05191d9b389a.jpg" alt="Front of Trigger PCB" width="768" height="1024" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRgIBAABXRUJQVlA4IPYAAACwBQCdASoUABsAPu1iq1AppSOisBgIATAdiWwAtOmM7l3RpmqwQGVtroTfMg+EmvgA3OvBcgAA/nkWiynkGZ66y1KtcCKKcqmtXLPVef3ui8ctjQ3sjGQFub0eQjtMtPI89J9s89CmehsnH+nfIny/XUN0omrIN+R849A26k5MhFHVlyrxOa+JdYSSJ1sTSY51KUUh073LayP40b+P6a5/6yb0iaR3FB9I+f0U34ZWtZ4r35zQW37eZ1BF5Rv3Jn3IY1onSg5kSEt63itnLrKtW4AALdXjV4WIqc2BIVK7ken+7h098AmpKaxX4IvgyWckaMwrgAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture></p>
+<p><picture><source type="image/avif" srcset="/static/uploads/1114bf3efc238f5b-480.avif 480w, /static/uploads/1114bf3efc238f5b-768.avif 768w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/1114bf3efc238f5b-480.webp 480w, /static/uploads/1114bf3efc238f5b-768.webp 768w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/1114bf3efc238f5b.jpg" alt="Back of Trigger PCB" width="768" height="1024" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRgABAABXRUJQVlA4IPQAAADQBQCdASoUABsAPu1qsFAppaSiqAqpMB2JaAC7AYy8aIRRUSQIzeldrmWseGoVStPpdrgB+NQAAOJmjUM73p+WNIbefU9FXFhBupCvumF8YKZvMdjWwoTSzjQrtm/6dw9JwP+Fo4S/kGn9ZptNobvEyPgJ0WAFPhM6MuOLjTBQWxTKfWdAzuRjinkCf1uL7suIobfNiqH+Dou51etfY2SGzeBBOa6Tt+fwD9xaepZBJFQbTVMBFQyPx5Wa55PwkjOhfbnfQO4U2gGdmkxHCRfviHXhUhrvyf1O4qMXgDee0yC82HOlP1AFclyAFOql/aFYsqAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture></p>
 <p>I need to go back and actually figure out more, but with the help of Elijah in MITERS and looking confused for a small amount of time, I was generally able to figure out what is going on.</p>
 <p>When the trigger is pressed, these little feet movie across on the back, connecting the large copper pads seen. You can see that this connects the board's power. (I'll include a schematic later). This prevents unnecessary power waste coming to this board when it's not in use (definitely useful). Below is my current understanding of the pin's functions.</p>
-<p><picture><source type="image/avif" srcset="/static/uploads/projects/impact-wrench/img_2268-480.avif 480w, /static/uploads/projects/impact-wrench/img_2268-800.avif 800w, /static/uploads/projects/impact-wrench/img_2268-1200.avif 1200w, /static/uploads/projects/impact-wrench/img_2268-1334.avif 1334w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/projects/impact-wrench/img_2268-480.webp 480w, /static/uploads/projects/impact-wrench/img_2268-800.webp 800w, /static/uploads/projects/impact-wrench/img_2268-1200.webp 1200w, /static/uploads/projects/impact-wrench/img_2268-1334.webp 1334w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/projects/impact-wrench/img_2268.png" alt="Mapping of PCB Pins" width="1334" height="1161" decoding="async" loading="lazy"></picture></p>
+<p><picture><source type="image/avif" srcset="/static/uploads/7aa9bece1e94ca80-480.avif 480w, /static/uploads/7aa9bece1e94ca80-800.avif 800w, /static/uploads/7aa9bece1e94ca80-1200.avif 1200w, /static/uploads/7aa9bece1e94ca80-1334.avif 1334w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/7aa9bece1e94ca80-480.webp 480w, /static/uploads/7aa9bece1e94ca80-800.webp 800w, /static/uploads/7aa9bece1e94ca80-1200.webp 1200w, /static/uploads/7aa9bece1e94ca80-1334.webp 1334w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/7aa9bece1e94ca80.png" alt="Mapping of PCB Pins" width="1334" height="1161" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABQAwCdASoUABEAPu1sq1EppaOiqAqpMB2JaQAAOpv8nMkEAAD+8C72WKamfPPG37el2nYncuq0G/hsbaHCWG5xpCO2Gsv6iBdLQAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture></p>
 <p>I will try milling a PCB for it in the <a href="https://make.mit.edu/makerspace?recordId=recrAr192E0hOylmw">Mezzanine</a> later this week. I will be using a Raspberry Pi for the basic control logic.</p>
 <p>I went back to MITERS to see if I could verify some basic information with an oscilloscope. I was able to determine that when pressed sufficiently, the red pin goes to ~ 4.7Vrms. When not pressed in sufficiently, it floats around 20 Vrms.</p>
 <p>The yellow pin when not connected floats around 20 Vrms and when pressing it goes from around 600 Vrms to 4.7Vrms (around what the red is).</p>
@@ -177,10 +209,10 @@
 <p>I've worked this out a little more. I have not made the mount yet, mostly bc I forgot about it. I was just going to screw into the holes that join the hammer part of the wrench with the part containing the motor. I think that should be sufficient.</p>
 <p>That being said, I don't have calipers around me right now, so I'll have to look later.</p>
 <p>I've designed a pcb for imitating the trigger, but I'm not 100% about the direction pin, mostly because I think I lost a couple of the components before. Regardless, I have the pcb for it designed as shown below. I have the parts at home, minus the 330 Ohm resistors, so I may order some from digikey. I'm in Philly for the Summer now, so I'll have to get them delivered here. Once I do, I'm hoping to test out the substitute. </p>
-<p><picture><source type="image/avif" srcset="/static/uploads/projects/impact-wrench/screenshot-from-2026-05-24-16-42-24-480.avif 480w, /static/uploads/projects/impact-wrench/screenshot-from-2026-05-24-16-42-24-800.avif 800w, /static/uploads/projects/impact-wrench/screenshot-from-2026-05-24-16-42-24-1200.avif 1200w, /static/uploads/projects/impact-wrench/screenshot-from-2026-05-24-16-42-24-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/projects/impact-wrench/screenshot-from-2026-05-24-16-42-24-480.webp 480w, /static/uploads/projects/impact-wrench/screenshot-from-2026-05-24-16-42-24-800.webp 800w, /static/uploads/projects/impact-wrench/screenshot-from-2026-05-24-16-42-24-1200.webp 1200w, /static/uploads/projects/impact-wrench/screenshot-from-2026-05-24-16-42-24-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/projects/impact-wrench/screenshot-from-2026-05-24-16-42-24.png" alt="Mock Trigger PCB" width="1600" height="869" decoding="async" loading="lazy"></picture></p>
+<p><picture><source type="image/avif" srcset="/static/uploads/0969fca2d74adc3e-480.avif 480w, /static/uploads/0969fca2d74adc3e-800.avif 800w, /static/uploads/0969fca2d74adc3e-1200.avif 1200w, /static/uploads/0969fca2d74adc3e-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/0969fca2d74adc3e-480.webp 480w, /static/uploads/0969fca2d74adc3e-800.webp 800w, /static/uploads/0969fca2d74adc3e-1200.webp 1200w, /static/uploads/0969fca2d74adc3e-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/0969fca2d74adc3e.png" alt="Mock Trigger PCB" width="1600" height="869" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADwAgCdASoUAAsAPu1iqU2ppaOiMAgBMB2JaQDA3C0kAAD+8ElR7xIjQAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture></p>
 <p>So the PCB did come in. Components were soldered on after work on Friday. It's been really hot, so working has been a little bit of a pain and I've just been focused on CAD. It's nice to do some amount of manufacturing. At some point this upcoming week, I will crimp JST wires and have a raspberry pi or maybe a jetson set up to do this. Actually, I think i'll probably take an arduino potentially. It'll eventually go on something heavier, but for testing I think an arduino should be sufficient. I'll probably tkae care of that the 16th. Hopefully there's an update with a video for this at some point.</p>
-<p><picture><source type="image/avif" srcset="/static/uploads/projects/impact-wrench/front_pcb-480.avif 480w, /static/uploads/projects/impact-wrench/front_pcb-800.avif 800w, /static/uploads/projects/impact-wrench/front_pcb-1200.avif 1200w, /static/uploads/projects/impact-wrench/front_pcb-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/projects/impact-wrench/front_pcb-480.webp 480w, /static/uploads/projects/impact-wrench/front_pcb-800.webp 800w, /static/uploads/projects/impact-wrench/front_pcb-1200.webp 1200w, /static/uploads/projects/impact-wrench/front_pcb-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/projects/impact-wrench/front_pcb.jpg" alt="Front of Trigger-Mimic PCB" width="1600" height="2133" decoding="async" loading="lazy"></picture></p>
-<p><picture><source type="image/avif" srcset="/static/uploads/projects/impact-wrench/image-480.avif 480w, /static/uploads/projects/impact-wrench/image-800.avif 800w, /static/uploads/projects/impact-wrench/image-1200.avif 1200w, /static/uploads/projects/impact-wrench/image-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/projects/impact-wrench/image-480.webp 480w, /static/uploads/projects/impact-wrench/image-800.webp 800w, /static/uploads/projects/impact-wrench/image-1200.webp 1200w, /static/uploads/projects/impact-wrench/image-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/projects/impact-wrench/image.jpg" alt="Back of Trigger-Mimic PCB" width="1600" height="2133" decoding="async" loading="lazy"></picture></p>
+<p><picture><source type="image/avif" srcset="/static/uploads/fec08c92d9933e94-480.avif 480w, /static/uploads/fec08c92d9933e94-800.avif 800w, /static/uploads/fec08c92d9933e94-1200.avif 1200w, /static/uploads/fec08c92d9933e94-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/fec08c92d9933e94-480.webp 480w, /static/uploads/fec08c92d9933e94-800.webp 800w, /static/uploads/fec08c92d9933e94-1200.webp 1200w, /static/uploads/fec08c92d9933e94-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/fec08c92d9933e94.jpg" alt="Front of Trigger-Mimic PCB" width="1600" height="2133" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAQBQCdASoUABsAPu1gq1AppKOisBgIATAdiWMAtsgQpluznNk58RyMaTqWyISrKuoAAP58IkYVP9qlh9nTsOxAWyJnyrTNxuLnEXzsSmDhYGCZT69PDBpEgxkKo5A29k9FJGiLxLlUsRJBnBs45CeAAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture></p>
+<p><picture><source type="image/avif" srcset="/static/uploads/7a1cbbd374e96a16-480.avif 480w, /static/uploads/7a1cbbd374e96a16-800.avif 800w, /static/uploads/7a1cbbd374e96a16-1200.avif 1200w, /static/uploads/7a1cbbd374e96a16-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/7a1cbbd374e96a16-480.webp 480w, /static/uploads/7a1cbbd374e96a16-800.webp 800w, /static/uploads/7a1cbbd374e96a16-1200.webp 1200w, /static/uploads/7a1cbbd374e96a16-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/7a1cbbd374e96a16.jpg" alt="Back of Trigger-Mimic PCB" width="1600" height="2133" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABQBACdASoUABsAPu1qr1CppaQiqAqpMB2JYwCdAAxsBcgxSKUeD4BXN4fAAP6fMASLcfWvI+qoD0olKsz1ZS0IOaPdJgxpr9dAYUb0JAOG8yB7MRnGicIEhEgqcacJEJWDme75iIEL4AgtHemXZ2OVL7tcZlDh9VpNBAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture></p>
 <p><strong>June 17 2026 Update</strong></p>
 <p>Today, I learned how to crimp the JSTs from Glenn, a technician at the company I work for. I haven't interacted with a lot of technicians and I'm continually astounded at the level of precision and attention to detail he has. For example, for crimping, he'll measure out the wire that needs to be stripped with a caliper in order to meet standards (around a .5 mm accuracy requirement).</p>
 <p>Also, I hadn't really thought about how i was going to connect the new board to the controller at first, so I just choose JST 2.54 because they're convenient/large. Later, I realized that the ones i'm working with are much smaller.</p>
@@ -188,124 +220,20 @@
                 </div>
                 
                 
-<style>
-  .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-    overflow: hidden;
-  }
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    text-align: center;
-  }
-  .carousel-slide.active {
-    display: block;
-  }
-  .carousel img {
-    max-width: 100%;
-    height: auto;
-  }
-  .carousel-controls {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-  .carousel-button {
-    display: inline-block;
-    background: var(--accent, #3b82f6);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-  }
-</style>
-<div class="carousel">
-  
-    <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/projects/impact-wrench/img_0426-480.avif 480w, /static/uploads/projects/impact-wrench/img_0426-800.avif 800w, /static/uploads/projects/impact-wrench/img_0426-1200.avif 1200w, /static/uploads/projects/impact-wrench/img_0426-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/projects/impact-wrench/img_0426-480.webp 480w, /static/uploads/projects/impact-wrench/img_0426-800.webp 800w, /static/uploads/projects/impact-wrench/img_0426-1200.webp 1200w, /static/uploads/projects/impact-wrench/img_0426-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/projects/impact-wrench/img_0426.jpg" alt="Part of Impact Wrench" width="1600" height="2133" decoding="async" loading="lazy"></picture>
-      
-    </div>
-  
-    <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/projects/impact-wrench/img_0426-480.avif 480w, /static/uploads/projects/impact-wrench/img_0426-800.avif 800w, /static/uploads/projects/impact-wrench/img_0426-1200.avif 1200w, /static/uploads/projects/impact-wrench/img_0426-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/projects/impact-wrench/img_0426-480.webp 480w, /static/uploads/projects/impact-wrench/img_0426-800.webp 800w, /static/uploads/projects/impact-wrench/img_0426-1200.webp 1200w, /static/uploads/projects/impact-wrench/img_0426-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/projects/impact-wrench/img_0426.jpg" alt="Part of impact wrench" width="1600" height="2133" decoding="async" loading="lazy"></picture>
-      
-    </div>
-  
-    <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/projects/impact-wrench/img_0428-480.avif 480w, /static/uploads/projects/impact-wrench/img_0428-800.avif 800w, /static/uploads/projects/impact-wrench/img_0428-1200.avif 1200w, /static/uploads/projects/impact-wrench/img_0428-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/projects/impact-wrench/img_0428-480.webp 480w, /static/uploads/projects/impact-wrench/img_0428-800.webp 800w, /static/uploads/projects/impact-wrench/img_0428-1200.webp 1200w, /static/uploads/projects/impact-wrench/img_0428-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/projects/impact-wrench/img_0428.jpg" alt="Part of impact wrench" width="1600" height="1200" decoding="async" loading="lazy"></picture>
-      
-    </div>
-  
-    <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/projects/impact-wrench/img_0429-480.avif 480w, /static/uploads/projects/impact-wrench/img_0429-800.avif 800w, /static/uploads/projects/impact-wrench/img_0429-1200.avif 1200w, /static/uploads/projects/impact-wrench/img_0429-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/projects/impact-wrench/img_0429-480.webp 480w, /static/uploads/projects/impact-wrench/img_0429-800.webp 800w, /static/uploads/projects/impact-wrench/img_0429-1200.webp 1200w, /static/uploads/projects/impact-wrench/img_0429-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/projects/impact-wrench/img_0429.jpg" alt="Part of impact wrench" width="1600" height="2133" decoding="async" loading="lazy"></picture>
-      
-    </div>
-  
-    <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/projects/impact-wrench/img_0430-480.avif 480w, /static/uploads/projects/impact-wrench/img_0430-800.avif 800w, /static/uploads/projects/impact-wrench/img_0430-1200.avif 1200w, /static/uploads/projects/impact-wrench/img_0430-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/projects/impact-wrench/img_0430-480.webp 480w, /static/uploads/projects/impact-wrench/img_0430-800.webp 800w, /static/uploads/projects/impact-wrench/img_0430-1200.webp 1200w, /static/uploads/projects/impact-wrench/img_0430-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/projects/impact-wrench/img_0430.jpg" alt="Part of impact wrench" width="1600" height="1200" decoding="async" loading="lazy"></picture>
-      
-    </div>
-  
-    <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/projects/impact-wrench/img_0431-480.avif 480w, /static/uploads/projects/impact-wrench/img_0431-800.avif 800w, /static/uploads/projects/impact-wrench/img_0431-1200.avif 1200w, /static/uploads/projects/impact-wrench/img_0431-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/projects/impact-wrench/img_0431-480.webp 480w, /static/uploads/projects/impact-wrench/img_0431-800.webp 800w, /static/uploads/projects/impact-wrench/img_0431-1200.webp 1200w, /static/uploads/projects/impact-wrench/img_0431-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/projects/impact-wrench/img_0431.jpg" alt="Part of impact wrench" width="1600" height="2133" decoding="async" loading="lazy"></picture>
-      
-    </div>
-  
-  <div class="carousel-controls">
-    <button class="carousel-button prev" type="button">&#8592;</button>
-    <button class="carousel-button next" type="button">&#8594;</button>
-  </div>
-</div>
-<script>
-  (function() {
-    var carousels = document.querySelectorAll('.carousel');
-    carousels.forEach(function(carousel) {
-      var slides = carousel.querySelectorAll('.carousel-slide');
-      if (slides.length === 0) return;
-      var current = 0;
-      function showSlide(idx) {
-        slides.forEach(function(slide, i) {
-          slide.classList.toggle('active', i === idx);
-        });
-      }
-      var prevBtn = carousel.querySelector('.carousel-button.prev');
-      var nextBtn = carousel.querySelector('.carousel-button.next');
-      prevBtn.onclick = function() {
-        current = (current - 1 + slides.length) % slides.length;
-        showSlide(current);
-      };
-      nextBtn.onclick = function() {
-        current = (current + 1) % slides.length;
-        showSlide(current);
-      };
-      showSlide(current);
-    });
-  })();
-</script>
-
-                
             </div>
         </div>
 
-        <!-- Related build logs (project pages only) -->
+        
         
 
-        <!-- Entry Navigation -->
+        
         <nav class="entry-navigation">
             <div class="nav-links">
                 
             </div>
             <div class="nav-actions">
                 
-                <a href="/projects/" class="btn btn-outline">
-                     Back to Projects
-                </a>
+                <a href="/projects/" class="btn btn-outline">Back to Projects</a>
                 
             </div>
         </nav>
@@ -338,11 +266,10 @@
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>

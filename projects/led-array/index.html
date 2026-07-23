@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -128,38 +127,48 @@
 
     <main class="main-content">
         
-<article class="entry-detail">
+<article class="entry-detail entry-detail--project">
     <div class="container">
-        <!-- Entry Header -->
-        <header class="entry-header entry-header-centered">
+
+        
+        
+        <header class="entry-header entry-header--project entry-header-centered">
             <h1 class="entry-title">LED Array PCB</h1>
             
             <div class="entry-tags">
-                
-                <span class="tag">KiCAD</span>
-                
-                <span class="tag">PCB Design</span>
-                
+                <span class="tag">PCB Design</span><span class="tag">Electronics</span>
             </div>
             
             
+            <p class="entry-subtitle">A 4-layer PCB with an STM32 microcontroller using shift-registers and MOSFETs with a 1/8 scan.</p>
             
-            <div class="entry-github" style="margin-bottom:1rem;">
-                <a href="https://github.com/sethrobles/led-array" class="nav-link nav-external" target="_blank" rel="noopener noreferrer">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:0.5em;">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    View on GitHub
-                </a>
-            </div>
-            
-            
-            
+            <div class="entry-links">
+<a href="https://github.com/sethrobles/led-array" class="entry-link nav-external" target="_blank" rel="noopener noreferrer">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="external-link-icon" aria-hidden="true">
+        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+    </svg>
+    View on GitHub
+</a>
+</div>
         </header>
-        <!-- Embedded video (if present) -->
         
 
-        <!-- Entry Content -->
+        
+        
+        
+        
+        <div class="entry-hero">
+            <picture><source type="image/avif" srcset="/static/uploads/3b857154fa000813-480.avif 480w, /static/uploads/3b857154fa000813-800.avif 800w, /static/uploads/3b857154fa000813-1200.avif 1200w, /static/uploads/3b857154fa000813-1600.avif 1600w" sizes="(max-width: 1000px) 100vw, 960px"><source type="image/webp" srcset="/static/uploads/3b857154fa000813-480.webp 480w, /static/uploads/3b857154fa000813-800.webp 800w, /static/uploads/3b857154fa000813-1200.webp 1200w, /static/uploads/3b857154fa000813-1600.webp 1600w" sizes="(max-width: 1000px) 100vw, 960px"><img src="/static/uploads/3b857154fa000813.png" alt="LED Array PCB" class="entry-hero-image" width="1600" height="1200" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQBahBshXKrbAX7Sk+8IAAM4QHw+YB81MOKtO2++aNYdAQ3Q/R4tbV0c099HTnr+rrD4tH9WMa6se1HSA2HjIg2efJYBToVfFxJgnh7AsnBJAAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+        </div>
+        
+
+        
+        
+
+        
+        
+
+        
         <div class="entry-content">
             <div class="content-main">
                 
@@ -170,82 +179,45 @@
 <p>A lot of time went into debugging small design choices: fixing LCSC part compatibility, redoing resistor ratios for the buck converter, and making sure the whole design passed ERC and DRC checks. I also learned how much manufacturing details can affect cost — my first JLCPCB quote came out to nearly $170 (half from customs and shipping), which I managed to cut down with coupons and advice from the MITERS Discord.</p>
 <p>The final board includes sixteen shift registers controlling over a thousand LEDs, with each section modularized for testing and reuse. Even though it took a lot of iteration, it was a huge step up in understanding how electrical design, layout, and fabrication all come together.</p>
 <p>
-<style>
-  .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-    overflow: hidden;
-  }
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    text-align: center;
-  }
-  .carousel-slide.active {
-    display: block;
-  }
-  .carousel img {
-    max-width: 100%;
-    height: auto;
-  }
-  .carousel-controls {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-  .carousel-button {
-    display: inline-block;
-    background: var(--accent, #3b82f6);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-  }
-</style>
 <div class="carousel">
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/led-array/led-schematic-final-480.avif 480w, /static/uploads/blogs/led-array/led-schematic-final-800.avif 800w, /static/uploads/blogs/led-array/led-schematic-final-1200.avif 1200w, /static/uploads/blogs/led-array/led-schematic-final-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/led-array/led-schematic-final-480.webp 480w, /static/uploads/blogs/led-array/led-schematic-final-800.webp 800w, /static/uploads/blogs/led-array/led-schematic-final-1200.webp 1200w, /static/uploads/blogs/led-array/led-schematic-final-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/blogs/led-array/led-schematic-final-480.avif 480w, /static/uploads/blogs/led-array/led-schematic-final-800.avif 800w, /static/uploads/blogs/led-array/led-schematic-final-1200.avif 1200w, /static/uploads/blogs/led-array/led-schematic-final-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/blogs/led-array/led-schematic-final-480.webp 480w, /static/uploads/blogs/led-array/led-schematic-final-800.webp 800w, /static/uploads/blogs/led-array/led-schematic-final-1200.webp 1200w, /static/uploads/blogs/led-array/led-schematic-final-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/blogs/led-array/led-schematic-final.png" alt="LED Final Schematic" width="1600" height="1011" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/b89ac7e3a8208ca7-480.avif 480w, /static/uploads/b89ac7e3a8208ca7-800.avif 800w, /static/uploads/b89ac7e3a8208ca7-1200.avif 1200w, /static/uploads/b89ac7e3a8208ca7-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/b89ac7e3a8208ca7-480.webp 480w, /static/uploads/b89ac7e3a8208ca7-800.webp 800w, /static/uploads/b89ac7e3a8208ca7-1200.webp 1200w, /static/uploads/b89ac7e3a8208ca7-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/b89ac7e3a8208ca7.png" alt="LED Final Schematic" width="1600" height="1011" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADwAgCdASoUAA0APu1iqU2ppaOiMAgBMB2JZwDE2C0kAAD+8C5i3aifkG4AAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">LED Final Schematic</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/led-array/led-pcb-final-480.avif 480w, /static/uploads/blogs/led-array/led-pcb-final-800.avif 800w, /static/uploads/blogs/led-array/led-pcb-final-1200.avif 1200w, /static/uploads/blogs/led-array/led-pcb-final-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/led-array/led-pcb-final-480.webp 480w, /static/uploads/blogs/led-array/led-pcb-final-800.webp 800w, /static/uploads/blogs/led-array/led-pcb-final-1200.webp 1200w, /static/uploads/blogs/led-array/led-pcb-final-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/blogs/led-array/led-pcb-final-480.avif 480w, /static/uploads/blogs/led-array/led-pcb-final-800.avif 800w, /static/uploads/blogs/led-array/led-pcb-final-1200.avif 1200w, /static/uploads/blogs/led-array/led-pcb-final-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/blogs/led-array/led-pcb-final-480.webp 480w, /static/uploads/blogs/led-array/led-pcb-final-800.webp 800w, /static/uploads/blogs/led-array/led-pcb-final-1200.webp 1200w, /static/uploads/blogs/led-array/led-pcb-final-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/blogs/led-array/led-pcb-final.png" alt="LED Final PCB Design" width="1600" height="967" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/9a294051ef276eb8-480.avif 480w, /static/uploads/9a294051ef276eb8-800.avif 800w, /static/uploads/9a294051ef276eb8-1200.avif 1200w, /static/uploads/9a294051ef276eb8-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/9a294051ef276eb8-480.webp 480w, /static/uploads/9a294051ef276eb8-800.webp 800w, /static/uploads/9a294051ef276eb8-1200.webp 1200w, /static/uploads/9a294051ef276eb8-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/9a294051ef276eb8.png" alt="LED Final PCB Design" width="1600" height="967" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAwCdASoUAAwAPu1orU2ppqSiMAgBMB2JZgCdMoAKRtcEUIe5KiRAAP78aFJoxK+Az/YT4GDI1vyIn9Ztp0QdeRO2ArV9oWT+++vESkrAAAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">LED Final PCB Design</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/led-array/led-pcb-3d-480.avif 480w, /static/uploads/blogs/led-array/led-pcb-3d-800.avif 800w, /static/uploads/blogs/led-array/led-pcb-3d-1200.avif 1200w, /static/uploads/blogs/led-array/led-pcb-3d-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/led-array/led-pcb-3d-480.webp 480w, /static/uploads/blogs/led-array/led-pcb-3d-800.webp 800w, /static/uploads/blogs/led-array/led-pcb-3d-1200.webp 1200w, /static/uploads/blogs/led-array/led-pcb-3d-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/blogs/led-array/led-pcb-3d-480.avif 480w, /static/uploads/blogs/led-array/led-pcb-3d-800.avif 800w, /static/uploads/blogs/led-array/led-pcb-3d-1200.avif 1200w, /static/uploads/blogs/led-array/led-pcb-3d-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/blogs/led-array/led-pcb-3d-480.webp 480w, /static/uploads/blogs/led-array/led-pcb-3d-800.webp 800w, /static/uploads/blogs/led-array/led-pcb-3d-1200.webp 1200w, /static/uploads/blogs/led-array/led-pcb-3d-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/blogs/led-array/led-pcb-3d.png" alt="LED Final 3D View" width="1600" height="947" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/b3efe6bc314c8b1b-480.avif 480w, /static/uploads/b3efe6bc314c8b1b-800.avif 800w, /static/uploads/b3efe6bc314c8b1b-1200.avif 1200w, /static/uploads/b3efe6bc314c8b1b-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/b3efe6bc314c8b1b-480.webp 480w, /static/uploads/b3efe6bc314c8b1b-800.webp 800w, /static/uploads/b3efe6bc314c8b1b-1200.webp 1200w, /static/uploads/b3efe6bc314c8b1b-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/b3efe6bc314c8b1b.png" alt="LED Final 3D View" width="1600" height="947" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACQAwCdASoUAAwAPu1kq04ppaQiMAgBMB2JYwAAW+wc9mzOoFsAAPa8GqQSPL6Vfcp/URhNGchF0uZBt+Her7/NU9U50JKqUzXX3t9JLR1qpEhpMYAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">LED Final 3D View</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/led-array/led-group-schematic-480.avif 480w, /static/uploads/blogs/led-array/led-group-schematic-794.avif 794w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/led-array/led-group-schematic-480.webp 480w, /static/uploads/blogs/led-array/led-group-schematic-794.webp 794w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/blogs/led-array/led-group-schematic-480.avif 480w, /static/uploads/blogs/led-array/led-group-schematic-794.avif 794w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/blogs/led-array/led-group-schematic-480.webp 480w, /static/uploads/blogs/led-array/led-group-schematic-794.webp 794w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/blogs/led-array/led-group-schematic.png" alt="LED Group Schematic" width="794" height="334" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/d5c22e66595dc9c6-480.avif 480w, /static/uploads/d5c22e66595dc9c6-794.avif 794w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/d5c22e66595dc9c6-480.webp 480w, /static/uploads/d5c22e66595dc9c6-794.webp 794w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/d5c22e66595dc9c6.png" alt="LED Group Schematic" width="794" height="334" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADwAgCdASoUAAgAPu1kqU2ppaOiMAgBMB2JaQDMHC0kAAD+8En7sx4vL7iQVbLIcAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">LED Group Schematic</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/led-array/led-module-schematic-480.avif 480w, /static/uploads/blogs/led-array/led-module-schematic-800.avif 800w, /static/uploads/blogs/led-array/led-module-schematic-1200.avif 1200w, /static/uploads/blogs/led-array/led-module-schematic-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/led-array/led-module-schematic-480.webp 480w, /static/uploads/blogs/led-array/led-module-schematic-800.webp 800w, /static/uploads/blogs/led-array/led-module-schematic-1200.webp 1200w, /static/uploads/blogs/led-array/led-module-schematic-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/blogs/led-array/led-module-schematic-480.avif 480w, /static/uploads/blogs/led-array/led-module-schematic-800.avif 800w, /static/uploads/blogs/led-array/led-module-schematic-1200.avif 1200w, /static/uploads/blogs/led-array/led-module-schematic-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/blogs/led-array/led-module-schematic-480.webp 480w, /static/uploads/blogs/led-array/led-module-schematic-800.webp 800w, /static/uploads/blogs/led-array/led-module-schematic-1200.webp 1200w, /static/uploads/blogs/led-array/led-module-schematic-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/blogs/led-array/led-module-schematic.png" alt="LED Module Schematic" width="1600" height="1142" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/4d350f5a81faf27a-480.avif 480w, /static/uploads/4d350f5a81faf27a-800.avif 800w, /static/uploads/4d350f5a81faf27a-1200.avif 1200w, /static/uploads/4d350f5a81faf27a-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/4d350f5a81faf27a-480.webp 480w, /static/uploads/4d350f5a81faf27a-800.webp 800w, /static/uploads/4d350f5a81faf27a-1200.webp 1200w, /static/uploads/4d350f5a81faf27a-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/4d350f5a81faf27a.png" alt="LED Module Schematic" width="1600" height="1142" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADwAgCdASoUAA4APu1kqU2ppaOiMAgBMB2JZwDE2C0kAAD+8Enspz7vm3DbagAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">LED Module Schematic</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/led-array/led-row-schematic-480.avif 480w, /static/uploads/blogs/led-array/led-row-schematic-800.avif 800w, /static/uploads/blogs/led-array/led-row-schematic-1200.avif 1200w, /static/uploads/blogs/led-array/led-row-schematic-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/led-array/led-row-schematic-480.webp 480w, /static/uploads/blogs/led-array/led-row-schematic-800.webp 800w, /static/uploads/blogs/led-array/led-row-schematic-1200.webp 1200w, /static/uploads/blogs/led-array/led-row-schematic-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/blogs/led-array/led-row-schematic-480.avif 480w, /static/uploads/blogs/led-array/led-row-schematic-800.avif 800w, /static/uploads/blogs/led-array/led-row-schematic-1200.avif 1200w, /static/uploads/blogs/led-array/led-row-schematic-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/blogs/led-array/led-row-schematic-480.webp 480w, /static/uploads/blogs/led-array/led-row-schematic-800.webp 800w, /static/uploads/blogs/led-array/led-row-schematic-1200.webp 1200w, /static/uploads/blogs/led-array/led-row-schematic-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/blogs/led-array/led-row-schematic.png" alt="LED Row Schematic" width="1600" height="880" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/b65351c64ec7fa26-480.avif 480w, /static/uploads/b65351c64ec7fa26-800.avif 800w, /static/uploads/b65351c64ec7fa26-1200.avif 1200w, /static/uploads/b65351c64ec7fa26-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/b65351c64ec7fa26-480.webp 480w, /static/uploads/b65351c64ec7fa26-800.webp 800w, /static/uploads/b65351c64ec7fa26-1200.webp 1200w, /static/uploads/b65351c64ec7fa26-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/b65351c64ec7fa26.png" alt="LED Row Schematic" width="1600" height="880" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADwAgCdASoUAAsAPu1iqU2ppaOiMAgBMB2JaQAAetCIAAD+8El/1xMCjCgAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">LED Row Schematic</div>
       
@@ -285,54 +257,17 @@
 </p>
 <p>Currently, I'm diving into STM32CubeIDE to write the firmware and flash the STM32 microcontroller. After some effort—and with help securing an ST-Link programmer—I was able to confirm the chip was working. I started with a simple blink code, powering the microcontroller directly off the ST-Link to verify that my first-ever PCB routing for the STM32 was sound.With the basic functionality confirmed, I moved on to analyzing the power stability. Using an oscilloscope, I measured the voltage ripple, which came out to a clean $20 \text{ mV}$. (I had some trouble with the image transfer from my thumb drive, but I'll upload the scope capture later!) My next steps will focus on producing code to get various messages / patterns to show on the LEDs.</p>
 <p>
-<style>
-  .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-    overflow: hidden;
-  }
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    text-align: center;
-  }
-  .carousel-slide.active {
-    display: block;
-  }
-  .carousel img {
-    max-width: 100%;
-    height: auto;
-  }
-  .carousel-controls {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-  .carousel-button {
-    display: inline-block;
-    background: var(--accent, #3b82f6);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-  }
-</style>
 <div class="carousel">
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/led-array/laid-out-boards-480.avif 480w, /static/uploads/blogs/led-array/laid-out-boards-800.avif 800w, /static/uploads/blogs/led-array/laid-out-boards-1200.avif 1200w, /static/uploads/blogs/led-array/laid-out-boards-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/led-array/laid-out-boards-480.webp 480w, /static/uploads/blogs/led-array/laid-out-boards-800.webp 800w, /static/uploads/blogs/led-array/laid-out-boards-1200.webp 1200w, /static/uploads/blogs/led-array/laid-out-boards-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/blogs/led-array/laid-out-boards-480.avif 480w, /static/uploads/blogs/led-array/laid-out-boards-800.avif 800w, /static/uploads/blogs/led-array/laid-out-boards-1200.avif 1200w, /static/uploads/blogs/led-array/laid-out-boards-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/blogs/led-array/laid-out-boards-480.webp 480w, /static/uploads/blogs/led-array/laid-out-boards-800.webp 800w, /static/uploads/blogs/led-array/laid-out-boards-1200.webp 1200w, /static/uploads/blogs/led-array/laid-out-boards-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/blogs/led-array/laid-out-boards.png" alt="PCBs and Assembled PCBs ordered from JLC" width="1600" height="1200" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/04556f0978530840-480.avif 480w, /static/uploads/04556f0978530840-800.avif 800w, /static/uploads/04556f0978530840-1200.avif 1200w, /static/uploads/04556f0978530840-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/04556f0978530840-480.webp 480w, /static/uploads/04556f0978530840-800.webp 800w, /static/uploads/04556f0978530840-1200.webp 1200w, /static/uploads/04556f0978530840-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/04556f0978530840.png" alt="PCBs and Assembled PCBs ordered from JLC" width="1600" height="1200" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAADwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQBadAz2nRW6gJaPwh3PoAP7pBCaea1soD+LUUfJ1sp7NV3Squuj1JOfOFfU2b/jArWxnEOHHyGi7E+e4xGp+RoLxcTB+jBtf/KBkYXeOdfF32FvgJFmm9WSzsV3qeof94u0r3gAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">PCBs and Assembled PCBs ordered from JLC</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/led-array/lightup_led-480.avif 480w, /static/uploads/blogs/led-array/lightup_led-800.avif 800w, /static/uploads/blogs/led-array/lightup_led-1024.avif 1024w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/led-array/lightup_led-480.webp 480w, /static/uploads/blogs/led-array/lightup_led-800.webp 800w, /static/uploads/blogs/led-array/lightup_led-1024.webp 1024w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/blogs/led-array/lightup_led.jpg" alt="Initial testing for LEDs" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/b35002a2b5d9b5fd-480.avif 480w, /static/uploads/b35002a2b5d9b5fd-800.avif 800w, /static/uploads/b35002a2b5d9b5fd-1024.avif 1024w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/b35002a2b5d9b5fd-480.webp 480w, /static/uploads/b35002a2b5d9b5fd-800.webp 800w, /static/uploads/b35002a2b5d9b5fd-1024.webp 1024w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/b35002a2b5d9b5fd.jpg" alt="Initial testing for LEDs" width="1024" height="768" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JZgCdMoRwIsAAh4GTnvxReENAAPxKOzkIuE5+0cQmjQW/1zfJ8deECYzMgBzQ7ZyipHW7eUHHE/ts1Wjmb1VL7RDyAmWVaOKyRsVJ1NLP4bi2p5Cta4NT+jVVGeuwBjLLgAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Initial testing for LEDs</div>
       
@@ -372,22 +307,21 @@
 </p>
                 </div>
                 
+                
             </div>
         </div>
 
-        <!-- Related build logs (project pages only) -->
+        
         
 
-        <!-- Entry Navigation -->
+        
         <nav class="entry-navigation">
             <div class="nav-links">
                 
             </div>
             <div class="nav-actions">
                 
-                <a href="/projects/" class="btn btn-outline">
-                     Back to Projects
-                </a>
+                <a href="/projects/" class="btn btn-outline">Back to Projects</a>
                 
             </div>
         </nav>
@@ -420,11 +354,10 @@
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>

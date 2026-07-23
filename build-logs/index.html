@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -128,181 +127,71 @@
 
     <main class="main-content">
         
-<section class="projects-header">
+<div class="entry-detail">
     <div class="container">
-        <header class="section-header">
-            <h1 class="section-title">Build Logs</h1>
+        <header class="idx-header">
+            <h1 class="idx-title">Build Logs</h1>
+            <p class="idx-blurb">The messy middle. Dead ends, bad assumptions, and the
+                decisions that actually mattered &mdash; kept in order, per project.</p>
         </header>
 
-        <div class="projects-controls">
-            <div class="search-box" style="position:relative;">
-                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="position:absolute;left:0.75rem;top:50%;transform:translateY(-50%);pointer-events:none;">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.35-4.35"></path>
-                </svg>
-                <input type="text" id="buildlog-search" placeholder="Search build logs..." class="search-input" style="padding-left:2.5rem;">
-            </div>
+        <div class="log-groups">
+            
+            <details class="log-group" open>
+                <summary class="log-group-head">
+                    <span class="log-group-title">FOC Motor Controller</span>
+                    <span class="log-group-count">1 log</span>
+                    <svg class="log-group-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </summary>
 
-            <div class="tag-filters" id="buildlog-tag-filters">
-                <button class="tag-filter active" data-tag="all">All</button>
-                
-                
+                <div class="log-list">
                     
-                        
-                            
-                                
-                            
-                        
+                    <a class="log-row" href="/build-logs/foc-motor-controller-1/">
+                        <span class="log-num">#1</span>
+                        <span class="log-meta">
+                            <span class="log-title">FOC Motor Controller</span>
+                            <span class="log-summary">The development of the FOC Motor Controller (after the end of 2.679)</span>
+                        </span>
+                        <span class="log-date">2026-07-07</span>
+                    </a>
                     
+                </div>
+
                 
+                <a class="log-group-link" href="/projects/foc-motor-controller/">View the project &rarr;</a>
+                
+            </details>
+            
+            <details class="log-group">
+                <summary class="log-group-head">
+                    <span class="log-group-title">Personal Site</span>
+                    <span class="log-group-count">1 log</span>
+                    <svg class="log-group-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </summary>
+
+                <div class="log-list">
                     
-                        
-                            
-                                
-                            
-                        
-                            
-                                
-                            
-                        
-                            
-                                
-                            
-                        
+                    <a class="log-row" href="/build-logs/personal-site-buildlog/">
+                        <span class="log-num">#1</span>
+                        <span class="log-meta">
+                            <span class="log-title">Building this website</span>
+                            <span class="log-summary">The development of this website over time. The static generator and CMS wiring + potential future changes.</span>
+                        </span>
+                        <span class="log-date">2026-06-24</span>
+                    </a>
                     
-                
+                </div>
 
                 
-                <button class="tag-filter" data-tag="pcb-design">pcb-design</button>
+                <a class="log-group-link" href="/projects/personal-site/">View the project &rarr;</a>
                 
-                <button class="tag-filter" data-tag="Web">Web</button>
-                
-                <button class="tag-filter" data-tag="Python">Python</button>
-                
-                <button class="tag-filter" data-tag="Process">Process</button>
-                
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="projects-content">
-    <div class="container">
-        <div class="projects-grid" id="buildlog-grid">
+            </details>
             
-            
-                
-<a href="/build-logs/foc-motor-controller-1/" class="card entry-card" data-tags="pcb-design" style="text-decoration:none;color:inherit;">
-    <div class="card-image">
-    
-        <div class="card-placeholder">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                <polyline points="21,15 16,10 5,21"></polyline>
-            </svg>
-        </div>
-    
-    </div>
-
-    <div class="card-content">
-        <header class="card-header">
-            <div class="card-heading">
-                <h3 class="card-title">
-                    FOC Motor Controller
-                </h3>
-                
-                <time class="card-date" datetime="2026-07-07">
-                    2026-07-07
-                </time>
-                
-            </div>
-        </header>
-
-        
-        <div class="card-tags">
-            
-            <span class="tag">pcb-design</span>
-            
-            
-        </div>
-        
-
-        
-        <p class="card-summary">The development of the FOC Motor Controller (after the end of 2.679)</p>
-        
-    </div>
-    </a>
-
-            
-                
-<a href="/build-logs/personal-site-buildlog/" class="card entry-card" data-tags="Web,Python,Process" style="text-decoration:none;color:inherit;">
-    <div class="card-image">
-    
-        
-        <picture><source type="image/avif" srcset="/static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-37-10-480.avif 480w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-37-10-800.avif 800w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-37-10-1200.avif 1200w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-37-10-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-37-10-480.webp 480w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-37-10-800.webp 800w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-37-10-1200.webp 1200w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-37-10-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-37-10.png" alt="Building this website" class="card-thumbnail" width="1600" height="739" decoding="async" loading="lazy"></picture>
-    
-    </div>
-
-    <div class="card-content">
-        <header class="card-header">
-            <div class="card-heading">
-                <h3 class="card-title">
-                    Building this website
-                </h3>
-                
-                <time class="card-date" datetime="2026-06-24">
-                    2026-06-24
-                </time>
-                
-            </div>
-        </header>
-
-        
-        <div class="card-tags">
-            
-            <span class="tag">Web</span>
-            
-            <span class="tag">Python</span>
-            
-            <span class="tag">Process</span>
-            
-            
-        </div>
-        
-
-        
-        <p class="card-summary">The development of this website over time. The static generator and CMS wiring + potential future changes.</p>
-        
-    </div>
-    </a>
 
             
         </div>
-
-        <div class="no-results" id="no-buildlog-results" style="display: none;">
-            <div class="no-results-content">
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.35-4.35"></path>
-                </svg>
-                <h3>No build logs found</h3>
-                <p>Try adjusting your search or filter criteria</p>
-            </div>
-        </div>
     </div>
-</section>
-
-<script src="/static/js/search.js"></script>
-<script>
-    setupSearchAndFilter({
-        searchInputId: 'buildlog-search',
-        tagFilterSelector: '#buildlog-tag-filters .tag-filter',
-        gridId: 'buildlog-grid',
-        noResultsId: 'no-buildlog-results',
-        cardSelector: '.entry-card'
-    });
-</script>
+</div>
 
     </main>
 
@@ -330,11 +219,10 @@
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>

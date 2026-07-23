@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -128,29 +127,41 @@
 
     <main class="main-content">
         
-<article class="entry-detail">
+<article class="entry-detail entry-detail--project">
     <div class="container">
-        <!-- Entry Header -->
-        <header class="entry-header entry-header-centered">
+
+        
+        
+        <header class="entry-header entry-header--project entry-header-centered">
             <h1 class="entry-title">Ender 6 Modifications</h1>
             
             <div class="entry-tags">
-                
-                <span class="tag">3D Printing</span>
-                
-                <span class="tag">Hardware</span>
-                
+                <span class="tag">3D Printing</span><span class="tag">Hardware</span>
             </div>
             
             
-            
+            <p class="entry-subtitle">Setting up an Ender6 3D Printer with Klipper and Potentially Future Modifications</p>
             
             
         </header>
-        <!-- Embedded video (if present) -->
         
 
-        <!-- Entry Content -->
+        
+        
+        
+        
+        <div class="entry-hero">
+            <picture><source type="image/avif" srcset="/static/uploads/b73816728ff3868d-480.avif 480w, /static/uploads/b73816728ff3868d-800.avif 800w, /static/uploads/b73816728ff3868d-1200.avif 1200w, /static/uploads/b73816728ff3868d-1346.avif 1346w" sizes="(max-width: 1000px) 100vw, 960px"><source type="image/webp" srcset="/static/uploads/b73816728ff3868d-480.webp 480w, /static/uploads/b73816728ff3868d-800.webp 800w, /static/uploads/b73816728ff3868d-1200.webp 1200w, /static/uploads/b73816728ff3868d-1346.webp 1346w" sizes="(max-width: 1000px) 100vw, 960px"><img src="/static/uploads/b73816728ff3868d.png" alt="Ender 6 Modifications" class="entry-hero-image" width="1346" height="1536" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAAAQBgCdASoUABcAPu1qrVCppaQiqAqpMB2JaACdL0MkFGaFQvlfevvFo0Y/PxYnyTPp4XYjoIBzQQAA+4DO31Vvw9DsRY0jxRww6Yuwr+Fm9keqCl8FfuQDgtMfLOLmbL9shAUo15hb0W4XA/EzL2fm03YZ3Kc21wd+Flv7NIUObgS2/UKJeW+U3lqA7JWqubO0I83oiO9l2T/Cl5gZkZrzcIyCiIvBvKiL9yPBCeyUHcMUuRZ8fa8XIQ1Eb+h0lZsj/tr0TZ59RCH1FpO6vWL03TvRMhTEeP0D6tgAAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+        </div>
+        
+
+        
+        
+
+        
+        
+
+        
         <div class="entry-content">
             <div class="content-main">
                 
@@ -173,22 +184,21 @@
 <p>After an extended period of time, I looked back at this. I was testing my motors because it seems that I'm unable to get the motors to move straight. I've determined it's likely because of my Y motor. It might be a wiring issue or the NEMA motor might be messed up. I'm honetsly so cooked with classes, but I want to make time to investigate.</p>
                 </div>
                 
+                
             </div>
         </div>
 
-        <!-- Related build logs (project pages only) -->
+        
         
 
-        <!-- Entry Navigation -->
+        
         <nav class="entry-navigation">
             <div class="nav-links">
                 
             </div>
             <div class="nav-actions">
                 
-                <a href="/projects/" class="btn btn-outline">
-                     Back to Projects
-                </a>
+                <a href="/projects/" class="btn btn-outline">Back to Projects</a>
                 
             </div>
         </nav>
@@ -221,11 +231,10 @@
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>

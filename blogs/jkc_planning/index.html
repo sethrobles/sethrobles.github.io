@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -128,34 +127,40 @@
 
     <main class="main-content">
         
-<article class="entry-detail">
+<article class="entry-detail entry-detail--blog">
     <div class="container">
-        <!-- Entry Header -->
-        <header class="entry-header entry-header-centered">
+
+        
+        
+        <header class="entry-header entry-header--blog">
+            
+            <div class="entry-eyebrow"><time datetime="2025-12-12">12 December 2025</time></div>
+            
             <h1 class="entry-title">Jack Kent Cooke Event Planning</h1>
             
-            <div class="entry-tags">
-                
-                <span class="tag">Community</span>
-                
-                <span class="tag">Logistics</span>
-                
-            </div>
-            
-            
-            
-            
+            <p class="entry-subtitle">Planning events to foster community within Alumni from the Jack Kent Cooke Foundation.</p>
             
         </header>
-        <!-- Embedded video (if present) -->
+
         
 
-        <!-- Entry Content -->
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+
+        
         <div class="entry-content">
             <div class="content-main">
                 
                 <div class="markdown-content">
-                    <!-- <h2 style="text-align:center;"></h2> -->
+                    
 
 <p>In highschool, I was awarded the <a href="https://www.jkcf.org/our-scholarships/">Jack Kent Cooke Scholarships</a>, which in my opinion is one of (if not the) best scholarship someone could win. For those who qualify, the scholarship provides many benefits, including alumni connections, community building, and more.</p>
 <p>This blog details some of these events.</p>
@@ -167,54 +172,17 @@
 <p>Last year, I planned a few events for local members of the Jack Kent Cooke community. The first was an Acai/Boba outing, where 10 of us went out to get Boba and Acai and upperclassmen were able to share advice to younger students. The second activity was a volunteer event, with 4 of us (it's so much harder to get people to show up for volunteer work) helping out at the Red Cross Food Pantry and then ordering Panda Express and enjoying a meal together after the fact.</p>
 <p>Both events were amazing, letting me connect with members on campus that I may not have met otherwise, and allowing us to come together to help out at the Red Cross.</p>
 <p>
-<style>
-  .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-    overflow: hidden;
-  }
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    text-align: center;
-  }
-  .carousel-slide.active {
-    display: block;
-  }
-  .carousel img {
-    max-width: 100%;
-    height: auto;
-  }
-  .carousel-controls {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-  .carousel-button {
-    display: inline-block;
-    background: var(--accent, #3b82f6);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-  }
-</style>
 <div class="carousel">
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/jkc_planning/jkc_acai-480.avif 480w, /static/uploads/blogs/jkc_planning/jkc_acai-800.avif 800w, /static/uploads/blogs/jkc_planning/jkc_acai-1024.avif 1024w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/jkc_planning/jkc_acai-480.webp 480w, /static/uploads/blogs/jkc_planning/jkc_acai-800.webp 800w, /static/uploads/blogs/jkc_planning/jkc_acai-1024.webp 1024w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/blogs/jkc_planning/jkc_acai.jpg" alt="Acai with JKC Scholars from MIT and Harvard" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/a3974ca8e4405bb4-480.avif 480w, /static/uploads/a3974ca8e4405bb4-800.avif 800w, /static/uploads/a3974ca8e4405bb4-1024.avif 1024w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/a3974ca8e4405bb4-480.webp 480w, /static/uploads/a3974ca8e4405bb4-800.webp 800w, /static/uploads/a3974ca8e4405bb4-1024.webp 1024w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/a3974ca8e4405bb4.jpg" alt="Acai with JKC Scholars from MIT and Harvard" width="1024" height="768" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAACwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQBbZMXwMGBFlOQ8ogAD+fKBJOqleX0otYWDZ6Uuv0KPJDCrzAPPemOgE2aNW4lJTBWlJBbq69aNMcYZ3ckUaqQh1bk2wTY6I7Hm0A4V5ba0Gzs4LT1KuPDSZBJgfcPrW0aekHsSrzijNq2Zqtl4n+Jr3WKzgeNeiI/lpXW9p0Km1vf4AAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Acai with JKC Scholars from MIT and Harvard</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/jkc_planning/jkc_red_cross-480.avif 480w, /static/uploads/blogs/jkc_planning/jkc_red_cross-800.avif 800w, /static/uploads/blogs/jkc_planning/jkc_red_cross-1024.avif 1024w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/jkc_planning/jkc_red_cross-480.webp 480w, /static/uploads/blogs/jkc_planning/jkc_red_cross-800.webp 800w, /static/uploads/blogs/jkc_planning/jkc_red_cross-1024.webp 1024w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/blogs/jkc_planning/jkc_red_cross.jpg" alt="Volunteering at the Red Cross with Volunteers from MIT and Harvard" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/91905cbe5e95034d-480.avif 480w, /static/uploads/91905cbe5e95034d-800.avif 800w, /static/uploads/91905cbe5e95034d-1024.avif 1024w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/91905cbe5e95034d-480.webp 480w, /static/uploads/91905cbe5e95034d-800.webp 800w, /static/uploads/91905cbe5e95034d-1024.webp 1024w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/91905cbe5e95034d.jpg" alt="Volunteering at the Red Cross with Volunteers from MIT and Harvard" width="1024" height="768" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAAAwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JQBOmUDX/wGhcd4mOa9aMVPAA/dln7xrXBwAbX7V6hQp6qnKmeA80nhR3ydyursdo3oMQMy4if4PRUUhiiUpfl+rJV/V9AqNXN7qcoxh8fiM3Wp1bAzkWUR0ENXwbKjJd8gVdFijSMXxnR6yjrv95zItb1NJqZirflFupT5g/SmQSzxAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Volunteering at the Red Cross with Volunteers from MIT and Harvard</div>
       
@@ -254,22 +222,21 @@
 </p>
                 </div>
                 
+                
             </div>
         </div>
 
-        <!-- Related build logs (project pages only) -->
+        
         
 
-        <!-- Entry Navigation -->
+        
         <nav class="entry-navigation">
             <div class="nav-links">
                 
             </div>
             <div class="nav-actions">
                 
-                <a href="/blogs/" class="btn btn-outline">
-                     Back to Blog
-                </a>
+                <a href="/blogs/" class="btn btn-outline">Back to Blog</a>
                 
             </div>
         </nav>
@@ -302,11 +269,10 @@
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>

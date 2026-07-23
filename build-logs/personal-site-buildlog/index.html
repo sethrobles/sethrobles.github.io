@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -128,37 +127,40 @@
 
     <main class="main-content">
         
-<article class="entry-detail">
+<article class="entry-detail entry-detail--buildlog">
     <div class="container">
-        <!-- Entry Header -->
-        <header class="entry-header entry-header-centered">
+
+        
+        
+        <header class="entry-header entry-header--log">
+            
+            <a class="entry-crumb" href="/projects/personal-site/">&larr; Personal Site</a>
+            
             <h1 class="entry-title">Building this website</h1>
+            <dl class="entry-spec">
+                <div><dt>Log</dt><dd>#1</dd></div>
+                <div><dt>Date</dt><dd>2026-06-24</dd></div>
+                <div><dt>Project</dt><dd>Personal Site</dd></div>
+                <div><dt>Tags</dt><dd>Web · Python · Process</dd></div>
+            </dl>
             
-            <div class="entry-tags">
-                
-                <span class="tag">Web</span>
-                
-                <span class="tag">Python</span>
-                
-                <span class="tag">Process</span>
-                
-            </div>
-            
-            
-            <div class="entry-parent-project" style="margin-bottom:1rem;">
-                <a href="/projects/personal-site/" class="nav-link">
-                    &larr; Personal Site &middot; Build Log #1
-                </a>
-            </div>
-            
-            
-            
-            
+            <p class="entry-lede">The development of this website over time. The static generator and CMS wiring + potential future changes.</p>
         </header>
-        <!-- Embedded video (if present) -->
+
         
 
-        <!-- Entry Content -->
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+
+        
         <div class="entry-content">
             <div class="content-main">
                 
@@ -194,68 +196,25 @@ and the decisions made along the way.</p>
                 </div>
                 
                 
-<style>
-  .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-    overflow: hidden;
-  }
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    text-align: center;
-  }
-  .carousel-slide.active {
-    display: block;
-  }
-  .carousel img {
-    max-width: 100%;
-    height: auto;
-  }
-  .carousel-controls {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-  .carousel-button {
-    display: inline-block;
-    background: var(--accent, #3b82f6);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-  }
-</style>
+                
 <div class="carousel">
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-37-10-480.avif 480w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-37-10-800.avif 800w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-37-10-1200.avif 1200w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-37-10-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-37-10-480.webp 480w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-37-10-800.webp 800w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-37-10-1200.webp 1200w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-37-10-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-37-10.png" alt="New Website Appearance (Warm + Teal)" width="1600" height="739" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/54863665cd350373-480.avif 480w, /static/uploads/54863665cd350373-800.avif 800w, /static/uploads/54863665cd350373-1200.avif 1200w, /static/uploads/54863665cd350373-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/54863665cd350373-480.webp 480w, /static/uploads/54863665cd350373-800.webp 800w, /static/uploads/54863665cd350373-1200.webp 1200w, /static/uploads/54863665cd350373-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/54863665cd350373.png" alt="New Website Appearance (Warm + Teal)" width="1600" height="739" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoUAAkAPu1oqk6ppiQiMAgBMB2JZwC3uCKbVUiYAAD+7c2KtHwaobNhQVATzzFrWMYhrzsZJ31DeZbfwZBfp5bUCBfgAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">New Website Appearance (Warm + Teal)</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-56-10-480.avif 480w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-56-10-800.avif 800w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-56-10-1200.avif 1200w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-56-10-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-56-10-480.webp 480w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-56-10-800.webp 800w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-56-10-1200.webp 1200w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-56-10-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-09-23-56-10.png" alt="Decap CMS" width="1600" height="812" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/6e180681fac0aa4c-480.avif 480w, /static/uploads/6e180681fac0aa4c-800.avif 800w, /static/uploads/6e180681fac0aa4c-1200.avif 1200w, /static/uploads/6e180681fac0aa4c-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/6e180681fac0aa4c-480.webp 480w, /static/uploads/6e180681fac0aa4c-800.webp 800w, /static/uploads/6e180681fac0aa4c-1200.webp 1200w, /static/uploads/6e180681fac0aa4c-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/6e180681fac0aa4c.png" alt="Decap CMS" width="1600" height="812" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAgCdASoUAAoAPu1iqU2ppaOiMAgBMB2JaQAAfqoAAP7wTgIo1aV/7Ordwj7i66EhgAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Decap CMS</div>
       
     </div>
   
     <div class="carousel-slide">
-      <img src="/static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-10-21-09-13.png" alt="Example of Tina CMS" decoding="async" loading="lazy">
-      
-        <div class="carousel-caption">Example of Tina CMS</div>
-      
-    </div>
-  
-    <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-12-20-49-27-480.avif 480w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-12-20-49-27-800.avif 800w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-12-20-49-27-1200.avif 1200w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-12-20-49-27-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-12-20-49-27-480.webp 480w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-12-20-49-27-800.webp 800w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-12-20-49-27-1200.webp 1200w, /static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-12-20-49-27-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/build-logs/building-the-personal-site/screenshot-from-2026-07-12-20-49-27.png" alt="Replacement Garmin Dashboard" width="1600" height="836" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/21760c2ba8981bb9-480.avif 480w, /static/uploads/21760c2ba8981bb9-800.avif 800w, /static/uploads/21760c2ba8981bb9-1200.avif 1200w, /static/uploads/21760c2ba8981bb9-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/21760c2ba8981bb9-480.webp 480w, /static/uploads/21760c2ba8981bb9-800.webp 800w, /static/uploads/21760c2ba8981bb9-1200.webp 1200w, /static/uploads/21760c2ba8981bb9-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/21760c2ba8981bb9.png" alt="Replacement Garmin Dashboard" width="1600" height="836" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADwAgCdASoUAAoAPu1iqU2ppaQiMAgBMB2JZwC2yC5JAAD+8BHY3gionsPY0AL0SAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Replacement Garmin Dashboard</div>
       
@@ -297,19 +256,20 @@ and the decisions made along the way.</p>
             </div>
         </div>
 
-        <!-- Related build logs (project pages only) -->
+        
         
 
-        <!-- Entry Navigation -->
+        
         <nav class="entry-navigation">
             <div class="nav-links">
                 
             </div>
             <div class="nav-actions">
                 
-                <a href="/build-logs/" class="btn btn-outline">
-                     Back to Build Logs
-                </a>
+                
+                
+                <a href="/projects/personal-site/" class="btn btn-outline">Back to Personal Site</a>
+                
                 
             </div>
         </nav>
@@ -342,11 +302,10 @@ and the decisions made along the way.</p>
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>

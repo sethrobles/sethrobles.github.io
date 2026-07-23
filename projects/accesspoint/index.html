@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -128,40 +127,48 @@
 
     <main class="main-content">
         
-<article class="entry-detail">
+<article class="entry-detail entry-detail--project">
     <div class="container">
-        <!-- Entry Header -->
-        <header class="entry-header entry-header-centered">
+
+        
+        
+        <header class="entry-header entry-header--project entry-header-centered">
             <h1 class="entry-title">AccessPoint</h1>
             
             <div class="entry-tags">
-                
-                <span class="tag">Python</span>
-                
-                <span class="tag">Flask</span>
-                
-                <span class="tag">Web Development</span>
-                
+                <span class="tag">Software</span>
             </div>
             
             
+            <p class="entry-subtitle">A web platform offering services to connect underrepresented students with scholarships and opportunities, built with Flask and PostgreSQL.</p>
             
-            <div class="entry-github" style="margin-bottom:1rem;">
-                <a href="https://github.com/DangeloV-2025/AccessPoint_V3.git" class="nav-link nav-external" target="_blank" rel="noopener noreferrer">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:0.5em;">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    View on GitHub
-                </a>
-            </div>
-            
-            
-            
+            <div class="entry-links">
+<a href="https://github.com/DangeloV-2025/AccessPoint_V3.git" class="entry-link nav-external" target="_blank" rel="noopener noreferrer">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="external-link-icon" aria-hidden="true">
+        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+    </svg>
+    View on GitHub
+</a>
+</div>
         </header>
-        <!-- Embedded video (if present) -->
         
 
-        <!-- Entry Content -->
+        
+        
+        
+        
+        <div class="entry-hero">
+            <picture><source type="image/avif" srcset="/static/uploads/6d852e07696147dd-480.avif 480w, /static/uploads/6d852e07696147dd-800.avif 800w, /static/uploads/6d852e07696147dd-1200.avif 1200w, /static/uploads/6d852e07696147dd-1600.avif 1600w" sizes="(max-width: 1000px) 100vw, 960px"><source type="image/webp" srcset="/static/uploads/6d852e07696147dd-480.webp 480w, /static/uploads/6d852e07696147dd-800.webp 800w, /static/uploads/6d852e07696147dd-1200.webp 1200w, /static/uploads/6d852e07696147dd-1600.webp 1600w" sizes="(max-width: 1000px) 100vw, 960px"><img src="/static/uploads/6d852e07696147dd.png" alt="AccessPoint" class="entry-hero-image" width="1600" height="1112" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoUAA4APu1kqU2ppaOiMAgBMB2JaACdEf/gNnx5h8rfbipwAPX8oEKduO2Tuur0qh/WhlDbszfZhbVlVNrg6o7De8Ze8GxnFlbRdBGHmUxbwcHUAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+        </div>
+        
+
+        
+        
+
+        
+        
+
+        
         <div class="entry-content">
             <div class="content-main">
                 
@@ -200,54 +207,17 @@
 </ul>
 <p>Ultimately, we sunset the project — but the lessons around both technical development and entrepreneurial validation continue to shape how I approach future work.</p>
 <p>
-<style>
-  .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-    overflow: hidden;
-  }
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    text-align: center;
-  }
-  .carousel-slide.active {
-    display: block;
-  }
-  .carousel img {
-    max-width: 100%;
-    height: auto;
-  }
-  .carousel-controls {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-  .carousel-button {
-    display: inline-block;
-    background: var(--accent, #3b82f6);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-  }
-</style>
 <div class="carousel">
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/projects/accesspoint/landing-page-480.avif 480w, /static/uploads/projects/accesspoint/landing-page-800.avif 800w, /static/uploads/projects/accesspoint/landing-page-1200.avif 1200w, /static/uploads/projects/accesspoint/landing-page-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/projects/accesspoint/landing-page-480.webp 480w, /static/uploads/projects/accesspoint/landing-page-800.webp 800w, /static/uploads/projects/accesspoint/landing-page-1200.webp 1200w, /static/uploads/projects/accesspoint/landing-page-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/projects/accesspoint/landing-page-480.avif 480w, /static/uploads/projects/accesspoint/landing-page-800.avif 800w, /static/uploads/projects/accesspoint/landing-page-1200.avif 1200w, /static/uploads/projects/accesspoint/landing-page-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/projects/accesspoint/landing-page-480.webp 480w, /static/uploads/projects/accesspoint/landing-page-800.webp 800w, /static/uploads/projects/accesspoint/landing-page-1200.webp 1200w, /static/uploads/projects/accesspoint/landing-page-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/projects/accesspoint/landing-page.png" alt="Landing Page" width="1600" height="1112" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/6d852e07696147dd-480.avif 480w, /static/uploads/6d852e07696147dd-800.avif 800w, /static/uploads/6d852e07696147dd-1200.avif 1200w, /static/uploads/6d852e07696147dd-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/6d852e07696147dd-480.webp 480w, /static/uploads/6d852e07696147dd-800.webp 800w, /static/uploads/6d852e07696147dd-1200.webp 1200w, /static/uploads/6d852e07696147dd-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/6d852e07696147dd.png" alt="Landing Page" width="1600" height="1112" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoUAA4APu1kqU2ppaOiMAgBMB2JaACdEf/gNnx5h8rfbipwAPX8oEKduO2Tuur0qh/WhlDbszfZhbVlVNrg6o7De8Ze8GxnFlbRdBGHmUxbwcHUAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Landing Page</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/projects/accesspoint/resources-section-480.avif 480w, /static/uploads/projects/accesspoint/resources-section-800.avif 800w, /static/uploads/projects/accesspoint/resources-section-1200.avif 1200w, /static/uploads/projects/accesspoint/resources-section-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/projects/accesspoint/resources-section-480.webp 480w, /static/uploads/projects/accesspoint/resources-section-800.webp 800w, /static/uploads/projects/accesspoint/resources-section-1200.webp 1200w, /static/uploads/projects/accesspoint/resources-section-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/projects/accesspoint/resources-section-480.avif 480w, /static/uploads/projects/accesspoint/resources-section-800.avif 800w, /static/uploads/projects/accesspoint/resources-section-1200.avif 1200w, /static/uploads/projects/accesspoint/resources-section-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/projects/accesspoint/resources-section-480.webp 480w, /static/uploads/projects/accesspoint/resources-section-800.webp 800w, /static/uploads/projects/accesspoint/resources-section-1200.webp 1200w, /static/uploads/projects/accesspoint/resources-section-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/projects/accesspoint/resources-section.png" alt="Resources Section" width="1600" height="1106" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/9c985b41eae470b2-480.avif 480w, /static/uploads/9c985b41eae470b2-800.avif 800w, /static/uploads/9c985b41eae470b2-1200.avif 1200w, /static/uploads/9c985b41eae470b2-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/9c985b41eae470b2-480.webp 480w, /static/uploads/9c985b41eae470b2-800.webp 800w, /static/uploads/9c985b41eae470b2-1200.webp 1200w, /static/uploads/9c985b41eae470b2-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/9c985b41eae470b2.png" alt="Resources Section" width="1600" height="1106" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAACwAwCdASoUAA4APu1kqU2ppaQiMAgBMB2JZACdEf/gPI4Z69zdgADN5XPzkHNcK3G5W9Fl6tbr4TYOOOHIQLFJbhufIOdTGUkeBuXshEf/vb4VfdUpzvurpM57XDkJK4rGUceQnOu68AAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Resources Section</div>
       
@@ -287,22 +257,21 @@
 </p>
                 </div>
                 
+                
             </div>
         </div>
 
-        <!-- Related build logs (project pages only) -->
+        
         
 
-        <!-- Entry Navigation -->
+        
         <nav class="entry-navigation">
             <div class="nav-links">
                 
             </div>
             <div class="nav-actions">
                 
-                <a href="/projects/" class="btn btn-outline">
-                     Back to Projects
-                </a>
+                <a href="/projects/" class="btn btn-outline">Back to Projects</a>
                 
             </div>
         </nav>
@@ -335,11 +304,10 @@
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>

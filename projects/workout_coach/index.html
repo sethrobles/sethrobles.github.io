@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -128,36 +127,46 @@
 
     <main class="main-content">
         
-<article class="entry-detail">
+<article class="entry-detail entry-detail--project">
     <div class="container">
-        <!-- Entry Header -->
-        <header class="entry-header entry-header-centered">
+
+        
+        
+        <header class="entry-header entry-header--project entry-header-centered">
             <h1 class="entry-title">Workout Coach</h1>
             
             <div class="entry-tags">
-                
-                <span class="tag">Health</span>
-                
-                <span class="tag">Fitness</span>
-                
-                <span class="tag">Coding</span>
-                
+                <span class="tag">Fitness</span><span class="tag">Software</span><span class="tag">Device Integration</span>
             </div>
             
             
-            
+            <p class="entry-subtitle">AI Workout Coach. Basically just a ChatGPT wrapper that interfaces with my Garmin data. Will become more if I find it useful</p>
             
             
         </header>
-        <!-- Embedded video (if present) -->
         
 
-        <!-- Entry Content -->
+        
+        
+        
+        
+        <div class="entry-hero">
+            <picture><source type="image/avif" srcset="/static/uploads/388c9c8786f90262-480.avif 480w, /static/uploads/388c9c8786f90262-768.avif 768w" sizes="(max-width: 1000px) 100vw, 960px"><source type="image/webp" srcset="/static/uploads/388c9c8786f90262-480.webp 480w, /static/uploads/388c9c8786f90262-768.webp 768w" sizes="(max-width: 1000px) 100vw, 960px"><img src="/static/uploads/388c9c8786f90262.jpg" alt="Workout Coach" class="entry-hero-image" width="768" height="1024" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABwBACdASoUABsAPu1opk2ppiMiMBgMATAdiWcAvdAQ6o1uplNJF0//fkFiCAD+kZMxuweJru3Y9UfcY60qCmfqEg+6kzBWjArb3Iad98vx64kFzdK6ChnevWJISz460Eqm3WtnKP0HWaCMzAhl9t29XY+NXlkOhPHkWwaxysocdlq+RzaAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+        </div>
+        
+
+        
+        
+
+        
+        
+
+        
         <div class="entry-content">
             <div class="content-main">
                 
                 <div class="markdown-content">
-                    <!-- <h2 style="text-align:center;"></h2> -->
+                    
 
 <p>I really enjoy fitness and working out. Although dips during the semester do not always reflect this very well, I just enjoy a hard workout or the feeling of my body moving.</p>
 <p>This alongisde the fact that I am not wrestling or on a team how I was in high school, means that my fitness has slowed down a decent amount. I'm not able to have someone to push me in the exact same way that I used to.</p>
@@ -173,22 +182,21 @@
 <p>So this was like an hour long project, but I have a Docker container running this. I'll need to set it up on one of my Rasppis. I just checked tailscale and am realizing that their power source is all unplugged. I will have to do this later I guess.</p>
                 </div>
                 
+                
             </div>
         </div>
 
-        <!-- Related build logs (project pages only) -->
+        
         
 
-        <!-- Entry Navigation -->
+        
         <nav class="entry-navigation">
             <div class="nav-links">
                 
             </div>
             <div class="nav-actions">
                 
-                <a href="/projects/" class="btn btn-outline">
-                     Back to Projects
-                </a>
+                <a href="/projects/" class="btn btn-outline">Back to Projects</a>
                 
             </div>
         </nav>
@@ -221,11 +229,10 @@
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>

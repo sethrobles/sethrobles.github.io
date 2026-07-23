@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -128,43 +127,44 @@
 
     <main class="main-content">
         
-<article class="entry-detail">
+<article class="entry-detail entry-detail--blog">
     <div class="container">
-        <!-- Entry Header -->
-        <header class="entry-header entry-header-centered">
+
+        
+        
+        <header class="entry-header entry-header--blog">
+            
+            <div class="entry-eyebrow"><time datetime="2025-10-23">23 October 2025</time></div>
+            
             <h1 class="entry-title">GTL Italy</h1>
             
-            <div class="entry-tags">
-                
-                <span class="tag">GTL</span>
-                
-                <span class="tag">Travel</span>
-                
-                <span class="tag">Foreign Languages</span>
-                
-                <span class="tag">Teaching</span>
-                
-            </div>
-            
-            
-            
-            
-            
-            <div class="entry-hero">
-                
-                <picture><source type="image/avif" srcset="/static/uploads/blogs/gtl-italy/gtl-italy-thumb-480.avif 480w, /static/uploads/blogs/gtl-italy/gtl-italy-thumb-800.avif 800w, /static/uploads/blogs/gtl-italy/gtl-italy-thumb-1024.avif 1024w" sizes="(max-width: 1000px) 100vw, 960px"><source type="image/webp" srcset="/static/uploads/blogs/gtl-italy/gtl-italy-thumb-480.webp 480w, /static/uploads/blogs/gtl-italy/gtl-italy-thumb-800.webp 800w, /static/uploads/blogs/gtl-italy/gtl-italy-thumb-1024.webp 1024w" sizes="(max-width: 1000px) 100vw, 960px"><img src="/static/uploads/blogs/gtl-italy/gtl-italy-thumb.jpg" alt="GTL Italy" class="entry-hero-image" width="1024" height="768" decoding="async" loading="eager" fetchpriority="high"></picture>
-            </div>
+            <p class="entry-subtitle">A month spent in Italy, teaching high school students about physics, electronics, web development, and machine learning.</p>
             
         </header>
-        <!-- Embedded video (if present) -->
+
         
 
-        <!-- Entry Content -->
+        
+        
+        
+        
+        <div class="entry-hero">
+            <picture><source type="image/avif" srcset="/static/uploads/9eee50c830ff0e8c-480.avif 480w, /static/uploads/9eee50c830ff0e8c-800.avif 800w, /static/uploads/9eee50c830ff0e8c-1024.avif 1024w" sizes="(max-width: 1000px) 100vw, 960px"><source type="image/webp" srcset="/static/uploads/9eee50c830ff0e8c-480.webp 480w, /static/uploads/9eee50c830ff0e8c-800.webp 800w, /static/uploads/9eee50c830ff0e8c-1024.webp 1024w" sizes="(max-width: 1000px) 100vw, 960px"><img src="/static/uploads/9eee50c830ff0e8c.jpg" alt="GTL Italy" class="entry-hero-image" width="1024" height="768" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAADwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQBWGUABA/ndqyuV4ALMAAOFMSehR+RwPXM4YpW+vy95K6C3Qi60il/jpC2PLAGeA8kfXNACM4SuHZXhyhFqqACFJMgdAy/zk/53UGDQxfyn8SUTREbzfLvJ9X4lbg5AVzHdjpn1+H9hccUwog6w1jFs+X86aQaxMHonUF6QPCsQAoAagAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+        </div>
+        
+
+        
+        
+
+        
+        
+
+        
         <div class="entry-content">
             <div class="content-main">
                 
                 <div class="markdown-content">
-                    <!-- # This is the description -->
+                    
 <p>Over <a href="https://elo.mit.edu/iap/">IAP</a>, I participated in MIT's Italy GTL program, and was able to travel to Pordenone, Italy and teach high schools students.</p>
 <p>I taught the following classes:</p>
 <ul>
@@ -178,25 +178,24 @@
 <p>Classes had 15-25 students with various levels of English-speaking ability. While teaching was primarily done in English, I also used my Spanish and Italian when students struggled to understand a concept.</p>
 <p>I was responsible for developing small problem sets that engaged student content. This involved me preparing 1-hour lectures, creating psets with LaTEX, and providing additional instruction materials or solutions.</p>
 <p>I particularly appreciated this opportunity because of the ability to return to Italy. I lived there when I was younger, but now had the opportunity to do so as a host. It was an invaluable opportunity to learn more about Italian culture and myself.</p>
-<p><picture><source type="image/avif" srcset="/static/uploads/blogs/gtl-italy/gtl-experiment-480.avif 480w, /static/uploads/blogs/gtl-italy/gtl-experiment-800.avif 800w, /static/uploads/blogs/gtl-italy/gtl-experiment-1024.avif 1024w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/blogs/gtl-italy/gtl-experiment-480.webp 480w, /static/uploads/blogs/gtl-italy/gtl-experiment-800.webp 800w, /static/uploads/blogs/gtl-italy/gtl-experiment-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/blogs/gtl-italy/gtl-experiment.jpg" alt="Teaching demo" width="1024" height="768" decoding="async" loading="lazy"></picture></p>
+<p><picture><source type="image/avif" srcset="/static/uploads/ad920077539a2e6e-480.avif 480w, /static/uploads/ad920077539a2e6e-800.avif 800w, /static/uploads/ad920077539a2e6e-1024.avif 1024w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/ad920077539a2e6e-480.webp 480w, /static/uploads/ad920077539a2e6e-800.webp 800w, /static/uploads/ad920077539a2e6e-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/ad920077539a2e6e.jpg" alt="Teaching demo" width="1024" height="768" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JQBWAO4AaWmwFO850N9msuQAA92oO8D0fLFP66cDUEDIU3T8qcCcRRzV414WpTJqtfJpGyZFbsQP/rzD4fRJBesp6lGCA8Elx6O6iWqj/Dv3uPmoQPbp2uKIJq5P4TvkRg2ky9By05AAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture></p>
                 </div>
+                
                 
             </div>
         </div>
 
-        <!-- Related build logs (project pages only) -->
+        
         
 
-        <!-- Entry Navigation -->
+        
         <nav class="entry-navigation">
             <div class="nav-links">
                 
             </div>
             <div class="nav-actions">
                 
-                <a href="/blogs/" class="btn btn-outline">
-                     Back to Blog
-                </a>
+                <a href="/blogs/" class="btn btn-outline">Back to Blog</a>
                 
             </div>
         </nav>
@@ -229,11 +228,10 @@
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>

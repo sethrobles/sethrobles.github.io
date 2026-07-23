@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -128,29 +127,35 @@
 
     <main class="main-content">
         
-<article class="entry-detail">
+<article class="entry-detail entry-detail--blog">
     <div class="container">
-        <!-- Entry Header -->
-        <header class="entry-header entry-header-centered">
+
+        
+        
+        <header class="entry-header entry-header--blog">
+            
+            <div class="entry-eyebrow"><time datetime="2026-04-27">27 April 2026</time></div>
+            
             <h1 class="entry-title">Sin LiMITe Coordinator</h1>
             
-            <div class="entry-tags">
-                
-                <span class="tag">Community</span>
-                
-                <span class="tag">Logistics</span>
-                
-            </div>
-            
-            
-            
-            
+            <p class="entry-subtitle">Leading the group that plans the Latin-American focused MIT fly-in, Sin LiMITe</p>
             
         </header>
-        <!-- Embedded video (if present) -->
+
         
 
-        <!-- Entry Content -->
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+
+        
         <div class="entry-content">
             <div class="content-main">
                 
@@ -172,96 +177,60 @@
                 </div>
                 
                 
-<style>
-  .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-    overflow: hidden;
-  }
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    text-align: center;
-  }
-  .carousel-slide.active {
-    display: block;
-  }
-  .carousel img {
-    max-width: 100%;
-    height: auto;
-  }
-  .carousel-controls {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-  .carousel-button {
-    display: inline-block;
-    background: var(--accent, #3b82f6);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-  }
-</style>
+                
 <div class="carousel">
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/sl_coordinator/lcc_black-480.avif 480w, /static/uploads/blogs/sl_coordinator/lcc_black-500.avif 500w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/sl_coordinator/lcc_black-480.webp 480w, /static/uploads/blogs/sl_coordinator/lcc_black-500.webp 500w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/blogs/sl_coordinator/lcc_black.png" alt="LCC Logo" width="500" height="537" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/a76316081cd47e41-480.avif 480w, /static/uploads/a76316081cd47e41-500.avif 500w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/a76316081cd47e41-480.webp 480w, /static/uploads/a76316081cd47e41-500.webp 500w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/a76316081cd47e41.png" alt="LCC Logo" width="500" height="537" decoding="async" loading="lazy"></picture>
       
         <div class="carousel-caption">LCC Logo</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/sl_coordinator/mujeres-latinas-oval-480.avif 480w, /static/uploads/blogs/sl_coordinator/mujeres-latinas-oval-800.avif 800w, /static/uploads/blogs/sl_coordinator/mujeres-latinas-oval-1200.avif 1200w, /static/uploads/blogs/sl_coordinator/mujeres-latinas-oval-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/sl_coordinator/mujeres-latinas-oval-480.webp 480w, /static/uploads/blogs/sl_coordinator/mujeres-latinas-oval-800.webp 800w, /static/uploads/blogs/sl_coordinator/mujeres-latinas-oval-1200.webp 1200w, /static/uploads/blogs/sl_coordinator/mujeres-latinas-oval-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/blogs/sl_coordinator/mujeres-latinas-oval.png" alt="Mujeres Latinas Logo" width="1600" height="1600" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/977182e1678aabfd-480.avif 480w, /static/uploads/977182e1678aabfd-800.avif 800w, /static/uploads/977182e1678aabfd-1200.avif 1200w, /static/uploads/977182e1678aabfd-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/977182e1678aabfd-480.webp 480w, /static/uploads/977182e1678aabfd-800.webp 800w, /static/uploads/977182e1678aabfd-1200.webp 1200w, /static/uploads/977182e1678aabfd-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/977182e1678aabfd.png" alt="Mujeres Latinas Logo" width="1600" height="1600" decoding="async" loading="lazy"></picture>
       
         <div class="carousel-caption">Mujeres Latinas Logo</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/sl_coordinator/·-·-·-latin-dance-club-transparent-·-·-·-480.avif 480w, /static/uploads/blogs/sl_coordinator/·-·-·-latin-dance-club-transparent-·-·-·-500.avif 500w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/sl_coordinator/·-·-·-latin-dance-club-transparent-·-·-·-480.webp 480w, /static/uploads/blogs/sl_coordinator/·-·-·-latin-dance-club-transparent-·-·-·-500.webp 500w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/blogs/sl_coordinator/·-·-·-latin-dance-club-transparent-·-·-·.png" alt="LDC Logo" width="500" height="500" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/216300da16ae3dd7-480.avif 480w, /static/uploads/216300da16ae3dd7-500.avif 500w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/216300da16ae3dd7-480.webp 480w, /static/uploads/216300da16ae3dd7-500.webp 500w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/216300da16ae3dd7.png" alt="LDC Logo" width="500" height="500" decoding="async" loading="lazy"></picture>
       
         <div class="carousel-caption">LDC Logo</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/sl_coordinator/cafe-no-background-1--480.avif 480w, /static/uploads/blogs/sl_coordinator/cafe-no-background-1--800.avif 800w, /static/uploads/blogs/sl_coordinator/cafe-no-background-1--1200.avif 1200w, /static/uploads/blogs/sl_coordinator/cafe-no-background-1--1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/sl_coordinator/cafe-no-background-1--480.webp 480w, /static/uploads/blogs/sl_coordinator/cafe-no-background-1--800.webp 800w, /static/uploads/blogs/sl_coordinator/cafe-no-background-1--1200.webp 1200w, /static/uploads/blogs/sl_coordinator/cafe-no-background-1--1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/blogs/sl_coordinator/cafe-no-background-1-.png" alt="CAFE Logo" width="1600" height="1200" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/3f6ceaa2588b7aea-480.avif 480w, /static/uploads/3f6ceaa2588b7aea-800.avif 800w, /static/uploads/3f6ceaa2588b7aea-1200.avif 1200w, /static/uploads/3f6ceaa2588b7aea-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/3f6ceaa2588b7aea-480.webp 480w, /static/uploads/3f6ceaa2588b7aea-800.webp 800w, /static/uploads/3f6ceaa2588b7aea-1200.webp 1200w, /static/uploads/3f6ceaa2588b7aea-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/3f6ceaa2588b7aea.png" alt="CAFE Logo" width="1600" height="1200" decoding="async" loading="lazy"></picture>
       
         <div class="carousel-caption">CAFE Logo</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/sl_coordinator/club_peru_sticker-480.avif 480w, /static/uploads/blogs/sl_coordinator/club_peru_sticker-800.avif 800w, /static/uploads/blogs/sl_coordinator/club_peru_sticker-1000.avif 1000w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/sl_coordinator/club_peru_sticker-480.webp 480w, /static/uploads/blogs/sl_coordinator/club_peru_sticker-800.webp 800w, /static/uploads/blogs/sl_coordinator/club_peru_sticker-1000.webp 1000w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/blogs/sl_coordinator/club_peru_sticker.png" alt="Club Peru Logo" width="1000" height="502" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/f4ba6d7c2c6d80a3-480.avif 480w, /static/uploads/f4ba6d7c2c6d80a3-800.avif 800w, /static/uploads/f4ba6d7c2c6d80a3-1000.avif 1000w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/f4ba6d7c2c6d80a3-480.webp 480w, /static/uploads/f4ba6d7c2c6d80a3-800.webp 800w, /static/uploads/f4ba6d7c2c6d80a3-1000.webp 1000w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/f4ba6d7c2c6d80a3.png" alt="Club Peru Logo" width="1000" height="502" decoding="async" loading="lazy"></picture>
       
         <div class="carousel-caption">Club Peru Logo</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/sl_coordinator/img_1638-480.avif 480w, /static/uploads/blogs/sl_coordinator/img_1638-676.avif 676w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/sl_coordinator/img_1638-480.webp 480w, /static/uploads/blogs/sl_coordinator/img_1638-676.webp 676w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/blogs/sl_coordinator/img_1638.png" alt="MIT Mariachi Logo" width="676" height="676" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/ae9638c4b4a21c33-480.avif 480w, /static/uploads/ae9638c4b4a21c33-676.avif 676w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/ae9638c4b4a21c33-480.webp 480w, /static/uploads/ae9638c4b4a21c33-676.webp 676w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/ae9638c4b4a21c33.png" alt="MIT Mariachi Logo" width="676" height="676" decoding="async" loading="lazy"></picture>
       
         <div class="carousel-caption">MIT Mariachi Logo</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/sl_coordinator/mit_casino_rueda_logo-480.avif 480w, /static/uploads/blogs/sl_coordinator/mit_casino_rueda_logo-800.avif 800w, /static/uploads/blogs/sl_coordinator/mit_casino_rueda_logo-1080.avif 1080w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/sl_coordinator/mit_casino_rueda_logo-480.webp 480w, /static/uploads/blogs/sl_coordinator/mit_casino_rueda_logo-800.webp 800w, /static/uploads/blogs/sl_coordinator/mit_casino_rueda_logo-1080.webp 1080w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/blogs/sl_coordinator/mit_casino_rueda_logo.jpg" alt="Casino Rueda Logo" width="1080" height="1080" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/70daff2c2663d3c8-480.avif 480w, /static/uploads/70daff2c2663d3c8-800.avif 800w, /static/uploads/70daff2c2663d3c8-1080.avif 1080w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/70daff2c2663d3c8-480.webp 480w, /static/uploads/70daff2c2663d3c8-800.webp 800w, /static/uploads/70daff2c2663d3c8-1080.webp 1080w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/70daff2c2663d3c8.jpg" alt="Casino Rueda Logo" width="1080" height="1080" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAADwBQCdASoUABQAPu1qrVCppaQiqAqpMB2JbACdMoR1B5fxVJqH4AegB0twDGS3m6tOURfitMCSIAD+4xDn4PPjR7myvDJI5vpwAXqEmcSYSJ34g/HMZzVQzNCZPfxY0S+wM4hqTf/9Lv4zwNBfd80NNw4Zi2CT3yj/ixJ9ZqcIbhCuqDAEhdR1cCujnIgspbV0++WpJimS3lcFqR8aBzH/zttdB2V6bIouvXRBMZ//4ZOF9ZLfwZ1P7jfJa99yH/8prGZ/loepdYtdZGnEAAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Casino Rueda Logo</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/sl_coordinator/screenshot-2024-10-27-at-9.04.56 pm-480.avif 480w, /static/uploads/blogs/sl_coordinator/screenshot-2024-10-27-at-9.04.56 pm-800.avif 800w, /static/uploads/blogs/sl_coordinator/screenshot-2024-10-27-at-9.04.56 pm-1200.avif 1200w, /static/uploads/blogs/sl_coordinator/screenshot-2024-10-27-at-9.04.56 pm-1486.avif 1486w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/sl_coordinator/screenshot-2024-10-27-at-9.04.56 pm-480.webp 480w, /static/uploads/blogs/sl_coordinator/screenshot-2024-10-27-at-9.04.56 pm-800.webp 800w, /static/uploads/blogs/sl_coordinator/screenshot-2024-10-27-at-9.04.56 pm-1200.webp 1200w, /static/uploads/blogs/sl_coordinator/screenshot-2024-10-27-at-9.04.56 pm-1486.webp 1486w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/blogs/sl_coordinator/screenshot-2024-10-27-at-9.04.56 pm.png" alt="MAES Logo" width="1486" height="848" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/a58b64fdb2c6c07a-480.avif 480w, /static/uploads/a58b64fdb2c6c07a-800.avif 800w, /static/uploads/a58b64fdb2c6c07a-1200.avif 1200w, /static/uploads/a58b64fdb2c6c07a-1486.avif 1486w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/a58b64fdb2c6c07a-480.webp 480w, /static/uploads/a58b64fdb2c6c07a-800.webp 800w, /static/uploads/a58b64fdb2c6c07a-1200.webp 1200w, /static/uploads/a58b64fdb2c6c07a-1486.webp 1486w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/a58b64fdb2c6c07a.png" alt="MAES Logo" width="1486" height="848" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADQAwCdASoUAAsAPu1iqU2ppaQiMAgBMB2JYwCdEf/gQF2AVO13z9YA/u3qu8MZvWHLRFLRrAXCdoHLVmXZbzsag9f5ox7vGWzR709qT/eQrjjeltOnLPbDBi1ycgFxNGzQ+zwvgCmZzJ0UToggBhKBskoAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">MAES Logo</div>
       
@@ -303,19 +272,17 @@
             </div>
         </div>
 
-        <!-- Related build logs (project pages only) -->
+        
         
 
-        <!-- Entry Navigation -->
+        
         <nav class="entry-navigation">
             <div class="nav-links">
                 
             </div>
             <div class="nav-actions">
                 
-                <a href="/blogs/" class="btn btn-outline">
-                     Back to Blog
-                </a>
+                <a href="/blogs/" class="btn btn-outline">Back to Blog</a>
                 
             </div>
         </nav>
@@ -348,11 +315,10 @@
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>

@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -128,31 +127,41 @@
 
     <main class="main-content">
         
-<article class="entry-detail">
+<article class="entry-detail entry-detail--project">
     <div class="container">
-        <!-- Entry Header -->
-        <header class="entry-header entry-header-centered">
+
+        
+        
+        <header class="entry-header entry-header--project entry-header-centered">
             <h1 class="entry-title">Spurdog Battery</h1>
             
             <div class="entry-tags">
-                
-                <span class="tag">Electronics</span>
-                
-                <span class="tag">Robotics</span>
-                
-                <span class="tag">Hardware</span>
-                
+                <span class="tag">Electronics</span><span class="tag">Hardware</span><span class="tag">Robotics</span>
             </div>
             
             
-            
+            <p class="entry-subtitle">A 12s3p AA battery pack as part of my work with the Marine Autonomy Lab.</p>
             
             
         </header>
-        <!-- Embedded video (if present) -->
         
 
-        <!-- Entry Content -->
+        
+        
+        
+        
+        <div class="entry-hero">
+            <picture><source type="image/avif" srcset="/static/uploads/0ebb003c2f04c585-480.avif 480w, /static/uploads/0ebb003c2f04c585-800.avif 800w, /static/uploads/0ebb003c2f04c585-1200.avif 1200w, /static/uploads/0ebb003c2f04c585-1342.avif 1342w" sizes="(max-width: 1000px) 100vw, 960px"><source type="image/webp" srcset="/static/uploads/0ebb003c2f04c585-480.webp 480w, /static/uploads/0ebb003c2f04c585-800.webp 800w, /static/uploads/0ebb003c2f04c585-1200.webp 1200w, /static/uploads/0ebb003c2f04c585-1342.webp 1342w" sizes="(max-width: 1000px) 100vw, 960px"><img src="/static/uploads/0ebb003c2f04c585.png" alt="Spurdog Battery" class="entry-hero-image" width="1342" height="1304" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABwBACdASoUABMAPu1mq06ppaOiKA1RMB2JZQC7ABGh71l+IXQ5/QNma4f5EAD+8uJ6n6cIgs1stb0AWZvlab7F1tmSSSd/nR3ei3NTsst3WXQ9WcTKZgk5P4jHr20AMdfvEOhg0D22DHn0sRC8jwAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+        </div>
+        
+
+        
+        
+
+        
+        
+
+        
         <div class="entry-content">
             <div class="content-main">
                 
@@ -163,61 +172,24 @@
 <p>In the future, I am considering changing the design so that they are stacked on their side, which will help with the overall height. This may make installation of nickel tabs more difficult, but likely will solve the vertical height constraint.</p>
 <p>This has been put lower on the priority now that I have a working concept, so I am working mostly on writing code for the Ping360 Sonar to integrate it with the lab's Spurdog UUVs and BlueBoats.</p>
 <p>
-<style>
-  .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-    overflow: hidden;
-  }
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    text-align: center;
-  }
-  .carousel-slide.active {
-    display: block;
-  }
-  .carousel img {
-    max-width: 100%;
-    height: auto;
-  }
-  .carousel-controls {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-  .carousel-button {
-    display: inline-block;
-    background: var(--accent, #3b82f6);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-  }
-</style>
 <div class="carousel">
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/projects/spurdog-battery/spurdog_battery_comparison-480.avif 480w, /static/uploads/projects/spurdog-battery/spurdog_battery_comparison-800.avif 800w, /static/uploads/projects/spurdog-battery/spurdog_battery_comparison-1200.avif 1200w, /static/uploads/projects/spurdog-battery/spurdog_battery_comparison-1316.avif 1316w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/projects/spurdog-battery/spurdog_battery_comparison-480.webp 480w, /static/uploads/projects/spurdog-battery/spurdog_battery_comparison-800.webp 800w, /static/uploads/projects/spurdog-battery/spurdog_battery_comparison-1200.webp 1200w, /static/uploads/projects/spurdog-battery/spurdog_battery_comparison-1316.webp 1316w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/projects/spurdog-battery/spurdog_battery_comparison-480.avif 480w, /static/uploads/projects/spurdog-battery/spurdog_battery_comparison-800.avif 800w, /static/uploads/projects/spurdog-battery/spurdog_battery_comparison-1200.avif 1200w, /static/uploads/projects/spurdog-battery/spurdog_battery_comparison-1316.avif 1316w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/projects/spurdog-battery/spurdog_battery_comparison-480.webp 480w, /static/uploads/projects/spurdog-battery/spurdog_battery_comparison-800.webp 800w, /static/uploads/projects/spurdog-battery/spurdog_battery_comparison-1200.webp 1200w, /static/uploads/projects/spurdog-battery/spurdog_battery_comparison-1316.webp 1316w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/projects/spurdog-battery/spurdog_battery_comparison.png" alt="Battery pack prototype alongside BlueROV battery" width="1316" height="1374" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/7979f67e9f8d06b2-480.avif 480w, /static/uploads/7979f67e9f8d06b2-800.avif 800w, /static/uploads/7979f67e9f8d06b2-1200.avif 1200w, /static/uploads/7979f67e9f8d06b2-1316.avif 1316w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/7979f67e9f8d06b2-480.webp 480w, /static/uploads/7979f67e9f8d06b2-800.webp 800w, /static/uploads/7979f67e9f8d06b2-1200.webp 1200w, /static/uploads/7979f67e9f8d06b2-1316.webp 1316w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/7979f67e9f8d06b2.png" alt="Battery pack prototype alongside BlueROV battery" width="1316" height="1374" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAACwBACdASoUABUAPu1ur1IppiQiqAgBMB2JQBfJMZPOZGuLQ40ZLSUD3l3kzkAAAP7ADX7CYTJSKBFmhGaPsSGdm5zKlnz7XAqXHixM/+THklAFi5L169NL+D5+AcGCLf/2tRZEUBbYRvANsPcC3YH0aplaWAoiilt0Xob1LF/qYVl61P+EnCAdZu/gKRAfzkSjjyn1OOvsBdDPdJiQgAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Battery pack prototype alongside BlueROV battery</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/mal/battery_pack-480.avif 480w, /static/uploads/blogs/mal/battery_pack-720.avif 720w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/mal/battery_pack-480.webp 480w, /static/uploads/blogs/mal/battery_pack-720.webp 720w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/blogs/mal/battery_pack-480.avif 480w, /static/uploads/blogs/mal/battery_pack-720.avif 720w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/blogs/mal/battery_pack-480.webp 480w, /static/uploads/blogs/mal/battery_pack-720.webp 720w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/blogs/mal/battery_pack.png" alt="Battery pack prototype" width="720" height="1066" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/10eb6ba3d629fe36-480.avif 480w, /static/uploads/10eb6ba3d629fe36-720.avif 720w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/10eb6ba3d629fe36-480.webp 480w, /static/uploads/10eb6ba3d629fe36-720.webp 720w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/10eb6ba3d629fe36.png" alt="Battery pack prototype" width="720" height="1066" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAQBQCdASoUAB4APulcp02pJKOiN/VYASAdCWMAqPQQ5mN/BuybLz53oKuEQxnBa7gAAPohHSDiWe+lxp0XfNWVLUATQmG4aFagiNwoIeiqAq6jSiIynMG9WMbt1P/gPbzGC2y9Grt6q88NeT8tgwHthVsQ/S1IecY0y/VCcxb3CsxI2+ol1r3CZDS+CFVHhgAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Battery pack prototype</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/mal/battery_pack_cad-480.avif 480w, /static/uploads/blogs/mal/battery_pack_cad-800.avif 800w, /static/uploads/blogs/mal/battery_pack_cad-1200.avif 1200w, /static/uploads/blogs/mal/battery_pack_cad-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/mal/battery_pack_cad-480.webp 480w, /static/uploads/blogs/mal/battery_pack_cad-800.webp 800w, /static/uploads/blogs/mal/battery_pack_cad-1200.webp 1200w, /static/uploads/blogs/mal/battery_pack_cad-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/blogs/mal/battery_pack_cad-480.avif 480w, /static/uploads/blogs/mal/battery_pack_cad-800.avif 800w, /static/uploads/blogs/mal/battery_pack_cad-1200.avif 1200w, /static/uploads/blogs/mal/battery_pack_cad-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/blogs/mal/battery_pack_cad-480.webp 480w, /static/uploads/blogs/mal/battery_pack_cad-800.webp 800w, /static/uploads/blogs/mal/battery_pack_cad-1200.webp 1200w, /static/uploads/blogs/mal/battery_pack_cad-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/blogs/mal/battery_pack_cad.png" alt="Battery Pack CAD" width="1600" height="1105" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/ee20b27e05befc77-480.avif 480w, /static/uploads/ee20b27e05befc77-800.avif 800w, /static/uploads/ee20b27e05befc77-1200.avif 1200w, /static/uploads/ee20b27e05befc77-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/ee20b27e05befc77-480.webp 480w, /static/uploads/ee20b27e05befc77-800.webp 800w, /static/uploads/ee20b27e05befc77-1200.webp 1200w, /static/uploads/ee20b27e05befc77-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/ee20b27e05befc77.png" alt="Battery Pack CAD" width="1600" height="1105" decoding="async" loading="lazy"></picture>
       
         <div class="carousel-caption">Battery Pack CAD</div>
       
@@ -257,22 +229,21 @@
 </p>
                 </div>
                 
+                
             </div>
         </div>
 
-        <!-- Related build logs (project pages only) -->
+        
         
 
-        <!-- Entry Navigation -->
+        
         <nav class="entry-navigation">
             <div class="nav-links">
                 
             </div>
             <div class="nav-actions">
                 
-                <a href="/projects/" class="btn btn-outline">
-                     Back to Projects
-                </a>
+                <a href="/projects/" class="btn btn-outline">Back to Projects</a>
                 
             </div>
         </nav>
@@ -305,11 +276,10 @@
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>

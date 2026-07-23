@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -128,29 +127,41 @@
 
     <main class="main-content">
         
-<article class="entry-detail">
+<article class="entry-detail entry-detail--project">
     <div class="container">
-        <!-- Entry Header -->
-        <header class="entry-header entry-header-centered">
+
+        
+        
+        <header class="entry-header entry-header--project entry-header-centered">
             <h1 class="entry-title">Blender Figures</h1>
             
             <div class="entry-tags">
-                
-                <span class="tag">Blender</span>
-                
-                <span class="tag">3D Printing</span>
-                
+                <span class="tag">3D Printing</span><span class="tag">Blender</span>
             </div>
             
             
-            
+            <p class="entry-subtitle">Learning to use blender by making various small figurines for 3D-printable gifts</p>
             
             
         </header>
-        <!-- Embedded video (if present) -->
         
 
-        <!-- Entry Content -->
+        
+        
+        
+        
+        <div class="entry-hero">
+            <picture><source type="image/avif" srcset="/static/uploads/d0d2478409450494-225.avif 225w" sizes="(max-width: 1000px) 100vw, 960px"><source type="image/webp" srcset="/static/uploads/d0d2478409450494-225.webp 225w" sizes="(max-width: 1000px) 100vw, 960px"><img src="/static/uploads/d0d2478409450494.png" alt="Blender Figures" class="entry-hero-image" width="225" height="225" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAwBACdASoUABQAPu1qrE8ppiQiMBgIATAdiWcAzYQQ79n2a3j/qOF5fQAA/vNp77+xqFRZ2whQh/ecfLSwBXVNHX1ibZCvSUEYYAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+        </div>
+        
+
+        
+        
+
+        
+        
+
+        
         <div class="entry-content">
             <div class="content-main">
                 
@@ -164,61 +175,24 @@
 <p>4) Join all bodies together (cmd J)</p>
 <p>5) Select all faces and convert them to triangalize them</p>
 <p>
-<style>
-  .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-    overflow: hidden;
-  }
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    text-align: center;
-  }
-  .carousel-slide.active {
-    display: block;
-  }
-  .carousel img {
-    max-width: 100%;
-    height: auto;
-  }
-  .carousel-controls {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-  .carousel-button {
-    display: inline-block;
-    background: var(--accent, #3b82f6);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-  }
-</style>
 <div class="carousel">
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/projects/blender-figures/bluey_model-480.avif 480w, /static/uploads/projects/blender-figures/bluey_model-800.avif 800w, /static/uploads/projects/blender-figures/bluey_model-1200.avif 1200w, /static/uploads/projects/blender-figures/bluey_model-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/projects/blender-figures/bluey_model-480.webp 480w, /static/uploads/projects/blender-figures/bluey_model-800.webp 800w, /static/uploads/projects/blender-figures/bluey_model-1200.webp 1200w, /static/uploads/projects/blender-figures/bluey_model-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/projects/blender-figures/bluey_model-480.avif 480w, /static/uploads/projects/blender-figures/bluey_model-800.avif 800w, /static/uploads/projects/blender-figures/bluey_model-1200.avif 1200w, /static/uploads/projects/blender-figures/bluey_model-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/projects/blender-figures/bluey_model-480.webp 480w, /static/uploads/projects/blender-figures/bluey_model-800.webp 800w, /static/uploads/projects/blender-figures/bluey_model-1200.webp 1200w, /static/uploads/projects/blender-figures/bluey_model-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/projects/blender-figures/bluey_model.png" alt="Model of Bluey" width="1600" height="900" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/3fe24d036f3579b8-480.avif 480w, /static/uploads/3fe24d036f3579b8-800.avif 800w, /static/uploads/3fe24d036f3579b8-1200.avif 1200w, /static/uploads/3fe24d036f3579b8-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/3fe24d036f3579b8-480.webp 480w, /static/uploads/3fe24d036f3579b8-800.webp 800w, /static/uploads/3fe24d036f3579b8-1200.webp 1200w, /static/uploads/3fe24d036f3579b8-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/3fe24d036f3579b8.png" alt="Model of Bluey" width="1600" height="900" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAAAwAwCdASoUAAsAPu1iqU2ppaOiMAgBMB2JZwAAQmCC4a6AAP7jTaUqwUov7fjM4qZ+zGFXDNvvvku1QAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Model of Bluey</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/projects/blender-figures/bunny_model-480.avif 480w, /static/uploads/projects/blender-figures/bunny_model-800.avif 800w, /static/uploads/projects/blender-figures/bunny_model-1200.avif 1200w, /static/uploads/projects/blender-figures/bunny_model-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/projects/blender-figures/bunny_model-480.webp 480w, /static/uploads/projects/blender-figures/bunny_model-800.webp 800w, /static/uploads/projects/blender-figures/bunny_model-1200.webp 1200w, /static/uploads/projects/blender-figures/bunny_model-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/projects/blender-figures/bunny_model-480.avif 480w, /static/uploads/projects/blender-figures/bunny_model-800.avif 800w, /static/uploads/projects/blender-figures/bunny_model-1200.avif 1200w, /static/uploads/projects/blender-figures/bunny_model-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/projects/blender-figures/bunny_model-480.webp 480w, /static/uploads/projects/blender-figures/bunny_model-800.webp 800w, /static/uploads/projects/blender-figures/bunny_model-1200.webp 1200w, /static/uploads/projects/blender-figures/bunny_model-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/projects/blender-figures/bunny_model.png" alt="Model of a bunny" width="1600" height="900" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/64811c0486a80ca0-480.avif 480w, /static/uploads/64811c0486a80ca0-800.avif 800w, /static/uploads/64811c0486a80ca0-1200.avif 1200w, /static/uploads/64811c0486a80ca0-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/64811c0486a80ca0-480.webp 480w, /static/uploads/64811c0486a80ca0-800.webp 800w, /static/uploads/64811c0486a80ca0-1200.webp 1200w, /static/uploads/64811c0486a80ca0-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/64811c0486a80ca0.png" alt="Model of a bunny" width="1600" height="900" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAwAwCdASoUAAsAPu1iqU2ppaOiMAgBMB2JaQAASmqhamwAAP7jS2NBghSknxY+njwS569V9NC25QAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Model of a bunny</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/projects/blender-figures/duck_model-480.avif 480w, /static/uploads/projects/blender-figures/duck_model-800.avif 800w, /static/uploads/projects/blender-figures/duck_model-1200.avif 1200w, /static/uploads/projects/blender-figures/duck_model-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/projects/blender-figures/duck_model-480.webp 480w, /static/uploads/projects/blender-figures/duck_model-800.webp 800w, /static/uploads/projects/blender-figures/duck_model-1200.webp 1200w, /static/uploads/projects/blender-figures/duck_model-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/projects/blender-figures/duck_model-480.avif 480w, /static/uploads/projects/blender-figures/duck_model-800.avif 800w, /static/uploads/projects/blender-figures/duck_model-1200.avif 1200w, /static/uploads/projects/blender-figures/duck_model-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/projects/blender-figures/duck_model-480.webp 480w, /static/uploads/projects/blender-figures/duck_model-800.webp 800w, /static/uploads/projects/blender-figures/duck_model-1200.webp 1200w, /static/uploads/projects/blender-figures/duck_model-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/projects/blender-figures/duck_model.png" alt="Model of a rubber duck" width="1600" height="900" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/17a6755032e0e20c-480.avif 480w, /static/uploads/17a6755032e0e20c-800.avif 800w, /static/uploads/17a6755032e0e20c-1200.avif 1200w, /static/uploads/17a6755032e0e20c-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/17a6755032e0e20c-480.webp 480w, /static/uploads/17a6755032e0e20c-800.webp 800w, /static/uploads/17a6755032e0e20c-1200.webp 1200w, /static/uploads/17a6755032e0e20c-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/17a6755032e0e20c.png" alt="Model of a rubber duck" width="1600" height="900" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABQAwCdASoUAAsAPu1iqU2ppaOiMAgBMB2JYgC7AAyvWtyXAAD+4wRuFyezcELgvGeMkzq/0qUF8siDf62CQZrjMpmc6dEPliIz6TL+qdZcHVMwJcbHPgAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Model of a rubber duck</div>
       
@@ -258,22 +232,21 @@
 </p>
                 </div>
                 
+                
             </div>
         </div>
 
-        <!-- Related build logs (project pages only) -->
+        
         
 
-        <!-- Entry Navigation -->
+        
         <nav class="entry-navigation">
             <div class="nav-links">
                 
             </div>
             <div class="nav-actions">
                 
-                <a href="/projects/" class="btn btn-outline">
-                     Back to Projects
-                </a>
+                <a href="/projects/" class="btn btn-outline">Back to Projects</a>
                 
             </div>
         </nav>
@@ -306,11 +279,10 @@
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>

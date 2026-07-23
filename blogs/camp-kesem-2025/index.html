@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -128,35 +127,41 @@
 
     <main class="main-content">
         
-<article class="entry-detail">
+<article class="entry-detail entry-detail--blog">
     <div class="container">
-        <!-- Entry Header -->
-        <header class="entry-header entry-header-centered">
+
+        
+        
+        <header class="entry-header entry-header--blog">
+            
+            <div class="entry-eyebrow"><time datetime="2025-10-23">23 October 2025</time></div>
+            
             <h1 class="entry-title">Camp Kesem 2025</h1>
             
-            <div class="entry-tags">
-                
-                <span class="tag">Mentoring</span>
-                
-                <span class="tag">Comumunity</span>
-                
-            </div>
-            
-            
-            
-            
+            <p class="entry-subtitle">A week-long summer camp to help support children whose parents have been affected by cancer</p>
             
         </header>
-        <!-- Embedded video (if present) -->
+
         
 
-        <!-- Entry Content -->
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+
+        
         <div class="entry-content">
             <div class="content-main">
                 
                 <div class="markdown-content">
                     <p>This past week, I had the opportunity to be at <a href="https://www.campkesem.org/">Camp Kesem website</a>, a week-long summer camp for kids whose parents have been affected by cancer.</p>
-<p><picture><source type="image/avif" srcset="/static/uploads/blogs/camp-kesem-2025/kesem-all-480.avif 480w, /static/uploads/blogs/camp-kesem-2025/kesem-all-800.avif 800w, /static/uploads/blogs/camp-kesem-2025/kesem-all-1086.avif 1086w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/blogs/camp-kesem-2025/kesem-all-480.webp 480w, /static/uploads/blogs/camp-kesem-2025/kesem-all-800.webp 800w, /static/uploads/blogs/camp-kesem-2025/kesem-all-1086.webp 1086w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/blogs/camp-kesem-2025/kesem-all.jpg" alt="Whole Camp" width="1086" height="724" decoding="async" loading="lazy"></picture></p>
+<p><picture><source type="image/avif" srcset="/static/uploads/f8d7220b1c546955-480.avif 480w, /static/uploads/f8d7220b1c546955-800.avif 800w, /static/uploads/f8d7220b1c546955-1086.avif 1086w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/f8d7220b1c546955-480.webp 480w, /static/uploads/f8d7220b1c546955-800.webp 800w, /static/uploads/f8d7220b1c546955-1086.webp 1086w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/f8d7220b1c546955.jpg" alt="Whole Camp" width="1086" height="724" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JagCsIHAC4uS0cU7ogv6AAP7cXRLb4XAEhNqG9KD9zA7++lLUmg3Lqjl+JUc6AGVGHXrZ6pyHIPrwRkEN1kIhRciXeoAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture></p>
 <h2 style="text-align:center;">Highlights from the Week</h2>
 
 <p>There were a few moments that really made the week special:</p>
@@ -166,68 +171,31 @@
 <li><strong>Affirmations and Empowerment</strong>: More vulnerable moments where campers and counselors are able to show who they are and how they appreciate eachother.</li>
 </ul>
 <p>
-<style>
-  .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-    overflow: hidden;
-  }
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    text-align: center;
-  }
-  .carousel-slide.active {
-    display: block;
-  }
-  .carousel img {
-    max-width: 100%;
-    height: auto;
-  }
-  .carousel-controls {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-  .carousel-button {
-    display: inline-block;
-    background: var(--accent, #3b82f6);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-  }
-</style>
 <div class="carousel">
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/camp-kesem-2025/kesem-group-480.avif 480w, /static/uploads/blogs/camp-kesem-2025/kesem-group-800.avif 800w, /static/uploads/blogs/camp-kesem-2025/kesem-group-1086.avif 1086w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/camp-kesem-2025/kesem-group-480.webp 480w, /static/uploads/blogs/camp-kesem-2025/kesem-group-800.webp 800w, /static/uploads/blogs/camp-kesem-2025/kesem-group-1086.webp 1086w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/blogs/camp-kesem-2025/kesem-group.jpg" alt="My Kesem Camp Group" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/5a02dfd9caba1e53-480.avif 480w, /static/uploads/5a02dfd9caba1e53-800.avif 800w, /static/uploads/5a02dfd9caba1e53-1086.avif 1086w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/5a02dfd9caba1e53-480.webp 480w, /static/uploads/5a02dfd9caba1e53-800.webp 800w, /static/uploads/5a02dfd9caba1e53-1086.webp 1086w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/5a02dfd9caba1e53.jpg" alt="My Kesem Camp Group" width="1086" height="724" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAwBACdASoUAA0APu1iqU2ppaOiMAgBMB2JbACdACHu2Anjy4HTn6jXOgAA/uoxZjKqUCc8mXv39ml688FrPMte2alLxyMeacBT7zFSczM/2JtWoFtwS0LXjWRMR2cG+jd/z8lpzThTb1q0pg2tOB/o0BF7/lPBQm+eO/ReuWKvYpN9NjQAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">My Kesem Camp Group</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/camp-kesem-2025/kesem-rock-climb-480.avif 480w, /static/uploads/blogs/camp-kesem-2025/kesem-rock-climb-724.avif 724w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/camp-kesem-2025/kesem-rock-climb-480.webp 480w, /static/uploads/blogs/camp-kesem-2025/kesem-rock-climb-724.webp 724w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/blogs/camp-kesem-2025/kesem-rock-climb.jpg" alt="Scaling a climbing wall" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/5a9da65766504c4e-480.avif 480w, /static/uploads/5a9da65766504c4e-724.avif 724w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/5a9da65766504c4e-480.webp 480w, /static/uploads/5a9da65766504c4e-724.webp 724w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/5a9da65766504c4e.jpg" alt="Scaling a climbing wall" width="724" height="1086" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAABQBQCdASoUAB4APu1qq08ppiOiMBgIATAdiWMAuwAxVliaj2vUSwPuc8NM7vqCEqMFUgAA/pwB89MF7ZFVQsc8Ue8JdLJF8hEfTJzrax4MU21qMer4+6zz55A72scvvei4miCb5pV/nJkHLanzxmFh+WtKKhDCqzBrQYI2IFcWXcXyH1WBh3PyneazS1Isf8BeJd0XGN4Sdk3G8xONYGvoDNs0MONMdl4AAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Scaling a climbing wall</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/camp-kesem-2025/kesem-chant-480.avif 480w, /static/uploads/blogs/camp-kesem-2025/kesem-chant-800.avif 800w, /static/uploads/blogs/camp-kesem-2025/kesem-chant-1086.avif 1086w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/camp-kesem-2025/kesem-chant-480.webp 480w, /static/uploads/blogs/camp-kesem-2025/kesem-chant-800.webp 800w, /static/uploads/blogs/camp-kesem-2025/kesem-chant-1086.webp 1086w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/blogs/camp-kesem-2025/kesem-chant.jpg" alt="Leading a Purple Team Chant" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/b9000e11a8944766-480.avif 480w, /static/uploads/b9000e11a8944766-800.avif 800w, /static/uploads/b9000e11a8944766-1086.avif 1086w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/b9000e11a8944766-480.webp 480w, /static/uploads/b9000e11a8944766-800.webp 800w, /static/uploads/b9000e11a8944766-1086.webp 1086w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/b9000e11a8944766.jpg" alt="Leading a Purple Team Chant" width="1086" height="724" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAADQAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JbACdACPmL+DSH31uxlgA/tcAbpgtCpJJBYlZKbXetX738HYTLPNRZND6cpQp6BZaigeZRlr6RZBP6dtpA0E40CYonieR6b7xnl/M/+8u98N5UBhkHfwhUbkVnvsNf78rl9UHudM+fG3pspOFagDZ4UqAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Leading a Purple Team Chant</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/camp-kesem-2025/kesem-affirmation-480.avif 480w, /static/uploads/blogs/camp-kesem-2025/kesem-affirmation-800.avif 800w, /static/uploads/blogs/camp-kesem-2025/kesem-affirmation-1200.avif 1200w, /static/uploads/blogs/camp-kesem-2025/kesem-affirmation-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/camp-kesem-2025/kesem-affirmation-480.webp 480w, /static/uploads/blogs/camp-kesem-2025/kesem-affirmation-800.webp 800w, /static/uploads/blogs/camp-kesem-2025/kesem-affirmation-1200.webp 1200w, /static/uploads/blogs/camp-kesem-2025/kesem-affirmation-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/blogs/camp-kesem-2025/kesem-affirmation.jpg" alt="Post Affirmation Hug" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/f4e2390e4ede73bc-480.avif 480w, /static/uploads/f4e2390e4ede73bc-800.avif 800w, /static/uploads/f4e2390e4ede73bc-1200.avif 1200w, /static/uploads/f4e2390e4ede73bc-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/f4e2390e4ede73bc-480.webp 480w, /static/uploads/f4e2390e4ede73bc-800.webp 800w, /static/uploads/f4e2390e4ede73bc-1200.webp 1200w, /static/uploads/f4e2390e4ede73bc-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/f4e2390e4ede73bc.jpg" alt="Post Affirmation Hug" width="1600" height="1068" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAwBACdASoUAA0APu1iqU2ppaOiMAgBMB2JbACdMoGv/gJZNo4glIJH1YAA/hSLj+0C4ZHRpDlMsJUUDFw6LVz1q7LT1X4TPMIBqyZ9rjzYfFnOJMRLYW2Bg7XvvmZvNawX8+qZ4qwWv4DnO/mzpfmL1Z2/z9GgZEdNyPI/HbdiF4cl4fcmAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Post Affirmation Hug</div>
       
@@ -267,22 +235,21 @@
 </p>
                 </div>
                 
+                
             </div>
         </div>
 
-        <!-- Related build logs (project pages only) -->
+        
         
 
-        <!-- Entry Navigation -->
+        
         <nav class="entry-navigation">
             <div class="nav-links">
                 
             </div>
             <div class="nav-actions">
                 
-                <a href="/blogs/" class="btn btn-outline">
-                     Back to Blog
-                </a>
+                <a href="/blogs/" class="btn btn-outline">Back to Blog</a>
                 
             </div>
         </nav>
@@ -315,11 +282,10 @@
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>

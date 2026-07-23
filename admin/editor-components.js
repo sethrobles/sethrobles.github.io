@@ -147,6 +147,67 @@
     },
   });
 
+  // ── Gallery ─────────────────────────────────────────────────────────────────
+  // A grid of 2–4 (or more) images with an optional shared caption — the
+  // "4-image block" from the blog mockup. Emits raw HTML build.py already knows
+  // how to handle: fix_image_paths()/upgrade_body_images() turn each <img> into
+  // an optimized <picture>, and site.css lays them out via .gallery. On blog
+  // posts the grid is allowed to break past the reading measure.
+  CMS.registerEditorComponent({
+    id: 'gallery',
+    label: 'Gallery (image grid)',
+    fields: [
+      {
+        name: 'images',
+        label: 'Images',
+        widget: 'list',
+        field: { name: 'image', label: 'Image', widget: 'image' },
+      },
+      { name: 'caption', label: 'Caption', widget: 'string', required: false },
+    ],
+    pattern: /^<figure class="gallery-figure">\n<div class="gallery">\n([\s\S]*?)\n<\/div>(?:\n<figcaption>([\s\S]*?)<\/figcaption>)?\n<\/figure>$/,
+    fromBlock: function (match) {
+      var srcs = (match[1] || '')
+        .split('\n')
+        .map(function (line) {
+          var m = line.match(/<img src="([^"]*)"/);
+          return m ? m[1] : null;
+        })
+        .filter(Boolean);
+      return { images: srcs, caption: match[2] || '' };
+    },
+    toBlock: function (data) {
+      var srcs = toArray(data.images);
+      var imgs = srcs
+        .map(function (src) { return '<img src="' + src + '" alt="">'; })
+        .join('\n');
+      var cap = (data.caption || '').trim();
+      return (
+        '<figure class="gallery-figure">\n<div class="gallery">\n' +
+        imgs +
+        '\n</div>' +
+        (cap ? '\n<figcaption>' + cap + '</figcaption>' : '') +
+        '\n</figure>'
+      );
+    },
+    toPreview: function (data) {
+      var srcs = toArray(data.images);
+      var cap = (data.caption || '').trim();
+      return (
+        '<figure style="margin:1rem 0">' +
+        '<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">' +
+        srcs
+          .map(function (src) {
+            return '<img src="' + src + '" style="width:100%;border-radius:6px">';
+          })
+          .join('') +
+        '</div>' +
+        (cap ? '<figcaption style="text-align:center;font-style:italic;opacity:0.75">' + cap + '</figcaption>' : '') +
+        '</figure>'
+      );
+    },
+  });
+
   // ── Table ─────────────────────────────────────────────────────────────────────
   // A GFM table (rendered by the markdown 'extra' extension) edited entirely
   // through form fields — no hand-written pipes required:

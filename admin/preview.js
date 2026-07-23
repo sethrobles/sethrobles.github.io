@@ -2,7 +2,7 @@
 // Runs after decap-cms.js loads; uses globals: h, createClass, CMS.
 
 // ── Site styles ──────────────────────────────────────────────────────────────
-CMS.registerPreviewStyle('/static/css/base.css');
+CMS.registerPreviewStyle('/static/css/site.css');
 CMS.registerPreviewStyle(
   'body { background: var(--bg-primary, #fff); color: var(--text-primary, #0f172a); }',
   { raw: true }

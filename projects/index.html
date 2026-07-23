@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore my portfolio of software projects, web applications, and technical contributions.">
+    <meta name="description" content="Hardware, robots, and software — the polished write-ups, each with its build logs below it for the messy middle.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -128,872 +127,256 @@
 
     <main class="main-content">
         
-<section class="projects-header">
+<div class="entry-detail">
     <div class="container">
-        <header class="section-header">
-            <h1 class="section-title">My Projects</h1>
-        </header>
-
-        <div class="projects-controls">
-            <div class="search-box" style="position:relative;">
-                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="position:absolute;left:0.75rem;top:50%;transform:translateY(-50%);pointer-events:none;">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.35-4.35"></path>
-                </svg>
-                <input type="text" id="project-search" placeholder="Search projects..." class="search-input" style="padding-left:2.5rem;">
-            </div>
-
-            <div class="tag-filters" id="tag-filters">
-                <button class="tag-filter active" data-tag="all">All</button>
-                
-                
-                    
-                        
-                            
-                                
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                                
-                            
-                        
-                            
-                        
-                            
-                                
-                            
-                        
-                            
-                                
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                                
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                                
-                            
-                        
-                            
-                                
-                            
-                        
-                            
-                                
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                                
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                                
-                            
-                        
-                            
-                                
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                                
-                            
-                        
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                                
-                            
-                        
-                            
-                                
-                            
-                        
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                                
-                            
-                        
-                            
-                        
-                            
-                                
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                                
-                            
-                        
-                            
-                                
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                        
-                            
-                                
-                            
-                        
-                            
-                                
-                            
-                        
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                                
-                            
-                        
-                            
-                                
-                            
-                        
-                            
-                        
-                    
-                
-
-                
-                <button class="tag-filter" data-tag="PCB">PCB</button>
-                
-                <button class="tag-filter" data-tag="Motor">Motor</button>
-                
-                <button class="tag-filter" data-tag="Prototyping">Prototyping</button>
-                
-                <button class="tag-filter" data-tag="M2H">M2H</button>
-                
-                <button class="tag-filter" data-tag="Web Development">Web Development</button>
-                
-                <button class="tag-filter" data-tag="Health">Health</button>
-                
-                <button class="tag-filter" data-tag="Fitness">Fitness</button>
-                
-                <button class="tag-filter" data-tag="Coding">Coding</button>
-                
-                <button class="tag-filter" data-tag="Machine Learning">Machine Learning</button>
-                
-                <button class="tag-filter" data-tag="3D Printing">3D Printing</button>
-                
-                <button class="tag-filter" data-tag="Hardware">Hardware</button>
-                
-                <button class="tag-filter" data-tag="Blender">Blender</button>
-                
-                <button class="tag-filter" data-tag="Electronics">Electronics</button>
-                
-                <button class="tag-filter" data-tag="Robotics">Robotics</button>
-                
-                <button class="tag-filter" data-tag="Class">Class</button>
-                
-                <button class="tag-filter" data-tag="Arduino">Arduino</button>
-                
-                <button class="tag-filter" data-tag="KiCAD">KiCAD</button>
-                
-                <button class="tag-filter" data-tag="PCB Design">PCB Design</button>
-                
-                <button class="tag-filter" data-tag="Computer Vision">Computer Vision</button>
-                
-                <button class="tag-filter" data-tag="Team Project">Team Project</button>
-                
-                <button class="tag-filter" data-tag="Python">Python</button>
-                
-                <button class="tag-filter" data-tag="Flask">Flask</button>
-                
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="projects-content">
-    <div class="container">
-        <div class="projects-grid" id="projects-grid">
-            
-            
-                
-<a href="/projects/impact-wrench/" class="card entry-card" data-tags="PCB" style="text-decoration:none;color:inherit;">
-    <div class="card-image">
-    
-        
-        <picture><source type="image/avif" srcset="/static/uploads/projects/impact-wrench/71ztjtxvkul._ac_sl1500_-480.avif 480w, /static/uploads/projects/impact-wrench/71ztjtxvkul._ac_sl1500_-800.avif 800w, /static/uploads/projects/impact-wrench/71ztjtxvkul._ac_sl1500_-1200.avif 1200w, /static/uploads/projects/impact-wrench/71ztjtxvkul._ac_sl1500_-1499.avif 1499w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/projects/impact-wrench/71ztjtxvkul._ac_sl1500_-480.webp 480w, /static/uploads/projects/impact-wrench/71ztjtxvkul._ac_sl1500_-800.webp 800w, /static/uploads/projects/impact-wrench/71ztjtxvkul._ac_sl1500_-1200.webp 1200w, /static/uploads/projects/impact-wrench/71ztjtxvkul._ac_sl1500_-1499.webp 1499w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/projects/impact-wrench/71ztjtxvkul._ac_sl1500_.jpg" alt="Disassembling Impact Wrench" class="card-thumbnail" width="1499" height="1500" decoding="async" loading="lazy"></picture>
-    
-    </div>
-
-    <div class="card-content">
-        <header class="card-header">
-            <div class="card-heading">
-                <h3 class="card-title">
-                    Disassembling Impact Wrench
-                </h3>
-                
-                <time class="card-date" datetime="2026-06-14">
-                    2026-06-14
-                </time>
-                
-            </div>
+        <header class="idx-header">
+            <h1 class="idx-title">Projects</h1>
+            <p class="idx-blurb">Hardware, robots, and software — the polished write-ups, each with its build logs below it for the messy middle.</p>
         </header>
 
         
-        <div class="card-tags">
+        
+        <nav class="tagbar" aria-label="Filter by category">
+            <a class="tagbar-link is-active"
+               href="/projects/" aria-current="page">
+                All <span class="tagbar-count">15</span>
+            </a>
             
-            <span class="tag">PCB</span>
+            <a class="tagbar-link"
+               href="/projects/tag/electronics/">
+                Electronics <span class="tagbar-count">7</span>
+            </a>
             
+            <a class="tagbar-link"
+               href="/projects/tag/hardware/">
+                Hardware <span class="tagbar-count">6</span>
+            </a>
             
-        </div>
+            <a class="tagbar-link"
+               href="/projects/tag/3d-printing/">
+                3D Printing <span class="tagbar-count">4</span>
+            </a>
+            
+            <a class="tagbar-link"
+               href="/projects/tag/software/">
+                Software <span class="tagbar-count">4</span>
+            </a>
+            
+            <a class="tagbar-link"
+               href="/projects/tag/coursework/">
+                Coursework <span class="tagbar-count">3</span>
+            </a>
+            
+            <a class="tagbar-link"
+               href="/projects/tag/pcb-design/">
+                PCB Design <span class="tagbar-count">3</span>
+            </a>
+            
+            <a class="tagbar-link"
+               href="/projects/tag/robotics/">
+                Robotics <span class="tagbar-count">3</span>
+            </a>
+            
+            <a class="tagbar-link"
+               href="/projects/tag/device-integration/">
+                Device Integration <span class="tagbar-count">2</span>
+            </a>
+            
+            <a class="tagbar-link"
+               href="/projects/tag/motor/">
+                Motor <span class="tagbar-count">2</span>
+            </a>
+            
+        </nav>
         
 
-        
-        <p class="card-summary">I am trying to put my own controls on an impact wrench so that it can be controlled by a computer without using the trigger that is normally used for the control.</p>
-        
-    </div>
-    </a>
-
+        <div class="index-list">
             
+            <a class="index-row" href="/projects/foc-motor-controller/">
+                <span class="index-top">
+                    <span class="index-title">FOC Motor Controller</span>
+                    
+                    <span class="index-date">Jul 2026</span>
+                    
+                </span>
                 
-<a href="/projects/3d-printable-motor/" class="card entry-card" data-tags="Motor,PCB,Prototyping,M2H" style="text-decoration:none;color:inherit;">
-    <div class="card-image">
-    
-        
-        <picture><source type="image/avif" srcset="/static/uploads/projects/3d-printable-motor/image-from-ios-1--480.avif 480w, /static/uploads/projects/3d-printable-motor/image-from-ios-1--800.avif 800w, /static/uploads/projects/3d-printable-motor/image-from-ios-1--1200.avif 1200w, /static/uploads/projects/3d-printable-motor/image-from-ios-1--1600.avif 1600w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/projects/3d-printable-motor/image-from-ios-1--480.webp 480w, /static/uploads/projects/3d-printable-motor/image-from-ios-1--800.webp 800w, /static/uploads/projects/3d-printable-motor/image-from-ios-1--1200.webp 1200w, /static/uploads/projects/3d-printable-motor/image-from-ios-1--1600.webp 1600w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/projects/3d-printable-motor/image-from-ios-1-.jpg" alt="Small 3D Printable Motor" class="card-thumbnail" width="1600" height="2133" decoding="async" loading="lazy"></picture>
-    
-    </div>
-
-    <div class="card-content">
-        <header class="card-header">
-            <div class="card-heading">
-                <h3 class="card-title">
-                    Small 3D Printable Motor
-                </h3>
+                <span class="index-summary">A two-motor field-oriented-control board, rebuilt properly after a rushed first prototype in MIT's 2.679.</span>
                 
-                <time class="card-date" datetime="2026-06-10">
-                    2026-06-10
-                </time>
+            </a>
+            
+            <a class="index-row" href="/projects/impact-wrench/">
+                <span class="index-top">
+                    <span class="index-title">Disassembling Impact Wrench</span>
+                    
+                    <span class="index-date">Jun 2026</span>
+                    
+                </span>
                 
-            </div>
-        </header>
-
-        
-        <div class="card-tags">
-            
-            <span class="tag">Motor</span>
-            
-            <span class="tag">PCB</span>
-            
-            <span class="tag">Prototyping</span>
-            
-            
-            <span class="tag tag-more">+1</span>
-            
-        </div>
-        
-
-        
-        <p class="card-summary">For the Metal2Humanoid project (and personal interest), I redesigned a small 3d printable motor that I saw online and then  manufactured it.</p>
-        
-    </div>
-    </a>
-
-            
+                <span class="index-summary">I am trying to put my own controls on an impact wrench so that it can be controlled by a computer without using the trigger that is normally used for the control.</span>
                 
-<a href="/projects/personal-site/" class="card entry-card" data-tags="Web Development" style="text-decoration:none;color:inherit;">
-    <div class="card-image">
-    
-        
-        <picture><source type="image/avif" srcset="/static/uploads/projects/personal-site/personal-site-thumb-480.avif 480w, /static/uploads/projects/personal-site/personal-site-thumb-800.avif 800w, /static/uploads/projects/personal-site/personal-site-thumb-1200.avif 1200w, /static/uploads/projects/personal-site/personal-site-thumb-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/projects/personal-site/personal-site-thumb-480.webp 480w, /static/uploads/projects/personal-site/personal-site-thumb-800.webp 800w, /static/uploads/projects/personal-site/personal-site-thumb-1200.webp 1200w, /static/uploads/projects/personal-site/personal-site-thumb-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/projects/personal-site/personal-site-thumb.png" alt="Personal Site" class="card-thumbnail" width="1600" height="1093" decoding="async" loading="lazy"></picture>
-    
-    </div>
-
-    <div class="card-content">
-        <header class="card-header">
-            <div class="card-heading">
-                <h3 class="card-title">
-                    Personal Site
-                </h3>
+            </a>
+            
+            <a class="index-row" href="/projects/3d-printable-motor/">
+                <span class="index-top">
+                    <span class="index-title">Small 3D Printable Motor</span>
+                    
+                    <span class="index-date">Jun 2026</span>
+                    
+                </span>
                 
-                <time class="card-date" datetime="2026-05-24">
-                    2026-05-24
-                </time>
+                <span class="index-summary">For the Metal2Humanoid project (and personal interest), I redesigned a small 3d printable motor that I saw online and then  manufactured it.</span>
                 
-            </div>
-        </header>
-
-        
-        <div class="card-tags">
+            </a>
             
-            <span class="tag">Web Development</span>
-            
-            
-        </div>
-        
-
-        
-        <p class="card-summary">My personal portfolio website, hosted with github pages and connected to my domain.</p>
-        
-    </div>
-    </a>
-
-            
+            <a class="index-row" href="/projects/personal-site/">
+                <span class="index-top">
+                    <span class="index-title">Personal Site</span>
+                    
+                    <span class="index-date">May 2026</span>
+                    
+                </span>
                 
-<a href="/projects/workout_coach/" class="card entry-card" data-tags="Health,Fitness,Coding" style="text-decoration:none;color:inherit;">
-    <div class="card-image">
-    
-        
-        <picture><source type="image/avif" srcset="/static/uploads/projects/workout_coach/workout_coach_thumb-480.avif 480w, /static/uploads/projects/workout_coach/workout_coach_thumb-768.avif 768w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/projects/workout_coach/workout_coach_thumb-480.webp 480w, /static/uploads/projects/workout_coach/workout_coach_thumb-768.webp 768w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/projects/workout_coach/workout_coach_thumb.jpg" alt="Workout Coach" class="card-thumbnail" width="768" height="1024" decoding="async" loading="lazy"></picture>
-    
-    </div>
-
-    <div class="card-content">
-        <header class="card-header">
-            <div class="card-heading">
-                <h3 class="card-title">
-                    Workout Coach
-                </h3>
+                <span class="index-summary">My personal portfolio website, hosted with github pages and connected to my domain.</span>
                 
-                <time class="card-date" datetime="2026-04-22">
-                    2026-04-22
-                </time>
+            </a>
+            
+            <a class="index-row" href="/projects/workout_coach/">
+                <span class="index-top">
+                    <span class="index-title">Workout Coach</span>
+                    
+                    <span class="index-date">Apr 2026</span>
+                    
+                </span>
                 
-            </div>
-        </header>
-
-        
-        <div class="card-tags">
-            
-            <span class="tag">Health</span>
-            
-            <span class="tag">Fitness</span>
-            
-            <span class="tag">Coding</span>
-            
-            
-        </div>
-        
-
-        
-        <p class="card-summary">AI Workout Coach. Basically just a ChatGPT wrapper that interfaces with my Garmin data. Will become more if I find it useful</p>
-        
-    </div>
-    </a>
-
-            
+                <span class="index-summary">AI Workout Coach. Basically just a ChatGPT wrapper that interfaces with my Garmin data. Will become more if I find it useful</span>
                 
-<a href="/projects/rl-practice/" class="card entry-card" data-tags="Machine Learning" style="text-decoration:none;color:inherit;">
-    <div class="card-image">
-    
-        
-        <picture><source type="image/avif" srcset="/static/uploads/projects/rl-practice/rl-practice-thumb-350.avif 350w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/projects/rl-practice/rl-practice-thumb-350.webp 350w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/projects/rl-practice/rl-practice-thumb.png" alt="Reinforcement Learning Explorations" class="card-thumbnail" width="350" height="350" decoding="async" loading="lazy"></picture>
-    
-    </div>
-
-    <div class="card-content">
-        <header class="card-header">
-            <div class="card-heading">
-                <h3 class="card-title">
-                    Reinforcement Learning Explorations
-                </h3>
+            </a>
+            
+            <a class="index-row" href="/projects/rl-practice/">
+                <span class="index-top">
+                    <span class="index-title">Reinforcement Learning Explorations</span>
+                    
+                    <span class="index-date">Jan 2026</span>
+                    
+                </span>
                 
-                <time class="card-date" datetime="2026-01-23">
-                    2026-01-23
-                </time>
+                <span class="index-summary">Exploring reinforcement learning referencing the book by Sutton and Barto for Building a Snake builder</span>
                 
-            </div>
-        </header>
-
-        
-        <div class="card-tags">
+            </a>
             
-            <span class="tag">Machine Learning</span>
-            
-            
-        </div>
-        
-
-        
-        <p class="card-summary">Exploring reinforcement learning referencing the book by Sutton and Barto for Building a Snake builder</p>
-        
-    </div>
-    </a>
-
-            
+            <a class="index-row" href="/projects/ender6/">
+                <span class="index-top">
+                    <span class="index-title">Ender 6 Modifications</span>
+                    
+                    <span class="index-date">Jan 2026</span>
+                    
+                </span>
                 
-<a href="/projects/ender6/" class="card entry-card" data-tags="3D Printing,Hardware" style="text-decoration:none;color:inherit;">
-    <div class="card-image">
-    
-        
-        <picture><source type="image/avif" srcset="/static/uploads/projects/ender6/ender6-480.avif 480w, /static/uploads/projects/ender6/ender6-800.avif 800w, /static/uploads/projects/ender6/ender6-1200.avif 1200w, /static/uploads/projects/ender6/ender6-1346.avif 1346w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/projects/ender6/ender6-480.webp 480w, /static/uploads/projects/ender6/ender6-800.webp 800w, /static/uploads/projects/ender6/ender6-1200.webp 1200w, /static/uploads/projects/ender6/ender6-1346.webp 1346w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/projects/ender6/ender6.png" alt="Ender 6 Modifications" class="card-thumbnail" width="1346" height="1536" decoding="async" loading="lazy"></picture>
-    
-    </div>
-
-    <div class="card-content">
-        <header class="card-header">
-            <div class="card-heading">
-                <h3 class="card-title">
-                    Ender 6 Modifications
-                </h3>
+                <span class="index-summary">Setting up an Ender6 3D Printer with Klipper and Potentially Future Modifications</span>
                 
-                <time class="card-date" datetime="2026-01-23">
-                    2026-01-23
-                </time>
+            </a>
+            
+            <a class="index-row" href="/projects/blender-figures/">
+                <span class="index-top">
+                    <span class="index-title">Blender Figures</span>
+                    
+                    <span class="index-date">Jan 2026</span>
+                    
+                </span>
                 
-            </div>
-        </header>
-
-        
-        <div class="card-tags">
-            
-            <span class="tag">3D Printing</span>
-            
-            <span class="tag">Hardware</span>
-            
-            
-        </div>
-        
-
-        
-        <p class="card-summary">Setting up an Ender6 3D Printer with Klipper and Potentially Future Modifications</p>
-        
-    </div>
-    </a>
-
-            
+                <span class="index-summary">Learning to use blender by making various small figurines for 3D-printable gifts</span>
                 
-<a href="/projects/blender-figures/" class="card entry-card" data-tags="Blender,3D Printing" style="text-decoration:none;color:inherit;">
-    <div class="card-image">
-    
-        
-        <picture><source type="image/avif" srcset="/static/uploads/projects/blender-figures/blender_logo-225.avif 225w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/projects/blender-figures/blender_logo-225.webp 225w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/projects/blender-figures/blender_logo.png" alt="Blender Figures" class="card-thumbnail" width="225" height="225" decoding="async" loading="lazy"></picture>
-    
-    </div>
-
-    <div class="card-content">
-        <header class="card-header">
-            <div class="card-heading">
-                <h3 class="card-title">
-                    Blender Figures
-                </h3>
+            </a>
+            
+            <a class="index-row" href="/projects/spurdog-battery/">
+                <span class="index-top">
+                    <span class="index-title">Spurdog Battery</span>
+                    
+                    <span class="index-date">Jan 2026</span>
+                    
+                </span>
                 
-                <time class="card-date" datetime="2026-01-21">
-                    2026-01-21
-                </time>
+                <span class="index-summary">A 12s3p AA battery pack as part of my work with the Marine Autonomy Lab.</span>
                 
-            </div>
-        </header>
-
-        
-        <div class="card-tags">
+            </a>
             
-            <span class="tag">Blender</span>
-            
-            <span class="tag">3D Printing</span>
-            
-            
-        </div>
-        
-
-        
-        <p class="card-summary">Learning to use blender by making various small figurines for 3D-printable gifts</p>
-        
-    </div>
-    </a>
-
-            
+            <a class="index-row" href="/projects/2_671/">
+                <span class="index-top">
+                    <span class="index-title">2.671</span>
+                    
+                    <span class="index-date">Jan 2026</span>
+                    
+                </span>
                 
-<a href="/projects/spurdog-battery/" class="card entry-card" data-tags="Electronics,Robotics,Hardware" style="text-decoration:none;color:inherit;">
-    <div class="card-image">
-    
-        
-        <picture><source type="image/avif" srcset="/static/uploads/projects/spurdog-battery/spurdog_battery_thumb-480.avif 480w, /static/uploads/projects/spurdog-battery/spurdog_battery_thumb-800.avif 800w, /static/uploads/projects/spurdog-battery/spurdog_battery_thumb-1200.avif 1200w, /static/uploads/projects/spurdog-battery/spurdog_battery_thumb-1342.avif 1342w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/projects/spurdog-battery/spurdog_battery_thumb-480.webp 480w, /static/uploads/projects/spurdog-battery/spurdog_battery_thumb-800.webp 800w, /static/uploads/projects/spurdog-battery/spurdog_battery_thumb-1200.webp 1200w, /static/uploads/projects/spurdog-battery/spurdog_battery_thumb-1342.webp 1342w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/projects/spurdog-battery/spurdog_battery_thumb.png" alt="Spurdog Battery" class="card-thumbnail" width="1342" height="1304" decoding="async" loading="lazy"></picture>
-    
-    </div>
-
-    <div class="card-content">
-        <header class="card-header">
-            <div class="card-heading">
-                <h3 class="card-title">
-                    Spurdog Battery
-                </h3>
+                <span class="index-summary">Reflections on 2.671, Measurement and Instrumentation.</span>
                 
-                <time class="card-date" datetime="2026-01-13">
-                    2026-01-13
-                </time>
+            </a>
+            
+            <a class="index-row" href="/projects/led-array/">
+                <span class="index-top">
+                    <span class="index-title">LED Array PCB</span>
+                    
+                    <span class="index-date">Dec 2025</span>
+                    
+                </span>
                 
-            </div>
-        </header>
-
-        
-        <div class="card-tags">
-            
-            <span class="tag">Electronics</span>
-            
-            <span class="tag">Robotics</span>
-            
-            <span class="tag">Hardware</span>
-            
-            
-        </div>
-        
-
-        
-        <p class="card-summary">A 12s3p AA battery pack as part of my work with the Marine Autonomy Lab.</p>
-        
-    </div>
-    </a>
-
-            
+                <span class="index-summary">A 4-layer PCB with an STM32 microcontroller using shift-registers and MOSFETs with a 1/8 scan.</span>
                 
-<a href="/projects/2_671/" class="card entry-card" data-tags="Class,Electronics,Arduino" style="text-decoration:none;color:inherit;">
-    <div class="card-image">
-    
-        
-        <picture><source type="image/avif" srcset="/static/uploads/projects/2_671/gf_visual_abstract-480.avif 480w, /static/uploads/projects/2_671/gf_visual_abstract-800.avif 800w, /static/uploads/projects/2_671/gf_visual_abstract-1200.avif 1200w, /static/uploads/projects/2_671/gf_visual_abstract-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/projects/2_671/gf_visual_abstract-480.webp 480w, /static/uploads/projects/2_671/gf_visual_abstract-800.webp 800w, /static/uploads/projects/2_671/gf_visual_abstract-1200.webp 1200w, /static/uploads/projects/2_671/gf_visual_abstract-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/projects/2_671/gf_visual_abstract.png" alt="2.671" class="card-thumbnail" width="1600" height="688" decoding="async" loading="lazy"></picture>
-    
-    </div>
-
-    <div class="card-content">
-        <header class="card-header">
-            <div class="card-heading">
-                <h3 class="card-title">
-                    2.671
-                </h3>
+            </a>
+            
+            <a class="index-row" href="/projects/2-12-ur5/">
+                <span class="index-top">
+                    <span class="index-title">2.12 UR5</span>
+                    
+                    <span class="index-date">Dec 2025</span>
+                    
+                </span>
                 
-                <time class="card-date" datetime="2026-01-04">
-                    2026-01-04
-                </time>
+                <span class="index-summary">As UR5 Team Lead for my 2.12 lab section, I worked with a group of 8 students to program a UR5 robot to detect, sort, and dispose of plastic bottles using computer vision and robotics control.</span>
                 
-            </div>
-        </header>
-
-        
-        <div class="card-tags">
+            </a>
             
-            <span class="tag">Class</span>
-            
-            <span class="tag">Electronics</span>
-            
-            <span class="tag">Arduino</span>
-            
-            
-        </div>
-        
-
-        
-        <p class="card-summary">Reflections on 2.671, Measurement and Instrumentation.</p>
-        
-    </div>
-    </a>
-
-            
+            <a class="index-row" href="/projects/suction-tank/">
+                <span class="index-top">
+                    <span class="index-title">Suction Tank Robot</span>
+                    
+                    <span class="index-date">Oct 2025</span>
+                    
+                </span>
                 
-<a href="/projects/led-array/" class="card entry-card" data-tags="KiCAD,PCB Design" style="text-decoration:none;color:inherit;">
-    <div class="card-image">
-    
-        
-        <picture><source type="image/avif" srcset="/static/uploads/projects/led-array/led_pcb-480.avif 480w, /static/uploads/projects/led-array/led_pcb-800.avif 800w, /static/uploads/projects/led-array/led_pcb-1200.avif 1200w, /static/uploads/projects/led-array/led_pcb-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/projects/led-array/led_pcb-480.webp 480w, /static/uploads/projects/led-array/led_pcb-800.webp 800w, /static/uploads/projects/led-array/led_pcb-1200.webp 1200w, /static/uploads/projects/led-array/led_pcb-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/projects/led-array/led_pcb.png" alt="LED Array PCB" class="card-thumbnail" width="1600" height="1200" decoding="async" loading="lazy"></picture>
-    
-    </div>
-
-    <div class="card-content">
-        <header class="card-header">
-            <div class="card-heading">
-                <h3 class="card-title">
-                    LED Array PCB
-                </h3>
+                <span class="index-summary">A prototyped tank-style robot that uses suction to adhere to surfaces, designed with 3D printed parts and modular components.</span>
                 
-                <time class="card-date" datetime="2025-12-13">
-                    2025-12-13
-                </time>
+            </a>
+            
+            <a class="index-row" href="/projects/2-00-library-tracker/">
+                <span class="index-top">
+                    <span class="index-title">2.00 Library Tracker</span>
+                    
+                    <span class="index-date">Oct 2025</span>
+                    
+                </span>
                 
-            </div>
-        </header>
-
-        
-        <div class="card-tags">
-            
-            <span class="tag">KiCAD</span>
-            
-            <span class="tag">PCB Design</span>
-            
-            
-        </div>
-        
-
-        
-        <p class="card-summary">A 4-layer PCB with an STM32 microcontroller using shift-registers and MOSFETs with a 1/8 scan.</p>
-        
-    </div>
-    </a>
-
-            
+                <span class="index-summary">An Arduino-powered Library Tracker tool built for an elementary school librarian to help manage student tasks with LEDs, buttons, and a control board.</span>
                 
-<a href="/projects/2-12-ur5/" class="card entry-card" data-tags="Robotics,Computer Vision,Team Project,Class" style="text-decoration:none;color:inherit;">
-    <div class="card-image">
-    
-        
-        <picture><source type="image/avif" srcset="/static/uploads/projects/2-12-ur5/ur5-480.avif 480w, /static/uploads/projects/2-12-ur5/ur5-768.avif 768w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/projects/2-12-ur5/ur5-480.webp 480w, /static/uploads/projects/2-12-ur5/ur5-768.webp 768w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/projects/2-12-ur5/ur5.jpg" alt="2.12 UR5" class="card-thumbnail" width="768" height="1024" decoding="async" loading="lazy"></picture>
-    
-    </div>
-
-    <div class="card-content">
-        <header class="card-header">
-            <div class="card-heading">
-                <h3 class="card-title">
-                    2.12 UR5
-                </h3>
+            </a>
+            
+            <a class="index-row" href="/projects/accesspoint/">
+                <span class="index-top">
+                    <span class="index-title">AccessPoint</span>
+                    
+                    <span class="index-date">Aug 2025</span>
+                    
+                </span>
                 
-                <time class="card-date" datetime="2025-12-04">
-                    2025-12-04
-                </time>
+                <span class="index-summary">A web platform offering services to connect underrepresented students with scholarships and opportunities, built with Flask and PostgreSQL.</span>
                 
-            </div>
-        </header>
-
-        
-        <div class="card-tags">
+            </a>
             
-            <span class="tag">Robotics</span>
-            
-            <span class="tag">Computer Vision</span>
-            
-            <span class="tag">Team Project</span>
-            
-            
-            <span class="tag tag-more">+1</span>
-            
-        </div>
-        
-
-        
-        <p class="card-summary">As UR5 Team Lead for my 2.12 lab section, I worked with a group of 8 students to program a UR5 robot to detect, sort, and dispose of plastic bottles using computer vision and robotics control.</p>
-        
-    </div>
-    </a>
-
-            
-                
-<a href="/projects/suction-tank/" class="card entry-card" data-tags="Prototyping,3D Printing,Arduino,Robotics" style="text-decoration:none;color:inherit;">
-    <div class="card-image">
-    
-        
-        <picture><source type="image/avif" srcset="/static/uploads/projects/suction-tank/suction-tank-thumb-480.avif 480w, /static/uploads/projects/suction-tank/suction-tank-thumb-800.avif 800w, /static/uploads/projects/suction-tank/suction-tank-thumb-970.avif 970w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/projects/suction-tank/suction-tank-thumb-480.webp 480w, /static/uploads/projects/suction-tank/suction-tank-thumb-800.webp 800w, /static/uploads/projects/suction-tank/suction-tank-thumb-970.webp 970w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/projects/suction-tank/suction-tank-thumb.jpg" alt="Suction Tank Robot" class="card-thumbnail" width="970" height="598" decoding="async" loading="lazy"></picture>
-    
-    </div>
-
-    <div class="card-content">
-        <header class="card-header">
-            <div class="card-heading">
-                <h3 class="card-title">
-                    Suction Tank Robot
-                </h3>
-                
-                <time class="card-date" datetime="2025-10-23">
-                    2025-10-23
-                </time>
-                
-            </div>
-        </header>
-
-        
-        <div class="card-tags">
-            
-            <span class="tag">Prototyping</span>
-            
-            <span class="tag">3D Printing</span>
-            
-            <span class="tag">Arduino</span>
-            
-            
-            <span class="tag tag-more">+1</span>
-            
-        </div>
-        
-
-        
-        <p class="card-summary">A prototyped tank-style robot that uses suction to adhere to surfaces, designed with 3D printed parts and modular components.</p>
-        
-    </div>
-    </a>
-
-            
-                
-<a href="/projects/2-00-library-tracker/" class="card entry-card" data-tags="Arduino,Hardware,Team Project,Class" style="text-decoration:none;color:inherit;">
-    <div class="card-image">
-    
-        
-        <picture><source type="image/avif" srcset="/static/uploads/projects/2-00-library-tracker/library_tracker-480.avif 480w, /static/uploads/projects/2-00-library-tracker/library_tracker-800.avif 800w, /static/uploads/projects/2-00-library-tracker/library_tracker-1200.avif 1200w, /static/uploads/projects/2-00-library-tracker/library_tracker-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/projects/2-00-library-tracker/library_tracker-480.webp 480w, /static/uploads/projects/2-00-library-tracker/library_tracker-800.webp 800w, /static/uploads/projects/2-00-library-tracker/library_tracker-1200.webp 1200w, /static/uploads/projects/2-00-library-tracker/library_tracker-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/projects/2-00-library-tracker/library_tracker.jpg" alt="2.00 Library Tracker" class="card-thumbnail" width="1600" height="1252" decoding="async" loading="lazy"></picture>
-    
-    </div>
-
-    <div class="card-content">
-        <header class="card-header">
-            <div class="card-heading">
-                <h3 class="card-title">
-                    2.00 Library Tracker
-                </h3>
-                
-                <time class="card-date" datetime="2025-10-04">
-                    2025-10-04
-                </time>
-                
-            </div>
-        </header>
-
-        
-        <div class="card-tags">
-            
-            <span class="tag">Arduino</span>
-            
-            <span class="tag">Hardware</span>
-            
-            <span class="tag">Team Project</span>
-            
-            
-            <span class="tag tag-more">+1</span>
-            
-        </div>
-        
-
-        
-        <p class="card-summary">An Arduino-powered Library Tracker tool built for an elementary school librarian to help manage student tasks with LEDs, buttons, and a control board.</p>
-        
-    </div>
-    </a>
-
-            
-                
-<a href="/projects/accesspoint/" class="card entry-card" data-tags="Python,Flask,Web Development" style="text-decoration:none;color:inherit;">
-    <div class="card-image">
-    
-        
-        <picture><source type="image/avif" srcset="/static/uploads/projects/accesspoint/landing-page-480.avif 480w, /static/uploads/projects/accesspoint/landing-page-800.avif 800w, /static/uploads/projects/accesspoint/landing-page-1200.avif 1200w, /static/uploads/projects/accesspoint/landing-page-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 400px"><source type="image/webp" srcset="/static/uploads/projects/accesspoint/landing-page-480.webp 480w, /static/uploads/projects/accesspoint/landing-page-800.webp 800w, /static/uploads/projects/accesspoint/landing-page-1200.webp 1200w, /static/uploads/projects/accesspoint/landing-page-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 400px"><img src="/static/uploads/projects/accesspoint/landing-page.png" alt="AccessPoint" class="card-thumbnail" width="1600" height="1112" decoding="async" loading="lazy"></picture>
-    
-    </div>
-
-    <div class="card-content">
-        <header class="card-header">
-            <div class="card-heading">
-                <h3 class="card-title">
-                    AccessPoint
-                </h3>
-                
-                <time class="card-date" datetime="2025-08-04">
-                    2025-08-04
-                </time>
-                
-            </div>
-        </header>
-
-        
-        <div class="card-tags">
-            
-            <span class="tag">Python</span>
-            
-            <span class="tag">Flask</span>
-            
-            <span class="tag">Web Development</span>
-            
-            
-        </div>
-        
-
-        
-        <p class="card-summary">A web platform offering services to connect underrepresented students with scholarships and opportunities, built with Flask and PostgreSQL.</p>
-        
-    </div>
-    </a>
 
             
         </div>
-
-        <div class="no-results" id="no-results" style="display: none;">
-            <div class="no-results-content">
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.35-4.35"></path>
-                </svg>
-                <h3>No projects found</h3>
-                <p>Try adjusting your search or filter criteria</p>
-            </div>
-        </div>
     </div>
-</section>
-
-<script src="/static/js/search.js"></script>
-<script>
-    setupSearchAndFilter({
-        searchInputId: 'project-search',
-        tagFilterSelector: '#tag-filters .tag-filter',
-        gridId: 'projects-grid',
-        noResultsId: 'no-results',
-        cardSelector: '.entry-card'
-    });
-</script>
+</div>
 
     </main>
 
@@ -1021,11 +404,10 @@
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>

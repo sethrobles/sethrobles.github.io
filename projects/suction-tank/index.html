@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -128,42 +127,48 @@
 
     <main class="main-content">
         
-<article class="entry-detail">
+<article class="entry-detail entry-detail--project">
     <div class="container">
-        <!-- Entry Header -->
-        <header class="entry-header entry-header-centered">
+
+        
+        
+        <header class="entry-header entry-header--project entry-header-centered">
             <h1 class="entry-title">Suction Tank Robot</h1>
             
             <div class="entry-tags">
-                
-                <span class="tag">Prototyping</span>
-                
-                <span class="tag">3D Printing</span>
-                
-                <span class="tag">Arduino</span>
-                
-                <span class="tag">Robotics</span>
-                
+                <span class="tag">Robotics</span><span class="tag">3D Printing</span><span class="tag">Electronics</span><span class="tag">Hardware</span>
             </div>
             
             
+            <p class="entry-subtitle">A prototyped tank-style robot that uses suction to adhere to surfaces, designed with 3D printed parts and modular components.</p>
             
-            <div class="entry-github" style="margin-bottom:1rem;">
-                <a href="https://github.com/sethrobles/suction-tank" class="nav-link nav-external" target="_blank" rel="noopener noreferrer">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:0.5em;">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    View on GitHub
-                </a>
-            </div>
-            
-            
-            
+            <div class="entry-links">
+<a href="https://github.com/sethrobles/suction-tank" class="entry-link nav-external" target="_blank" rel="noopener noreferrer">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="external-link-icon" aria-hidden="true">
+        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+    </svg>
+    View on GitHub
+</a>
+</div>
         </header>
-        <!-- Embedded video (if present) -->
         
 
-        <!-- Entry Content -->
+        
+        
+        
+        
+        <div class="entry-hero">
+            <picture><source type="image/avif" srcset="/static/uploads/ab10b956f0356a66-480.avif 480w, /static/uploads/ab10b956f0356a66-800.avif 800w, /static/uploads/ab10b956f0356a66-970.avif 970w" sizes="(max-width: 1000px) 100vw, 960px"><source type="image/webp" srcset="/static/uploads/ab10b956f0356a66-480.webp 480w, /static/uploads/ab10b956f0356a66-800.webp 800w, /static/uploads/ab10b956f0356a66-970.webp 970w" sizes="(max-width: 1000px) 100vw, 960px"><img src="/static/uploads/ab10b956f0356a66.jpg" alt="Suction Tank Robot" class="entry-hero-image" width="970" height="598" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQBACdASoUAAwAPu1kqU2ppaQiMAgBMB2JaQAD4kIkZFfkV2E+KykFAAD+8Nxwgz7B2QhBFkZMHS+YBPh8G8ZGklnjj3nnz7dee6EI5Il59mrz+fnxt8NyxmNs6MS8AAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+        </div>
+        
+
+        
+        
+
+        
+        
+
+        
         <div class="entry-content">
             <div class="content-main">
                 
@@ -189,61 +194,24 @@
 
 <p>Through this process, I learned the importance of <strong>modularity for faster redesigns</strong> and how small design changes, like gear shape and bracing, can have large impacts on performance. This project also raised new questions about the limits of suction-based adhesion, especially on steeper slopes and in potential underwater applications.</p>
 <p>
-<style>
-  .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-    overflow: hidden;
-  }
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    text-align: center;
-  }
-  .carousel-slide.active {
-    display: block;
-  }
-  .carousel img {
-    max-width: 100%;
-    height: auto;
-  }
-  .carousel-controls {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-  .carousel-button {
-    display: inline-block;
-    background: var(--accent, #3b82f6);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-  }
-</style>
 <div class="carousel">
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/projects/suction-tank/suction_track-480.avif 480w, /static/uploads/projects/suction-tank/suction_track-800.avif 800w, /static/uploads/projects/suction-tank/suction_track-1200.avif 1200w, /static/uploads/projects/suction-tank/suction_track-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/projects/suction-tank/suction_track-480.webp 480w, /static/uploads/projects/suction-tank/suction_track-800.webp 800w, /static/uploads/projects/suction-tank/suction_track-1200.webp 1200w, /static/uploads/projects/suction-tank/suction_track-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/projects/suction-tank/suction_track-480.avif 480w, /static/uploads/projects/suction-tank/suction_track-800.avif 800w, /static/uploads/projects/suction-tank/suction_track-1200.avif 1200w, /static/uploads/projects/suction-tank/suction_track-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/projects/suction-tank/suction_track-480.webp 480w, /static/uploads/projects/suction-tank/suction_track-800.webp 800w, /static/uploads/projects/suction-tank/suction_track-1200.webp 1200w, /static/uploads/projects/suction-tank/suction_track-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/projects/suction-tank/suction_track.png" alt="Suction Cup Track" width="1600" height="576" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/061eacf159c45a61-480.avif 480w, /static/uploads/061eacf159c45a61-800.avif 800w, /static/uploads/061eacf159c45a61-1200.avif 1200w, /static/uploads/061eacf159c45a61-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/061eacf159c45a61-480.webp 480w, /static/uploads/061eacf159c45a61-800.webp 800w, /static/uploads/061eacf159c45a61-1200.webp 1200w, /static/uploads/061eacf159c45a61-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/061eacf159c45a61.png" alt="Suction Cup Track" width="1600" height="576" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABwAwCdASoUAAcAPu1qrU8ppiQiMAgBMB2JaQAAW9NEcV6uIQAAzisIN/r5+V4RFO8/tqmVHDwNw9VqPj1gTJPp0PfIYseHQoAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Suction Cup Track</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/projects/suction-tank/bracing_progression-480.avif 480w, /static/uploads/projects/suction-tank/bracing_progression-800.avif 800w, /static/uploads/projects/suction-tank/bracing_progression-1200.avif 1200w, /static/uploads/projects/suction-tank/bracing_progression-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/projects/suction-tank/bracing_progression-480.webp 480w, /static/uploads/projects/suction-tank/bracing_progression-800.webp 800w, /static/uploads/projects/suction-tank/bracing_progression-1200.webp 1200w, /static/uploads/projects/suction-tank/bracing_progression-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/projects/suction-tank/bracing_progression-480.avif 480w, /static/uploads/projects/suction-tank/bracing_progression-800.avif 800w, /static/uploads/projects/suction-tank/bracing_progression-1200.avif 1200w, /static/uploads/projects/suction-tank/bracing_progression-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/projects/suction-tank/bracing_progression-480.webp 480w, /static/uploads/projects/suction-tank/bracing_progression-800.webp 800w, /static/uploads/projects/suction-tank/bracing_progression-1200.webp 1200w, /static/uploads/projects/suction-tank/bracing_progression-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/projects/suction-tank/bracing_progression.png" alt="Bracing Progression" width="1600" height="1067" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/90c32697d95b5ab8-480.avif 480w, /static/uploads/90c32697d95b5ab8-800.avif 800w, /static/uploads/90c32697d95b5ab8-1200.avif 1200w, /static/uploads/90c32697d95b5ab8-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/90c32697d95b5ab8-480.webp 480w, /static/uploads/90c32697d95b5ab8-800.webp 800w, /static/uploads/90c32697d95b5ab8-1200.webp 1200w, /static/uploads/90c32697d95b5ab8-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/90c32697d95b5ab8.png" alt="Bracing Progression" width="1600" height="1067" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAADQAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JaQAD5JoJY3b4jnGOMhgA/vK+ZpMQsSeXdZjar+sa9twVpGSMBQSqCpxB1WWpWwYXIAOxCWycv7d2r7LvYmgHO8uNvW/e2j9mTjzR7zF9YgZp9cssDasuXn+RHEcBn04bKa3h+ryMjxZtxQAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Bracing Progression</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/projects/suction-tank/gear_progression-480.avif 480w, /static/uploads/projects/suction-tank/gear_progression-800.avif 800w, /static/uploads/projects/suction-tank/gear_progression-1200.avif 1200w, /static/uploads/projects/suction-tank/gear_progression-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/projects/suction-tank/gear_progression-480.webp 480w, /static/uploads/projects/suction-tank/gear_progression-800.webp 800w, /static/uploads/projects/suction-tank/gear_progression-1200.webp 1200w, /static/uploads/projects/suction-tank/gear_progression-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><picture><source type="image/avif" srcset="/static/uploads/projects/suction-tank/gear_progression-480.avif 480w, /static/uploads/projects/suction-tank/gear_progression-800.avif 800w, /static/uploads/projects/suction-tank/gear_progression-1200.avif 1200w, /static/uploads/projects/suction-tank/gear_progression-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/projects/suction-tank/gear_progression-480.webp 480w, /static/uploads/projects/suction-tank/gear_progression-800.webp 800w, /static/uploads/projects/suction-tank/gear_progression-1200.webp 1200w, /static/uploads/projects/suction-tank/gear_progression-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/projects/suction-tank/gear_progression.png" alt="Gear Progression" width="1600" height="1067" decoding="async" loading="lazy"></picture></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/93862ec202b9c054-480.avif 480w, /static/uploads/93862ec202b9c054-800.avif 800w, /static/uploads/93862ec202b9c054-1200.avif 1200w, /static/uploads/93862ec202b9c054-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/93862ec202b9c054-480.webp 480w, /static/uploads/93862ec202b9c054-800.webp 800w, /static/uploads/93862ec202b9c054-1200.webp 1200w, /static/uploads/93862ec202b9c054-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/93862ec202b9c054.png" alt="Gear Progression" width="1600" height="1067" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JaQAAXHIOvqZ70zJ1zV8gAP7s2rpKrMeqpyY1dsYQ9Gs4YLA8nP93mhOySMUZ59wUmAzvX4mOYnWLPVwoZZ3vmj/ApA4dKuV64vPRcyBJtYMFC4dKjgYfOzPpyebJrCusqyerAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Gear Progression</div>
       
@@ -285,22 +253,21 @@
 <p>This project combined <strong>mechanical prototyping, CAD iteration, and hands-on testing</strong>. While still in its early stages, the suction tank robot gave me valuable insight into designing for unconventional mobility systems.</p>
                 </div>
                 
+                
             </div>
         </div>
 
-        <!-- Related build logs (project pages only) -->
+        
         
 
-        <!-- Entry Navigation -->
+        
         <nav class="entry-navigation">
             <div class="nav-links">
                 
             </div>
             <div class="nav-actions">
                 
-                <a href="/projects/" class="btn btn-outline">
-                     Back to Projects
-                </a>
+                <a href="/projects/" class="btn btn-outline">Back to Projects</a>
                 
             </div>
         </nav>
@@ -333,11 +300,10 @@
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>

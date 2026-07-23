@@ -32,9 +32,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/static/css/base.css">
-        <!-- Warm theme, layered over base.css -->
-        <link rel="stylesheet" href="/static/css/ui-warm.css">
+        <link rel="preload" href="/static/fonts/newsreader-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/static/fonts/fonts.css">
+        <link rel="stylesheet" href="/static/css/site.css">
 
         <!-- Redirect /index.html to pretty URL -->
         <script>
@@ -93,13 +94,11 @@
             <span class="navbar-toggle-icon"></span>
         </button>
 
+        
         <div class="navbar-menu">
             <a href="/" class="navbar-link">Home</a>
             <a href="/projects" class="navbar-link">Projects</a>
             <a href="/blogs" class="navbar-link">Blog</a>
-            <a href="/build-logs" class="navbar-link">Build Logs</a>
-            <a href="/resume" class="navbar-link">Resume</a>
-            <a href="/portfolio" class="navbar-link">Portfolio</a>
         </div>
 
         <!--  -->
@@ -128,27 +127,35 @@
 
     <main class="main-content">
         
-<article class="entry-detail">
+<article class="entry-detail entry-detail--blog">
     <div class="container">
-        <!-- Entry Header -->
-        <header class="entry-header entry-header-centered">
+
+        
+        
+        <header class="entry-header entry-header--blog">
+            
+            <div class="entry-eyebrow"><time datetime="2026-04-26">26 April 2026</time></div>
+            
             <h1 class="entry-title">52 Mile Run</h1>
             
-            <div class="entry-tags">
-                
-                <span class="tag">Running</span>
-                
-            </div>
-            
-            
-            
-            
+            <p class="entry-subtitle">I ran two marathons in a day. It was hard.</p>
             
         </header>
-        <!-- Embedded video (if present) -->
+
         
 
-        <!-- Entry Content -->
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+
+        
         <div class="entry-content">
             <div class="content-main">
                 
@@ -165,61 +172,25 @@
                 </div>
                 
                 
-<style>
-  .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-    overflow: hidden;
-  }
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    text-align: center;
-  }
-  .carousel-slide.active {
-    display: block;
-  }
-  .carousel img {
-    max-width: 100%;
-    height: auto;
-  }
-  .carousel-controls {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-  .carousel-button {
-    display: inline-block;
-    background: var(--accent, #3b82f6);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-  }
-</style>
+                
 <div class="carousel">
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/ultra_marathon_1/img_0040-480.avif 480w, /static/uploads/blogs/ultra_marathon_1/img_0040-800.avif 800w, /static/uploads/blogs/ultra_marathon_1/img_0040-1200.avif 1200w, /static/uploads/blogs/ultra_marathon_1/img_0040-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/ultra_marathon_1/img_0040-480.webp 480w, /static/uploads/blogs/ultra_marathon_1/img_0040-800.webp 800w, /static/uploads/blogs/ultra_marathon_1/img_0040-1200.webp 1200w, /static/uploads/blogs/ultra_marathon_1/img_0040-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/blogs/ultra_marathon_1/img_0040.jpg" alt="A random trail on my run" width="1600" height="2133" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/2fadbb055444de01-480.avif 480w, /static/uploads/2fadbb055444de01-800.avif 800w, /static/uploads/2fadbb055444de01-1200.avif 1200w, /static/uploads/2fadbb055444de01-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/2fadbb055444de01-480.webp 480w, /static/uploads/2fadbb055444de01-800.webp 800w, /static/uploads/2fadbb055444de01-1200.webp 1200w, /static/uploads/2fadbb055444de01-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/2fadbb055444de01.jpg" alt="A random trail on my run" width="1600" height="2133" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABwBACdASoUABsAPu1eqU6ppKOiMBgMATAdiWUAwzQQcYo4vZOTit1CiT6wAAD5Jzfwe7+PymQ6Bg+isA1m9TOlh9PFHEGlyTXMAKq5HG3n3E8Mt0+Q5Iw828xjwruG2gAAAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">A random trail on my run</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/ultra_marathon_1/img_0049-480.avif 480w, /static/uploads/blogs/ultra_marathon_1/img_0049-800.avif 800w, /static/uploads/blogs/ultra_marathon_1/img_0049-1200.avif 1200w, /static/uploads/blogs/ultra_marathon_1/img_0049-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/ultra_marathon_1/img_0049-480.webp 480w, /static/uploads/blogs/ultra_marathon_1/img_0049-800.webp 800w, /static/uploads/blogs/ultra_marathon_1/img_0049-1200.webp 1200w, /static/uploads/blogs/ultra_marathon_1/img_0049-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/blogs/ultra_marathon_1/img_0049.jpg" alt="View from the Esplanada" width="1600" height="2133" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/ea9b02d7c904ea37-480.avif 480w, /static/uploads/ea9b02d7c904ea37-800.avif 800w, /static/uploads/ea9b02d7c904ea37-1200.avif 1200w, /static/uploads/ea9b02d7c904ea37-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/ea9b02d7c904ea37-480.webp 480w, /static/uploads/ea9b02d7c904ea37-800.webp 800w, /static/uploads/ea9b02d7c904ea37-1200.webp 1200w, /static/uploads/ea9b02d7c904ea37-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/ea9b02d7c904ea37.jpg" alt="View from the Esplanada" width="1600" height="2133" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAACwBACdASoUABsAPu1ur1IppiQiqAgBMB2JZQDJEAyY+3xYxHutV/RPl/Cw1rTAAPoOMPj5xbvV06Q16h2Gv9z1CO8b9lGv6ThedLumQDI4uLT9w8nQVl6/JgpwGHh2a9BTEA89sjrEkazgGQUVH59PHQtHAgkKl1d7wKBwtFHl1xYJV3CnjpS3qEVX6ZKd8AA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">View from the Esplanade</div>
       
     </div>
   
     <div class="carousel-slide">
-      <picture><source type="image/avif" srcset="/static/uploads/blogs/ultra_marathon_1/img_0051-480.avif 480w, /static/uploads/blogs/ultra_marathon_1/img_0051-800.avif 800w, /static/uploads/blogs/ultra_marathon_1/img_0051-1200.avif 1200w, /static/uploads/blogs/ultra_marathon_1/img_0051-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/blogs/ultra_marathon_1/img_0051-480.webp 480w, /static/uploads/blogs/ultra_marathon_1/img_0051-800.webp 800w, /static/uploads/blogs/ultra_marathon_1/img_0051-1200.webp 1200w, /static/uploads/blogs/ultra_marathon_1/img_0051-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/blogs/ultra_marathon_1/img_0051.jpg" alt="Me after finishing my run trying to look composed" width="1600" height="2133" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/avif" srcset="/static/uploads/e5306f759b0fd396-480.avif 480w, /static/uploads/e5306f759b0fd396-800.avif 800w, /static/uploads/e5306f759b0fd396-1200.avif 1200w, /static/uploads/e5306f759b0fd396-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/e5306f759b0fd396-480.webp 480w, /static/uploads/e5306f759b0fd396-800.webp 800w, /static/uploads/e5306f759b0fd396-1200.webp 1200w, /static/uploads/e5306f759b0fd396-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/e5306f759b0fd396.jpg" alt="Me after finishing my run trying to look composed" width="1600" height="2133" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAACQBQCdASoUABsAPu1irFAppSQisBgIATAdiUAWHYGHvAzmwdUTSXuwKmoNNWy7SZAVuRK4AAD+6323NohHNEhfPIct3yFI9g8l2HONdGgDv4l6NEckt5dsZ5bDn+LG6y3r/yQIHdiIBYBWkEaBBEyo3daF4HU883sYJFa2RXryrqvZucYqpBRWyfREChNRqe8Ci9TTg5L8GLUtKLKq3NqeSeqZxnj6M596RfAfKO1ymxmKs68XP3qpFKWGRIAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
       
         <div class="carousel-caption">Me after finishing my run trying to look composed</div>
       
@@ -261,19 +232,17 @@
             </div>
         </div>
 
-        <!-- Related build logs (project pages only) -->
+        
         
 
-        <!-- Entry Navigation -->
+        
         <nav class="entry-navigation">
             <div class="nav-links">
                 
             </div>
             <div class="nav-actions">
                 
-                <a href="/blogs/" class="btn btn-outline">
-                     Back to Blog
-                </a>
+                <a href="/blogs/" class="btn btn-outline">Back to Blog</a>
                 
             </div>
         </nav>
@@ -306,11 +275,10 @@
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-subtitle">Resources</h4>
+                <h4 class="footer-subtitle">Explore</h4>
                 <div class="footer-links">
-                    <a href="/resume/" class="footer-link">Resume</a>
-                    <a href="/portfolio/" class="footer-link">Portfolio</a>
                     <a href="/projects/" class="footer-link">Projects</a>
+                    <a href="/blogs/" class="footer-link">Blog</a>
                 </div>
             </div>
         </div>
