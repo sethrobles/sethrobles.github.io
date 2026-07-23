@@ -11,14 +11,14 @@
     <meta property="og:url" content="https://sirobles.com">
     <meta property="og:title" content="Seth Robles - Portfolio">
     <meta property="og:description" content="Seth Robles - Mechanical Engineer and Roboticist at MIT">
-    <meta property="og:image" content="https://sirobles.com/static/uploads/personal/seth-photo.jpeg">
+    <meta property="og:image" content="https://sirobles.com/static/uploads/a6df2c09e280bab7.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://sirobles.com">
     <meta property="twitter:title" content="Seth Robles - Portfolio">
     <meta property="twitter:description" content="Seth Robles - Mechanical Engineer and Roboticist at MIT">
-    <meta property="twitter:image" content="https://sirobles.com/static/uploads/personal/seth-photo.jpeg">
+    <meta property="twitter:image" content="https://sirobles.com/static/uploads/a6df2c09e280bab7.jpg">
 
     <title>Portfolio - Seth Robles</title>
 
@@ -242,13 +242,17 @@
         const savedTheme = localStorage.getItem('theme') || 'light';
         html.setAttribute('data-theme', savedTheme);
 
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        // The button is currently commented out above, so this can be null —
+        // binding unguarded threw a TypeError on every page load.
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = html.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
 
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-        });
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        }
     </script>
 </body>
 </html>
