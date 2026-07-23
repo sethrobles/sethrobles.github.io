@@ -208,7 +208,10 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: -0.011em;
     color: var(--text-primary);
     margin-bottom: var(--space-3);
-    text-wrap: balance;
+    /* No text-wrap: balance. It's real, well-supported CSS, but it deliberately
+       breaks a heading *earlier* than needed to even out line lengths — which
+       is why headings looked like they were wrapping for no reason. Headings
+       now wrap only when they actually run out of room. */
 }
 
 h1 { font-size: var(--text-4xl); }
@@ -634,8 +637,13 @@ ul ul {
 
 .hero-photo {
     width: 100%;
-    max-width: 300px;
-    height: 340px;
+    /* Scales continuously with the viewport rather than snapping at a
+       breakpoint — this used to jump 300px -> 200px the moment you crossed
+       900px, which read as the image "popping" smaller mid-resize.
+       aspect-ratio keeps the crop fixed so only one value has to change. */
+    max-width: clamp(190px, 24vw, 300px);
+    aspect-ratio: 15 / 17;
+    height: auto;
     object-fit: cover;
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
@@ -2144,11 +2152,6 @@ ul ul {
 
     .hero-container {
         gap: var(--space-6);
-    }
-
-    .hero-photo {
-        max-width: 200px;
-        height: 240px;
     }
 }
 
