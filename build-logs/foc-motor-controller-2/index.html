@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A two-motor field-oriented-control board, rebuilt properly after a rushed first prototype in MIT's 2.679.">
+    <meta name="description" content="Now that we have relative requirements as seen in the first build log, this will be a log about the difference components. It'll likely link to the spreadsheet with all the information, so maybe it'll be a little short. That's the goal I guess.">
 
     
     <!-- Open Graph / Facebook -->
@@ -20,7 +20,7 @@
     <meta property="twitter:description" content="Seth Robles - Mechanical Engineer and Roboticist at MIT">
     <meta property="twitter:image" content="https://sirobles.com/static/uploads/a6df2c09e280bab7.jpg">
 
-    <title>FOC Motor Controller - Seth Robles</title>
+    <title>FOC PCB Components - Seth Robles</title>
 
     <!-- Favicons for all devices and browsers -->
     <link rel="icon" type="image/svg+xml" href="/static/uploads/personal/favicon_io/favicon.svg">
@@ -128,23 +128,26 @@
 
     <main class="main-content">
         
-<article class="entry-detail entry-detail--project">
+<article class="entry-detail entry-detail--buildlog">
     <div class="container">
 
         
         
-        <header class="entry-header entry-header--project entry-header-centered">
-            <h1 class="entry-title">FOC Motor Controller</h1>
+        <header class="entry-header entry-header--log">
             
-            <div class="entry-tags">
-                <span class="tag">PCB Design</span><span class="tag">Electronics</span><span class="tag">Motor</span>
-            </div>
+            <a class="entry-crumb" href="/projects/foc-motor-controller/">&larr; FOC Motor Controller</a>
             
+            <h1 class="entry-title">FOC PCB Components</h1>
+            <dl class="entry-spec">
+                <div><dt>Log</dt><dd>#2</dd></div>
+                <div><dt>Date</dt><dd>2026-07-12</dd></div>
+                <div><dt>Project</dt><dd>FOC Motor Controller</dd></div>
+                <div><dt>Tags</dt><dd>PCB Design · Prototyping · Electronics</dd></div>
+            </dl>
             
-            <p class="entry-subtitle">A two-motor field-oriented-control board, rebuilt properly after a rushed first prototype in MIT's 2.679.</p>
-            
-            
+            <p class="entry-lede">Now that we have relative requirements as seen in the first build log, this will be a log about the difference components. It'll likely link to the spreadsheet with all the information, so maybe it'll be a little short. That's the goal I guess.</p>
         </header>
+
         
 
         
@@ -163,17 +166,74 @@
             <div class="content-main">
                 
                 <div class="markdown-content">
-                    <p>I started this during 2.679 my junior spring but wasn't really able to finish it. The prototype came together in far too little time and ended up an incredibly chopped board. I'm redoing it now with more rigorous part selection and an actual end goal in mind.</p>
-<h2 id="goal">Goal</h2>
-<p>Build a board that drives two motors under field-oriented control — this time choosing parts deliberately and keeping documentation as I go, rather than reconstructing it afterwards. The original design was based on ODrive 3.5, the last open-source revision.</p>
-<h2 id="targets">Targets</h2>
-<ul>
-<li><strong>Power</strong> — 18–40 V input bus (24 V and 36 V nominal), 10 A continuous, 30 A peak</li>
-<li><strong>Microcontroller</strong> — STM32G474RET6, up from the G474RBT6 for 512 KB of flash</li>
-<li><strong>Communication</strong> — CAN bus for control and bootloading, SPI to the encoders</li>
-<li><strong>Encoders</strong> — 2× AS5047D, with headroom reserved for two more off-board</li>
-</ul>
-<p>Gate drivers and the power stage are still being decided. The build logs below track those calls as I make them.</p>
+                    <p>Okay first step after the microcontroller for me is deciding on the drivers.</p>
+<p>For 2.679, I saw that ODrive used a TI Driver, the DRV8353. This was what I used in the project (I think) and it seems to be a pretty popular choice when it comes to FOC boards. I think this is a result of it having various different properties like a charge pump, current sense amplifiers (CSAs), and can be interacted with over SPI. This means that you don't hardcode gains or other values. Especially for my level of experience, I'll want that.</p>
+<p>I'm currently debating between the DRV8353 and the DRV8323S. The main difference I believe is that the DRV8353 has a maximum voltage of 75V whereas the DRV8323S is 60V. While that's exactly what I said, I'm still a little wary and wanted to push it up on my individual components. Maybe that's unideal but I want to be careful here.</p>
+<p>I'm a little tired so I'll write more about the gate drivers tomorrow, but I'm likely going to go ahead with the DRV8353.</p>
+<p>Relevant information that I've learned while looking into the gate drivers:</p>
+<p>The high-side gate in higher-quality drivers can be driven by a charge pump.</p>
+<p>Based on some AI research + what I saw last time, I think it makes sense to continue with the DRV8353S. It has SPI configuration (nice), built in shunts (doubly nice), and is popular for FOC boards. I'll stick with it for now. It also has a 75V rating, which is good.</p>
+<p>Next up, I need to think about MOSFETs. I found 3 that I'm considering shown in the graph below. I wanted to rate these greater than 60V because I'd prefer to be extra safe, given these are closer to potential induced voltages, so I went to the next common step up. I decided to get FETs that were rated for 80V.</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Vds (V)</th>
+<th>Vgs(th) (V)</th>
+<th>Id (A)</th>
+<th>Rds(on) (mΩ)</th>
+<th>Qg</th>
+<th>Package</th>
+<th>LCSC Price ($)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NTMFS6H801NLT1G</td>
+<td>80</td>
+<td></td>
+<td>160</td>
+<td>2.7</td>
+<td>44nC</td>
+<td>SO-8FL</td>
+<td>1.8939</td>
+</tr>
+<tr>
+<td>TPH4R008NH</td>
+<td>80</td>
+<td>4</td>
+<td>100</td>
+<td>4</td>
+<td>59</td>
+<td>SOP-8 (SOP-Advanced)</td>
+<td>0.97</td>
+</tr>
+<tr>
+<td>BSC030N08NS5</td>
+<td>80</td>
+<td>3.8</td>
+<td>100</td>
+<td>3</td>
+<td>76</td>
+<td>TDSON-8(5x6)</td>
+<td>0.94</td>
+</tr>
+<tr>
+<td>I ended up selecting the NTMFS6H801NLT1G. The price is a little higher, but it had less Rds and a lower Qg, which I thought was worth the price difference. It's also around the same price on Digikey, so I was thinking it could be worth it for other people.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>It's now 1:30 am and I need to wake up in the morning at 7 to workout so I will be going to bed. The next component I need to figure out is the exact Buck I'll be using. I'm going to choose this and the CAN components for the board. After that I'll likely look into cap-sizing + maybe starting running Spice Simulations (I'm quite excited for this).</p>
+<p>I am looking at bucks right now (will attach the full list that was briefly considered later) but I will likely be going with TI's LM5164. It is almost 4x greater in current rating than my requirement, far above my voltage level (100V) and is focused on little emi / injected noise. It might be a little bit more expensive than alternatives but I'm okay wit it rn. If I ever do a cheaper design though, i might look into lowering this cost. That being said, it's like a dollar which is mega cheap so... Actually if I do a single controller design, maybe I'd get away with the LM5163 which has half the current rating. I'll likely need to find a bead that can go with this to make sure the STM32 chip's VDDA is clean.</p>
+<p>I'm also briefly looking at the CAN Transceiver that I will be using. Here's the front-runner: TCAN334G. It supports CANFD, will run on 3.3V. I think that's basically all I need.</p>
+<p>Afterwards, I'll probably have to look at the encoder + any potential I2C components.</p>
                 </div>
                 
                 
@@ -181,36 +241,6 @@
         </div>
 
         
-        
-        <section class="related-buildlogs">
-            <div class="logs-head">
-                <h2 class="logs-title">Build Logs</h2>
-                <span class="logs-count">2 logs</span>
-            </div>
-            <p class="logs-blurb">The messy middle &mdash; notes, dead ends, and what
-                each revision actually changed.</p>
-            <div class="log-list">
-                
-                <a class="log-row" href="/build-logs/foc-motor-controller-1/">
-                    <span class="log-num">#1</span>
-                    <span class="log-meta">
-                        <span class="log-title">FOC Motor Controller</span>
-                        <span class="log-summary">The development of the FOC Motor Controller (after the end of 2.679)</span>
-                    </span>
-                    <span class="log-date">2026-07-07</span>
-                </a>
-                
-                <a class="log-row" href="/build-logs/foc-motor-controller-2/">
-                    <span class="log-num">#2</span>
-                    <span class="log-meta">
-                        <span class="log-title">FOC PCB Components</span>
-                        <span class="log-summary">Now that we have relative requirements as seen in the first build log, this will be a log about the difference components. It'll likely link to the spreadsheet with all the information, so maybe it'll be a little short. That's the goal I guess.</span>
-                    </span>
-                    <span class="log-date">2026-07-12</span>
-                </a>
-                
-            </div>
-        </section>
         
 
         
@@ -220,7 +250,10 @@
             </div>
             <div class="nav-actions">
                 
-                <a href="/projects/" class="btn btn-outline">Back to Projects</a>
+                
+                
+                <a href="/projects/foc-motor-controller/" class="btn btn-outline">Back to FOC Motor Controller</a>
+                
                 
             </div>
         </nav>
