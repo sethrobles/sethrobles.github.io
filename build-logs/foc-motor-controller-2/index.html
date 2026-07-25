@@ -218,18 +218,9 @@
 <td>TDSON-8(5x6)</td>
 <td>0.94</td>
 </tr>
-<tr>
-<td>I ended up selecting the NTMFS6H801NLT1G. The price is a little higher, but it had less Rds and a lower Qg, which I thought was worth the price difference. It's also around the same price on Digikey, so I was thinking it could be worth it for other people.</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
 </tbody>
 </table>
+<p>I ended up selecting the NTMFS6H801NLT1G. The price is a little higher, but it had less Rds and a lower Qg, which I thought was worth the price difference. It's also around the same price on Digikey, so I was thinking it could be worth it for other people.</p>
 <p>It's now 1:30 am and I need to wake up in the morning at 7 to workout so I will be going to bed. The next component I need to figure out is the exact Buck I'll be using. I'm going to choose this and the CAN components for the board. After that I'll likely look into cap-sizing + maybe starting running Spice Simulations (I'm quite excited for this).</p>
 <p>I am looking at bucks right now (will attach the full list that was briefly considered later) but I will likely be going with TI's LM5164. It is almost 4x greater in current rating than my requirement, far above my voltage level (100V) and is focused on little emi / injected noise. It might be a little bit more expensive than alternatives but I'm okay wit it rn. If I ever do a cheaper design though, i might look into lowering this cost. That being said, it's like a dollar which is mega cheap so... Actually if I do a single controller design, maybe I'd get away with the LM5163 which has half the current rating. I'll likely need to find a bead that can go with this to make sure the STM32 chip's VDDA is clean.</p>
 <p>I'm also briefly looking at the CAN Transceiver that I will be using. Here's the front-runner: TCAN334G. It supports CANFD, will run on 3.3V. I think that's basically all I need.</p>
