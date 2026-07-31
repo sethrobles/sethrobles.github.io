@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-30T15:46:44.539455+00:00",
+  "generated_at_utc": "2026-07-31T05:24:22.921236+00:00",
   "highlights": [
     {
       "label": "Lifted last week",
@@ -9,8 +9,8 @@
     },
     {
       "label": "Last week",
-      "value": "5 workouts",
-      "detail": "3h 6m active \u00b7 7.91 mi",
+      "value": "6 workouts",
+      "detail": "3h 29m active \u00b7 7.91 mi",
       "icon": "calendar"
     },
     {
@@ -26,6 +26,12 @@
       "icon": "dumbbell"
     },
     {
+      "label": "Resting HR",
+      "value": "44",
+      "detail": "7-day avg 43",
+      "icon": "pulse"
+    },
+    {
       "label": "Longest workout",
       "value": "1h 27m",
       "detail": "Strength \u00b7 3 weeks ago",
@@ -38,6 +44,18 @@
       "icon": "run"
     },
     {
+      "label": "Active this week",
+      "value": "14m",
+      "detail": "workout time",
+      "icon": "pulse"
+    },
+    {
+      "label": "Workouts",
+      "value": "1",
+      "detail": "this week",
+      "icon": "dumbbell"
+    },
+    {
       "label": "Longest run",
       "value": "52.5 mi",
       "detail": "Apr 25, 2026",
@@ -46,11 +64,31 @@
     {
       "label": "2026 so far",
       "value": "316.6 mi",
-      "detail": "95 workouts \u00b7 64h",
+      "detail": "97 workouts \u00b7 65h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "Core Workout",
+      "type": "other",
+      "start_date_local": "2026-07-27",
+      "distance_m": 0,
+      "moving_time_s": 863,
+      "pace_min_per_mi": null,
+      "calories": 33,
+      "url": "https://connect.garmin.com/modern/activity/23790527784"
+    },
+    {
+      "name": "Yoga",
+      "type": "yoga",
+      "start_date_local": "2026-07-26",
+      "distance_m": 0,
+      "moving_time_s": 1365,
+      "pace_min_per_mi": null,
+      "calories": 54,
+      "url": "https://connect.garmin.com/modern/activity/23790527386"
+    },
     {
       "name": "Philadelphia - Base",
       "type": "running",
@@ -60,26 +98,6 @@
       "pace_min_per_mi": 8.946321934387534,
       "calories": 624,
       "url": "https://connect.garmin.com/modern/activity/23740459446"
-    },
-    {
-      "name": "Strength",
-      "type": "strength_training",
-      "start_date_local": "2026-07-24",
-      "distance_m": 0,
-      "moving_time_s": 3573,
-      "pace_min_per_mi": null,
-      "calories": 191,
-      "url": "https://connect.garmin.com/modern/activity/23740457637"
-    },
-    {
-      "name": "Strength",
-      "type": "strength_training",
-      "start_date_local": "2026-07-23",
-      "distance_m": 0,
-      "moving_time_s": 2769,
-      "pace_min_per_mi": null,
-      "calories": 216,
-      "url": "https://connect.garmin.com/modern/activity/23740456665"
     }
   ]
 }
