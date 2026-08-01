@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Setting up a home server. Thoughts primarily for now.">
+    <meta name="description" content="Setting up a home-server for hosting Tailscale Services including Actual Budgeting, my CMS, Fitness Trainer.">
 
     
     <!-- Open Graph / Facebook -->
@@ -141,7 +141,7 @@
             </div>
             
             
-            <p class="entry-subtitle">Setting up a home server. Thoughts primarily for now.</p>
+            <p class="entry-subtitle">Setting up a home-server for hosting Tailscale Services including Actual Budgeting, my CMS, Fitness Trainer.</p>
             
             
         </header>
@@ -165,22 +165,8 @@
                 <div class="markdown-content">
                     <p>I recently have decided that there are some things that I want to host myself. This site for now is being hosted through github pages and being routed through my domain, sirobles.com. </p>
 <p>Through the graces of labs and such, I have acquired a Jetson Orin Nano and a few Rasperry Pis (raspis), I think 2 3s, a 4, and a 5. I am wanting to set at least one of these up to be a home-server for hosting basic information.</p>
-<p>I <a href="/projects/budgeting/">recently set up my banking </a>through <a href="https://actualbudget.org/">actual,</a> which is nice because I have some more control of the information that is being seen as well as generally how my budget is organized + it is cheaper.</p>
-<p>This being said, this means that in order to work with the app, I must have my information hosted somewhere, hence the server.</p>
-<p>I have also had a gym coach project that I want to touch a little more on that is storing some data. Beyond this, I think it'd be nice to rely less just on apple icloud for my photos, so I'll pay exorbitant costs for storing my own information.</p>
-<p>I'm deciding on what else I eventually might want hosted, but I think for now, I've decided that it's worth it to start thinking about a home server.</p>
-<p>I have been using tailscale for the past year already, so I have gotten several devices on there. I think my main current obstacles to setting up a server are 1) good power source, 2) access to WiFi, and 3) not having a monitor or keyboard at home for setting up the Pi. I was trying to set stuff up earlier this weekend, but I was struggling. I think there's a chance the cords I have for the Pi are insufficient for powering it (I am just using phone chargers). I am ordering one for the Pi 4 that will be here tomorrow and I"m hoping that I will be able to use this more.</p>
-<p>Also, I realized that my SD card that was plugged into one of the pis no longer works. It just snapped in half somehow. So yeah, that was bad.</p>
-<p>I've done some amount of reading + AI summarizing today + asking friends for help and I've come to decide on my next few steps. </p>
-<ol>
-<li>Flash my pi (again) after the new power source comes in.</li>
-<li>Rsync my basic tailscale set up script</li>
-<li>Rsync the ActualBudget setup</li>
-<li>Set up offsite hosting - potentially through BackBlaze for now. I'll likely host small files for now, so I'll just use their free version</li>
-</ol>
-<p>At some point, I think i'd like to upgrade from the Pi. I'm going back to mit this weekend and want to see if I can crust a mini-pc or anything small that I can use for a server. I'm not really paying for electricity generally, so I think that crufting generally should be fine.</p>
-<p>Ideally I can just fine a mini-pc that somehow is intact and use that. That's what I'll be looking for when not celebrating a friend's birthday or at the lab.</p>
-<p>Anyway, this is a blog post for now since not a lot has been done. Hopefully it gets moved over to a project post more soon.</p>
+<p>The home server currently includes a <a href="https://github.com/gethomepage">Homepage dashboard</a> a hosted CMS (using to write this now), <a href="https://actualbudget.org/">Actual Budget</a>, a small flashcards app that is potentially being replaced by a <a href="https://notebooklm.google/">Gemini Notebook LLM workflow</a>, a personal VaultWarden that I'm struggling to integrate well, a Calendar service, and a personal agent in progress.</p>
+<p>In the future, this might take on more than just a Raspberry Pi 4B (especially if I get more into training models or running local LLMs) but for now, the Pi seems to be sufficient.</p>
                 </div>
                 
                 
@@ -188,6 +174,27 @@
         </div>
 
         
+        
+        <section class="related-buildlogs">
+            <div class="logs-head">
+                <h2 class="logs-title">Build Logs</h2>
+                <span class="logs-count">1 log</span>
+            </div>
+            <p class="logs-blurb">The messy middle &mdash; notes, dead ends, and what
+                each revision actually changed.</p>
+            <div class="log-list">
+                
+                <a class="log-row" href="/build-logs/home-server-1/">
+                    <span class="log-num">#1</span>
+                    <span class="log-meta">
+                        <span class="log-title">Initial Set Up</span>
+                        <span class="log-summary">Raspberry Pi Server Summer 2026</span>
+                    </span>
+                    <span class="log-date">2026-07-29</span>
+                </a>
+                
+            </div>
+        </section>
         
 
         
