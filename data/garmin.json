@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-31T15:57:58.137210+00:00",
+  "generated_at_utc": "2026-08-01T05:17:21.103527+00:00",
   "highlights": [
     {
       "label": "Lifted last week",
@@ -26,15 +26,9 @@
       "icon": "dumbbell"
     },
     {
-      "label": "Resting HR",
-      "value": "44",
-      "detail": "7-day avg 43",
-      "icon": "pulse"
-    },
-    {
       "label": "Longest workout",
       "value": "1h 27m",
-      "detail": "Strength \u00b7 3 weeks ago",
+      "detail": "Strength \u00b7 4 weeks ago",
       "icon": "dumbbell"
     },
     {
