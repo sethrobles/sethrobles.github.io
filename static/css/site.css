@@ -650,8 +650,22 @@ ul ul {
     box-shadow: var(--shadow-lg);
 }
 
-.featured-projects {
+/* Homepage recent feed */
+.home-feed {
     padding: var(--space-10) 0;
+}
+
+.feed {
+    max-width: var(--width-prose);
+    margin: 0 auto;
+}
+
+.feed-head {
+    margin-bottom: var(--space-4);
+}
+
+.feed-head h2 {
+    font-size: var(--text-2xl);
 }
 
 .hobbies {
@@ -1567,6 +1581,24 @@ ul ul {
     white-space: nowrap;
 }
 
+/* Homepage feed rows carry a mono kind-label (Project / Blog / Log) beside the
+   date, so a mixed list stays legible. Listing pages omit it. */
+.index-meta {
+    display: inline-flex;
+    align-items: baseline;
+    gap: var(--space-3);
+    flex: none;
+    white-space: nowrap;
+}
+
+.index-kind {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
 .index-summary {
     display: block;
     margin-top: var(--space-2);
@@ -2257,7 +2289,10 @@ ul ul {
         gap: var(--space-1);
     }
 
-    .index-date {
+    /* Bare date (listing pages) or the kind+date group (homepage feed) rises
+       above the title as an eyebrow when the row stacks. */
+    .index-date,
+    .index-meta {
         order: -1;
         font-size: var(--text-xs);
     }
@@ -2268,7 +2303,7 @@ ul ul {
         padding: var(--space-8) 0;
     }
 
-    .featured-projects,
+    .home-feed,
     .hobbies {
         padding: var(--space-8) 0;
     }
