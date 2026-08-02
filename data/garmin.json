@@ -1,6 +1,12 @@
 {
-  "generated_at_utc": "2026-08-01T14:53:51.571481+00:00",
+  "generated_at_utc": "2026-08-02T05:16:37.285315+00:00",
   "highlights": [
+    {
+      "label": "Weight moved",
+      "value": "8,058 lb",
+      "detail": "this week \u00b7 135 reps",
+      "icon": "dumbbell"
+    },
     {
       "label": "Lifted last week",
       "value": "9,268 lb",
@@ -15,8 +21,8 @@
     },
     {
       "label": "Lifted in '26",
-      "value": "433,673 lb",
-      "detail": "40 sessions",
+      "value": "441,731 lb",
+      "detail": "41 sessions",
       "icon": "dumbbell"
     },
     {
@@ -26,9 +32,15 @@
       "icon": "dumbbell"
     },
     {
+      "label": "Resting HR",
+      "value": "46",
+      "detail": "7-day avg 43",
+      "icon": "pulse"
+    },
+    {
       "label": "Longest workout",
-      "value": "1h 27m",
-      "detail": "Strength \u00b7 4 weeks ago",
+      "value": "2h 25m",
+      "detail": "King County Hiking \u00b7 2 weeks ago",
       "icon": "dumbbell"
     },
     {
@@ -39,13 +51,13 @@
     },
     {
       "label": "Active this week",
-      "value": "14m",
+      "value": "1h 19m",
       "detail": "workout time",
       "icon": "pulse"
     },
     {
       "label": "Workouts",
-      "value": "1",
+      "value": "2",
       "detail": "this week",
       "icon": "dumbbell"
     },
@@ -57,12 +69,22 @@
     },
     {
       "label": "2026 so far",
-      "value": "316.6 mi",
-      "detail": "97 workouts \u00b7 65h",
+      "value": "323.0 mi",
+      "detail": "101 workouts \u00b7 69h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "Strength",
+      "type": "strength_training",
+      "start_date_local": "2026-08-01",
+      "distance_m": 0,
+      "moving_time_s": 3918,
+      "pace_min_per_mi": null,
+      "calories": 260,
+      "url": "https://connect.garmin.com/modern/activity/23816574332"
+    },
     {
       "name": "Core Workout",
       "type": "other",
@@ -82,16 +104,6 @@
       "pace_min_per_mi": null,
       "calories": 54,
       "url": "https://connect.garmin.com/modern/activity/23790527386"
-    },
-    {
-      "name": "Philadelphia - Base",
-      "type": "running",
-      "start_date_local": "2026-07-25",
-      "distance_m": 8691.6103515625,
-      "moving_time_s": 2899,
-      "pace_min_per_mi": 8.946321934387534,
-      "calories": 624,
-      "url": "https://connect.garmin.com/modern/activity/23740459446"
     }
   ]
 }
