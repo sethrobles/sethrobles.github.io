@@ -1,22 +1,16 @@
 {
-  "generated_at_utc": "2026-08-02T14:55:52.623623+00:00",
+  "generated_at_utc": "2026-08-03T05:30:58.774808+00:00",
   "highlights": [
     {
-      "label": "Weight moved",
-      "value": "8,058 lb",
-      "detail": "this week \u00b7 135 reps",
-      "icon": "dumbbell"
-    },
-    {
       "label": "Lifted last week",
-      "value": "9,268 lb",
-      "detail": "2 sessions",
+      "value": "8,058 lb",
+      "detail": "1 session",
       "icon": "dumbbell"
     },
     {
       "label": "Last week",
-      "value": "6 workouts",
-      "detail": "3h 29m active \u00b7 7.91 mi",
+      "value": "3 workouts",
+      "detail": "1h 40m active",
       "icon": "calendar"
     },
     {
@@ -50,16 +44,10 @@
       "icon": "run"
     },
     {
-      "label": "Active this week",
-      "value": "1h 19m",
-      "detail": "workout time",
-      "icon": "pulse"
-    },
-    {
-      "label": "Workouts",
+      "label": "Day streak",
       "value": "2",
-      "detail": "this week",
-      "icon": "dumbbell"
+      "detail": "days in a row",
+      "icon": "calendar"
     },
     {
       "label": "Longest run",
@@ -70,11 +58,21 @@
     {
       "label": "2026 so far",
       "value": "323.0 mi",
-      "detail": "101 workouts \u00b7 69h",
+      "detail": "102 workouts \u00b7 69h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "Yoga",
+      "type": "yoga",
+      "start_date_local": "2026-08-02",
+      "distance_m": 0,
+      "moving_time_s": 1237,
+      "pace_min_per_mi": null,
+      "calories": 34,
+      "url": "https://connect.garmin.com/modern/activity/23830989291"
+    },
     {
       "name": "Strength",
       "type": "strength_training",
@@ -94,16 +92,6 @@
       "pace_min_per_mi": null,
       "calories": 33,
       "url": "https://connect.garmin.com/modern/activity/23790527784"
-    },
-    {
-      "name": "Yoga",
-      "type": "yoga",
-      "start_date_local": "2026-07-26",
-      "distance_m": 0,
-      "moving_time_s": 1365,
-      "pace_min_per_mi": null,
-      "calories": 54,
-      "url": "https://connect.garmin.com/modern/activity/23790527386"
     }
   ]
 }
