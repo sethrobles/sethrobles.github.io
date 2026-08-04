@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-03T16:16:21.469244+00:00",
+  "generated_at_utc": "2026-08-04T04:54:03.779984+00:00",
   "highlights": [
     {
       "label": "Lifted last week",
@@ -42,12 +42,6 @@
       "value": "43h 43m",
       "detail": "36 runs",
       "icon": "run"
-    },
-    {
-      "label": "Day streak",
-      "value": "2",
-      "detail": "days in a row",
-      "icon": "calendar"
     },
     {
       "label": "Longest run",
