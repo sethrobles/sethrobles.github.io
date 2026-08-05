@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-04T16:08:31.092894+00:00",
+  "generated_at_utc": "2026-08-05T04:54:27.733557+00:00",
   "highlights": [
     {
       "label": "Lifted last week",
@@ -39,9 +39,21 @@
     },
     {
       "label": "Run time '26",
-      "value": "43h 43m",
-      "detail": "36 runs",
+      "value": "44h 31m",
+      "detail": "37 runs",
       "icon": "run"
+    },
+    {
+      "label": "Active this week",
+      "value": "57m",
+      "detail": "workout time",
+      "icon": "pulse"
+    },
+    {
+      "label": "Workouts",
+      "value": "2",
+      "detail": "this week",
+      "icon": "dumbbell"
     },
     {
       "label": "Longest run",
@@ -51,12 +63,32 @@
     },
     {
       "label": "2026 so far",
-      "value": "323.0 mi",
-      "detail": "102 workouts \u00b7 69h",
+      "value": "328.1 mi",
+      "detail": "104 workouts \u00b7 70h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "Core Workout",
+      "type": "other",
+      "start_date_local": "2026-08-04",
+      "distance_m": 0,
+      "moving_time_s": 601,
+      "pace_min_per_mi": null,
+      "calories": 47,
+      "url": "https://connect.garmin.com/modern/activity/23856766076"
+    },
+    {
+      "name": "Philadelphia Track Running",
+      "type": "track_running",
+      "start_date_local": "2026-08-04",
+      "distance_m": 8230.0,
+      "moving_time_s": 2876,
+      "pace_min_per_mi": 9.37315074929121,
+      "calories": 626,
+      "url": "https://connect.garmin.com/modern/activity/23856420236"
+    },
     {
       "name": "Yoga",
       "type": "yoga",
@@ -66,26 +98,6 @@
       "pace_min_per_mi": null,
       "calories": 34,
       "url": "https://connect.garmin.com/modern/activity/23830989291"
-    },
-    {
-      "name": "Strength",
-      "type": "strength_training",
-      "start_date_local": "2026-08-01",
-      "distance_m": 0,
-      "moving_time_s": 3918,
-      "pace_min_per_mi": null,
-      "calories": 260,
-      "url": "https://connect.garmin.com/modern/activity/23816574332"
-    },
-    {
-      "name": "Core Workout",
-      "type": "other",
-      "start_date_local": "2026-07-27",
-      "distance_m": 0,
-      "moving_time_s": 863,
-      "pace_min_per_mi": null,
-      "calories": 33,
-      "url": "https://connect.garmin.com/modern/activity/23790527784"
     }
   ]
 }
