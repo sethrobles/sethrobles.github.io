@@ -109,7 +109,6 @@ class FitnessWidget {
             : '';
         return `
             <div class="fitness-row">
-                <div class="fitness-spine" aria-hidden="true"></div>
                 <div class="fitness-details">
                     <div class="fitness-stat">${label}</div>
                 </div>
@@ -143,7 +142,7 @@ class FitnessWidget {
     }
 
     renderEmpty() {
-        this.container.innerHTML = '<div class="fitness-empty"><p>No highlights yet — check back soon.</p></div>';
+        this.container.innerHTML = '<div class="fitness-empty"><p>No highlights yet.</p></div>';
     }
 
     renderError() {
@@ -223,7 +222,6 @@ class HardcoverWidget {
 
         return `
             <div class="book-item${reading ? ' reading' : ''}">
-                <div class="book-spine" aria-hidden="true"></div>
                 <div class="book-details">
                     <div class="book-name">${title}</div>
                     <div class="book-author">${author}</div>
@@ -258,7 +256,7 @@ class HardcoverWidget {
     renderEmpty() {
         this.container.innerHTML = `
             <div class="hardcover-empty">
-                <p>No books found. Check back soon!</p>
+                <p>No books yet.</p>
             </div>
         `;
     }

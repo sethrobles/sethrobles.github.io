@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Build logs are on each project page.">
+    <meta name="description" content="A bit about Seth Robles — background, what I'm working on, and what I do outside of it.">
 
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sirobles.com">
-    <meta property="og:title" content="Seth Robles - Portfolio">
-    <meta property="og:description" content="Seth Robles - Mechanical Engineer and Roboticist at MIT">
+    <meta property="og:title" content="Me - Seth Robles">
+    <meta property="og:description" content="A bit about Seth Robles — background, what I'm working on, and what I do outside of it.">
     <meta property="og:image" content="https://sirobles.com/static/uploads/a6df2c09e280bab7.jpg">
 
     <!-- Twitter -->
@@ -20,7 +20,7 @@
     <meta property="twitter:description" content="Seth Robles - Mechanical Engineer and Roboticist at MIT">
     <meta property="twitter:image" content="https://sirobles.com/static/uploads/a6df2c09e280bab7.jpg">
 
-    <title>Projects - Seth Robles</title>
+    <title>Me - Seth Robles</title>
 
     <!-- Favicons for all devices and browsers -->
     <link rel="icon" type="image/svg+xml" href="/static/uploads/personal/favicon_io/favicon.svg">
@@ -124,98 +124,62 @@
 
     <main class="main-content">
         
-<div class="entry-detail">
+<section class="me-intro">
     <div class="container">
-        <header class="idx-header">
-            <h1 class="idx-title">Projects</h1>
-            <p class="idx-blurb">Build logs are on each project page.</p>
+        
+        <div class="me-header">
+            
+            <div class="me-header-text">
+                <h1 class="section-title">Me</h1>
+                <p class="section-lede">Mechanical Engineer and Roboticist at MIT</p>
+
+                <div class="me-prose">
+                    <p>This is placeholder text — replace it with your own.</p>
+<p>Write however many paragraphs you want; it's plain markdown, so <code>**bold**</code>,
+<code>*italic*</code>, <a href="https://example.com">links</a>, lists and headings all work. The same
+body pipeline the blog uses runs over this file, so callout, collapsible and
+carousel blocks work here too.</p>
+<p>Two things worth knowing. The <code>lede</code> in the frontmatter above is the line that
+sits under the "Me" heading — edit it there, not in the template. And images
+referenced by bare filename resolve against <code>static/uploads/pages/me/</code>; use a
+full <code>/static/...</code> path to pull an image from anywhere else.</p>
+                </div>
+            </div>
+
+            <div class="me-portrait">
+                <picture><source type="image/avif" srcset="/static/uploads/a6df2c09e280bab7-480.avif 480w, /static/uploads/a6df2c09e280bab7-800.avif 800w, /static/uploads/a6df2c09e280bab7-1086.avif 1086w" sizes="(max-width: 860px) 55vw, 320px"><source type="image/webp" srcset="/static/uploads/a6df2c09e280bab7-480.webp 480w, /static/uploads/a6df2c09e280bab7-800.webp 800w, /static/uploads/a6df2c09e280bab7-1086.webp 1086w" sizes="(max-width: 860px) 55vw, 320px"><img src="/static/uploads/a6df2c09e280bab7.jpg" alt="Seth Robles" class="me-photo" width="1086" height="724" decoding="async" loading="eager" fetchpriority="high" style="background-image:url(data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADQAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JYwC7ABnbh2pVJ2WPpVAA/oUZCSqy9PMwmaJREc4pA1f5YG6GabRIKn/GC4e63/E2B8al+DV/MPZqbWnk0QwcD2SkWKZzneL6pofY6khqX4fVzp6rGCy5v6jA5bA9zzbbAAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+            </div>
+        </div>
+
+        
+        
+    </div>
+</section>
+
+
+<section class="me-hobbies">
+    <div class="container">
+        <header class="section-header">
+            <h2 class="section-title">Outside of work</h2>
         </header>
 
-        
-        
-        <nav class="tagbar" aria-label="Filter by category">
-            <a class="tagbar-link"
-               href="/projects/">
-                All <span class="tagbar-count">17</span>
-            </a>
-            
-            <a class="tagbar-link"
-               href="/projects/tag/electronics/">
-                Electronics <span class="tagbar-count">7</span>
-            </a>
-            
-            <a class="tagbar-link"
-               href="/projects/tag/hardware/">
-                Hardware <span class="tagbar-count">6</span>
-            </a>
-            
-            <a class="tagbar-link"
-               href="/projects/tag/software/">
-                Software <span class="tagbar-count">6</span>
-            </a>
-            
-            <a class="tagbar-link"
-               href="/projects/tag/3d-printing/">
-                3D Printing <span class="tagbar-count">4</span>
-            </a>
-            
-            <a class="tagbar-link"
-               href="/projects/tag/self-hosted/">
-                Self-Hosted <span class="tagbar-count">4</span>
-            </a>
-            
-            <a class="tagbar-link"
-               href="/projects/tag/coursework/">
-                Coursework <span class="tagbar-count">3</span>
-            </a>
-            
-            <a class="tagbar-link"
-               href="/projects/tag/device-integration/">
-                Device Integration <span class="tagbar-count">3</span>
-            </a>
-            
-            <a class="tagbar-link"
-               href="/projects/tag/pcb-design/">
-                PCB Design <span class="tagbar-count">3</span>
-            </a>
-            
-            <a class="tagbar-link"
-               href="/projects/tag/robotics/">
-                Robotics <span class="tagbar-count">3</span>
-            </a>
-            
-            <a class="tagbar-link"
-               href="/projects/tag/motor/">
-                Motor <span class="tagbar-count">2</span>
-            </a>
-            
-            <a class="tagbar-link is-active"
-               href="/projects/tag/fitness/" aria-current="page">
-                Fitness <span class="tagbar-count">1</span>
-            </a>
-            
-        </nav>
-        
+        <div class="hobbies-grid">
+            <div class="hobby-widget">
+                <h3 class="hobby-title">Fitness</h3>
+                <div id="fitness-widget" class="fitness-widget">
+                    <!-- Rotating fitness highlight tiles (Garmin + life highlights) -->
+                </div>
+            </div>
 
-        <div class="index-list">
-            
-            <a class="index-row" href="/projects/workout_coach/">
-                <span class="index-top">
-                    <span class="index-title">Workout Coach</span>
-                    
-                    <span class="index-date">Apr 2026</span>
-                    
-                </span>
-                
-                <span class="index-summary">AI Workout Coach. Basically just a ChatGPT wrapper that interfaces with my Garmin data. Will become more if I find it useful</span>
-                
-            </a>
-            
-
-            
+            <div class="hobby-widget">
+                <h3 class="hobby-title">Reading</h3>
+                <div id="hardcover-widget" class="hardcover-widget">
+                    <!-- Hardcover books will be loaded here -->
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
     </main>
 
