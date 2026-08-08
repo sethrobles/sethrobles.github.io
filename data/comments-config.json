@@ -1,0 +1,8 @@
+{
+  "mode": "on",
+  "endpoint": "",
+  "turnstile_site_key": "",
+  "heading": "Comments",
+  "intro": "Comments are moderated, so yours will show up once I have read it.",
+  "closed_notice": "Comments are closed on this post."
+}
