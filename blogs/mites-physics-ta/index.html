@@ -47,9 +47,17 @@
     <link rel="stylesheet" href="/static/css/site.css">
 
     
+    <meta name="color-scheme" content="light dark">
+
+    
     <script>
-        document.documentElement.setAttribute(
-            'data-theme', localStorage.getItem('theme') || 'light');
+        (function () {
+            var saved = null;
+            try { saved = localStorage.getItem('theme'); } catch (e) {}
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.setAttribute(
+                'data-theme', saved || (prefersDark ? 'dark' : 'light'));
+        })();
     </script>
 
     <script>
@@ -286,12 +294,22 @@
     </script>
     <script src="/static/js/widgets.js"></script>
     <script>
-        // The theme is already applied in <head>; this only handles the toggle.
+        // The theme is already applied in <head>; this only handles changes.
+        const html = document.documentElement;
+
         document.getElementById('theme-toggle').addEventListener('click', () => {
-            const html = document.documentElement;
             const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
             html.setAttribute('data-theme', next);
-            localStorage.setItem('theme', next);
+            try { localStorage.setItem('theme', next); } catch (e) {}
+        });
+
+        // Keep following the OS until the reader overrides it — so someone whose
+        // machine switches to dark at sunset sees the page follow, while anyone
+        // who has actually picked a side keeps what they picked.
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            let saved = null;
+            try { saved = localStorage.getItem('theme'); } catch (err) {}
+            if (!saved) html.setAttribute('data-theme', e.matches ? 'dark' : 'light');
         });
     </script>
 </body>

@@ -270,10 +270,16 @@ ul ul {
     z-index: 100;
 }
 
+/* Same gap the nav links use between themselves. It was --space-4, which left
+   the theme toggle sitting half as far from "Me" as the links sit from each
+   other — so it read as attached to "Me" rather than as its own control. The
+   toggle stays a sibling of .navbar-menu rather than living inside it, because
+   below 768px the menu becomes the collapsed dropdown and would take the toggle
+   with it. */
 .navbar-container {
     display: flex;
     align-items: center;
-    gap: var(--space-4);
+    gap: var(--space-6);
     max-width: var(--width-page);
     margin: 0 auto;
     padding: var(--space-4) var(--gutter);
@@ -342,26 +348,47 @@ ul ul {
 .navbar-toggle-icon::before { top: -8px; }
 .navbar-toggle-icon::after  { bottom: -8px; }
 
-/* Theme toggle — last item in the navbar flow. */
+/* Theme toggle — last item in the navbar flow. A bare icon at the weight of a
+   nav link: as a filled 44px disc with a border and a shadow it was the
+   heaviest object in a bar of 14px text, which put the most visual weight on
+   the least important control. The box stays 40px for a comfortable tap
+   target; the negative margin pulls the icon's optical edge out to meet the
+   container edge, so it lines up with the nav text rather than sitting a
+   button's worth of padding short of it. */
 .theme-toggle {
+    /* The box stays 40px for a comfortable tap target while the icon is 18px.
+       Cancelling that padding with equal negative margins makes the icon lay
+       out as though it were a bare glyph: the flex gap is measured from the
+       icon rather than from the box, and its right edge meets the same page
+       margin the rest of the site aligns to. */
+    --tt-box:  40px;
+    --tt-icon: 18px;
     flex-shrink: 0;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-pill);
+    width: var(--tt-box);
+    height: var(--tt-box);
+    margin-inline: calc((var(--tt-box) - var(--tt-icon)) / -2);
+    /* Grid, not flex: the sun and moon are both in the DOM and swap by opacity.
+       Side by side they each took up space, so the *visible* icon sat half a
+       button left of centre — which is a good part of why this never looked
+       aligned. One grid cell stacks them. */
+    display: grid;
+    place-items: center;
+    padding: 0;
+    background: none;
+    border: 0;
     cursor: pointer;
-    color: var(--text-secondary);
-    box-shadow: var(--shadow);
-    transition: background var(--transition), border-color var(--transition);
+    color: var(--text-muted);
+    transition: color var(--transition);
 }
 
 .theme-toggle:hover {
-    background: var(--bg-tertiary);
-    border-color: var(--border-hover);
+    color: var(--accent);
+}
+
+.theme-toggle svg {
+    grid-area: 1 / 1;
+    width: var(--tt-icon);
+    height: var(--tt-icon);
 }
 
 .theme-toggle .sun-icon,
@@ -2054,12 +2081,11 @@ ul ul {
 
     /* The collapsed menu is absolutely positioned, so only these two buttons
        are left in the bar. Keep the hamburger outermost. */
+    /* The menu is absolutely positioned at this width, so these two buttons are
+       all that's left in the bar. Keep the hamburger outermost. */
     .theme-toggle {
         margin-left: auto;
         order: 2;
-        width: 40px;
-        height: 40px;
-        box-shadow: none;
     }
 
     .navbar-toggle {
