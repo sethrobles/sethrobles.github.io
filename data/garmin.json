@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-07T14:46:57.740142+00:00",
+  "generated_at_utc": "2026-08-08T03:15:58.856867+00:00",
   "highlights": [
     {
       "label": "Lifted last week",
@@ -26,15 +26,9 @@
       "icon": "dumbbell"
     },
     {
-      "label": "Resting HR",
-      "value": "47",
-      "detail": "7-day avg 43",
-      "icon": "pulse"
-    },
-    {
       "label": "Longest workout",
       "value": "2h 25m",
-      "detail": "King County Hiking \u00b7 2 weeks ago",
+      "detail": "King County Hiking \u00b7 3 weeks ago",
       "icon": "dumbbell"
     },
     {
