@@ -1,0 +1,131 @@
+# robots.txt for sirobles.com
+#
+# Policy, in one line: read it, summarise it, cite it — don't train on it.
+#
+# The split below follows that. Retrieval agents fetch a page to answer a
+# question a human just asked and put a link back in the answer; that's a
+# reader arriving sideways, and they're welcome. Bulk training crawlers take
+# the same words to build a model and send nobody back; they aren't.
+#
+# This is a request, not a fence. Well-behaved crawlers honour it, scrapers
+# ignore it, and a User-agent string can claim to be anything. Anything that
+# genuinely must not be public should not be published here in the first place.
+#
+# Bot names drift — operators rename, split and retire them. When revisiting
+# this, check the operators' own docs rather than trusting the list below.
+
+# ── Ordinary search engines, and anything not named further down ─────────────
+# Crawlers obey the single most specific group that matches them and ignore
+# every other, so a bot with its own section below never reads this one.
+User-agent: *
+Allow: /
+
+# ── AI answer engines: allowed ───────────────────────────────────────────────
+# Redundant with the wildcard above as written. They're spelled out anyway, so
+# that tightening `*` later doesn't silently take these down with it, and so
+# the intent survives without needing this comment.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# ── Training crawlers: not allowed ───────────────────────────────────────────
+# Google-Extended and Applebot-Extended are opt-out tokens rather than real
+# crawlers: they don't fetch anything themselves, they tell Gemini and Apple
+# Intelligence to leave this site out of training. Blocking Google-Extended
+# does NOT remove the site from Google Search, and does NOT remove it from AI
+# Overviews — those are built from the ordinary Googlebot index, and there is
+# no robots.txt directive that opts out of them without leaving Search too.
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: Omgili
+Disallow: /
+
+User-agent: Webzio-Extended
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: AI2Bot
+Disallow: /
+
+User-agent: PanguBot
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: img2dataset
+Disallow: /
+
+# Bing is allowed to crawl by the wildcard rule. Microsoft's training opt-out
+# isn't a robots.txt directive at all — it's the NOCACHE/NOARCHIVE robots meta
+# tag, which would have to go in templates/base.html to take effect.
+
+# ── Pages kept out of results ────────────────────────────────────────────────
+# Handled with <meta name="robots" content="noindex"> on the pages themselves
+# (/qr/ and /404.html), deliberately NOT with Disallow lines here. Disallow
+# blocks *crawling*, and a page that can't be crawled can't be read — so the
+# noindex tag would never be seen, and the URL could still surface in results
+# on the strength of inbound links alone. To hide a page, let it be fetched and
+# let it say noindex. That is also why nothing unlisted is named in this file:
+# a Disallow line is a public index of the things you'd rather people not find.
+
+Sitemap: https://sirobles.com/sitemap.xml
