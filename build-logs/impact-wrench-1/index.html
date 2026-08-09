@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <meta name="description" content="Initial Build — a build log by Seth Robles.">
+
+    
+    
+    <link rel="canonical" href="https://sirobles.com/build-logs/impact-wrench-1/">
+
+    
+    <meta property="og:site_name" content="Seth Robles">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sirobles.com/build-logs/impact-wrench-1/">
+    <meta property="og:title" content="Initial Build — Build log #1 - Seth Robles">
+    <meta property="og:description" content="Initial Build — a build log by Seth Robles.">
+    <meta property="og:image" content="https://sirobles.com/static/uploads/a6df2c09e280bab7.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sirobles.com/build-logs/impact-wrench-1/">
+    <meta property="twitter:title" content="Initial Build — Build log #1 - Seth Robles">
+    <meta property="twitter:description" content="Initial Build — a build log by Seth Robles.">
+    <meta property="twitter:image" content="https://sirobles.com/static/uploads/a6df2c09e280bab7.jpg">
+
+    
+    <title>Initial Build — Build log #1 - Seth Robles</title>
+
+    
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/static/uploads/personal/favicon_io/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/static/uploads/personal/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/uploads/personal/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/uploads/personal/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/uploads/personal/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="/static/uploads/personal/favicon_io/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/uploads/personal/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
+
+    <link rel="preload" href="/static/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/static/fonts/inter-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/static/fonts/fonts.css">
+    <link rel="stylesheet" href="/static/css/site.css">
+
+    
+    <meta name="color-scheme" content="light dark">
+
+    
+    <script>
+        (function () {
+            var saved = null;
+            try { saved = localStorage.getItem('theme'); } catch (e) {}
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.setAttribute(
+                'data-theme', saved || (prefersDark ? 'dark' : 'light'));
+        })();
+    </script>
+
+    <script>
+        if (location.pathname.endsWith('/index.html')) {
+            location.replace(location.pathname.replace('/index.html', '/'));
+        }
+    </script>
+
+    
+    
+    
+
+    <!-- GoatCounter analytics -->
+    <script data-goatcounter="https://sirobles.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-container">
+        <button class="navbar-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="navbar-toggle-icon"></span>
+        </button>
+
+        
+        <div class="navbar-menu">
+            <a href="/" class="navbar-link">Home</a>
+            <a href="/projects" class="navbar-link">Projects</a>
+            <a href="/blogs" class="navbar-link">Blog</a>
+            <a href="/me" class="navbar-link">Me</a>
+        </div>
+
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+            <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<script>
+    // Mobile navigation toggle
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navbarMenu = document.querySelector('.navbar-menu');
+
+    navbarToggle.addEventListener('click', () => {
+        const isExpanded = navbarToggle.getAttribute('aria-expanded') === 'true';
+        navbarToggle.setAttribute('aria-expanded', !isExpanded);
+        navbarMenu.classList.toggle('show');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navbarToggle.contains(e.target) && !navbarMenu.contains(e.target)) {
+            navbarToggle.setAttribute('aria-expanded', 'false');
+            navbarMenu.classList.remove('show');
+        }
+    });
+</script>
+
+    <main class="main-content">
+        
+<article class="entry-detail entry-detail--buildlog">
+    <div class="container">
+
+        
+        
+        <header class="entry-header entry-header--log">
+            
+            <a class="entry-crumb" href="/projects/impact-wrench/">&larr; Disassembling Impact Wrench</a>
+            
+            <h1 class="entry-title">Initial Build</h1>
+            <dl class="entry-spec">
+                <div><dt>Log</dt><dd>#1</dd></div>
+                <div><dt>Date</dt><dd>2026-08-01</dd></div>
+                <div><dt>Project</dt><dd>Disassembling Impact Wrench</dd></div>
+                
+            </dl>
+            
+            
+        </header>
+
+        
+
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        <div class="entry-content">
+            <div class="content-main">
+                
+                <div class="markdown-content">
+                    <p>As the description says, there is a project where I basically want to have an impact wrench connect to a computer. In the long term, I would actually like to design my own impact wrench because they are super cool, but I think in the short term, I want to validate this small project idea.</p>
+<p>As a result, I bought <a href="https://www.amazon.com/SEYVUM-Cordless-Brushless-Battery-Charger/dp/B0B4JN1HP4?sr=8-5">this</a> impact wrench, which it says should be able to provide 400 Nm. That is a lot and would be super cool.</p>
+<p>That being said, since I am stripping out the trigger and basic electronics, I will need to figure out a substitute "trigger" control mechanism as well as a mount for the actual actuation. </p>
+<p>Last week, I was in MITERs trying to figure out if I would be able to power this separately.</p>
+<p>This is my second time tearing apart something and really trying to figure out what its PCB does. The first time was at a Bad Bunny concert in the Dominican Republic where they gave out these necklaces with flashing lights.</p>
+<p><picture><source type="image/avif" srcset="/static/uploads/6a8d05191d9b389a-480.avif 480w, /static/uploads/6a8d05191d9b389a-768.avif 768w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/6a8d05191d9b389a-480.webp 480w, /static/uploads/6a8d05191d9b389a-768.webp 768w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/6a8d05191d9b389a.jpg" alt="Front of Trigger PCB" width="768" height="1024" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRgIBAABXRUJQVlA4IPYAAACwBQCdASoUABsAPu1iq1AppSOisBgIATAdiWwAtOmM7l3RpmqwQGVtroTfMg+EmvgA3OvBcgAA/nkWiynkGZ66y1KtcCKKcqmtXLPVef3ui8ctjQ3sjGQFub0eQjtMtPI89J9s89CmehsnH+nfIny/XUN0omrIN+R849A26k5MhFHVlyrxOa+JdYSSJ1sTSY51KUUh073LayP40b+P6a5/6yb0iaR3FB9I+f0U34ZWtZ4r35zQW37eZ1BF5Rv3Jn3IY1onSg5kSEt63itnLrKtW4AALdXjV4WIqc2BIVK7ken+7h098AmpKaxX4IvgyWckaMwrgAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture></p>
+<p><picture><source type="image/avif" srcset="/static/uploads/1114bf3efc238f5b-480.avif 480w, /static/uploads/1114bf3efc238f5b-768.avif 768w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/1114bf3efc238f5b-480.webp 480w, /static/uploads/1114bf3efc238f5b-768.webp 768w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/1114bf3efc238f5b.jpg" alt="Back of Trigger PCB" width="768" height="1024" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRgABAABXRUJQVlA4IPQAAADQBQCdASoUABsAPu1qsFAppaSiqAqpMB2JaAC7AYy8aIRRUSQIzeldrmWseGoVStPpdrgB+NQAAOJmjUM73p+WNIbefU9FXFhBupCvumF8YKZvMdjWwoTSzjQrtm/6dw9JwP+Fo4S/kGn9ZptNobvEyPgJ0WAFPhM6MuOLjTBQWxTKfWdAzuRjinkCf1uL7suIobfNiqH+Dou51etfY2SGzeBBOa6Tt+fwD9xaepZBJFQbTVMBFQyPx5Wa55PwkjOhfbnfQO4U2gGdmkxHCRfviHXhUhrvyf1O4qMXgDee0yC82HOlP1AFclyAFOql/aFYsqAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture></p>
+<p>I need to go back and actually figure out more, but with the help of Elijah in MITERS and looking confused for a small amount of time, I was generally able to figure out what is going on.</p>
+<p>When the trigger is pressed, these little feet movie across on the back, connecting the large copper pads seen. You can see that this connects the board's power. (I'll include a schematic later). This prevents unnecessary power waste coming to this board when it's not in use (definitely useful). Below is my current understanding of the pin's functions.</p>
+<p><picture><source type="image/avif" srcset="/static/uploads/7aa9bece1e94ca80-480.avif 480w, /static/uploads/7aa9bece1e94ca80-800.avif 800w, /static/uploads/7aa9bece1e94ca80-1200.avif 1200w, /static/uploads/7aa9bece1e94ca80-1334.avif 1334w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/7aa9bece1e94ca80-480.webp 480w, /static/uploads/7aa9bece1e94ca80-800.webp 800w, /static/uploads/7aa9bece1e94ca80-1200.webp 1200w, /static/uploads/7aa9bece1e94ca80-1334.webp 1334w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/7aa9bece1e94ca80.png" alt="Mapping of PCB Pins" width="1334" height="1161" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABQAwCdASoUABEAPu1sq1EppaOiqAqpMB2JaQAAOpv8nMkEAAD+8C72WKamfPPG37el2nYncuq0G/hsbaHCWG5xpCO2Gsv6iBdLQAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture></p>
+<p>I will try milling a PCB for it in the <a href="https://make.mit.edu/makerspace?recordId=recrAr192E0hOylmw">Mezzanine</a> later this week. I will be using a Raspberry Pi for the basic control logic.</p>
+<p>I went back to MITERS to see if I could verify some basic information with an oscilloscope. I was able to determine that when pressed sufficiently, the red pin goes to ~ 4.7Vrms. When not pressed in sufficiently, it floats around 20 Vrms.</p>
+<p>The yellow pin when not connected floats around 20 Vrms and when pressing it goes from around 600 Vrms to 4.7Vrms (around what the red is).</p>
+<p>The yellow is connected to the left middle pad on the back which the carriage connects to. Idk why i thought it was ground.</p>
+<p>I am measuring the resistor values now. (This was a long segway, so I exlcuded it here). Basically, I realized that the trigger was acting as an artifical analog voltage signal using the carriage moving across slanted pads.</p>
+<p>Okay, I think i'm pretty confident about what it is. The pins are isolated until the slider on bottom moves. There appear to be no other copper connections or other traces. As such, I want to make a relay switch that will take in a digital signal of a Raspberry Pi (or some other controller) and then connect these two. I should be able to test this by just connecting them with a wire...</p>
+<p>So that was an obvious test lol. It worked. I'll mimic their design just because I'm not sure what the internals look like, so I will be using a relay switch. I think this will do: AQV210E. </p>
+<p>I now need to do something to mimic the analog signal that is going into the yellow wire. I think this will be: MCP4725A1T-E/CH.</p>
+<p>For now, I think I will be using a floating gnd / connect my rapsi gnd to the lion gnd. It seems a little sketchy to me, but I've probably done similar things before. I'm just worried about it now because It's not something that I would do a lot. Okay, I clamped the motor down and ran a test. It works how I expected. I need to double check the changing of directions, but this looks pretty good right now.</p>
+<p>I am going to try working on this more on Saturday. I will be cutting off a lot of the handle probably and maybe making a basic clamping style mount that grabs the from on top and bottom and could be screwed onto a base platform.</p>
+<p>(Update: May 24)</p>
+<p>I've worked this out a little more. I have not made the mount yet, mostly bc I forgot about it. I was just going to screw into the holes that join the hammer part of the wrench with the part containing the motor. I think that should be sufficient.</p>
+<p>That being said, I don't have calipers around me right now, so I'll have to look later.</p>
+<p>I've designed a pcb for imitating the trigger, but I'm not 100% about the direction pin, mostly because I think I lost a couple of the components before. Regardless, I have the pcb for it designed as shown below. I have the parts at home, minus the 330 Ohm resistors, so I may order some from digikey. I'm in Philly for the Summer now, so I'll have to get them delivered here. Once I do, I'm hoping to test out the substitute. </p>
+<p><picture><source type="image/avif" srcset="/static/uploads/0969fca2d74adc3e-480.avif 480w, /static/uploads/0969fca2d74adc3e-800.avif 800w, /static/uploads/0969fca2d74adc3e-1200.avif 1200w, /static/uploads/0969fca2d74adc3e-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/0969fca2d74adc3e-480.webp 480w, /static/uploads/0969fca2d74adc3e-800.webp 800w, /static/uploads/0969fca2d74adc3e-1200.webp 1200w, /static/uploads/0969fca2d74adc3e-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/0969fca2d74adc3e.png" alt="Mock Trigger PCB" width="1600" height="869" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADwAgCdASoUAAsAPu1iqU2ppaOiMAgBMB2JaQDA3C0kAAD+8ElR7xIjQAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture></p>
+<p>So the PCB did come in. Components were soldered on after work on Friday. It's been really hot, so working has been a little bit of a pain and I've just been focused on CAD. It's nice to do some amount of manufacturing. At some point this upcoming week, I will crimp JST wires and have a raspberry pi or maybe a jetson set up to do this. Actually, I think i'll probably take an arduino potentially. It'll eventually go on something heavier, but for testing I think an arduino should be sufficient. I'll probably tkae care of that the 16th. Hopefully there's an update with a video for this at some point.</p>
+<p><picture><source type="image/avif" srcset="/static/uploads/fec08c92d9933e94-480.avif 480w, /static/uploads/fec08c92d9933e94-800.avif 800w, /static/uploads/fec08c92d9933e94-1200.avif 1200w, /static/uploads/fec08c92d9933e94-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/fec08c92d9933e94-480.webp 480w, /static/uploads/fec08c92d9933e94-800.webp 800w, /static/uploads/fec08c92d9933e94-1200.webp 1200w, /static/uploads/fec08c92d9933e94-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/fec08c92d9933e94.jpg" alt="Front of Trigger-Mimic PCB" width="1600" height="2133" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAQBQCdASoUABsAPu1gq1AppKOisBgIATAdiWMAtsgQpluznNk58RyMaTqWyISrKuoAAP58IkYVP9qlh9nTsOxAWyJnyrTNxuLnEXzsSmDhYGCZT69PDBpEgxkKo5A29k9FJGiLxLlUsRJBnBs45CeAAAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture></p>
+<p><picture><source type="image/avif" srcset="/static/uploads/7a1cbbd374e96a16-480.avif 480w, /static/uploads/7a1cbbd374e96a16-800.avif 800w, /static/uploads/7a1cbbd374e96a16-1200.avif 1200w, /static/uploads/7a1cbbd374e96a16-1600.avif 1600w" sizes="(max-width: 768px) 100vw, 720px"><source type="image/webp" srcset="/static/uploads/7a1cbbd374e96a16-480.webp 480w, /static/uploads/7a1cbbd374e96a16-800.webp 800w, /static/uploads/7a1cbbd374e96a16-1200.webp 1200w, /static/uploads/7a1cbbd374e96a16-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 720px"><img src="/static/uploads/7a1cbbd374e96a16.jpg" alt="Back of Trigger-Mimic PCB" width="1600" height="2133" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABQBACdASoUABsAPu1qr1CppaQiqAqpMB2JYwCdAAxsBcgxSKUeD4BXN4fAAP6fMASLcfWvI+qoD0olKsz1ZS0IOaPdJgxpr9dAYUb0JAOG8yB7MRnGicIEhEgqcacJEJWDme75iIEL4AgtHemXZ2OVL7tcZlDh9VpNBAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture></p>
+<p><strong>June 17 2026 Update</strong></p>
+<p>Today, I learned how to crimp the JSTs from Glenn, a technician at the company I work for. I haven't interacted with a lot of technicians and I'm continually astounded at the level of precision and attention to detail he has. For example, for crimping, he'll measure out the wire that needs to be stripped with a caliper in order to meet standards (around a .5 mm accuracy requirement).</p>
+<p>Also, I hadn't really thought about how i was going to connect the new board to the controller at first, so I just choose JST 2.54 because they're convenient/large. Later, I realized that the ones i'm working with are much smaller.</p>
+<p>Anyways, I need to program the raspi or arduino i'll be using. My goal is to hear the impact wrench move tomorrow.</p>
+                </div>
+                
+            </div>
+        </div>
+
+        
+        
+
+        
+        <nav class="entry-navigation">
+            <div class="nav-actions">
+                
+                
+                <a href="/projects/impact-wrench/" class="action-link action-link--back"><span aria-hidden="true">&larr;</span> Back to Disassembling Impact Wrench</a>
+                
+                
+            </div>
+            <div class="nav-links">
+                
+            </div>
+        </nav>
+
+        
+        
+    </div>
+</article>
+
+    </main>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-bar">
+            <div class="footer-identity">
+                <span class="footer-name">Seth Robles</span>
+                <span class="footer-role">Mechanical Engineer &amp; Roboticist</span>
+            </div>
+
+            <nav class="footer-links" aria-label="Footer">
+                <a href="/projects/" class="footer-link">Projects</a>
+                <a href="/blogs/" class="footer-link">Blog</a>
+                <a href="/me/" class="footer-link">Me</a>
+                <a href="https://github.com/sethrobles" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/sethrobles" class="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="mailto:sethrobles04@gmail.com" class="footer-link">Email</a>
+            </nav>
+        </div>
+
+        
+        <p class="footer-copyright">&copy; 2026 Seth Robles</p>
+    </div>
+</footer>
+
+    <script>
+        window.socialUsernames = {
+            strava: "sethrobles",
+            strava_num: "149255842",
+            hardcover: "Sethyopolopodis"
+        };
+    </script>
+    <script src="/static/js/widgets.js"></script>
+    <script>
+        // The theme is already applied in <head>; this only handles changes.
+        const html = document.documentElement;
+
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', next);
+            try { localStorage.setItem('theme', next); } catch (e) {}
+        });
+
+        // Keep following the OS until the reader overrides it — so someone whose
+        // machine switches to dark at sunset sees the page follow, while anyone
+        // who has actually picked a side keeps what they picked.
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            let saved = null;
+            try { saved = localStorage.getItem('theme'); } catch (err) {}
+            if (!saved) html.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+        });
+    </script>
+</body>
+</html>
