@@ -2396,17 +2396,24 @@ ul ul {
 
 /* ── Form ───────────────────────────────────────────────────────────────── */
 
+/* Ruled rather than boxed, matching mockups/comments.html variant A. A filled,
+   rounded panel is the card language the redesign spent three phases removing,
+   and it made the page end on a heavy slab. A single rule separates it just as
+   well. */
 .comment-form {
     margin-top: var(--space-8);
-    padding: var(--space-5);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    background: var(--bg-secondary);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--border);
 }
 
-/* When replying, the form is moved inside the comment being answered. */
+/* When replying, the form is moved inside the comment being answered — where it
+   does need an edge to sit against, or it reads as a continuation of that
+   comment rather than a reply to it. */
 .comment .comment-form {
     margin-top: var(--space-4);
+    padding: var(--space-4) 0 0 var(--space-4);
+    border-top: 0;
+    border-left: 2px solid var(--border-hover);
 }
 
 .comment-form-title {
