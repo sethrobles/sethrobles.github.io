@@ -1,7 +1,7 @@
 {
   "mode": "on",
-  "endpoint": "",
-  "turnstile_site_key": "",
+  "endpoint": "https://sirobles-comments.sirobles.workers.dev",
+  "turnstile_site_key": "0x4AAAAAAELd77V6-JiiZUgw",
   "heading": "Comments",
   "intro": "Comments are moderated, so yours will show up once I have read it.",
   "closed_notice": "Comments are closed on this post."
