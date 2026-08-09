@@ -1,0 +1,14 @@
+{
+  "type": "blog",
+  "slug": "tailscale",
+  "comments": [
+    {
+      "id": "demo0001seedexample",
+      "name": "Dana Whitfield",
+      "website": null,
+      "body": "This finally made subnet routers click for me — the bit about advertising routes rather than bridging was the piece I was missing.\n\nDoes MagicDNS work across tailnets, or is it per-tailnet only?",
+      "date": "2026-08-09T23:03:55.000Z",
+      "parent": null
+    }
+  ]
+}
