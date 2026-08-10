@@ -193,6 +193,77 @@
 
         
         
+
+
+
+
+<section class="comments" id="comments" aria-labelledby="comments-title">
+    <div class="comments-head">
+        <h2 class="comments-title" id="comments-title">Comments</h2>
+        
+    </div>
+
+    
+    <p class="comments-empty">No comments yet — yours would be the first.</p>
+    
+
+    
+    <form class="comment-form"
+          data-endpoint="https://sirobles-comments.sirobles.workers.dev"
+          data-sitekey="0x4AAAAAAELd77V6-JiiZUgw"
+          data-entry-type="blog"
+          data-slug="open-source"
+          novalidate>
+        <h3 class="comment-form-title">Leave a comment</h3>
+        <p class="comment-form-intro">Comments are moderated, so yours will show up once I have read it.</p>
+
+        <div class="comment-replying-to" hidden>
+            Replying to <strong class="comment-replying-name"></strong>
+            <button type="button" class="comment-cancel-reply">Cancel</button>
+        </div>
+
+        <div class="comment-fields">
+            <label class="comment-field">
+                <span class="comment-label">Name <span class="req" aria-hidden="true">*</span></span>
+                <input type="text" name="name" maxlength="60" required autocomplete="name">
+            </label>
+            <label class="comment-field">
+                <span class="comment-label">Email <span class="comment-hint">optional, never published</span></span>
+                <input type="email" name="email" maxlength="254" autocomplete="email">
+            </label>
+        </div>
+
+        <label class="comment-field comment-field--body">
+            <span class="comment-label">Comment <span class="req" aria-hidden="true">*</span></span>
+            <textarea name="body" rows="6" maxlength="4000" required></textarea>
+        </label>
+
+        
+        <div class="comment-hp" aria-hidden="true">
+            <label>Leave this field empty
+                <input type="text" name="url_confirm" tabindex="-1" autocomplete="off">
+            </label>
+        </div>
+
+        <input type="hidden" name="parent_id" value="">
+
+        <div class="comment-turnstile"></div>
+
+        <div class="comment-actions">
+            <button type="submit" class="btn btn-primary comment-submit">Post comment</button>
+            <p class="comment-status" role="status" aria-live="polite"></p>
+        </div>
+
+        <noscript>
+            <p class="comment-status comment-status--error">
+                Posting a comment needs JavaScript for the spam check. Comments already
+                posted are readable without it.
+            </p>
+        </noscript>
+    </form>
+    <script src="/static/js/comments.js" defer></script>
+    
+</section>
     </div>
 </article>
 
