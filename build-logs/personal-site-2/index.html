@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <meta name="description" content="The development of this website over time. The static generator and CMS wiring + potential future changes.">
+
+    
+    
+    <link rel="canonical" href="https://sirobles.com/build-logs/personal-site-2/">
+
+    
+    <meta property="og:site_name" content="Seth Robles">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sirobles.com/build-logs/personal-site-2/">
+    <meta property="og:title" content="Building this website — Build log #1 - Seth Robles">
+    <meta property="og:description" content="The development of this website over time. The static generator and CMS wiring + potential future changes.">
+    <meta property="og:image" content="https://sirobles.com/static/uploads/a6df2c09e280bab7.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sirobles.com/build-logs/personal-site-2/">
+    <meta property="twitter:title" content="Building this website — Build log #1 - Seth Robles">
+    <meta property="twitter:description" content="The development of this website over time. The static generator and CMS wiring + potential future changes.">
+    <meta property="twitter:image" content="https://sirobles.com/static/uploads/a6df2c09e280bab7.jpg">
+
+    
+    <title>Building this website — Build log #1 - Seth Robles</title>
+
+    
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/static/uploads/personal/favicon_io/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/static/uploads/personal/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/uploads/personal/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/uploads/personal/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/uploads/personal/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="/static/uploads/personal/favicon_io/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/uploads/personal/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/static/uploads/personal/favicon_io/android-chrome-512x512.png">
+
+    <link rel="preload" href="/static/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/static/fonts/inter-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/static/fonts/fonts.css">
+    <link rel="stylesheet" href="/static/css/site.css">
+
+    
+    <meta name="color-scheme" content="light dark">
+
+    
+    <script>
+        (function () {
+            var saved = null;
+            try { saved = localStorage.getItem('theme'); } catch (e) {}
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.setAttribute(
+                'data-theme', saved || (prefersDark ? 'dark' : 'light'));
+        })();
+    </script>
+
+    <script>
+        if (location.pathname.endsWith('/index.html')) {
+            location.replace(location.pathname.replace('/index.html', '/'));
+        }
+    </script>
+
+    
+    
+    
+
+    <!-- GoatCounter analytics -->
+    <script data-goatcounter="https://sirobles.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-container">
+        <button class="navbar-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="navbar-toggle-icon"></span>
+        </button>
+
+        
+        <div class="navbar-menu">
+            <a href="/" class="navbar-link">Home</a>
+            <a href="/projects" class="navbar-link">Projects</a>
+            <a href="/blogs" class="navbar-link">Blog</a>
+            <a href="/me" class="navbar-link">Me</a>
+        </div>
+
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+            <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<script>
+    // Mobile navigation toggle
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navbarMenu = document.querySelector('.navbar-menu');
+
+    navbarToggle.addEventListener('click', () => {
+        const isExpanded = navbarToggle.getAttribute('aria-expanded') === 'true';
+        navbarToggle.setAttribute('aria-expanded', !isExpanded);
+        navbarMenu.classList.toggle('show');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navbarToggle.contains(e.target) && !navbarMenu.contains(e.target)) {
+            navbarToggle.setAttribute('aria-expanded', 'false');
+            navbarMenu.classList.remove('show');
+        }
+    });
+</script>
+
+    <main class="main-content">
+        
+<article class="entry-detail entry-detail--buildlog">
+    <div class="container">
+
+        
+        
+        <header class="entry-header entry-header--log">
+            
+            <a class="entry-crumb" href="/projects/personal-site/">&larr; Personal Site</a>
+            
+            <h1 class="entry-title">Building this website</h1>
+            <dl class="entry-spec">
+                <div><dt>Log</dt><dd>#1</dd></div>
+                <div><dt>Date</dt><dd>2026-06-24</dd></div>
+                <div><dt>Project</dt><dd>Personal Site</dd></div>
+                <div><dt>Tags</dt><dd>Web · Python · Process</dd></div>
+            </dl>
+            
+            <p class="entry-lede">The development of this website over time. The static generator and CMS wiring + potential future changes.</p>
+        </header>
+
+        
+
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        <div class="entry-content">
+            <div class="content-main">
+                
+                <div class="markdown-content">
+                    <p><a href="https://sirobles.com/blogs/open-source/">https://sirobles.com/blogs/open-source/</a>This is a sample build log. Build logs are the informal, behind-the-scenes
+counterpart to a polished project summary — the messy middle, the dead ends,
+and the decisions made along the way.</p>
+<p>So, initially my website was hosted on<a href="https://sethrobles.github.io"> https://sethrobles.github.io</a> (still redirected here) and it was made for professional reasons. I have since realized that self expression is something that I think I enjoy doing through the website and that I will do.</p>
+<p>As a result, I added on the blogs section of the website. But then, I realized it would be nice to have a separation of Projects (which would be a more professional final display of a project), vs build logs which will include the detailing. The two should be linked.</p>
+<p>The personal site description is particularly messy because it was not something I thought of as something that I wanted to very rigorously talked about.</p>
+<p>Those were my original intentions though, I will now talk about how the website has changed over time.</p>
+<p>Initially, I was working out of VSCode with Static Jinja (still in Static Jinja), using templates for each of the different projects/blogs. I would basically create a new markdown file and fill out information related to the blog (date, project name, slug-title, github link, etc.). This was okay for a while, but at some point I realized it would not be that great. </p>
+<p>As a result, I decided to add on a CMS (Content Management System) that would help avoid always needing to write code. Basically helped remove some of the boiler plate + ideally would allow me to write these blogs out faster. I added on Decap CMS, which I have been using for a few months.</p>
+<p>I also have gone through a few changes in reference to the general look/design. Right now, it's this new beige and teal. Before it was this blue and white that I was told several times by my girlfriend to change and so I did. Like most things, it seems she was right, I like the new website's look much more.</p>
+<p>One change that I did when I added on the build logs was that I had them linked to projects. The idea is that a specific build-log and project will share a slug title, since they're inherently going to be related. This might change in the future, but I think right now I like the idea. The thing is, that it's currently possible to save several build logs to one project, but I'm not really sure how/why I would do this. I guess projects have several stages so it makes some sense, but it's not my favorite, I kind of like a long scroll. We'll see if that changes.</p>
+<p>One addition I liked was adding my hobbies to the bottom of the first page. The issue is that the strava api recently moved away from being free (I complained about this very briefly <a href="https://sirobles.com/blogs/open-source/">here</a>. I think it just is so silly to me when companies do that. Anyways, that's part of the reason that I moved away from Goodreads to <a href="https://hardcover.app/">Hardcover. </a>They are a young open-source project, but I saw that they were trying to improve upon the openness of Goodreads. I think this is something that should change. If you're giving your data to companies, I personally feel that they should be willing to let you have it back, especially since many of them make money of of it. Regardless, I decided that I would pull the data from these websites regularly using Github Actions. So they run on a somewhat infrequent basis. If I ever decide to host my website and stuff locally, I'll likely just make it a cron job.</p>
+<h6 style="text-align: center;"> July 9th 2026 </h6>
+
+<p>I'm currently looking into switching CMSes. One think that's been a problem is the fact that I can't easily do Carousel images throughout the text for Decap CMS. Maybe I can, I haven't looked into it a lot, but I've heard that Tina will be something that's a little more easy to set up for different things I want. Right now, I typed out the html tag in markdown in order to get that centering above. It's a little ridiculous for a CMS where the whole point is to move away from markup languages. Anyways, there'll potentially be updates. I'm having Claude loop through an initial design update with Tina and will test that locally then potentially deploy.</p>
+<p>I'm looking into this right now and debating. My website is pretty static and I like it. I don't necessarily want a super JS heavy website. What I do want to do is better image storage + holding. Right now, I upload images and I think it's not ideal. I would like them to be actually well stored such that they can load easily despite poor internet connection. I'm also wanting them to be linked with slugs (so that it's easy to port over any pictures from a build log that I might want in a final project).</p>
+<p>I think that's all for now, I'm going to work on other stuff but maybe will have an update depending on what I feel about the CMS. I'm also looking into Decap still, there's a chance that I can add the buttons I need, I just didn't look too deep into it orignally.</p>
+<h6 style="text-align: center;"> July 10th 2026 </h6>
+
+<p>I came back to my computer and decided that I didn't like Decap again. The blocky nature of the CMS just isn't my favorite. So I set up a Tina account and am hoping to be blogging from it by the end of the day. I haven't edited out Decap, but I think I'll likely be sticking with Tina because it's prettier.</p>
+<p>I still will need to edit my images structure although I'm not really sure what's possible with Tina. I've realized they take far longer to load than necessary. I'm not really a photographer, so "okay" photos is okay with me. See what I did there :). </p>
+<p>I'm also working on switching my Strava api to a garminconnect api. This is mostly just rewriting it. Also, someone told me that just listing my activities is getting kind of boring. So I think a more "stats-like" listing would be interesting. Like different kinds of workouts. Number of workouts in the last 7 days. Miles this year. That kind of thing.</p>
+<h6 style="text-align: center;"> July 12th 2026 </h6>
+
+<p>So I've realized that I don't really like the TinaCMS that much either just yet. There's some fiddling that needs to happen with things like recreating my current slug setup and while it's prettier, there's differences in how easily I can integrate photos. I'm planning on revamping my photo set up so that I upload whatever here and they get transformed to a lighter format so that they render easily on the web. I haven't figured it out really yet, but I think I should consider this more before I swap to TinaCMS.</p>
+<p>Regardless, I have swapped from the Strava api. It now pulls directly from my garmin, but it still links to my strava since that's where I'm more likely to interact with other people.</p>
+<p>I think I'm probably going to take a small break from editing the formatting of my website. I recently made small adjustments to my resume after some prompting from Ava and I think this in general has got me feeling a little tired of looking at my computer / setting up coding loops.</p>
+<p>Yeah, hopefully I'm sticking to writing about other things as opposed to updating this for a while. Honestly, I like Decap but it's just a little blocky. I think that I was too hasty jumping onto Tina. I have the TinaCMS dashboard set up, but I just really don't like it's look, so I'm avoiding it for a while.</p>
+                </div>
+                
+                
+<div class="carousel">
+  
+    <div class="carousel-slide">
+      <picture><source type="image/avif" srcset="/static/uploads/54863665cd350373-480.avif 480w, /static/uploads/54863665cd350373-800.avif 800w, /static/uploads/54863665cd350373-1200.avif 1200w, /static/uploads/54863665cd350373-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/54863665cd350373-480.webp 480w, /static/uploads/54863665cd350373-800.webp 800w, /static/uploads/54863665cd350373-1200.webp 1200w, /static/uploads/54863665cd350373-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/54863665cd350373.png" alt="" width="1600" height="739" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoUAAkAPu1oqk6ppiQiMAgBMB2JZwC3uCKbVUiYAAD+7c2KtHwaobNhQVATzzFrWMYhrzsZJ31DeZbfwZBfp5bUCBfgAA==);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+      
+    </div>
+  
+    <div class="carousel-slide">
+      <picture><source type="image/avif" srcset="/static/uploads/6e180681fac0aa4c-480.avif 480w, /static/uploads/6e180681fac0aa4c-800.avif 800w, /static/uploads/6e180681fac0aa4c-1200.avif 1200w, /static/uploads/6e180681fac0aa4c-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/6e180681fac0aa4c-480.webp 480w, /static/uploads/6e180681fac0aa4c-800.webp 800w, /static/uploads/6e180681fac0aa4c-1200.webp 1200w, /static/uploads/6e180681fac0aa4c-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/6e180681fac0aa4c.png" alt="" width="1600" height="812" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAgCdASoUAAoAPu1iqU2ppaOiMAgBMB2JaQAAfqoAAP7wTgIo1aV/7Ordwj7i66EhgAAA);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+      
+    </div>
+  
+    <div class="carousel-slide">
+      <picture><source type="image/avif" srcset="/static/uploads/21760c2ba8981bb9-480.avif 480w, /static/uploads/21760c2ba8981bb9-800.avif 800w, /static/uploads/21760c2ba8981bb9-1200.avif 1200w, /static/uploads/21760c2ba8981bb9-1600.avif 1600w" sizes="(max-width: 640px) 100vw, 600px"><source type="image/webp" srcset="/static/uploads/21760c2ba8981bb9-480.webp 480w, /static/uploads/21760c2ba8981bb9-800.webp 800w, /static/uploads/21760c2ba8981bb9-1200.webp 1200w, /static/uploads/21760c2ba8981bb9-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 600px"><img src="/static/uploads/21760c2ba8981bb9.png" alt="" width="1600" height="836" decoding="async" loading="lazy" style="background-image:url(data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADwAgCdASoUAAoAPu1iqU2ppaQiMAgBMB2JZwC2yC5JAAD+8BHY3gionsPY0AL0SAA=);background-size:cover;background-position:center;background-repeat:no-repeat"></picture>
+      
+    </div>
+  
+  <div class="carousel-controls">
+    <button class="carousel-button prev" type="button">&#8592;</button>
+    <button class="carousel-button next" type="button">&#8594;</button>
+  </div>
+</div>
+<script>
+  (function() {
+    var carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(function(carousel) {
+      var slides = carousel.querySelectorAll('.carousel-slide');
+      if (slides.length === 0) return;
+      var current = 0;
+      function showSlide(idx) {
+        slides.forEach(function(slide, i) {
+          slide.classList.toggle('active', i === idx);
+        });
+      }
+      var prevBtn = carousel.querySelector('.carousel-button.prev');
+      var nextBtn = carousel.querySelector('.carousel-button.next');
+      prevBtn.onclick = function() {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+      };
+      nextBtn.onclick = function() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      };
+      showSlide(current);
+    });
+  })();
+</script>
+
+                
+            </div>
+        </div>
+
+        
+        
+
+        
+        <nav class="entry-navigation">
+            <div class="nav-actions">
+                
+                
+                <a href="/projects/personal-site/" class="action-link action-link--back"><span aria-hidden="true">&larr;</span> Back to Personal Site</a>
+                
+                
+            </div>
+            <div class="nav-links">
+                
+            </div>
+        </nav>
+
+        
+        
+
+
+
+
+<section class="comments" id="comments" aria-labelledby="comments-title">
+    <div class="comments-head">
+        <h2 class="comments-title" id="comments-title">Comments</h2>
+        
+    </div>
+
+    
+    <p class="comments-empty">No comments yet — yours would be the first.</p>
+    
+
+    
+    <form class="comment-form"
+          data-endpoint="https://sirobles-comments.sirobles.workers.dev"
+          data-sitekey="0x4AAAAAAELd77V6-JiiZUgw"
+          data-entry-type="buildlog"
+          data-slug="personal-site-2"
+          novalidate>
+        <h3 class="comment-form-title">Leave a comment</h3>
+        <p class="comment-form-intro">Comments are moderated, so yours will show up once I have read it.</p>
+
+        <div class="comment-replying-to" hidden>
+            Replying to <strong class="comment-replying-name"></strong>
+            <button type="button" class="comment-cancel-reply">Cancel</button>
+        </div>
+
+        <div class="comment-fields">
+            <label class="comment-field">
+                <span class="comment-label">Name <span class="req" aria-hidden="true">*</span></span>
+                <input type="text" name="name" maxlength="60" required autocomplete="name">
+            </label>
+            <label class="comment-field">
+                <span class="comment-label">Email <span class="comment-hint">optional, never published</span></span>
+                <input type="email" name="email" maxlength="254" autocomplete="email">
+            </label>
+        </div>
+
+        <label class="comment-field comment-field--body">
+            <span class="comment-label">Comment <span class="req" aria-hidden="true">*</span></span>
+            <textarea name="body" rows="6" maxlength="4000" required></textarea>
+        </label>
+
+        
+        <div class="comment-hp" aria-hidden="true">
+            <label>Leave this field empty
+                <input type="text" name="url_confirm" tabindex="-1" autocomplete="off">
+            </label>
+        </div>
+
+        <input type="hidden" name="parent_id" value="">
+
+        <div class="comment-turnstile"></div>
+
+        <div class="comment-actions">
+            <button type="submit" class="btn btn-primary comment-submit">Post comment</button>
+            <p class="comment-status" role="status" aria-live="polite"></p>
+        </div>
+
+        <noscript>
+            <p class="comment-status comment-status--error">
+                Posting a comment needs JavaScript for the spam check. Comments already
+                posted are readable without it.
+            </p>
+        </noscript>
+    </form>
+    <script src="/static/js/comments.js" defer></script>
+    
+</section>
+    </div>
+</article>
+
+    </main>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-bar">
+            <div class="footer-identity">
+                <span class="footer-name">Seth Robles</span>
+                <span class="footer-role">Mechanical Engineer &amp; Roboticist</span>
+            </div>
+
+            <nav class="footer-links" aria-label="Footer">
+                <a href="/projects/" class="footer-link">Projects</a>
+                <a href="/blogs/" class="footer-link">Blog</a>
+                <a href="/me/" class="footer-link">Me</a>
+                <a href="https://github.com/sethrobles" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/sethrobles" class="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="mailto:sethrobles04@gmail.com" class="footer-link">Email</a>
+            </nav>
+        </div>
+
+        
+        <p class="footer-copyright">&copy; 2026 Seth Robles</p>
+    </div>
+</footer>
+
+    <script>
+        window.socialUsernames = {
+            strava: "sethrobles",
+            strava_num: "149255842",
+            hardcover: "Sethyopolopodis"
+        };
+    </script>
+    <script src="/static/js/widgets.js"></script>
+    <script>
+        // The theme is already applied in <head>; this only handles changes.
+        const html = document.documentElement;
+
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', next);
+            try { localStorage.setItem('theme', next); } catch (e) {}
+        });
+
+        // Keep following the OS until the reader overrides it — so someone whose
+        // machine switches to dark at sunset sees the page follow, while anyone
+        // who has actually picked a side keeps what they picked.
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            let saved = null;
+            try { saved = localStorage.getItem('theme'); } catch (err) {}
+            if (!saved) html.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+        });
+    </script>
+</body>
+</html>
