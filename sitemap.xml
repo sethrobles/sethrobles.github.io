@@ -122,14 +122,14 @@
   </url>
   <url>
     <loc>https://sirobles.com/</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-07</lastmod>
   </url>
   <url>
     <loc>https://sirobles.com/me/</loc>
   </url>
   <url>
     <loc>https://sirobles.com/photos/</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-07</lastmod>
   </url>
   <url>
     <loc>https://sirobles.com/projects/2-00-library-tracker/</loc>
@@ -177,7 +177,7 @@
   </url>
   <url>
     <loc>https://sirobles.com/projects/</loc>
-    <lastmod>2026-07-06</lastmod>
+    <lastmod>2026-08-07</lastmod>
   </url>
   <url>
     <loc>https://sirobles.com/projects/led-array/</loc>
@@ -190,6 +190,10 @@
   <url>
     <loc>https://sirobles.com/projects/rl-practice/</loc>
     <lastmod>2026-01-23</lastmod>
+  </url>
+  <url>
+    <loc>https://sirobles.com/projects/snake-vla/</loc>
+    <lastmod>2026-08-07</lastmod>
   </url>
   <url>
     <loc>https://sirobles.com/projects/spurdog-battery/</loc>
@@ -233,7 +237,7 @@
   </url>
   <url>
     <loc>https://sirobles.com/projects/tag/machine-learning/</loc>
-    <lastmod>2026-01-23</lastmod>
+    <lastmod>2026-08-07</lastmod>
   </url>
   <url>
     <loc>https://sirobles.com/projects/tag/motor/</loc>
@@ -249,7 +253,7 @@
   </url>
   <url>
     <loc>https://sirobles.com/projects/tag/robotics/</loc>
-    <lastmod>2026-01-13</lastmod>
+    <lastmod>2026-08-07</lastmod>
   </url>
   <url>
     <loc>https://sirobles.com/projects/tag/self-hosted/</loc>
