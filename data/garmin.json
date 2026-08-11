@@ -1,16 +1,22 @@
 {
-  "generated_at_utc": "2026-08-11T03:25:26.918598+00:00",
+  "generated_at_utc": "2026-08-11T14:51:39.531429+00:00",
   "highlights": [
     {
+      "label": "Lifted last week",
+      "value": "9,244 lb",
+      "detail": "1 session",
+      "icon": "dumbbell"
+    },
+    {
       "label": "Last week",
-      "value": "2 workouts",
-      "detail": "57m active \u00b7 5.11 mi",
+      "value": "3 workouts",
+      "detail": "1h 47m active \u00b7 5.11 mi",
       "icon": "calendar"
     },
     {
       "label": "Lifted in '26",
-      "value": "441,731 lb",
-      "detail": "41 sessions",
+      "value": "450,975 lb",
+      "detail": "42 sessions",
       "icon": "dumbbell"
     },
     {
@@ -18,6 +24,12 @@
       "value": "276 lb",
       "detail": "best single set",
       "icon": "dumbbell"
+    },
+    {
+      "label": "Resting HR",
+      "value": "41",
+      "detail": "7-day avg 42",
+      "icon": "pulse"
     },
     {
       "label": "Longest workout",
@@ -40,11 +52,21 @@
     {
       "label": "2026 so far",
       "value": "328.1 mi",
-      "detail": "104 workouts \u00b7 70h",
+      "detail": "105 workouts \u00b7 70h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "Strength",
+      "type": "strength_training",
+      "start_date_local": "2026-08-09",
+      "distance_m": 0,
+      "moving_time_s": 2996,
+      "pace_min_per_mi": null,
+      "calories": 205,
+      "url": "https://connect.garmin.com/modern/activity/23932519965"
+    },
     {
       "name": "Core Workout",
       "type": "other",
@@ -64,16 +86,6 @@
       "pace_min_per_mi": 9.37315074929121,
       "calories": 626,
       "url": "https://connect.garmin.com/modern/activity/23856420236"
-    },
-    {
-      "name": "Yoga",
-      "type": "yoga",
-      "start_date_local": "2026-08-02",
-      "distance_m": 0,
-      "moving_time_s": 1237,
-      "pace_min_per_mi": null,
-      "calories": 34,
-      "url": "https://connect.garmin.com/modern/activity/23830989291"
     }
   ]
 }
