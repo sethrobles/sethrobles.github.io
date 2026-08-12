@@ -1,6 +1,12 @@
 {
-  "generated_at_utc": "2026-08-11T14:51:39.531429+00:00",
+  "generated_at_utc": "2026-08-12T03:54:04.609922+00:00",
   "highlights": [
+    {
+      "label": "Weight moved",
+      "value": "11,982 lb",
+      "detail": "this week \u00b7 131 reps",
+      "icon": "dumbbell"
+    },
     {
       "label": "Lifted last week",
       "value": "9,244 lb",
@@ -15,8 +21,8 @@
     },
     {
       "label": "Lifted in '26",
-      "value": "450,975 lb",
-      "detail": "42 sessions",
+      "value": "462,957 lb",
+      "detail": "43 sessions",
       "icon": "dumbbell"
     },
     {
@@ -44,6 +50,18 @@
       "icon": "run"
     },
     {
+      "label": "Active this week",
+      "value": "51m",
+      "detail": "workout time",
+      "icon": "pulse"
+    },
+    {
+      "label": "Workouts",
+      "value": "1",
+      "detail": "this week",
+      "icon": "dumbbell"
+    },
+    {
       "label": "Longest run",
       "value": "52.5 mi",
       "detail": "Apr 25, 2026",
@@ -52,11 +70,21 @@
     {
       "label": "2026 so far",
       "value": "328.1 mi",
-      "detail": "105 workouts \u00b7 70h",
+      "detail": "106 workouts \u00b7 70h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "Strength",
+      "type": "strength_training",
+      "start_date_local": "2026-08-11",
+      "distance_m": 0,
+      "moving_time_s": 3096,
+      "pace_min_per_mi": null,
+      "calories": 227,
+      "url": "https://connect.garmin.com/modern/activity/23943762674"
+    },
     {
       "name": "Strength",
       "type": "strength_training",
@@ -76,16 +104,6 @@
       "pace_min_per_mi": null,
       "calories": 47,
       "url": "https://connect.garmin.com/modern/activity/23856766076"
-    },
-    {
-      "name": "Philadelphia Track Running",
-      "type": "track_running",
-      "start_date_local": "2026-08-04",
-      "distance_m": 8230.0,
-      "moving_time_s": 2876,
-      "pace_min_per_mi": 9.37315074929121,
-      "calories": 626,
-      "url": "https://connect.garmin.com/modern/activity/23856420236"
     }
   ]
 }
