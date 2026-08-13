@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-08-12T14:51:17.564728+00:00",
+  "generated_at_utc": "2026-08-13T03:58:59.529918+00:00",
   "highlights": [
     {
       "label": "Weight moved",
-      "value": "11,982 lb",
-      "detail": "this week \u00b7 131 reps",
+      "value": "27,886 lb",
+      "detail": "this week \u00b7 216 reps",
       "icon": "dumbbell"
     },
     {
@@ -21,13 +21,13 @@
     },
     {
       "label": "Lifted in '26",
-      "value": "462,957 lb",
-      "detail": "43 sessions",
+      "value": "478,861 lb",
+      "detail": "44 sessions",
       "icon": "dumbbell"
     },
     {
       "label": "Heaviest lift",
-      "value": "276 lb",
+      "value": "319 lb",
       "detail": "best single set",
       "icon": "dumbbell"
     },
@@ -50,14 +50,20 @@
       "icon": "run"
     },
     {
+      "label": "Day streak",
+      "value": "2",
+      "detail": "days in a row",
+      "icon": "calendar"
+    },
+    {
       "label": "Active this week",
-      "value": "51m",
+      "value": "1h 22m",
       "detail": "workout time",
       "icon": "pulse"
     },
     {
       "label": "Workouts",
-      "value": "1",
+      "value": "2",
       "detail": "this week",
       "icon": "dumbbell"
     },
@@ -70,11 +76,21 @@
     {
       "label": "2026 so far",
       "value": "328.1 mi",
-      "detail": "106 workouts \u00b7 70h",
+      "detail": "107 workouts \u00b7 70h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "Strength",
+      "type": "strength_training",
+      "start_date_local": "2026-08-12",
+      "distance_m": 0,
+      "moving_time_s": 1879,
+      "pace_min_per_mi": null,
+      "calories": 81,
+      "url": "https://connect.garmin.com/modern/activity/23956607147"
+    },
     {
       "name": "Strength",
       "type": "strength_training",
@@ -94,16 +110,6 @@
       "pace_min_per_mi": null,
       "calories": 205,
       "url": "https://connect.garmin.com/modern/activity/23932519965"
-    },
-    {
-      "name": "Core Workout",
-      "type": "other",
-      "start_date_local": "2026-08-04",
-      "distance_m": 0,
-      "moving_time_s": 601,
-      "pace_min_per_mi": null,
-      "calories": 47,
-      "url": "https://connect.garmin.com/modern/activity/23856766076"
     }
   ]
 }
