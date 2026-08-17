@@ -1,22 +1,16 @@
 {
-  "generated_at_utc": "2026-08-16T14:15:21.846103+00:00",
+  "generated_at_utc": "2026-08-17T02:51:32.467690+00:00",
   "highlights": [
     {
-      "label": "Weight moved",
-      "value": "27,886 lb",
-      "detail": "this week \u00b7 216 reps",
-      "icon": "dumbbell"
-    },
-    {
       "label": "Lifted last week",
-      "value": "9,244 lb",
-      "detail": "1 session",
+      "value": "27,886 lb",
+      "detail": "2 sessions",
       "icon": "dumbbell"
     },
     {
       "label": "Last week",
       "value": "3 workouts",
-      "detail": "1h 47m active \u00b7 5.11 mi",
+      "detail": "1h 49m active \u00b7 2.71 mi",
       "icon": "calendar"
     },
     {
@@ -42,18 +36,6 @@
       "value": "44h 58m",
       "detail": "38 runs",
       "icon": "run"
-    },
-    {
-      "label": "Active this week",
-      "value": "1h 49m",
-      "detail": "workout time",
-      "icon": "pulse"
-    },
-    {
-      "label": "Workouts",
-      "value": "3",
-      "detail": "this week",
-      "icon": "dumbbell"
     },
     {
       "label": "Longest run",
