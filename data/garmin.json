@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-25T14:37:39.416302+00:00",
+  "generated_at_utc": "2026-08-26T02:56:10.921296+00:00",
   "highlights": [
     {
       "label": "Last week",
@@ -21,8 +21,8 @@
     },
     {
       "label": "Resting HR",
-      "value": "39",
-      "detail": "7-day avg 42",
+      "value": "41",
+      "detail": "7-day avg 41",
       "icon": "pulse"
     },
     {
@@ -33,9 +33,27 @@
     },
     {
       "label": "Run time '26",
-      "value": "46h 50m",
-      "detail": "41 runs",
+      "value": "47h 49m",
+      "detail": "44 runs",
       "icon": "run"
+    },
+    {
+      "label": "Day streak",
+      "value": "2",
+      "detail": "days in a row",
+      "icon": "calendar"
+    },
+    {
+      "label": "Active this week",
+      "value": "1h 35m",
+      "detail": "workout time",
+      "icon": "pulse"
+    },
+    {
+      "label": "Workouts",
+      "value": "4",
+      "detail": "this week",
+      "icon": "dumbbell"
     },
     {
       "label": "Longest run",
@@ -45,41 +63,41 @@
     },
     {
       "label": "2026 so far",
-      "value": "343.8 mi",
-      "detail": "111 workouts \u00b7 73h",
+      "value": "349.8 mi",
+      "detail": "115 workouts \u00b7 74h",
       "icon": "calendar"
     }
   ],
   "recent": [
     {
-      "name": "Philadelphia - Base",
+      "name": "Boston Running",
       "type": "running",
-      "start_date_local": "2026-08-19",
-      "distance_m": 5440.18017578125,
-      "moving_time_s": 1784,
-      "pace_min_per_mi": 8.795856225441081,
-      "calories": 383,
-      "url": "https://connect.garmin.com/modern/activity/24072742748"
+      "start_date_local": "2026-08-25",
+      "distance_m": 1624.68994140625,
+      "moving_time_s": 543,
+      "pace_min_per_mi": 8.964496319459993,
+      "calories": 115,
+      "url": "https://connect.garmin.com/modern/activity/24114196376"
     },
     {
-      "name": "Philadelphia - Base",
-      "type": "running",
-      "start_date_local": "2026-08-17",
-      "distance_m": 5439.7001953125,
-      "moving_time_s": 1781,
-      "pace_min_per_mi": 8.781839798419687,
-      "calories": 397,
-      "url": "https://connect.garmin.com/modern/activity/24072741600"
+      "name": "HIIT",
+      "type": "hiit",
+      "start_date_local": "2026-08-25",
+      "distance_m": 0,
+      "moving_time_s": 2168,
+      "pace_min_per_mi": null,
+      "calories": 380,
+      "url": "https://connect.garmin.com/modern/activity/24114001132"
     },
     {
-      "name": "Philadelphia Running",
+      "name": "Boston Running",
       "type": "running",
-      "start_date_local": "2026-08-15",
-      "distance_m": 10024.349609375,
-      "moving_time_s": 3161,
-      "pace_min_per_mi": 8.45794480146357,
-      "calories": 701,
-      "url": "https://connect.garmin.com/modern/activity/24072740312"
+      "start_date_local": "2026-08-25",
+      "distance_m": 1718.02001953125,
+      "moving_time_s": 431,
+      "pace_min_per_mi": 6.728923723380621,
+      "calories": 106,
+      "url": "https://connect.garmin.com/modern/activity/24113372438"
     }
   ]
 }
