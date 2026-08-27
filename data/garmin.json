@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-26T14:36:46.333073+00:00",
+  "generated_at_utc": "2026-08-27T12:07:50.754202+00:00",
   "highlights": [
     {
       "label": "Last week",
@@ -36,12 +36,6 @@
       "value": "47h 49m",
       "detail": "44 runs",
       "icon": "run"
-    },
-    {
-      "label": "Day streak",
-      "value": "2",
-      "detail": "days in a row",
-      "icon": "calendar"
     },
     {
       "label": "Active this week",
