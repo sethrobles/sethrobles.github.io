@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-27T23:25:30.944294+00:00",
+  "generated_at_utc": "2026-08-28T13:30:43.146671+00:00",
   "highlights": [
     {
       "label": "Last week",
@@ -21,8 +21,8 @@
     },
     {
       "label": "Resting HR",
-      "value": "42",
-      "detail": "7-day avg 41",
+      "value": "46",
+      "detail": "7-day avg 42",
       "icon": "pulse"
     },
     {
