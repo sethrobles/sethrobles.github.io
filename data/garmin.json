@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-29T17:27:44.181924+00:00",
+  "generated_at_utc": "2026-08-30T07:38:18.220264+00:00",
   "highlights": [
     {
       "label": "Last week",
@@ -33,19 +33,19 @@
     },
     {
       "label": "Run time '26",
-      "value": "47h 49m",
-      "detail": "44 runs",
+      "value": "48h 41m",
+      "detail": "45 runs",
       "icon": "run"
     },
     {
       "label": "Active this week",
-      "value": "1h 35m",
+      "value": "2h 27m",
       "detail": "workout time",
       "icon": "pulse"
     },
     {
       "label": "Workouts",
-      "value": "4",
+      "value": "5",
       "detail": "this week",
       "icon": "dumbbell"
     },
@@ -57,12 +57,22 @@
     },
     {
       "label": "2026 so far",
-      "value": "349.8 mi",
-      "detail": "115 workouts \u00b7 74h",
+      "value": "356.1 mi",
+      "detail": "116 workouts \u00b7 75h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "San Francisco Running",
+      "type": "running",
+      "start_date_local": "2026-08-29",
+      "distance_m": 10246.01953125,
+      "moving_time_s": 3122,
+      "pace_min_per_mi": 8.172864048449709,
+      "calories": 688,
+      "url": "https://connect.garmin.com/modern/activity/24166726618"
+    },
     {
       "name": "Boston Running",
       "type": "running",
@@ -82,16 +92,6 @@
       "pace_min_per_mi": null,
       "calories": 380,
       "url": "https://connect.garmin.com/modern/activity/24114001132"
-    },
-    {
-      "name": "Boston Running",
-      "type": "running",
-      "start_date_local": "2026-08-25",
-      "distance_m": 1718.02001953125,
-      "moving_time_s": 431,
-      "pace_min_per_mi": 6.728923723380621,
-      "calories": 106,
-      "url": "https://connect.garmin.com/modern/activity/24113372438"
     }
   ]
 }
