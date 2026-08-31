@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-08-30T17:51:34.173048+00:00",
+  "generated_at_utc": "2026-08-31T07:51:21.676787+00:00",
   "highlights": [
     {
       "label": "Last week",
-      "value": "2 workouts",
-      "detail": "59m active \u00b7 6.76 mi",
+      "value": "5 workouts",
+      "detail": "2h 27m active \u00b7 12.3 mi",
       "icon": "calendar"
     },
     {
@@ -20,12 +20,6 @@
       "icon": "dumbbell"
     },
     {
-      "label": "Resting HR",
-      "value": "44",
-      "detail": "7-day avg 42",
-      "icon": "pulse"
-    },
-    {
       "label": "Longest workout",
       "value": "2h 25m",
       "detail": "King County Hiking \u00b7 6 weeks ago",
@@ -36,18 +30,6 @@
       "value": "48h 41m",
       "detail": "45 runs",
       "icon": "run"
-    },
-    {
-      "label": "Active this week",
-      "value": "2h 27m",
-      "detail": "workout time",
-      "icon": "pulse"
-    },
-    {
-      "label": "Workouts",
-      "value": "5",
-      "detail": "this week",
-      "icon": "dumbbell"
     },
     {
       "label": "Longest run",

@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-30T08:12:46.302064+00:00",
+  "generated_at_utc": "2026-08-31T08:32:43.550007+00:00",
   "books": [
     {
       "id": "16782826",
@@ -20,9 +20,9 @@
       "title": "Thinking, Fast and Slow",
       "author": "Daniel Kahneman",
       "cover_image_url": "https://assets.hardcover.app/books/242841/5516687037874617.jpeg",
-      "rating": null,
-      "date_read": "2026-07-26",
-      "status": "currently-reading",
+      "rating": 3.5,
+      "date_read": "2026-08-31",
+      "status": "read",
       "review_url": "https://hardcover.app/book/242841",
       "pages": 499,
       "isbn": null
@@ -44,7 +44,7 @@
       "id": "12763942",
       "book_id": "478155",
       "title": "The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you",
-      "author": "Rob  Fitzpatrick",
+      "author": " Rob Fitzpatrick",
       "cover_image_url": null,
       "rating": 5.0,
       "date_read": "2026-07-04",
