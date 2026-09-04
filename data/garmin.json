@@ -1,16 +1,22 @@
 {
-  "generated_at_utc": "2026-09-03T17:25:27.268041+00:00",
+  "generated_at_utc": "2026-09-04T06:42:43.931203+00:00",
   "highlights": [
     {
+      "label": "Weight moved",
+      "value": "34,268 lb",
+      "detail": "this week \u00b7 447 reps",
+      "icon": "dumbbell"
+    },
+    {
       "label": "Last week",
-      "value": "5 workouts",
-      "detail": "2h 27m active \u00b7 12.3 mi",
+      "value": "6 workouts",
+      "detail": "3h 7m active \u00b7 12.3 mi",
       "icon": "calendar"
     },
     {
       "label": "Lifted in '26",
-      "value": "478,861 lb",
-      "detail": "44 sessions",
+      "value": "513,129 lb",
+      "detail": "47 sessions",
       "icon": "dumbbell"
     },
     {
@@ -18,6 +24,12 @@
       "value": "319 lb",
       "detail": "best single set",
       "icon": "dumbbell"
+    },
+    {
+      "label": "Resting HR",
+      "value": "42",
+      "detail": "7-day avg 42",
+      "icon": "pulse"
     },
     {
       "label": "Longest workout",
@@ -32,6 +44,18 @@
       "icon": "run"
     },
     {
+      "label": "Active this week",
+      "value": "3h 51m",
+      "detail": "workout time",
+      "icon": "pulse"
+    },
+    {
+      "label": "Workouts",
+      "value": "3",
+      "detail": "this week",
+      "icon": "dumbbell"
+    },
+    {
       "label": "Longest run",
       "value": "52.5 mi",
       "detail": "Apr 25, 2026",
@@ -40,40 +64,40 @@
     {
       "label": "2026 so far",
       "value": "356.1 mi",
-      "detail": "116 workouts \u00b7 75h",
+      "detail": "120 workouts \u00b7 77h",
       "icon": "calendar"
     }
   ],
   "recent": [
     {
-      "name": "San Francisco Running",
-      "type": "running",
-      "start_date_local": "2026-08-29",
-      "distance_m": 10246.01953125,
-      "moving_time_s": 3122,
-      "pace_min_per_mi": 8.172864048449709,
-      "calories": 688,
-      "url": "https://connect.garmin.com/modern/activity/24166726618"
-    },
-    {
-      "name": "Boston Running",
-      "type": "running",
-      "start_date_local": "2026-08-25",
-      "distance_m": 1624.68994140625,
-      "moving_time_s": 543,
-      "pace_min_per_mi": 8.964496319459993,
-      "calories": 115,
-      "url": "https://connect.garmin.com/modern/activity/24114196376"
-    },
-    {
-      "name": "HIIT",
-      "type": "hiit",
-      "start_date_local": "2026-08-25",
+      "name": "Strength",
+      "type": "strength_training",
+      "start_date_local": "2026-09-02",
       "distance_m": 0,
-      "moving_time_s": 2168,
+      "moving_time_s": 3391,
       "pace_min_per_mi": null,
-      "calories": 380,
-      "url": "https://connect.garmin.com/modern/activity/24114001132"
+      "calories": 307,
+      "url": "https://connect.garmin.com/modern/activity/24231278379"
+    },
+    {
+      "name": "Strength",
+      "type": "strength_training",
+      "start_date_local": "2026-09-01",
+      "distance_m": 0,
+      "moving_time_s": 4152,
+      "pace_min_per_mi": null,
+      "calories": 245,
+      "url": "https://connect.garmin.com/modern/activity/24231278009"
+    },
+    {
+      "name": "Strength",
+      "type": "strength_training",
+      "start_date_local": "2026-08-31",
+      "distance_m": 0,
+      "moving_time_s": 6338,
+      "pace_min_per_mi": null,
+      "calories": 388,
+      "url": "https://connect.garmin.com/modern/activity/24231277581"
     }
   ]
 }
