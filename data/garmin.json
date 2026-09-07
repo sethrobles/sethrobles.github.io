@@ -1,16 +1,16 @@
 {
-  "generated_at_utc": "2026-09-06T16:37:06.713727+00:00",
+  "generated_at_utc": "2026-09-07T06:45:40.319686+00:00",
   "highlights": [
     {
-      "label": "Weight moved",
+      "label": "Lifted last week",
       "value": "44,397 lb",
-      "detail": "this week \u00b7 581 reps",
+      "detail": "5 sessions",
       "icon": "dumbbell"
     },
     {
       "label": "Last week",
-      "value": "6 workouts",
-      "detail": "3h 7m active \u00b7 12.3 mi",
+      "value": "5 workouts",
+      "detail": "4h 58m active",
       "icon": "calendar"
     },
     {
@@ -27,14 +27,14 @@
     },
     {
       "label": "Resting HR",
-      "value": "40",
+      "value": "41",
       "detail": "7-day avg 41",
       "icon": "pulse"
     },
     {
       "label": "Longest workout",
       "value": "1h 45m",
-      "detail": "Strength \u00b7 6 days ago",
+      "detail": "Strength \u00b7 last week",
       "icon": "dumbbell"
     },
     {
@@ -42,24 +42,6 @@
       "value": "48h 41m",
       "detail": "45 runs",
       "icon": "run"
-    },
-    {
-      "label": "Day streak",
-      "value": "2",
-      "detail": "days in a row",
-      "icon": "calendar"
-    },
-    {
-      "label": "Active this week",
-      "value": "4h 58m",
-      "detail": "workout time",
-      "icon": "pulse"
-    },
-    {
-      "label": "Workouts",
-      "value": "5",
-      "detail": "this week",
-      "icon": "dumbbell"
     },
     {
       "label": "Longest run",
