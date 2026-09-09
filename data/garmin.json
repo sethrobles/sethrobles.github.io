@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-08T17:41:17.034240+00:00",
+  "generated_at_utc": "2026-09-09T06:52:04.693323+00:00",
   "highlights": [
     {
       "label": "Lifted last week",
@@ -24,12 +24,6 @@
       "value": "319 lb",
       "detail": "best single set",
       "icon": "dumbbell"
-    },
-    {
-      "label": "Resting HR",
-      "value": "42",
-      "detail": "7-day avg 41",
-      "icon": "pulse"
     },
     {
       "label": "Longest workout",
