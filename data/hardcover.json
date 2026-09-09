@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-08T07:10:22.277455+00:00",
+  "generated_at_utc": "2026-09-09T07:17:42.281211+00:00",
   "books": [
     {
       "id": "16782826",
@@ -37,7 +37,7 @@
       "date_read": "2026-07-16",
       "status": "read",
       "review_url": "https://hardcover.app/book/251442",
-      "pages": 576,
+      "pages": 582,
       "isbn": null
     },
     {
