@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-16T07:34:02.936254+00:00",
+  "generated_at_utc": "2026-09-17T07:30:37.145955+00:00",
   "books": [
     {
       "id": "16782826",
@@ -12,6 +12,19 @@
       "status": "currently-reading",
       "review_url": "https://hardcover.app/book/330490",
       "pages": 452,
+      "isbn": null
+    },
+    {
+      "id": "18649582",
+      "book_id": "348610",
+      "title": "Skunk Works: A Personal Memoir of My Years at Lockheed",
+      "author": "Ben R. Rich, Leo Janos",
+      "cover_image_url": "https://assets.hardcover.app/books/348610/7321776-L.jpg",
+      "rating": 3.5,
+      "date_read": "2026-09-17",
+      "status": "read",
+      "review_url": "https://hardcover.app/book/348610",
+      "pages": 344,
       "isbn": null
     },
     {
@@ -64,19 +77,6 @@
       "status": "read",
       "review_url": "https://hardcover.app/book/481844",
       "pages": 416,
-      "isbn": null
-    },
-    {
-      "id": "11627845",
-      "book_id": "212769",
-      "title": "The Nightingale",
-      "author": "Kristin Hannah",
-      "cover_image_url": "https://assets.hardcover.app/books/212769/8314147-L.jpg",
-      "rating": 5.0,
-      "date_read": "2026-01-04",
-      "status": "read",
-      "review_url": "https://hardcover.app/book/212769",
-      "pages": 448,
       "isbn": null
     }
   ]
