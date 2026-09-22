@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-22T07:00:50.054998+00:00",
+  "generated_at_utc": "2026-09-22T17:51:16.746217+00:00",
   "highlights": [
     {
       "label": "Lifted last week",
@@ -9,8 +9,8 @@
     },
     {
       "label": "Last week",
-      "value": "4 workouts",
-      "detail": "3h 10m active \u00b7 0.87 mi",
+      "value": "5 workouts",
+      "detail": "3h 30m active \u00b7 0.87 mi",
       "icon": "calendar"
     },
     {
@@ -26,6 +26,12 @@
       "icon": "dumbbell"
     },
     {
+      "label": "Resting HR",
+      "value": "40",
+      "detail": "7-day avg 41",
+      "icon": "pulse"
+    },
+    {
       "label": "Longest workout",
       "value": "1h 45m",
       "detail": "Strength \u00b7 3 weeks ago",
@@ -38,6 +44,18 @@
       "icon": "run"
     },
     {
+      "label": "Active this week",
+      "value": "27m",
+      "detail": "workout time",
+      "icon": "pulse"
+    },
+    {
+      "label": "Workouts",
+      "value": "1",
+      "detail": "this week",
+      "icon": "dumbbell"
+    },
+    {
       "label": "Longest run",
       "value": "52.5 mi",
       "detail": "Apr 25, 2026",
@@ -46,11 +64,31 @@
     {
       "label": "2026 so far",
       "value": "365.7 mi",
-      "detail": "132 workouts \u00b7 80h",
+      "detail": "134 workouts \u00b7 81h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "HIIT",
+      "type": "hiit",
+      "start_date_local": "2026-09-22",
+      "distance_m": 0,
+      "moving_time_s": 1672,
+      "pace_min_per_mi": null,
+      "calories": 256,
+      "url": "https://connect.garmin.com/modern/activity/24457493543"
+    },
+    {
+      "name": "Yoga",
+      "type": "yoga",
+      "start_date_local": "2026-09-20",
+      "distance_m": 0,
+      "moving_time_s": 1229,
+      "pace_min_per_mi": null,
+      "calories": 39,
+      "url": "https://connect.garmin.com/modern/activity/24457493468"
+    },
     {
       "name": "San Francisco Soccer/Football",
       "type": "soccer",
@@ -60,26 +98,6 @@
       "pace_min_per_mi": null,
       "calories": 176,
       "url": "https://connect.garmin.com/modern/activity/24423315476"
-    },
-    {
-      "name": "Strength",
-      "type": "strength_training",
-      "start_date_local": "2026-09-18",
-      "distance_m": 0,
-      "moving_time_s": 3993,
-      "pace_min_per_mi": null,
-      "calories": 371,
-      "url": "https://connect.garmin.com/modern/activity/24423315411"
-    },
-    {
-      "name": "Strength",
-      "type": "strength_training",
-      "start_date_local": "2026-09-15",
-      "distance_m": 0,
-      "moving_time_s": 3224,
-      "pace_min_per_mi": null,
-      "calories": 182,
-      "url": "https://connect.garmin.com/modern/activity/24423315314"
     }
   ]
 }
