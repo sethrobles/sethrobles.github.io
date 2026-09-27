@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-26T17:32:08.485168+00:00",
+  "generated_at_utc": "2026-09-27T07:17:58.106921+00:00",
   "highlights": [
     {
       "label": "Weight moved",
@@ -33,7 +33,7 @@
     },
     {
       "label": "Resting HR",
-      "value": "41",
+      "value": "43",
       "detail": "7-day avg 42",
       "icon": "pulse"
     },
@@ -45,25 +45,25 @@
     },
     {
       "label": "Run time '26",
-      "value": "49h 50m",
-      "detail": "47 runs",
+      "value": "51h 29m",
+      "detail": "48 runs",
       "icon": "run"
     },
     {
       "label": "Day streak",
-      "value": "2",
+      "value": "3",
       "detail": "days in a row",
       "icon": "calendar"
     },
     {
       "label": "Active this week",
-      "value": "1h 46m",
+      "value": "3h 24m",
       "detail": "workout time",
       "icon": "pulse"
     },
     {
       "label": "Workouts",
-      "value": "3",
+      "value": "4",
       "detail": "this week",
       "icon": "dumbbell"
     },
@@ -75,12 +75,22 @@
     },
     {
       "label": "2026 so far",
-      "value": "365.7 mi",
-      "detail": "136 workouts \u00b7 81h",
+      "value": "376.4 mi",
+      "detail": "137 workouts \u00b7 83h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "San Francisco Running",
+      "type": "running",
+      "start_date_local": "2026-09-26",
+      "distance_m": 17188.990234375,
+      "moving_time_s": 5895,
+      "pace_min_per_mi": 9.198775078933496,
+      "calories": 1256,
+      "url": "https://connect.garmin.com/modern/activity/24509804855"
+    },
     {
       "name": "HIIT",
       "type": "hiit",
@@ -100,16 +110,6 @@
       "pace_min_per_mi": null,
       "calories": 209,
       "url": "https://connect.garmin.com/modern/activity/24499759058"
-    },
-    {
-      "name": "HIIT",
-      "type": "hiit",
-      "start_date_local": "2026-09-22",
-      "distance_m": 0,
-      "moving_time_s": 1672,
-      "pace_min_per_mi": null,
-      "calories": 256,
-      "url": "https://connect.garmin.com/modern/activity/24457493543"
     }
   ]
 }

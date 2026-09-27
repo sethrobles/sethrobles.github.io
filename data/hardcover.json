@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-26T07:27:36.737421+00:00",
+  "generated_at_utc": "2026-09-27T07:58:11.052590+00:00",
   "books": [
     {
       "id": "16782826",
@@ -12,6 +12,19 @@
       "status": "currently-reading",
       "review_url": "https://hardcover.app/book/330490",
       "pages": 452,
+      "isbn": null
+    },
+    {
+      "id": "18965513",
+      "book_id": "375470",
+      "title": "The Shadow of the Wind",
+      "author": "Carlos Ruiz Zaf\u00f3n, Lucia Graves",
+      "cover_image_url": "https://assets.hardcover.app/books/375470/10107644-L.jpg",
+      "rating": null,
+      "date_read": "2026-09-26",
+      "status": "read",
+      "review_url": "https://hardcover.app/book/375470",
+      "pages": 487,
       "isbn": null
     },
     {
@@ -64,19 +77,6 @@
       "status": "read",
       "review_url": "https://hardcover.app/book/478155",
       "pages": 130,
-      "isbn": null
-    },
-    {
-      "id": "11711912",
-      "book_id": "481844",
-      "title": "Build: An Unorthodox Guide to Making Things Worth Making",
-      "author": "Tony Fadell",
-      "cover_image_url": null,
-      "rating": 5.0,
-      "date_read": "2026-01-17",
-      "status": "read",
-      "review_url": "https://hardcover.app/book/481844",
-      "pages": 416,
       "isbn": null
     }
   ]
