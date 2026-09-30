@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-09-29T19:02:15.158070+00:00",
+  "generated_at_utc": "2026-09-30T07:40:33.220013+00:00",
   "highlights": [
     {
       "label": "Weight moved",
-      "value": "5,454 lb",
-      "detail": "this week \u00b7 165 reps",
+      "value": "15,374 lb",
+      "detail": "this week \u00b7 289 reps",
       "icon": "dumbbell"
     },
     {
@@ -21,8 +21,8 @@
     },
     {
       "label": "Lifted in '26",
-      "value": "599,055 lb",
-      "detail": "58 sessions",
+      "value": "608,975 lb",
+      "detail": "59 sessions",
       "icon": "dumbbell"
     },
     {
@@ -57,13 +57,13 @@
     },
     {
       "label": "Active this week",
-      "value": "1h 13m",
+      "value": "2h 9m",
       "detail": "workout time",
       "icon": "pulse"
     },
     {
       "label": "Workouts",
-      "value": "2",
+      "value": "3",
       "detail": "this week",
       "icon": "dumbbell"
     },
@@ -76,11 +76,21 @@
     {
       "label": "2026 so far",
       "value": "379.9 mi",
-      "detail": "140 workouts \u00b7 85h",
+      "detail": "141 workouts \u00b7 85h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "Strength",
+      "type": "strength_training",
+      "start_date_local": "2026-09-29",
+      "distance_m": 0,
+      "moving_time_s": 3327,
+      "pace_min_per_mi": null,
+      "calories": 240,
+      "url": "https://connect.garmin.com/modern/activity/24549768446"
+    },
     {
       "name": "San Francisco - Base",
       "type": "running",
@@ -100,16 +110,6 @@
       "pace_min_per_mi": null,
       "calories": 205,
       "url": "https://connect.garmin.com/modern/activity/24536136603"
-    },
-    {
-      "name": "Yoga",
-      "type": "yoga",
-      "start_date_local": "2026-09-27",
-      "distance_m": 0,
-      "moving_time_s": 3411,
-      "pace_min_per_mi": null,
-      "calories": 181,
-      "url": "https://connect.garmin.com/modern/activity/24524210201"
     }
   ]
 }
