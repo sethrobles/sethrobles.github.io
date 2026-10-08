@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-10-07T19:40:03.916357+00:00",
+  "generated_at_utc": "2026-10-08T08:08:48.947594+00:00",
   "highlights": [
     {
       "label": "Weight moved",
-      "value": "17,601 lb",
-      "detail": "this week \u00b7 244 reps",
+      "value": "18,632 lb",
+      "detail": "this week \u00b7 287 reps",
       "icon": "dumbbell"
     },
     {
@@ -21,8 +21,8 @@
     },
     {
       "label": "Lifted in '26",
-      "value": "626,575 lb",
-      "detail": "61 sessions",
+      "value": "627,607 lb",
+      "detail": "62 sessions",
       "icon": "dumbbell"
     },
     {
@@ -33,7 +33,7 @@
     },
     {
       "label": "Resting HR",
-      "value": "40",
+      "value": "46",
       "detail": "7-day avg 42",
       "icon": "pulse"
     },
@@ -51,19 +51,19 @@
     },
     {
       "label": "Day streak",
-      "value": "3",
+      "value": "4",
       "detail": "days in a row",
       "icon": "calendar"
     },
     {
       "label": "Active this week",
-      "value": "1h 56m",
+      "value": "2h 29m",
       "detail": "workout time",
       "icon": "pulse"
     },
     {
       "label": "Workouts",
-      "value": "2",
+      "value": "3",
       "detail": "this week",
       "icon": "dumbbell"
     },
@@ -76,11 +76,21 @@
     {
       "label": "2026 so far",
       "value": "386.6 mi",
-      "detail": "148 workouts \u00b7 87h",
+      "detail": "149 workouts \u00b7 88h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "Strength",
+      "type": "strength_training",
+      "start_date_local": "2026-10-07",
+      "distance_m": 0,
+      "moving_time_s": 1990,
+      "pace_min_per_mi": null,
+      "calories": 95,
+      "url": "https://connect.garmin.com/modern/activity/24648367966"
+    },
     {
       "name": "Strength",
       "type": "strength_training",
@@ -100,16 +110,6 @@
       "pace_min_per_mi": null,
       "calories": 232,
       "url": "https://connect.garmin.com/modern/activity/24622442019"
-    },
-    {
-      "name": "San Francisco Running",
-      "type": "running",
-      "start_date_local": "2026-10-04",
-      "distance_m": 7366.64013671875,
-      "moving_time_s": 2292,
-      "pace_min_per_mi": 8.345295393699386,
-      "calories": 505,
-      "url": "https://connect.garmin.com/modern/activity/24605629700"
     }
   ]
 }
