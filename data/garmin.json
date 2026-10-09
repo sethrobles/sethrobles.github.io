@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-08T19:35:40.645947+00:00",
+  "generated_at_utc": "2026-10-09T08:08:17.594476+00:00",
   "highlights": [
     {
       "label": "Weight moved",
@@ -33,7 +33,7 @@
     },
     {
       "label": "Resting HR",
-      "value": "46",
+      "value": "45",
       "detail": "7-day avg 42",
       "icon": "pulse"
     },
@@ -45,25 +45,25 @@
     },
     {
       "label": "Run time '26",
-      "value": "52h 52m",
-      "detail": "52 runs",
+      "value": "53h 22m",
+      "detail": "53 runs",
       "icon": "run"
     },
     {
       "label": "Day streak",
-      "value": "4",
+      "value": "5",
       "detail": "days in a row",
       "icon": "calendar"
     },
     {
       "label": "Active this week",
-      "value": "2h 29m",
+      "value": "2h 58m",
       "detail": "workout time",
       "icon": "pulse"
     },
     {
       "label": "Workouts",
-      "value": "3",
+      "value": "4",
       "detail": "this week",
       "icon": "dumbbell"
     },
@@ -75,12 +75,22 @@
     },
     {
       "label": "2026 so far",
-      "value": "386.6 mi",
-      "detail": "149 workouts \u00b7 88h",
+      "value": "390.4 mi",
+      "detail": "150 workouts \u00b7 88h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "San Francisco Running",
+      "type": "running",
+      "start_date_local": "2026-10-08",
+      "distance_m": 6081.9599609375,
+      "moving_time_s": 1770,
+      "pace_min_per_mi": 7.805958984426118,
+      "calories": 412,
+      "url": "https://connect.garmin.com/modern/activity/24658531556"
+    },
     {
       "name": "Strength",
       "type": "strength_training",
@@ -100,16 +110,6 @@
       "pace_min_per_mi": null,
       "calories": 191,
       "url": "https://connect.garmin.com/modern/activity/24635187383"
-    },
-    {
-      "name": "Strength",
-      "type": "strength_training",
-      "start_date_local": "2026-10-05",
-      "distance_m": 0,
-      "moving_time_s": 3941,
-      "pace_min_per_mi": null,
-      "calories": 232,
-      "url": "https://connect.garmin.com/modern/activity/24622442019"
     }
   ]
 }
