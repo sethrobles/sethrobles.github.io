@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-10T18:08:30.815726+00:00",
+  "generated_at_utc": "2026-10-11T07:59:43.236466+00:00",
   "highlights": [
     {
       "label": "Weight moved",
@@ -48,12 +48,6 @@
       "value": "53h 22m",
       "detail": "53 runs",
       "icon": "run"
-    },
-    {
-      "label": "Day streak",
-      "value": "6",
-      "detail": "days in a row",
-      "icon": "calendar"
     },
     {
       "label": "Active this week",
