@@ -1,6 +1,19 @@
 {
-  "generated_at_utc": "2026-10-18T07:09:17.281430+00:00",
+  "generated_at_utc": "2026-10-19T07:37:26.232833+00:00",
   "books": [
+    {
+      "id": "19770595",
+      "book_id": "29886",
+      "title": "The Trial",
+      "author": "Franz Kafka, Breon Mitchell",
+      "cover_image_url": "https://assets.hardcover.app/books/29886/10561909-L.jpg",
+      "rating": null,
+      "date_read": "2026-10-19",
+      "status": "currently-reading",
+      "review_url": "https://hardcover.app/book/29886",
+      "pages": 231,
+      "isbn": null
+    },
     {
       "id": "19731714",
       "book_id": "66795",
@@ -64,19 +77,6 @@
       "status": "read",
       "review_url": "https://hardcover.app/book/175780",
       "pages": 391,
-      "isbn": null
-    },
-    {
-      "id": "19731678",
-      "book_id": "463683",
-      "title": "Mockingjay",
-      "author": "Suzanne Collins",
-      "cover_image_url": "https://assets.hardcover.app/books/262275/10167246-L.jpg",
-      "rating": null,
-      "date_read": "2026-10-17",
-      "status": "read",
-      "review_url": "https://hardcover.app/book/463683",
-      "pages": 390,
       "isbn": null
     }
   ]

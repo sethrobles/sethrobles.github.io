@@ -1,22 +1,16 @@
 {
-  "generated_at_utc": "2026-10-18T17:01:14.319551+00:00",
+  "generated_at_utc": "2026-10-19T07:05:08.395558+00:00",
   "highlights": [
     {
-      "label": "Weight moved",
-      "value": "229 lb",
-      "detail": "this week \u00b7 182 reps",
-      "icon": "dumbbell"
-    },
-    {
       "label": "Lifted last week",
-      "value": "18,632 lb",
-      "detail": "3 sessions",
+      "value": "229 lb",
+      "detail": "1 session",
       "icon": "dumbbell"
     },
     {
       "label": "Last week",
-      "value": "6 workouts",
-      "detail": "4h 9m active \u00b7 3.78 mi",
+      "value": "5 workouts",
+      "detail": "4h 8m active \u00b7 6.24 mi",
       "icon": "calendar"
     },
     {
@@ -32,6 +26,12 @@
       "icon": "dumbbell"
     },
     {
+      "label": "Resting HR",
+      "value": "44",
+      "detail": "7-day avg 41",
+      "icon": "pulse"
+    },
+    {
       "label": "Longest workout",
       "value": "1h 38m",
       "detail": "San Francisco Running \u00b7 3 weeks ago",
@@ -39,21 +39,15 @@
     },
     {
       "label": "Run time '26",
-      "value": "53h 22m",
-      "detail": "53 runs",
+      "value": "54h 11m",
+      "detail": "54 runs",
       "icon": "run"
     },
     {
-      "label": "Active this week",
-      "value": "1h 39m",
-      "detail": "workout time",
-      "icon": "pulse"
-    },
-    {
-      "label": "Workouts",
-      "value": "2",
-      "detail": "this week",
-      "icon": "dumbbell"
+      "label": "Day streak",
+      "value": "3",
+      "detail": "days in a row",
+      "icon": "calendar"
     },
     {
       "label": "Longest run",
@@ -63,8 +57,8 @@
     },
     {
       "label": "2026 so far",
-      "value": "390.4 mi",
-      "detail": "154 workouts \u00b7 90h",
+      "value": "396.6 mi",
+      "detail": "157 workouts \u00b7 91h",
       "icon": "calendar"
     }
   ],
@@ -72,32 +66,32 @@
     {
       "name": "Strength",
       "type": "strength_training",
-      "start_date_local": "2026-10-13",
+      "start_date_local": "2026-10-18",
       "distance_m": 0,
-      "moving_time_s": 3288,
+      "moving_time_s": 4773,
       "pace_min_per_mi": null,
-      "calories": 176,
-      "url": "https://connect.garmin.com/modern/activity/24717128310"
+      "calories": 477,
+      "url": "https://connect.garmin.com/modern/activity/24772599438"
     },
     {
-      "name": "Strength",
-      "type": "strength_training",
-      "start_date_local": "2026-10-12",
+      "name": "Indoor Cycling",
+      "type": "indoor_cycling",
+      "start_date_local": "2026-10-17",
       "distance_m": 0,
-      "moving_time_s": 2663,
+      "moving_time_s": 1238,
       "pace_min_per_mi": null,
-      "calories": 176,
-      "url": "https://connect.garmin.com/modern/activity/24704627512"
+      "calories": 286,
+      "url": "https://connect.garmin.com/modern/activity/24771669180"
     },
     {
-      "name": "Yoga",
-      "type": "yoga",
-      "start_date_local": "2026-10-11",
-      "distance_m": 0,
-      "moving_time_s": 2398,
-      "pace_min_per_mi": null,
-      "calories": 72,
-      "url": "https://connect.garmin.com/modern/activity/24692414573"
+      "name": "Mesa Running",
+      "type": "running",
+      "start_date_local": "2026-10-16",
+      "distance_m": 10042.5,
+      "moving_time_s": 2960,
+      "pace_min_per_mi": 7.90581097004398,
+      "calories": 721,
+      "url": "https://connect.garmin.com/modern/activity/24771668847"
     }
   ]
 }
