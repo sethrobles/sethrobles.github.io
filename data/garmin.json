@@ -1,6 +1,12 @@
 {
-  "generated_at_utc": "2026-10-19T19:35:14.811218+00:00",
+  "generated_at_utc": "2026-10-20T06:49:53.058156+00:00",
   "highlights": [
+    {
+      "label": "Weight moved",
+      "value": "1,339 lb",
+      "detail": "this week \u00b7 71 reps",
+      "icon": "dumbbell"
+    },
     {
       "label": "Lifted last week",
       "value": "229 lb",
@@ -15,8 +21,8 @@
     },
     {
       "label": "Lifted in '26",
-      "value": "627,836 lb",
-      "detail": "63 sessions",
+      "value": "629,176 lb",
+      "detail": "64 sessions",
       "icon": "dumbbell"
     },
     {
@@ -45,9 +51,21 @@
     },
     {
       "label": "Day streak",
-      "value": "3",
+      "value": "4",
       "detail": "days in a row",
       "icon": "calendar"
+    },
+    {
+      "label": "Active this week",
+      "value": "59m",
+      "detail": "workout time",
+      "icon": "pulse"
+    },
+    {
+      "label": "Workouts",
+      "value": "1",
+      "detail": "this week",
+      "icon": "dumbbell"
     },
     {
       "label": "Longest run",
@@ -58,11 +76,21 @@
     {
       "label": "2026 so far",
       "value": "396.6 mi",
-      "detail": "157 workouts \u00b7 91h",
+      "detail": "158 workouts \u00b7 91h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "Strength",
+      "type": "strength_training",
+      "start_date_local": "2026-10-19",
+      "distance_m": 0,
+      "moving_time_s": 3556,
+      "pace_min_per_mi": null,
+      "calories": 241,
+      "url": "https://connect.garmin.com/modern/activity/24786363780"
+    },
     {
       "name": "Strength",
       "type": "strength_training",
@@ -82,16 +110,6 @@
       "pace_min_per_mi": null,
       "calories": 286,
       "url": "https://connect.garmin.com/modern/activity/24771669180"
-    },
-    {
-      "name": "Mesa Running",
-      "type": "running",
-      "start_date_local": "2026-10-16",
-      "distance_m": 10042.5,
-      "moving_time_s": 2960,
-      "pace_min_per_mi": 7.90581097004398,
-      "calories": 721,
-      "url": "https://connect.garmin.com/modern/activity/24771668847"
     }
   ]
 }
