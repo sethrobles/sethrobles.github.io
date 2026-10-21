@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-20T18:13:09.993960+00:00",
+  "generated_at_utc": "2026-10-21T06:45:00.437069+00:00",
   "highlights": [
     {
       "label": "Weight moved",
@@ -45,25 +45,25 @@
     },
     {
       "label": "Run time '26",
-      "value": "54h 11m",
-      "detail": "54 runs",
+      "value": "54h 57m",
+      "detail": "55 runs",
       "icon": "run"
     },
     {
       "label": "Day streak",
-      "value": "4",
+      "value": "5",
       "detail": "days in a row",
       "icon": "calendar"
     },
     {
       "label": "Active this week",
-      "value": "59m",
+      "value": "1h 45m",
       "detail": "workout time",
       "icon": "pulse"
     },
     {
       "label": "Workouts",
-      "value": "1",
+      "value": "2",
       "detail": "this week",
       "icon": "dumbbell"
     },
@@ -75,12 +75,22 @@
     },
     {
       "label": "2026 so far",
-      "value": "396.6 mi",
-      "detail": "158 workouts \u00b7 91h",
+      "value": "402.4 mi",
+      "detail": "159 workouts \u00b7 92h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "San Francisco Running",
+      "type": "running",
+      "start_date_local": "2026-10-20",
+      "distance_m": 9256.73046875,
+      "moving_time_s": 2784,
+      "pace_min_per_mi": 8.06692776159914,
+      "calories": 631,
+      "url": "https://connect.garmin.com/modern/activity/24798534261"
+    },
     {
       "name": "Strength",
       "type": "strength_training",
@@ -100,16 +110,6 @@
       "pace_min_per_mi": null,
       "calories": 477,
       "url": "https://connect.garmin.com/modern/activity/24772599438"
-    },
-    {
-      "name": "Indoor Cycling",
-      "type": "indoor_cycling",
-      "start_date_local": "2026-10-17",
-      "distance_m": 0,
-      "moving_time_s": 1238,
-      "pace_min_per_mi": null,
-      "calories": 286,
-      "url": "https://connect.garmin.com/modern/activity/24771669180"
     }
   ]
 }
