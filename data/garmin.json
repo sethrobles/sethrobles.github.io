@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-23T18:02:43.833369+00:00",
+  "generated_at_utc": "2026-10-24T06:39:14.881683+00:00",
   "highlights": [
     {
       "label": "Weight moved",
@@ -32,15 +32,9 @@
       "icon": "dumbbell"
     },
     {
-      "label": "Resting HR",
-      "value": "42",
-      "detail": "7-day avg 42",
-      "icon": "pulse"
-    },
-    {
       "label": "Longest workout",
       "value": "1h 38m",
-      "detail": "San Francisco Running \u00b7 3 weeks ago",
+      "detail": "San Francisco Running \u00b7 4 weeks ago",
       "icon": "run"
     },
     {
