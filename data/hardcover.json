@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-25T07:30:08.044576+00:00",
+  "generated_at_utc": "2026-10-26T07:40:51.681172+00:00",
   "books": [
     {
       "id": "19770595",
@@ -12,6 +12,19 @@
       "status": "currently-reading",
       "review_url": "https://hardcover.app/book/29886",
       "pages": 231,
+      "isbn": null
+    },
+    {
+      "id": "20014867",
+      "book_id": "122240",
+      "title": "Slaughterhouse-Five",
+      "author": "Kurt Vonnegut",
+      "cover_image_url": "https://assets.hardcover.app/books/122240/6e61fd66-c5a3-4596-8cb2-2a0620d5ca02.jpg",
+      "rating": 4.5,
+      "date_read": "2026-10-26",
+      "status": "read",
+      "review_url": "https://hardcover.app/book/122240",
+      "pages": 215,
       "isbn": null
     },
     {
@@ -64,19 +77,6 @@
       "status": "read",
       "review_url": "https://hardcover.app/book/143390",
       "pages": 541,
-      "isbn": null
-    },
-    {
-      "id": "19731680",
-      "book_id": "175780",
-      "title": "Catching Fire",
-      "author": "Suzanne Collins",
-      "cover_image_url": "https://assets.hardcover.app/books/175780/9820052453929396.jpeg",
-      "rating": null,
-      "date_read": "2026-10-17",
-      "status": "read",
-      "review_url": "https://hardcover.app/book/175780",
-      "pages": 391,
       "isbn": null
     }
   ]
