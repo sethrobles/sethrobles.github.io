@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-29T07:46:12.417185+00:00",
+  "generated_at_utc": "2026-10-30T07:52:22.590946+00:00",
   "highlights": [
     {
       "label": "Lifted last week",
@@ -27,8 +27,8 @@
     },
     {
       "label": "Resting HR",
-      "value": "47",
-      "detail": "7-day avg 44",
+      "value": "46",
+      "detail": "7-day avg 42",
       "icon": "pulse"
     },
     {
@@ -45,19 +45,19 @@
     },
     {
       "label": "Day streak",
-      "value": "7",
+      "value": "8",
       "detail": "days in a row",
       "icon": "calendar"
     },
     {
       "label": "Active this week",
-      "value": "1h 33m",
+      "value": "1h 55m",
       "detail": "workout time",
       "icon": "pulse"
     },
     {
       "label": "Workouts",
-      "value": "3",
+      "value": "4",
       "detail": "this week",
       "icon": "dumbbell"
     },
@@ -70,11 +70,21 @@
     {
       "label": "2026 so far",
       "value": "417.3 mi",
-      "detail": "167 workouts \u00b7 96h",
+      "detail": "168 workouts \u00b7 96h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "Yoga",
+      "type": "yoga",
+      "start_date_local": "2026-10-29",
+      "distance_m": 0,
+      "moving_time_s": 1309,
+      "pace_min_per_mi": null,
+      "calories": 45,
+      "url": "https://connect.garmin.com/modern/activity/24895074144"
+    },
     {
       "name": "Strength",
       "type": "strength_training",
@@ -94,16 +104,6 @@
       "pace_min_per_mi": null,
       "calories": 207,
       "url": "https://connect.garmin.com/modern/activity/24876685058"
-    },
-    {
-      "name": "Strength",
-      "type": "strength_training",
-      "start_date_local": "2026-10-26",
-      "distance_m": 0,
-      "moving_time_s": 2134,
-      "pace_min_per_mi": null,
-      "calories": 240,
-      "url": "https://connect.garmin.com/modern/activity/24864990535"
     }
   ]
 }
