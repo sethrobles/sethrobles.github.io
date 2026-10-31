@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-30T18:56:27.961655+00:00",
+  "generated_at_utc": "2026-10-31T07:41:55.584517+00:00",
   "highlights": [
     {
       "label": "Lifted last week",
@@ -27,7 +27,7 @@
     },
     {
       "label": "Resting HR",
-      "value": "42",
+      "value": "46",
       "detail": "7-day avg 42",
       "icon": "pulse"
     },
@@ -39,25 +39,25 @@
     },
     {
       "label": "Run time '26",
-      "value": "57h 4m",
-      "detail": "58 runs",
+      "value": "57h 40m",
+      "detail": "59 runs",
       "icon": "run"
     },
     {
       "label": "Day streak",
-      "value": "8",
+      "value": "9",
       "detail": "days in a row",
       "icon": "calendar"
     },
     {
       "label": "Active this week",
-      "value": "1h 55m",
+      "value": "2h 31m",
       "detail": "workout time",
       "icon": "pulse"
     },
     {
       "label": "Workouts",
-      "value": "4",
+      "value": "5",
       "detail": "this week",
       "icon": "dumbbell"
     },
@@ -69,12 +69,22 @@
     },
     {
       "label": "2026 so far",
-      "value": "417.3 mi",
-      "detail": "168 workouts \u00b7 96h",
+      "value": "422.4 mi",
+      "detail": "169 workouts \u00b7 97h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "Boston Running",
+      "type": "running",
+      "start_date_local": "2026-10-30",
+      "distance_m": 8239.8203125,
+      "moving_time_s": 2153,
+      "pace_min_per_mi": 7.008463956314783,
+      "calories": 556,
+      "url": "https://connect.garmin.com/modern/activity/24908943468"
+    },
     {
       "name": "Yoga",
       "type": "yoga",
@@ -94,16 +104,6 @@
       "pace_min_per_mi": null,
       "calories": 159,
       "url": "https://connect.garmin.com/modern/activity/24889053243"
-    },
-    {
-      "name": "HIIT",
-      "type": "hiit",
-      "start_date_local": "2026-10-27",
-      "distance_m": 0,
-      "moving_time_s": 1189,
-      "pace_min_per_mi": null,
-      "calories": 207,
-      "url": "https://connect.garmin.com/modern/activity/24876685058"
     }
   ]
 }

@@ -1,12 +1,12 @@
 {
-  "generated_at_utc": "2026-10-30T08:27:16.689875+00:00",
+  "generated_at_utc": "2026-10-31T08:17:20.731952+00:00",
   "books": [
     {
       "id": "19770595",
       "book_id": "29886",
       "title": "The Trial",
       "author": "Franz Kafka, Breon Mitchell",
-      "cover_image_url": "https://assets.hardcover.app/books/29886/10561909-L.jpg",
+      "cover_image_url": "https://assets.hardcover.app/book/29886/25dcb3aa-8e72-4bc4-b10d-b5861c09dd96.jpeg",
       "rating": null,
       "date_read": "2026-10-19",
       "status": "currently-reading",
@@ -45,7 +45,7 @@
       "book_id": "428023",
       "title": "Atomic habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
       "author": "James Clear",
-      "cover_image_url": "https://assets.hardcover.app/books/428023/5118803742973375.jpg",
+      "cover_image_url": "https://assets.hardcover.app/book/428023/090ea0fb-6881-475a-aa86-b93b0d4521c9.jpg",
       "rating": null,
       "date_read": "2026-10-17",
       "status": "read",
