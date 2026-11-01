@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-31T18:05:29.554995+00:00",
+  "generated_at_utc": "2026-11-01T08:21:42.133619+00:00",
   "highlights": [
     {
       "label": "Lifted last week",
@@ -34,7 +34,7 @@
     {
       "label": "Longest workout",
       "value": "1h 19m",
-      "detail": "Strength \u00b7 last week",
+      "detail": "Strength \u00b7 2 weeks ago",
       "icon": "dumbbell"
     },
     {
@@ -42,12 +42,6 @@
       "value": "57h 40m",
       "detail": "59 runs",
       "icon": "run"
-    },
-    {
-      "label": "Day streak",
-      "value": "9",
-      "detail": "days in a row",
-      "icon": "calendar"
     },
     {
       "label": "Active this week",
