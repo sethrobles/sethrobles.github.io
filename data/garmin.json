@@ -1,16 +1,10 @@
 {
-  "generated_at_utc": "2026-11-01T18:41:38.940681+00:00",
+  "generated_at_utc": "2026-11-02T08:35:17.837538+00:00",
   "highlights": [
     {
-      "label": "Lifted last week",
-      "value": "1,339 lb",
-      "detail": "1 session",
-      "icon": "dumbbell"
-    },
-    {
       "label": "Last week",
-      "value": "7 workouts",
-      "detail": "4h 43m active \u00b7 20.7 mi",
+      "value": "6 workouts",
+      "detail": "3h 14m active \u00b7 9.90 mi",
       "icon": "calendar"
     },
     {
@@ -27,8 +21,8 @@
     },
     {
       "label": "Resting HR",
-      "value": "38",
-      "detail": "7-day avg 40",
+      "value": "44",
+      "detail": "7-day avg 41",
       "icon": "pulse"
     },
     {
@@ -39,21 +33,9 @@
     },
     {
       "label": "Run time '26",
-      "value": "57h 40m",
-      "detail": "59 runs",
+      "value": "58h 23m",
+      "detail": "60 runs",
       "icon": "run"
-    },
-    {
-      "label": "Active this week",
-      "value": "2h 31m",
-      "detail": "workout time",
-      "icon": "pulse"
-    },
-    {
-      "label": "Workouts",
-      "value": "5",
-      "detail": "this week",
-      "icon": "dumbbell"
     },
     {
       "label": "Longest run",
@@ -63,12 +45,22 @@
     },
     {
       "label": "2026 so far",
-      "value": "422.4 mi",
-      "detail": "169 workouts \u00b7 97h",
+      "value": "427.2 mi",
+      "detail": "170 workouts \u00b7 97h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "Boston - Base",
+      "type": "running",
+      "start_date_local": "2026-11-01",
+      "distance_m": 7690.85009765625,
+      "moving_time_s": 2589,
+      "pace_min_per_mi": 9.029303668415332,
+      "calories": 554,
+      "url": "https://connect.garmin.com/modern/activity/24935465919"
+    },
     {
       "name": "Boston Running",
       "type": "running",
@@ -88,16 +80,6 @@
       "pace_min_per_mi": null,
       "calories": 45,
       "url": "https://connect.garmin.com/modern/activity/24895074144"
-    },
-    {
-      "name": "Strength",
-      "type": "strength_training",
-      "start_date_local": "2026-10-28",
-      "distance_m": 0,
-      "moving_time_s": 2286,
-      "pace_min_per_mi": null,
-      "calories": 159,
-      "url": "https://connect.garmin.com/modern/activity/24889053243"
     }
   ]
 }
