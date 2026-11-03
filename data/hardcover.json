@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-02T09:16:18.392784+00:00",
+  "generated_at_utc": "2026-11-03T09:21:39.688977+00:00",
   "books": [
     {
       "id": "19770595",
@@ -12,6 +12,32 @@
       "status": "currently-reading",
       "review_url": "https://hardcover.app/book/29886",
       "pages": 231,
+      "isbn": null
+    },
+    {
+      "id": "20319024",
+      "book_id": "383598",
+      "title": "Circe",
+      "author": "Madeline Miller",
+      "cover_image_url": "https://assets.hardcover.app/books/383598/8739376-L.jpg",
+      "rating": 3.0,
+      "date_read": "2026-11-03",
+      "status": "read",
+      "review_url": "https://hardcover.app/book/383598",
+      "pages": 400,
+      "isbn": null
+    },
+    {
+      "id": "20300208",
+      "book_id": "479910",
+      "title": "Tomorrow, and Tomorrow, and Tomorrow",
+      "author": "Gabrielle Zevin",
+      "cover_image_url": "https://assets.hardcover.app/book/479910/8419c49b-5635-4734-ab49-0493b8650220.jpg",
+      "rating": 4.5,
+      "date_read": "2026-11-02",
+      "status": "read",
+      "review_url": "https://hardcover.app/book/479910",
+      "pages": 496,
       "isbn": null
     },
     {
@@ -51,32 +77,6 @@
       "status": "read",
       "review_url": "https://hardcover.app/book/428023",
       "pages": 305,
-      "isbn": null
-    },
-    {
-      "id": "19731689",
-      "book_id": "158268",
-      "title": "Ender's Game",
-      "author": "Orson Scott Card",
-      "cover_image_url": "https://assets.hardcover.app/books/158268/8303020-L.jpg",
-      "rating": null,
-      "date_read": "2026-10-17",
-      "status": "read",
-      "review_url": "https://hardcover.app/book/158268",
-      "pages": 256,
-      "isbn": null
-    },
-    {
-      "id": "19731682",
-      "book_id": "143390",
-      "title": "The Ballad of Songbirds and Snakes",
-      "author": "Suzanne Collins",
-      "cover_image_url": "https://assets.hardcover.app/books/143390/108302696775753.jpg",
-      "rating": null,
-      "date_read": "2026-10-17",
-      "status": "read",
-      "review_url": "https://hardcover.app/book/143390",
-      "pages": 541,
       "isbn": null
     }
   ]
