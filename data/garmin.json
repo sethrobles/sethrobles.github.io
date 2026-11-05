@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-05T08:41:52.123576+00:00",
+  "generated_at_utc": "2026-11-05T20:53:47.547441+00:00",
   "highlights": [
     {
       "label": "Weight moved",
@@ -45,19 +45,19 @@
     },
     {
       "label": "Day streak",
-      "value": "2",
+      "value": "3",
       "detail": "days in a row",
       "icon": "calendar"
     },
     {
       "label": "Active this week",
-      "value": "1h 41m",
+      "value": "2h 12m",
       "detail": "workout time",
       "icon": "pulse"
     },
     {
       "label": "Workouts",
-      "value": "2",
+      "value": "3",
       "detail": "this week",
       "icon": "dumbbell"
     },
@@ -70,11 +70,21 @@
     {
       "label": "2026 so far",
       "value": "427.2 mi",
-      "detail": "172 workouts \u00b7 98h",
+      "detail": "173 workouts \u00b7 98h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "Yoga",
+      "type": "yoga",
+      "start_date_local": "2026-11-05",
+      "distance_m": 0,
+      "moving_time_s": 1837,
+      "pace_min_per_mi": null,
+      "calories": 60,
+      "url": "https://connect.garmin.com/modern/activity/24977719543"
+    },
     {
       "name": "Strength",
       "type": "strength_training",
@@ -94,16 +104,6 @@
       "pace_min_per_mi": null,
       "calories": 253,
       "url": "https://connect.garmin.com/modern/activity/24959457444"
-    },
-    {
-      "name": "Boston - Base",
-      "type": "running",
-      "start_date_local": "2026-11-01",
-      "distance_m": 7690.85009765625,
-      "moving_time_s": 2589,
-      "pace_min_per_mi": 9.029303668415332,
-      "calories": 554,
-      "url": "https://connect.garmin.com/modern/activity/24935465919"
     }
   ]
 }
