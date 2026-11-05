@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-11-04T20:37:41.333757+00:00",
+  "generated_at_utc": "2026-11-05T08:41:52.123576+00:00",
   "highlights": [
     {
       "label": "Weight moved",
-      "value": "8,735 lb",
-      "detail": "this week \u00b7 101 reps",
+      "value": "11,261 lb",
+      "detail": "this week \u00b7 158 reps",
       "icon": "dumbbell"
     },
     {
@@ -15,8 +15,8 @@
     },
     {
       "label": "Lifted in '26",
-      "value": "637,910 lb",
-      "detail": "65 sessions",
+      "value": "640,437 lb",
+      "detail": "66 sessions",
       "icon": "dumbbell"
     },
     {
@@ -44,14 +44,20 @@
       "icon": "run"
     },
     {
+      "label": "Day streak",
+      "value": "2",
+      "detail": "days in a row",
+      "icon": "calendar"
+    },
+    {
       "label": "Active this week",
-      "value": "1h 11m",
+      "value": "1h 41m",
       "detail": "workout time",
       "icon": "pulse"
     },
     {
       "label": "Workouts",
-      "value": "1",
+      "value": "2",
       "detail": "this week",
       "icon": "dumbbell"
     },
@@ -64,11 +70,21 @@
     {
       "label": "2026 so far",
       "value": "427.2 mi",
-      "detail": "171 workouts \u00b7 98h",
+      "detail": "172 workouts \u00b7 98h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "Strength",
+      "type": "strength_training",
+      "start_date_local": "2026-11-04",
+      "distance_m": 0,
+      "moving_time_s": 1810,
+      "pace_min_per_mi": null,
+      "calories": 114,
+      "url": "https://connect.garmin.com/modern/activity/24971119795"
+    },
     {
       "name": "Strength",
       "type": "strength_training",
@@ -88,16 +104,6 @@
       "pace_min_per_mi": 9.029303668415332,
       "calories": 554,
       "url": "https://connect.garmin.com/modern/activity/24935465919"
-    },
-    {
-      "name": "Boston Running",
-      "type": "running",
-      "start_date_local": "2026-10-30",
-      "distance_m": 8239.8203125,
-      "moving_time_s": 2153,
-      "pace_min_per_mi": 7.008463956314783,
-      "calories": 556,
-      "url": "https://connect.garmin.com/modern/activity/24908943468"
     }
   ]
 }
