@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-06T20:11:01.961625+00:00",
+  "generated_at_utc": "2026-11-07T07:57:45.564577+00:00",
   "highlights": [
     {
       "label": "Weight moved",
@@ -26,12 +26,6 @@
       "icon": "dumbbell"
     },
     {
-      "label": "Resting HR",
-      "value": "42",
-      "detail": "7-day avg 41",
-      "icon": "pulse"
-    },
-    {
       "label": "Longest workout",
       "value": "1h 19m",
       "detail": "Strength \u00b7 2 weeks ago",
@@ -42,12 +36,6 @@
       "value": "58h 23m",
       "detail": "60 runs",
       "icon": "run"
-    },
-    {
-      "label": "Day streak",
-      "value": "3",
-      "detail": "days in a row",
-      "icon": "calendar"
     },
     {
       "label": "Active this week",
