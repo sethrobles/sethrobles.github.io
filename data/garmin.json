@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-11-07T18:25:47.166010+00:00",
+  "generated_at_utc": "2026-11-08T08:15:55.791394+00:00",
   "highlights": [
     {
       "label": "Weight moved",
-      "value": "11,261 lb",
-      "detail": "this week \u00b7 158 reps",
+      "value": "11,764 lb",
+      "detail": "this week \u00b7 371 reps",
       "icon": "dumbbell"
     },
     {
@@ -15,8 +15,8 @@
     },
     {
       "label": "Lifted in '26",
-      "value": "640,437 lb",
-      "detail": "66 sessions",
+      "value": "640,939 lb",
+      "detail": "67 sessions",
       "icon": "dumbbell"
     },
     {
@@ -26,26 +26,38 @@
       "icon": "dumbbell"
     },
     {
+      "label": "Resting HR",
+      "value": "45",
+      "detail": "7-day avg 43",
+      "icon": "pulse"
+    },
+    {
       "label": "Longest workout",
       "value": "1h 19m",
-      "detail": "Strength \u00b7 2 weeks ago",
+      "detail": "Strength \u00b7 3 weeks ago",
       "icon": "dumbbell"
     },
     {
       "label": "Run time '26",
-      "value": "58h 23m",
-      "detail": "60 runs",
+      "value": "58h 37m",
+      "detail": "62 runs",
       "icon": "run"
     },
     {
+      "label": "Day streak",
+      "value": "5",
+      "detail": "days in a row",
+      "icon": "calendar"
+    },
+    {
       "label": "Active this week",
-      "value": "2h 12m",
+      "value": "3h 39m",
       "detail": "workout time",
       "icon": "pulse"
     },
     {
       "label": "Workouts",
-      "value": "3",
+      "value": "8",
       "detail": "this week",
       "icon": "dumbbell"
     },
@@ -57,41 +69,41 @@
     },
     {
       "label": "2026 so far",
-      "value": "427.2 mi",
-      "detail": "173 workouts \u00b7 98h",
+      "value": "430.6 mi",
+      "detail": "178 workouts \u00b7 99h",
       "icon": "calendar"
     }
   ],
   "recent": [
     {
-      "name": "Yoga",
-      "type": "yoga",
-      "start_date_local": "2026-11-05",
-      "distance_m": 0,
-      "moving_time_s": 1837,
+      "name": "San Francisco Soccer/Football",
+      "type": "soccer",
+      "start_date_local": "2026-11-07",
+      "distance_m": 2112.75,
+      "moving_time_s": 688,
       "pace_min_per_mi": null,
-      "calories": 60,
-      "url": "https://connect.garmin.com/modern/activity/24977719543"
+      "calories": 125,
+      "url": "https://connect.garmin.com/modern/activity/25004375936"
     },
     {
-      "name": "Strength",
-      "type": "strength_training",
-      "start_date_local": "2026-11-04",
-      "distance_m": 0,
-      "moving_time_s": 1810,
-      "pace_min_per_mi": null,
-      "calories": 114,
-      "url": "https://connect.garmin.com/modern/activity/24971119795"
+      "name": "San Francisco Running",
+      "type": "running",
+      "start_date_local": "2026-11-06",
+      "distance_m": 1726.6600341796875,
+      "moving_time_s": 411,
+      "pace_min_per_mi": 6.384568346853143,
+      "calories": 112,
+      "url": "https://connect.garmin.com/modern/activity/25004375909"
     },
     {
-      "name": "Strength",
-      "type": "strength_training",
-      "start_date_local": "2026-11-03",
+      "name": "HIIT",
+      "type": "hiit",
+      "start_date_local": "2026-11-06",
       "distance_m": 0,
-      "moving_time_s": 4296,
+      "moving_time_s": 1168,
       "pace_min_per_mi": null,
-      "calories": 253,
-      "url": "https://connect.garmin.com/modern/activity/24959457444"
+      "calories": 259,
+      "url": "https://connect.garmin.com/modern/activity/25004375873"
     }
   ]
 }
