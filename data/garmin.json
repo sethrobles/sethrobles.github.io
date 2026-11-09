@@ -1,16 +1,16 @@
 {
-  "generated_at_utc": "2026-11-08T18:36:24.762482+00:00",
+  "generated_at_utc": "2026-11-09T08:49:58.623619+00:00",
   "highlights": [
     {
-      "label": "Weight moved",
+      "label": "Lifted last week",
       "value": "11,764 lb",
-      "detail": "this week \u00b7 371 reps",
+      "detail": "3 sessions",
       "icon": "dumbbell"
     },
     {
       "label": "Last week",
-      "value": "6 workouts",
-      "detail": "3h 14m active \u00b7 9.90 mi",
+      "value": "9 workouts",
+      "detail": "4h 16m active \u00b7 7.16 mi",
       "icon": "calendar"
     },
     {
@@ -39,27 +39,15 @@
     },
     {
       "label": "Run time '26",
-      "value": "58h 37m",
-      "detail": "62 runs",
+      "value": "59h 14m",
+      "detail": "63 runs",
       "icon": "run"
     },
     {
       "label": "Day streak",
-      "value": "5",
+      "value": "6",
       "detail": "days in a row",
       "icon": "calendar"
-    },
-    {
-      "label": "Active this week",
-      "value": "3h 39m",
-      "detail": "workout time",
-      "icon": "pulse"
-    },
-    {
-      "label": "Workouts",
-      "value": "8",
-      "detail": "this week",
-      "icon": "dumbbell"
     },
     {
       "label": "Longest run",
@@ -69,12 +57,22 @@
     },
     {
       "label": "2026 so far",
-      "value": "430.6 mi",
-      "detail": "178 workouts \u00b7 99h",
+      "value": "434.4 mi",
+      "detail": "179 workouts \u00b7 100h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "San Francisco Running",
+      "type": "running",
+      "start_date_local": "2026-11-08",
+      "distance_m": 6005.990234375,
+      "moving_time_s": 2248,
+      "pace_min_per_mi": 10.039411151258385,
+      "calories": 412,
+      "url": "https://connect.garmin.com/modern/activity/25012969161"
+    },
     {
       "name": "San Francisco Soccer/Football",
       "type": "soccer",
@@ -94,16 +92,6 @@
       "pace_min_per_mi": 6.384568346853143,
       "calories": 112,
       "url": "https://connect.garmin.com/modern/activity/25004375909"
-    },
-    {
-      "name": "HIIT",
-      "type": "hiit",
-      "start_date_local": "2026-11-06",
-      "distance_m": 0,
-      "moving_time_s": 1168,
-      "pace_min_per_mi": null,
-      "calories": 259,
-      "url": "https://connect.garmin.com/modern/activity/25004375873"
     }
   ]
 }

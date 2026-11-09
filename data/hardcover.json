@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-08T08:50:51.599713+00:00",
+  "generated_at_utc": "2026-11-09T09:34:35.661415+00:00",
   "books": [
     {
       "id": "19770595",
@@ -12,6 +12,19 @@
       "status": "currently-reading",
       "review_url": "https://hardcover.app/book/29886",
       "pages": 231,
+      "isbn": null
+    },
+    {
+      "id": "20522971",
+      "book_id": "10099",
+      "title": "A Visit from the Goon Squad",
+      "author": "Jennifer Egan",
+      "cover_image_url": "https://assets.hardcover.app/books/10099/6452334-L.jpg",
+      "rating": 3.0,
+      "date_read": "2026-11-08",
+      "status": "read",
+      "review_url": "https://hardcover.app/book/10099",
+      "pages": 289,
       "isbn": null
     },
     {
@@ -64,19 +77,6 @@
       "status": "read",
       "review_url": "https://hardcover.app/book/66795",
       "pages": 321,
-      "isbn": null
-    },
-    {
-      "id": "19731690",
-      "book_id": "428023",
-      "title": "Atomic habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
-      "author": "James Clear",
-      "cover_image_url": "https://assets.hardcover.app/book/428023/090ea0fb-6881-475a-aa86-b93b0d4521c9.jpg",
-      "rating": null,
-      "date_read": "2026-10-17",
-      "status": "read",
-      "review_url": "https://hardcover.app/book/428023",
-      "pages": 305,
       "isbn": null
     }
   ]
