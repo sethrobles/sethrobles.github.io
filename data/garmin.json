@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-09T23:14:07.463491+00:00",
+  "generated_at_utc": "2026-11-10T08:55:59.969811+00:00",
   "highlights": [
     {
       "label": "Lifted last week",
@@ -45,9 +45,21 @@
     },
     {
       "label": "Day streak",
-      "value": "6",
+      "value": "7",
       "detail": "days in a row",
       "icon": "calendar"
+    },
+    {
+      "label": "Active this week",
+      "value": "22m",
+      "detail": "workout time",
+      "icon": "pulse"
+    },
+    {
+      "label": "Workouts",
+      "value": "1",
+      "detail": "this week",
+      "icon": "dumbbell"
     },
     {
       "label": "Longest run",
@@ -58,11 +70,21 @@
     {
       "label": "2026 so far",
       "value": "434.4 mi",
-      "detail": "179 workouts \u00b7 100h",
+      "detail": "180 workouts \u00b7 100h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "HIIT",
+      "type": "hiit",
+      "start_date_local": "2026-11-09",
+      "distance_m": 0,
+      "moving_time_s": 1358,
+      "pace_min_per_mi": null,
+      "calories": 289,
+      "url": "https://connect.garmin.com/modern/activity/25026453840"
+    },
     {
       "name": "San Francisco Running",
       "type": "running",
@@ -82,16 +104,6 @@
       "pace_min_per_mi": null,
       "calories": 125,
       "url": "https://connect.garmin.com/modern/activity/25004375936"
-    },
-    {
-      "name": "San Francisco Running",
-      "type": "running",
-      "start_date_local": "2026-11-06",
-      "distance_m": 1726.6600341796875,
-      "moving_time_s": 411,
-      "pace_min_per_mi": 6.384568346853143,
-      "calories": 112,
-      "url": "https://connect.garmin.com/modern/activity/25004375909"
     }
   ]
 }
