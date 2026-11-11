@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-10T20:39:54.068104+00:00",
+  "generated_at_utc": "2026-11-11T08:36:26.521840+00:00",
   "highlights": [
     {
       "label": "Lifted last week",
@@ -39,25 +39,25 @@
     },
     {
       "label": "Run time '26",
-      "value": "59h 14m",
-      "detail": "63 runs",
+      "value": "59h 52m",
+      "detail": "64 runs",
       "icon": "run"
     },
     {
       "label": "Day streak",
-      "value": "7",
+      "value": "8",
       "detail": "days in a row",
       "icon": "calendar"
     },
     {
       "label": "Active this week",
-      "value": "22m",
+      "value": "1h",
       "detail": "workout time",
       "icon": "pulse"
     },
     {
       "label": "Workouts",
-      "value": "1",
+      "value": "2",
       "detail": "this week",
       "icon": "dumbbell"
     },
@@ -69,12 +69,22 @@
     },
     {
       "label": "2026 so far",
-      "value": "434.4 mi",
-      "detail": "180 workouts \u00b7 100h",
+      "value": "438.5 mi",
+      "detail": "181 workouts \u00b7 100h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "San Francisco - Base",
+      "type": "running",
+      "start_date_local": "2026-11-10",
+      "distance_m": 6721.93017578125,
+      "moving_time_s": 2272,
+      "pace_min_per_mi": 9.065899189625338,
+      "calories": 491,
+      "url": "https://connect.garmin.com/modern/activity/25039010805"
+    },
     {
       "name": "HIIT",
       "type": "hiit",
@@ -94,16 +104,6 @@
       "pace_min_per_mi": 10.039411151258385,
       "calories": 412,
       "url": "https://connect.garmin.com/modern/activity/25012969161"
-    },
-    {
-      "name": "San Francisco Soccer/Football",
-      "type": "soccer",
-      "start_date_local": "2026-11-07",
-      "distance_m": 2112.75,
-      "moving_time_s": 688,
-      "pace_min_per_mi": null,
-      "calories": 125,
-      "url": "https://connect.garmin.com/modern/activity/25004375936"
     }
   ]
 }
