@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-14T08:16:44.333579+00:00",
+  "generated_at_utc": "2026-11-14T18:55:13.499320+00:00",
   "highlights": [
     {
       "label": "Lifted last week",
@@ -27,14 +27,14 @@
     },
     {
       "label": "Resting HR",
-      "value": "44",
+      "value": "42",
       "detail": "7-day avg 44",
       "icon": "pulse"
     },
     {
       "label": "Longest workout",
       "value": "1h 19m",
-      "detail": "Strength \u00b7 3 weeks ago",
+      "detail": "San Francisco Soccer/Football \u00b7 today",
       "icon": "dumbbell"
     },
     {
@@ -45,13 +45,13 @@
     },
     {
       "label": "Active this week",
-      "value": "1h 53m",
+      "value": "3h 13m",
       "detail": "workout time",
       "icon": "pulse"
     },
     {
       "label": "Workouts",
-      "value": "4",
+      "value": "5",
       "detail": "this week",
       "icon": "dumbbell"
     },
@@ -63,12 +63,22 @@
     },
     {
       "label": "2026 so far",
-      "value": "438.5 mi",
-      "detail": "183 workouts \u00b7 101h",
+      "value": "443.4 mi",
+      "detail": "184 workouts \u00b7 103h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "San Francisco Soccer/Football",
+      "type": "soccer",
+      "start_date_local": "2026-11-14",
+      "distance_m": 7823.1201171875,
+      "moving_time_s": 4774,
+      "pace_min_per_mi": null,
+      "calories": 846,
+      "url": "https://connect.garmin.com/modern/activity/25079366954"
+    },
     {
       "name": "Cardio",
       "type": "indoor_cardio",
@@ -88,16 +98,6 @@
       "pace_min_per_mi": null,
       "calories": 48,
       "url": "https://connect.garmin.com/modern/activity/25056722242"
-    },
-    {
-      "name": "San Francisco - Base",
-      "type": "running",
-      "start_date_local": "2026-11-10",
-      "distance_m": 6721.93017578125,
-      "moving_time_s": 2272,
-      "pace_min_per_mi": 9.065899189625338,
-      "calories": 491,
-      "url": "https://connect.garmin.com/modern/activity/25039010805"
     }
   ]
 }
