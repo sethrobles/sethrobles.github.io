@@ -1,16 +1,10 @@
 {
-  "generated_at_utc": "2026-11-15T19:30:36.935922+00:00",
+  "generated_at_utc": "2026-11-16T08:45:28.165668+00:00",
   "highlights": [
     {
-      "label": "Lifted last week",
-      "value": "11,764 lb",
-      "detail": "3 sessions",
-      "icon": "dumbbell"
-    },
-    {
       "label": "Last week",
-      "value": "9 workouts",
-      "detail": "4h 16m active \u00b7 7.16 mi",
+      "value": "7 workouts",
+      "detail": "4h 26m active \u00b7 14.1 mi",
       "icon": "calendar"
     },
     {
@@ -34,26 +28,20 @@
     {
       "label": "Longest workout",
       "value": "1h 19m",
-      "detail": "San Francisco Soccer/Football \u00b7 yesterday",
+      "detail": "San Francisco Soccer/Football \u00b7 2 days ago",
       "icon": "dumbbell"
     },
     {
       "label": "Run time '26",
-      "value": "59h 52m",
-      "detail": "64 runs",
+      "value": "60h 39m",
+      "detail": "65 runs",
       "icon": "run"
     },
     {
-      "label": "Active this week",
-      "value": "3h 40m",
-      "detail": "workout time",
-      "icon": "pulse"
-    },
-    {
-      "label": "Workouts",
-      "value": "6",
-      "detail": "this week",
-      "icon": "dumbbell"
+      "label": "Day streak",
+      "value": "2",
+      "detail": "days in a row",
+      "icon": "calendar"
     },
     {
       "label": "Longest run",
@@ -63,12 +51,22 @@
     },
     {
       "label": "2026 so far",
-      "value": "443.4 mi",
-      "detail": "185 workouts \u00b7 103h",
+      "value": "448.5 mi",
+      "detail": "186 workouts \u00b7 104h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "San Francisco Running",
+      "type": "running",
+      "start_date_local": "2026-11-15",
+      "distance_m": 8149.43017578125,
+      "moving_time_s": 2798,
+      "pace_min_per_mi": 9.20909647029058,
+      "calories": 593,
+      "url": "https://connect.garmin.com/modern/activity/25093009458"
+    },
     {
       "name": "Strength",
       "type": "strength_training",
@@ -88,16 +86,6 @@
       "pace_min_per_mi": null,
       "calories": 846,
       "url": "https://connect.garmin.com/modern/activity/25079366954"
-    },
-    {
-      "name": "Cardio",
-      "type": "indoor_cardio",
-      "start_date_local": "2026-11-12",
-      "distance_m": 0,
-      "moving_time_s": 1577,
-      "pace_min_per_mi": null,
-      "calories": 306,
-      "url": "https://connect.garmin.com/modern/activity/25063433880"
     }
   ]
 }
