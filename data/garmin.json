@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-17T21:58:22.840678+00:00",
+  "generated_at_utc": "2026-11-18T09:26:55.403478+00:00",
   "highlights": [
     {
       "label": "Weight moved",
@@ -34,30 +34,30 @@
     {
       "label": "Longest workout",
       "value": "1h 19m",
-      "detail": "San Francisco Soccer/Football \u00b7 3 days ago",
+      "detail": "San Francisco Soccer/Football \u00b7 4 days ago",
       "icon": "dumbbell"
     },
     {
       "label": "Run time '26",
-      "value": "60h 39m",
-      "detail": "65 runs",
+      "value": "61h 24m",
+      "detail": "66 runs",
       "icon": "run"
     },
     {
       "label": "Day streak",
-      "value": "3",
+      "value": "4",
       "detail": "days in a row",
       "icon": "calendar"
     },
     {
       "label": "Active this week",
-      "value": "43m",
+      "value": "1h 28m",
       "detail": "workout time",
       "icon": "pulse"
     },
     {
       "label": "Workouts",
-      "value": "1",
+      "value": "2",
       "detail": "this week",
       "icon": "dumbbell"
     },
@@ -69,12 +69,22 @@
     },
     {
       "label": "2026 so far",
-      "value": "448.5 mi",
-      "detail": "187 workouts \u00b7 104h",
+      "value": "454.1 mi",
+      "detail": "188 workouts \u00b7 104h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "San Francisco - Base",
+      "type": "running",
+      "start_date_local": "2026-11-17",
+      "distance_m": 9006.7998046875,
+      "moving_time_s": 2683,
+      "pace_min_per_mi": 7.989998877945551,
+      "calories": 631,
+      "url": "https://connect.garmin.com/modern/activity/25115256191"
+    },
     {
       "name": "Strength",
       "type": "strength_training",
@@ -94,16 +104,6 @@
       "pace_min_per_mi": 9.20909647029058,
       "calories": 593,
       "url": "https://connect.garmin.com/modern/activity/25093009458"
-    },
-    {
-      "name": "Strength",
-      "type": "strength_training",
-      "start_date_local": "2026-11-14",
-      "distance_m": 0,
-      "moving_time_s": 1599,
-      "pace_min_per_mi": null,
-      "calories": 111,
-      "url": "https://connect.garmin.com/modern/activity/25079877072"
     }
   ]
 }
