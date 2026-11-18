@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-18T09:26:55.403478+00:00",
+  "generated_at_utc": "2026-11-18T21:40:24.055783+00:00",
   "highlights": [
     {
       "label": "Weight moved",
@@ -27,8 +27,8 @@
     },
     {
       "label": "Resting HR",
-      "value": "40",
-      "detail": "7-day avg 42",
+      "value": "42",
+      "detail": "7-day avg 41",
       "icon": "pulse"
     },
     {
