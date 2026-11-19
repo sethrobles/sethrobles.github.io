@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-11-18T21:40:24.055783+00:00",
+  "generated_at_utc": "2026-11-19T09:38:41.792834+00:00",
   "highlights": [
     {
       "label": "Weight moved",
-      "value": "1,296 lb",
-      "detail": "this week \u00b7 119 reps",
+      "value": "1,799 lb",
+      "detail": "this week \u00b7 258 reps",
       "icon": "dumbbell"
     },
     {
@@ -15,8 +15,8 @@
     },
     {
       "label": "Lifted in '26",
-      "value": "642,236 lb",
-      "detail": "68 sessions",
+      "value": "642,738 lb",
+      "detail": "69 sessions",
       "icon": "dumbbell"
     },
     {
@@ -27,14 +27,14 @@
     },
     {
       "label": "Resting HR",
-      "value": "42",
-      "detail": "7-day avg 41",
+      "value": "45",
+      "detail": "7-day avg 42",
       "icon": "pulse"
     },
     {
       "label": "Longest workout",
       "value": "1h 19m",
-      "detail": "San Francisco Soccer/Football \u00b7 4 days ago",
+      "detail": "San Francisco Soccer/Football \u00b7 5 days ago",
       "icon": "dumbbell"
     },
     {
@@ -45,19 +45,19 @@
     },
     {
       "label": "Day streak",
-      "value": "4",
+      "value": "5",
       "detail": "days in a row",
       "icon": "calendar"
     },
     {
       "label": "Active this week",
-      "value": "1h 28m",
+      "value": "2h 25m",
       "detail": "workout time",
       "icon": "pulse"
     },
     {
       "label": "Workouts",
-      "value": "2",
+      "value": "3",
       "detail": "this week",
       "icon": "dumbbell"
     },
@@ -70,11 +70,21 @@
     {
       "label": "2026 so far",
       "value": "454.1 mi",
-      "detail": "188 workouts \u00b7 104h",
+      "detail": "189 workouts \u00b7 105h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "Strength",
+      "type": "strength_training",
+      "start_date_local": "2026-11-18",
+      "distance_m": 0,
+      "moving_time_s": 3421,
+      "pace_min_per_mi": null,
+      "calories": 198,
+      "url": "https://connect.garmin.com/modern/activity/25127151352"
+    },
     {
       "name": "San Francisco - Base",
       "type": "running",
@@ -94,16 +104,6 @@
       "pace_min_per_mi": null,
       "calories": 138,
       "url": "https://connect.garmin.com/modern/activity/25104306362"
-    },
-    {
-      "name": "San Francisco Running",
-      "type": "running",
-      "start_date_local": "2026-11-15",
-      "distance_m": 8149.43017578125,
-      "moving_time_s": 2798,
-      "pace_min_per_mi": 9.20909647029058,
-      "calories": 593,
-      "url": "https://connect.garmin.com/modern/activity/25093009458"
     }
   ]
 }
