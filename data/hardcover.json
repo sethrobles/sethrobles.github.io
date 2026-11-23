@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-22T09:37:35.558490+00:00",
+  "generated_at_utc": "2026-11-23T10:35:50.686532+00:00",
   "books": [
     {
       "id": "19770595",
@@ -12,6 +12,19 @@
       "status": "currently-reading",
       "review_url": "https://hardcover.app/book/29886",
       "pages": 231,
+      "isbn": null
+    },
+    {
+      "id": "21081154",
+      "book_id": "375422",
+      "title": "Stoner",
+      "author": "John Williams, John McGahern, Alfred Molina",
+      "cover_image_url": "https://assets.hardcover.app/books/375422/8310729-L.jpg",
+      "rating": 4.0,
+      "date_read": "2026-11-23",
+      "status": "read",
+      "review_url": "https://hardcover.app/book/375422",
+      "pages": null,
       "isbn": null
     },
     {
@@ -64,19 +77,6 @@
       "status": "read",
       "review_url": "https://hardcover.app/book/122240",
       "pages": 215,
-      "isbn": null
-    },
-    {
-      "id": "19731714",
-      "book_id": "66795",
-      "title": "Outliers: The Story of Success",
-      "author": "Malcolm Gladwell",
-      "cover_image_url": "https://assets.hardcover.app/books/66795/10858646-L.jpg",
-      "rating": null,
-      "date_read": "2026-10-17",
-      "status": "read",
-      "review_url": "https://hardcover.app/book/66795",
-      "pages": 321,
       "isbn": null
     }
   ]
