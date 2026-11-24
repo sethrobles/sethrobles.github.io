@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-23T09:58:14.465523+00:00",
+  "generated_at_utc": "2026-11-24T01:25:26.199822+00:00",
   "highlights": [
     {
       "label": "Lifted last week",
@@ -27,7 +27,7 @@
     },
     {
       "label": "Resting HR",
-      "value": "47",
+      "value": "43",
       "detail": "7-day avg 43",
       "icon": "pulse"
     },
@@ -42,12 +42,6 @@
       "value": "61h 24m",
       "detail": "66 runs",
       "icon": "run"
-    },
-    {
-      "label": "Day streak",
-      "value": "9",
-      "detail": "days in a row",
-      "icon": "calendar"
     },
     {
       "label": "Longest run",
