@@ -1,6 +1,12 @@
 {
-  "generated_at_utc": "2026-11-24T01:25:26.199822+00:00",
+  "generated_at_utc": "2026-11-24T11:46:12.328968+00:00",
   "highlights": [
+    {
+      "label": "Weight moved",
+      "value": "15,730 lb",
+      "detail": "this week \u00b7 227 reps",
+      "icon": "dumbbell"
+    },
     {
       "label": "Lifted last week",
       "value": "11,184 lb",
@@ -15,8 +21,8 @@
     },
     {
       "label": "Lifted in '26",
-      "value": "652,123 lb",
-      "detail": "71 sessions",
+      "value": "667,853 lb",
+      "detail": "72 sessions",
       "icon": "dumbbell"
     },
     {
@@ -27,7 +33,7 @@
     },
     {
       "label": "Resting HR",
-      "value": "43",
+      "value": "46",
       "detail": "7-day avg 43",
       "icon": "pulse"
     },
@@ -44,6 +50,24 @@
       "icon": "run"
     },
     {
+      "label": "Day streak",
+      "value": "10",
+      "detail": "days in a row",
+      "icon": "calendar"
+    },
+    {
+      "label": "Active this week",
+      "value": "54m",
+      "detail": "workout time",
+      "icon": "pulse"
+    },
+    {
+      "label": "Workouts",
+      "value": "1",
+      "detail": "this week",
+      "icon": "dumbbell"
+    },
+    {
       "label": "Longest run",
       "value": "52.5 mi",
       "detail": "Apr 25, 2026",
@@ -52,11 +76,21 @@
     {
       "label": "2026 so far",
       "value": "461.7 mi",
-      "detail": "194 workouts \u00b7 108h",
+      "detail": "195 workouts \u00b7 108h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "Strength",
+      "type": "strength_training",
+      "start_date_local": "2026-11-23",
+      "distance_m": 0,
+      "moving_time_s": 3298,
+      "pace_min_per_mi": null,
+      "calories": 302,
+      "url": "https://connect.garmin.com/modern/activity/25180432270"
+    },
     {
       "name": "San Francisco Soccer/Football",
       "type": "soccer",
@@ -76,16 +110,6 @@
       "pace_min_per_mi": null,
       "calories": 246,
       "url": "https://connect.garmin.com/modern/activity/25156269348"
-    },
-    {
-      "name": "San Francisco Soccer/Football",
-      "type": "soccer",
-      "start_date_local": "2026-11-21",
-      "distance_m": 6998.66015625,
-      "moving_time_s": 4478,
-      "pace_min_per_mi": null,
-      "calories": 878,
-      "url": "https://connect.garmin.com/modern/activity/25155463666"
     }
   ]
 }
