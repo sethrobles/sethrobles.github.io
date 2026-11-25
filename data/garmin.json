@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-11-24T23:20:06.624407+00:00",
+  "generated_at_utc": "2026-11-25T10:40:06.566345+00:00",
   "highlights": [
     {
       "label": "Weight moved",
       "value": "15,730 lb",
-      "detail": "this week \u00b7 227 reps",
+      "detail": "this week \u00b7 360 reps",
       "icon": "dumbbell"
     },
     {
@@ -51,19 +51,19 @@
     },
     {
       "label": "Day streak",
-      "value": "10",
+      "value": "11",
       "detail": "days in a row",
       "icon": "calendar"
     },
     {
       "label": "Active this week",
-      "value": "54m",
+      "value": "1h 57m",
       "detail": "workout time",
       "icon": "pulse"
     },
     {
       "label": "Workouts",
-      "value": "1",
+      "value": "2",
       "detail": "this week",
       "icon": "dumbbell"
     },
@@ -76,11 +76,21 @@
     {
       "label": "2026 so far",
       "value": "461.7 mi",
-      "detail": "195 workouts \u00b7 108h",
+      "detail": "196 workouts \u00b7 108h",
       "icon": "calendar"
     }
   ],
   "recent": [
+    {
+      "name": "Strength",
+      "type": "strength_training",
+      "start_date_local": "2026-11-24",
+      "distance_m": 0,
+      "moving_time_s": 3732,
+      "pace_min_per_mi": null,
+      "calories": 163,
+      "url": "https://connect.garmin.com/modern/activity/25191386621"
+    },
     {
       "name": "Strength",
       "type": "strength_training",
@@ -100,16 +110,6 @@
       "pace_min_per_mi": null,
       "calories": 345,
       "url": "https://connect.garmin.com/modern/activity/25165616155"
-    },
-    {
-      "name": "Strength",
-      "type": "strength_training",
-      "start_date_local": "2026-11-21",
-      "distance_m": 0,
-      "moving_time_s": 2740,
-      "pace_min_per_mi": null,
-      "calories": 246,
-      "url": "https://connect.garmin.com/modern/activity/25156269348"
     }
   ]
 }
