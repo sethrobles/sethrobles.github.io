@@ -1,6 +1,19 @@
 {
-  "generated_at_utc": "2026-11-27T10:43:44.343277+00:00",
+  "generated_at_utc": "2026-11-28T10:06:56.587381+00:00",
   "books": [
+    {
+      "id": "21252004",
+      "book_id": "480670",
+      "title": "When I Sing, Mountains Dance",
+      "author": "Irene Sol\u00e0, Mara Faye Lethem",
+      "cover_image_url": "https://assets.hardcover.app/books/480670/f6781b2c-6ed2-4f0d-a5ea-9f76c566db76.jpg",
+      "rating": null,
+      "date_read": "2026-11-28",
+      "status": "currently-reading",
+      "review_url": "https://hardcover.app/book/480670",
+      "pages": 216,
+      "isbn": null
+    },
     {
       "id": "19770595",
       "book_id": "29886",
@@ -64,19 +77,6 @@
       "status": "read",
       "review_url": "https://hardcover.app/book/479910",
       "pages": 496,
-      "isbn": null
-    },
-    {
-      "id": "20014867",
-      "book_id": "122240",
-      "title": "Slaughterhouse-Five",
-      "author": "Kurt Vonnegut",
-      "cover_image_url": "https://assets.hardcover.app/books/122240/6e61fd66-c5a3-4596-8cb2-2a0620d5ca02.jpg",
-      "rating": 4.5,
-      "date_read": "2026-10-26",
-      "status": "read",
-      "review_url": "https://hardcover.app/book/122240",
-      "pages": 215,
       "isbn": null
     }
   ]
